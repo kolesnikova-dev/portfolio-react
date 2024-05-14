@@ -24,6 +24,16 @@
         display: flex;
         place-items: center;
     }
+
+    .github-link-container {
+        width: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
+    }
 }
 /* --------------------------------------end desktop---------------- */
 /* ---------------------------------------------------------------- */
@@ -54,6 +64,16 @@
         min-height: 50vh;
         display: flex;
         place-items: center;
+    }
+
+    .github-link-container {
+        width: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
     }
 }
 /* --------------------------------------end mid---------------- */
@@ -86,7 +106,57 @@
         display: flex;
         place-items: center;
     }
+
+    .github-link-container {
+        width: 18%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
+    }
 }
+
+/* ---------------------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .title-section {
+        display: flex;
+        align-items:center;
+        margin: auto;
+        /* border: 1px solid aliceblue; */
+        width: 100%;
+    }
+
+    .title {
+        border: 1px solid rgba(128, 0, 128, 0.201);
+        padding: 1px;
+        font-size: 2.5vh;
+        letter-spacing: 2px;
+    }
+
+    .project-image-container {
+        border: 5px solid rgba(43, 117, 255, 0.342);
+        background-color: rgba(100, 148, 237, 0.212);
+        width: 89%;
+        max-height: 30vh;
+        min-height: 30vh;
+        display: flex;
+        place-items: center;
+    }
+
+    .github-link-container {
+        width: 22%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-left: auto;
+        position: relative;
+        z-index: 5;
+    }
+}
+/* ---------------------------------------------------------------- */
     
 
 /* --------------------------------------end mobile---------------- */
@@ -108,18 +178,6 @@
     width: 95%;
     position: relative;
     z-index: 0;
-}
-
-
-
-.github-link-container {
-    width: 18%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-left: auto;
-    position: relative;
-    z-index: 5;
 }
 
 .github-link-container a {

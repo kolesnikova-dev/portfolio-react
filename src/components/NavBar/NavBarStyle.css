@@ -55,9 +55,32 @@
         width: 95%;
         display: flex;
         justify-content: space-around;
-        align-items: unset;
-        margin: unset;
+        align-items: center;
+        margin: 1%;
         gap: 15%;
+    }
+
+    .link {
+        margin: 1em;
+        max-width: 1.5vw;
+        letter-spacing: unset;
+        transition: letter-spacing 100ms 40ms ease-in-out;
+    }
+
+    .link-skills, .link-projects {
+        display: none;
+    }
+}
+/* --------------------------------------mobile------------------- */
+@media (max-width: 480px) {
+    .nav-container {
+        border: 1px solid rgba(28, 9, 194, 0.589);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: unset;
+        gap: 5%;
     }
 
     .link {

@@ -89,8 +89,38 @@
 }
     
 
-/* --------------------------------------end mobile---------------- */
+/* ------------------------------------------------------ */
+/* -------------------------------------- mobile---------------- */
+
+@media (max-width: 480px) {
+    .text-container {
+        position: absolute;
+        z-index: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: start;
+        width: 80%;
+        top:13%;
+        margin-right: auto;
+        font-size: 150%;
+    }
+    
+    .greeting {
+        /* border: 1px solid rgba(220, 20, 60, 0.315); */
+        width: 40%;
+        font-size: 120%;
+        color:rgb(189, 189, 253);
+    }
+    
+    .introduction {
+        width: 39%;
+        display: none;
+        /* border: 1px solid rgba(255, 192, 203, 0.219) */
+    }
+}
 /* ---------------------------------------------------------------- */
+/* ------------------------------------------end of mobile----------- */
 
 
 .image-container {
