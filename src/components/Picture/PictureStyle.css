@@ -38,7 +38,7 @@
         align-items: end;
         text-align: start;
         width: 80%;
-        top:25%;
+        top:22%;
         margin-right: auto;
         font-size: 150%;
     }
@@ -68,8 +68,8 @@
         flex-direction: column;
         align-items: end;
         text-align: start;
-        width: 80%;
-        top:18%;
+        width: 90%;
+        top:15%;
         margin-right: auto;
         font-size: 150%;
     }
