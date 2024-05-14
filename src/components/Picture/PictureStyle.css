@@ -4,9 +4,9 @@
         z-index: 4;
         display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items:end;
         text-align: start;
-        width: 100%;
+        width: 68%;
         top:25%;
         margin-right: unset;
         font-size: 150%;
@@ -20,7 +20,7 @@
     }
     
     .introduction {
-        width: 33%;
+        width: 39%;
         /* border: 1px solid rgba(255, 192, 203, 0.219) */
         display: unset;
     }
@@ -95,7 +95,7 @@
 
 .image-container {
     width: 60%;
-    margin-inline-start: 6%;
+    margin-inline-start: -8%;
     position: relative;
     /* filter:invert(30%); */
 }
@@ -111,11 +111,11 @@
 
 /* animation */
 .gradient {
-    background: linear-gradient(200deg, #0a0c0b, #465551);
+    background: linear-gradient(200deg, #212523, #465551);
     background-size: 400% 400%;
 
-    -webkit-animation: move 30s ease infinite;
-    -moz-animation: move 30s ease infinite;
+    -webkit-animation: move 10s ease infinite;
+    -moz-animation: move 10s ease infinite;
     animation: move 10s ease infinite;
 }
 
