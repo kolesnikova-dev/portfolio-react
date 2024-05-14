@@ -5,7 +5,7 @@ import { navBarData } from '../../models/data.js';
 
 const NavBar = () => {
     const linkJSX = navBarData.map((item, index) => (
-        <Link className='link' to={`/${item}`} key={index}>
+        <Link className={`link link-${item}`} to={`/${item}`} key={index}>
             <div>{item}</div>
         </Link>
     ));

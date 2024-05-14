@@ -1,18 +1,80 @@
-.nav-container {
-    border: 1px solid rgba(28, 9, 194, 0.589);
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1%;
+@media (min-width: 1280px) {
+    .nav-container {
+        border: 1px solid rgba(28, 9, 194, 0.589);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1%;
+    }
+
+    .link {
+        margin: 1em;
+        max-width: 1.5vw;
+        letter-spacing: unset;
+        transition: letter-spacing 100ms 40ms ease-in-out;
+    }
+
+    .link-skills, .link-projects {
+        display: block;
+    }
+}
+/* --------------------------------------end desktop---------------- */
+/* ---------------------------------------------------------------- */
+/* --------------------------------------mobile------------------- */
+
+@media (min-width: 880px) and (max-width: 1280px) {
+    .nav-container {
+        border: 1px solid rgba(28, 9, 194, 0.589);
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1%;
+    }
+
+    .link {
+        margin: 1em;
+        max-width: 1.5vw;
+        letter-spacing: unset;
+        transition: letter-spacing 100ms 40ms ease-in-out;
+    }
+
+    .link-skills, .link-projects {
+        display: block;
+    }
 }
 
-.link {
-    margin: 1em;
-    max-width: 1.5vw;
-    letter-spacing: unset;
-    transition: letter-spacing 100ms 40ms ease-in-out;
+/* --------------------------------------end mid---------------- */
+/* ---------------------------------------------------------------- */
+/* --------------------------------------mobile------------------- */
+
+@media (max-width: 880px) {
+    .nav-container {
+        border: 1px solid rgba(28, 9, 194, 0.589);
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-items: unset;
+        margin: unset;
+        gap: 15%;
+    }
+
+    .link {
+        margin: 1em;
+        max-width: 1.5vw;
+        letter-spacing: unset;
+        transition: letter-spacing 100ms 40ms ease-in-out;
+    }
+
+    .link-skills, .link-projects {
+        display: none;
+    }
 }
+    
+
+/* --------------------------------------end mobile---------------- */
+/* ---------------------------------------------------------------- */
 
 .link:hover {
     color: #bec1ff;
