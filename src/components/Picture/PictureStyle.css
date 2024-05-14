@@ -9,9 +9,9 @@
     width: 100%;
     height: 100%;
     object-fit: fill;
-    opacity: 0.3;
-    border: 1px solid salmon;
-    border-right-color: transparent;
+    opacity: 0.8;
+    border-bottom: 1px solid salmon;
+    
 }
 
 .text-container {

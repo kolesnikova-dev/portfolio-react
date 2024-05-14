@@ -71,6 +71,7 @@
 
 .details {
     margin-top: 1%;
+    font-size: 2vh;
     border-left: 1px solid gray;
     border-right: 1px solid gray;
     padding-block-start: 1%;
@@ -87,7 +88,7 @@
     position: absolute;
     border: 1px solid rgba(174, 174, 252, 0.185);
     border-radius: 8px;
-    background-color: #1a1a1a3d;
+    background-color: #4646460e;
     display: flex;
     align-items: center;
     justify-content: space-between;

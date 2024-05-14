@@ -22,6 +22,7 @@ const Certifications = () => {
   return (
     <section>
       <header>Certifications</header>
+      
       <div className='card-section cetifications-section'>
 
         {Object.values(certificationsData).map((item, index) => (
