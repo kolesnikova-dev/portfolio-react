@@ -1,18 +1,66 @@
-.card {
-    border: 1px solid rgba(98, 155, 241, 0.363); 
-    border-radius: 1vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 22%;
-    height: 24.5vh;
-    margin-inline-start: 2%;
-    margin-block-end: 2.5%;
-    gap:3%;
-    box-shadow: 0 0.5vw 1vw rgba(128, 128, 128, 0.678);
-    background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+@media (min-width: 1280px) {
+    .card {
+        border: 1px solid rgba(98, 155, 241, 0.363); 
+        border-radius: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 22%;
+        height: 24.5vh;
+        margin-inline-start: 2%;
+        margin-block-end: 2.5%;
+        gap:3%;
+        box-shadow: 0 0.5vw 1vw rgba(128, 128, 128, 0.678);
+        background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+    }
 }
+/* --------------------------------------end desktop---------------- */
+/* ---------------------------------------------------------------- */
+/* --------------------------------------mobile------------------- */
+
+@media (min-width: 880px) and (max-width: 1280px) {
+    .card {
+        border: 1px solid rgba(98, 155, 241, 0.363); 
+        border-radius: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 22%;
+        height: 24.5vh;
+        margin-inline-start: 2%;
+        margin-block-end: 2.5%;
+        gap:3%;
+        box-shadow: 0 0.5vw 1vw rgba(128, 128, 128, 0.678);
+        background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+    }
+}
+/* --------------------------------------end mid---------------- */
+/* ---------------------------------------------------------------- */
+/* --------------------------------------mobile------------------- */
+
+@media (max-width: 880px) {
+    .card {
+        border: 1px solid rgba(98, 155, 241, 0.363); 
+        border-radius: 1vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 30%;
+        height: 21vh;
+        margin-inline-start: 3%;
+        margin-block-end: 3%;
+        gap:3%;
+        box-shadow: 0 0.5vw 1vw rgba(128, 128, 128, 0.678);
+        background: linear-gradient(to bottom, rgba(168, 170, 221, 0.250) 0%,rgba(168, 170, 221, 0.100) 100%);
+    }
+}
+    
+
+/* --------------------------------------end mobile---------------- */
+/* ---------------------------------------------------------------- */
 
 .card-first-child {
     /* border: 1px solid green; */
