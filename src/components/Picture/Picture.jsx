@@ -1,6 +1,7 @@
 import React from 'react';
 import './PictureStyle.css';
 import { introductionData } from '../../models/data';
+import picture from '../../assets/images/picture.png'; 
 
 const Picture = () => {
   return (
@@ -9,7 +10,7 @@ const Picture = () => {
     <div className="card-section gradient">
             {/* picture container */}
         <div className='image-container'>
-          <img src="/src/assets/images/picture.png" alt="Nika's Picture" />
+          <img src={picture} alt="Nika's Picture" />
         </div>
           {/* text container */}
         <div className="text-container">
