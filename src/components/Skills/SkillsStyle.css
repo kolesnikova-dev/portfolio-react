@@ -1,0 +1,6 @@
+.card-section {
+    /* border: 1px solid aliceblue; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}

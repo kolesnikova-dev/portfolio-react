@@ -1,0 +1,66 @@
+.image-container {
+    width: 60%;
+    margin-inline-start: 6%;
+    position: relative;
+    /* filter:invert(30%); */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0.3;
+    border: 1px solid salmon;
+    border-right-color: transparent;
+}
+
+.text-container {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: start;
+    width: 80%;
+    top:25%;
+    margin-right: auto;
+    font-size: 150%;
+}
+
+.greeting {
+    /* border: 1px solid rgba(220, 20, 60, 0.315); */
+    width: 40%;
+    font-size: 120%;
+    color:rgb(189, 189, 253);
+}
+
+.introduction {
+    width: 39%;
+    /* border: 1px solid rgba(255, 192, 203, 0.219) */
+}
+
+/* animation */
+.gradient {
+    background: linear-gradient(200deg, #0a0c0b, #465551);
+    background-size: 400% 400%;
+
+    -webkit-animation: move 30s ease infinite;
+    -moz-animation: move 30s ease infinite;
+    animation: move 10s ease infinite;
+}
+
+@-webkit-keyframes move {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes move {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes move {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

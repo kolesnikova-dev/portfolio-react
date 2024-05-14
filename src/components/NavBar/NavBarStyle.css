@@ -1,0 +1,20 @@
+.nav-container {
+    border: 1px solid rgba(28, 9, 194, 0.589);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1%;
+}
+
+.link {
+    margin: 1em;
+    max-width: 1.5vw;
+    letter-spacing: unset;
+    transition: letter-spacing 100ms 40ms ease-in-out;
+}
+
+.link:hover {
+    color: #bec1ff;
+    letter-spacing: 0.05vw;
+  }
