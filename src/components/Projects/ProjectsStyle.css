@@ -22,7 +22,14 @@
         max-height: 50vh;
         min-height: 50vh;
         display: flex;
-        place-items: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .project-image-container video {
+        height: 100%;
+        width: 79%;
     }
 
     .github-link-container {
@@ -63,7 +70,14 @@
         max-height: 50vh;
         min-height: 50vh;
         display: flex;
-        place-items: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .project-image-container video {
+        height: 100%;
+        width: 89%;
     }
 
     .github-link-container {
@@ -104,7 +118,14 @@
         max-height: 30vh;
         min-height: 30vh;
         display: flex;
-        place-items: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .project-image-container video {
+        height: 100%;
+        width: 79%;
     }
 
     .github-link-container {
@@ -143,7 +164,14 @@
         max-height: 30vh;
         min-height: 30vh;
         display: flex;
-        place-items: center;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .project-image-container video {
+        height: 100%;
+        width: 79%;
     }
 
     .github-link-container {
@@ -222,6 +250,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    pointer-events: none;
 }
 
 .slider-button {
@@ -236,10 +265,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    pointer-events: auto;
 }
 
 .slider-button:active {
     color: #646cff;
+    
 }
 
 .slider-button:active {

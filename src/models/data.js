@@ -1,4 +1,6 @@
 import githubLogo from '../assets/images/GitHub_Logo_White.png';
+import climateRecording from '../assets/videos/screen-recording.mp4';
+import weatherRecording from '../assets/videos/weather-recording.mp4';
 
 export const navBarData = ['home', 'skills', 'projects', 'certifications', 'contact'];
 
@@ -55,18 +57,30 @@ export const skillsData = {
 
 export const projectsData = {
     0: {
+        title: "Climate View",
+        githubLink: "https://github.com/kweeuhree/climate-view",
+        video: climateRecording,
+        details: "This a website that is meant to provide an overview of Earth's climate state as of 2024. It is a full MERN stack application where users can create an account and leave comments once logged in. Mongo provides persistence for user and comments data. The website includes animations, gifs and a video sourced mostly from NASA. Animations are achived through state management. 'History' section involves data fetching and will display historical climate data."
+    }, 
+    1: {
+        title: "Weather App",
+        githubLink: "https://github.com/firstnamenika/weather-app",
+        video: weatherRecording,
+        details: "The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key. This is a fun cryptography project with Python 3."
+    },
+    2: {
         title: "Vigenere Cipher in Python",
         githubLink: "https://github.com/firstnamenika/Vigenere-Cipher",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/vigenere.png",
         details: "The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key. This is a fun cryptography project with Python 3."
     }, 
-    1: {
+    3: {
         title: "Towers Of Hanoi in Python",
         githubLink: "https://github.com/firstnamenika/towers-of-hanoi",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/towers-of-hanoi-python.png",
         details: "This is a Python implementation of Towers of Hanoi game, demonstrating my understanding of stacks and linked list data structures. Working on this project has been valuable, as I was able to practice my skills in building classes." 
     },
-    2: {
+    4: {
         title: "Rock Paper Scissors React.js App",
         githubLink: "https://github.com/firstnamenika/rock-paper-scissors",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/rock-paper-scissors.png",

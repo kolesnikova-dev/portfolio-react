@@ -15,9 +15,15 @@ const Project = ({data, arrow}) => {
       </div>
     </div>
     
-    <div className="project-image-container">
-      <img src={data.image} alt={data.title} />
-    </div>
+   
+      <div className="project-image-container">
+      {data.image ? ( 
+         <img src={data.image} alt={data.title} />
+      ) : (      
+        <video src={data.video} loop="true" autoplay="autoplay" controls="controls" muted />
+      )}
+      </div> 
+   
     
     <div className='details'>{data.details}</div>
   </>
