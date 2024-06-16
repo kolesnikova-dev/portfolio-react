@@ -1,0 +1,161 @@
+.all-languages {
+    width: 60%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+    border: solid blue;
+}
+
+/* largest circle - most used language */
+.all-languages > div:first-child {
+    border: 0.2vw solid rgba(255, 51, 0, 0.637);
+    width:17rem;
+    height: 17rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.all-languages > div:first-child::after {
+    content: '';
+    border: 0.4vw solid rgba(255, 38, 0, 0.25);
+    width:17rem;
+    height: 17rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left:2%;
+    animation: first 5s ease-in-out infinite;
+}
+
+.all-languages > div:first-child::before {
+    content: '';
+    border: 0.8vw solid rgba(240, 106, 82, 0.1);
+    width:17rem;
+    height: 17rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left:-2%;
+    animation: first 5s 2ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes first {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    25% {
+        border-radius: 55% 45% 52% 38% / 40% 55% 45% 55%;
+    }
+
+    50% {
+        border-radius: 48% 52% 45% 55% / 42% 55% 48% 52%;
+    }
+
+    75% {
+        border-radius: 50% 42% 53% 47% / 43% 57% 43% 49%;
+    }
+}
+
+/* mid sized circle - 2nd most used language */
+.all-languages > div:nth-child(2) {
+    border: 0.2vw solid rgba(137, 43, 226, 0.603);
+    width:11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    animation: second 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.all-languages > div:nth-child(2)::after {
+    content: '';
+    border: 0.2vw solid rgba(137, 43, 226, 0.15);
+    width:11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: -1%;
+    animation: second 5s linear infinite;
+}
+
+.all-languages > div:nth-child(2)::before {
+    content: '';
+    border: 0.5vw solid rgba(137, 43, 226, 0.1);
+    width:11rem;
+    height: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left:-1%;
+    animation: second 5s ease-in-out infinite;
+}
+
+@keyframes second {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    50% {
+        border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+    }
+}
+
+/* smallest circle - 3d most used language */
+
+.all-languages > div:last-child {
+    border:0.2vw solid rgba(62, 62, 255, 0.7);
+    width:6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    animation: last 5s linear infinite;
+}
+
+.all-languages > div:last-child::after {
+    content: '';
+    border:0.2vw solid rgba(62, 62, 255, 0.36);
+    width:6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -11;
+    left: -1%;
+    animation: last 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.all-languages > div:last-child::before {
+    content: '';
+    border:0.5vw solid rgba(62, 62, 255, 0.06);
+    width:6rem;
+    height: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    left: -2%;
+    animation: last 5s linear infinite;
+}
+
+@keyframes last {
+    0%, 100% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    25% {
+        border-radius: 55% 45% 50% 40% / 40% 55% 45% 55%;
+    }
+
+    50% {
+        border-radius: 45% 55% 40% 50% / 50% 40% 55% 45%;
+    }
+
+    75% {
+        border-radius: 50% 40% 55% 45% / 45% 50% 45% 55%;
+    }
+}

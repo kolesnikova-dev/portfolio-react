@@ -1,12 +1,15 @@
 import React from 'react';
 import Contacts from '../components/Contacts/Contacts';
+import Form from '../components/Form/Form';
 
 
 const ContactPage = () => {
   return (
-    <div className='contact-page'>
+    <>
+      <Form />
+
       <Contacts />
-    </div>
+    </>
   )
 }
 

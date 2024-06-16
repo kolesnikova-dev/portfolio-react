@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import MainPage from './pages/MainPage';
 import Footer from './components/Footer/Footer';
 import Skills from './components/Skills/Skills';
+import Stats from './components/Stats/Stats';
 
 function App() {
 
