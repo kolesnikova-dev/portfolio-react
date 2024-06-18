@@ -109,14 +109,16 @@ const getMostUsedLang = (reposData) => {
       //get top 3 languages
       .slice(0,3);
 
-  console.log(topLanguages, 'top languages sorted');
-
+  // total length to calculate percentages
   const totalLength = allLanguages.length;
 
+  //loop through top languages
   topLanguages.forEach((language) => {
-    return language[1] = ((language[1] / totalLength) * 100).toFixed(1) +'%';
-     
+    // per each count, calculate percentage and return percents instead of count
+    return language[1] = ((language[1] / totalLength) * 100).toFixed(1) +'%'; 
   });
+
+  //main function -----------------------------------------------------------
   return topLanguages;
 }
 
