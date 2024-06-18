@@ -88,8 +88,6 @@ const getMostUsedLang = (reposData) => {
   //initialize languages object that will store counts
   let lang_dict = {};
 
-  // console.log(allLanguages, 'allLanguages');
-
   //loop through languages
   allLanguages.forEach((language) => {
       //if this language has already been added
@@ -105,17 +103,20 @@ const getMostUsedLang = (reposData) => {
       return lang_dict;
   })
 
-
-  // get top 3 used languages, loop through entries
   const topLanguages = Object.entries(lang_dict)
       //sort by number(value) in desc order
       .sort((a,b) => b[1]-a[1])
-      //map every first element(language)
-      .map(el=>el[0])
       //get top 3 languages
       .slice(0,3);
-  
-  // console.log(topLanguages)
+
+  console.log(topLanguages, 'top languages sorted');
+
+  const totalLength = allLanguages.length;
+
+  topLanguages.forEach((language) => {
+    return language[1] = ((language[1] / totalLength) * 100).toFixed(1) +'%';
+     
+  });
   return topLanguages;
 }
 
