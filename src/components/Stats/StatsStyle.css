@@ -56,9 +56,9 @@
 }
 
 /* largest circle - most used language */
-.background > div:nth-of-type(6) {
+.background > .animateHex:nth-of-type(6) {
     opacity: 1;
-    animation: turnBlue 1s linear forwards;
+    animation: turnBlue 1s linear 1200ms forwards;
 }
 
 @keyframes turnBlue {
@@ -67,9 +67,9 @@
 }
 
 /* mid sized circle - 2nd most used language */
-.background > div:nth-of-type(7) {
+.background > .animateHex:nth-of-type(7) {
     opacity: 1;
-    animation: turnGreen 1s linear forwards;
+    animation: turnGreen 1s linear 1300ms forwards;
 }
 
 @keyframes turnGreen {
@@ -79,9 +79,9 @@
 
 /* smallest circle - 3d most used language */
 
-.background > div:nth-of-type(8) {
+.background > .animateHex:nth-of-type(8) {
     opacity: 1;
-    animation: turnOrange 1s linear forwards;
+    animation: turnOrange 1s linear 1400ms forwards;
 }
 
 @keyframes turnOrange {
