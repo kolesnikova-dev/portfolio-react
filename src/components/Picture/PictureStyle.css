@@ -123,6 +123,20 @@
 /* ------------------------------------------end of mobile----------- */
 
 
+.appear {
+    animation: softAppearance 1s linear;
+}
+
+.introduction {
+    opacity: 0;
+    animation: softAppearance 1s linear 1s forwards;
+}
+
+@keyframes softAppearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 .image-container {
     width: 60%;
     margin-inline-start: -8%;
