@@ -21,9 +21,12 @@ const Certifications = () => {
 
   return (
     <section>
+     <div className='top-certifications'>
       <header>Certifications</header>
+      <p>click on a card to see credential</p>
+     </div>
       
-      <div className='card-section cetifications-section'>
+      <div className='card-section certifications-section'>
 
         {Object.values(certificationsData).map((item, index) => (
           <Card 

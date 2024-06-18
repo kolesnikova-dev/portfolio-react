@@ -1,7 +1,26 @@
-.certifications-center {
+/* .certifications-center {
     position: relative;
     z-index: 9;
+} */
+
+.top-certifications {
+    display: flex;
+    align-items: center;
 }
+
+.top-certifications p {
+    text-wrap: nowrap;
+    margin-inline-end: 2%;
+    border: 1px dashed rgba(240, 248, 255, 0.5);
+    height: 3rem;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 2%;
+    padding-inline-end: 2%;
+}
+
 
 .cert {
     cursor:pointer;
