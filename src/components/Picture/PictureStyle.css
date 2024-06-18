@@ -127,6 +127,7 @@
     animation: softAppearance 1s linear;
 }
 
+/* delay appearance of introduction by 1s */
 .introduction {
     opacity: 0;
     animation: softAppearance 1s linear 1s forwards;
@@ -141,7 +142,13 @@
     width: 60%;
     margin-inline-start: -8%;
     position: relative;
-    /* filter:invert(30%); */
+}
+
+/* shining blob */
+.image-container::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
 }
 
 .image-container img {
