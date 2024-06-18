@@ -10,17 +10,24 @@
     
 }
 
-.animate {
-    animation: moveLang linear; 
-    animation-duration: 900ms;
+.animateh4 {
+    animation: moveh4 1s ease-in-out;
 }
 
+@keyframes moveh4 {
+    0%, 100% {letter-spacing: unset;}
+    55% {letter-spacing: 0.05rem;}
+}
+
+.animate {
+    /* animation: moveLang 3s ease-in-out;
+    animation-delay: 5s; */
+    opacity: 0;
+}
 
 @keyframes moveLang {
-    0% {transform: translateX(0%);}
-    33% {transform: translateX(3%);}
-    66% {transform: translateX(-1%);}
-    100% {transform: translateX(0%);}
+    0% {opacity:0; transform: translateX(20%);}
+    100% {opacity:1; transform: translateX(0%);}
 }
 
 .all-languages {
@@ -42,7 +49,7 @@
     z-index: 1;
     left: 20%;
     top: 5%;
-    animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation: moveLang 2.5s ease-in-out 1s forwards, first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 .all-languages > div:first-child::after {
@@ -66,7 +73,7 @@
     position: absolute;
     z-index: 1;
     left:-2%;
-    animation: first 5s 2ms cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 @keyframes first {
@@ -97,7 +104,7 @@
     z-index: 1;
     bottom: 5%;
     right: 18%;
-    animation: second 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation:moveLang 3.5s ease-in-out 1s forwards, second 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
 .all-languages > div:nth-child(2)::after {
@@ -145,7 +152,7 @@
     z-index: 1;
     right: 20%;
     top:15%;
-    animation: last 5s linear infinite;
+    animation:moveLang 4.2s ease-in-out 1s forwards, last 5s linear infinite;
 }
 
 .all-languages > div:last-child::after {

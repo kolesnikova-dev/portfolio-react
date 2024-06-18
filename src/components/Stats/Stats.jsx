@@ -15,8 +15,6 @@ const Stats = () => {
   //observe intersections to apply animation
   const isInView = useIntersectionObserver(allLanguagesRef);
 
-
-
   const fetchData = async () => {
     //search for user with a nickname 'kweeuhree'
     const userInfo = await fetchUserData('kweeuhree');
@@ -28,22 +26,18 @@ const Stats = () => {
     fetchData();
   }, []);
 
-  // console.log(languages);
-
-
+ 
 
   return (
    
     <section className='all-languages-section'>
-      <h4>Most used languages accoding to GitHub</h4>
+      <h4 className={`${isInView ? 'animateh4' : ''}`}> Most used languages according to GitHub</h4>
         {/* dynamically apply animation */}
-        <div className={`all-languages ${isInView ? 'animate' : ''}`} ref={allLanguagesRef} >
-            {/* display most used language */}
-            <div>{languages[0]}</div>
-            {/* display second most used language*/}
-            <div>{languages[1]}</div>
-            {/* display third most used language*/}
-            <div>{languages[2]}</div>
+        <div className={`all-languages`} ref={allLanguagesRef} >
+            {/* display most used languages */}
+            {languages.map((language, index) => (
+              <div key={index} className={`${isInView ? 'animate' : ''}`}>{language[0]} {language[1]}</div>
+            ))}
         </div>
     </section>
   )
