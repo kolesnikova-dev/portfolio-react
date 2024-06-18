@@ -1,13 +1,15 @@
 .all-languages-section {
-    border: 2px solid rgba(0, 0, 255, 0.39);
+    border: 3px solid rgba(105, 105, 117, 0.39);
     border-radius: 1em;
-    background: linear-gradient(90deg, rgba(28, 26, 61, 0.199) 0%, rgba(17, 45, 155, 0.74) 46%, rgba(187,113,90,0.2) 100%);
+    background: linear-gradient(90deg, rgba(60, 61, 26, 0.199) 0%, rgba(33, 106, 241, 0.3) 46%, rgba(187,113,90,0.2) 100%);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px 77px 12px rgba(255,255,255,0.7);
-    
+    box-shadow: 10px 10px 77px 12px rgba(255,255,255,0.7);   
+    overflow: hidden; 
+    position: relative; 
+    gap: 2rem;
 }
 
 .animateh4 {
@@ -19,178 +21,70 @@
     55% {letter-spacing: 0.05rem;}
 }
 
-.animate {
-    opacity: 0;
-}
-
-@keyframes moveLang {
-    0% {opacity:0; transform: translateX(20%);}
-    100% {opacity:1; transform: translateX(0%);}
-}
-
-.all-languages {
+/* all languages background */
+.background {
+    position: absolute;
+    z-index: -1; 
+    display: flex;
+    flex-wrap: wrap;
     width: 60%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 40vh;
+    /* border: solid orange; */
+    margin-top: -5%;
+    padding-bottom: 5%;
+}
+
+.empty-hexagon, .language {
+    background-color: rgb(201, 194, 228);
+    opacity: 0.3;
+    width:11rem;
+    height: 11rem;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+}
+
+.background > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* largest circle - most used language */
-.all-languages > div:first-child {
-    border: 0.2vw solid rgba(255, 51, 0, 0.637);
-    width:17rem;
-    height: 17rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left: 20%;
-    top: 5%;
-    animation: moveLang 2.5s ease-in-out 1s forwards, first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+.background > div:nth-of-type(6) {
+    opacity: 1;
+    animation: turnBlue 1s linear forwards;
 }
 
-.all-languages > div:first-child::after {
-    content: '';
-    border: 0.4vw solid rgba(255, 38, 0, 0.25);
-    width:17rem;
-    height: 17rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left:2%;
-    animation: first 5s ease-in-out infinite;
-}
-
-.all-languages > div:first-child::before {
-    content: '';
-    border: 0.8vw solid rgba(240, 106, 82, 0.1);
-    width:17rem;
-    height: 17rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left:-2%;
-    animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-}
-
-@keyframes first {
-    0%, 100% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    }
-
-    25% {
-        border-radius: 55% 45% 52% 38% / 40% 55% 45% 55%;
-    }
-
-    50% {
-        border-radius: 48% 52% 45% 55% / 42% 55% 48% 52%;
-    }
-
-    75% {
-        border-radius: 50% 42% 53% 47% / 43% 57% 43% 49%;
-    }
+@keyframes turnBlue {
+    0% {background-color: aliceblue;}
+    100%  {background-color: #ae2012;}
 }
 
 /* mid sized circle - 2nd most used language */
-.all-languages > div:nth-child(2) {
-    border: 0.2vw solid rgba(137, 43, 226, 0.603);
-    width:11rem;
-    height: 11rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    bottom: 5%;
-    right: 18%;
-    animation:moveLang 3.5s ease-in-out 1s forwards, second 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+.background > div:nth-of-type(7) {
+    opacity: 1;
+    animation: turnGreen 1s linear forwards;
 }
 
-.all-languages > div:nth-child(2)::after {
-    content: '';
-    border: 0.2vw solid rgba(137, 43, 226, 0.15);
-    width:11rem;
-    height: 11rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left: -1%;
-    animation: second 5s linear infinite;
-}
-
-.all-languages > div:nth-child(2)::before {
-    content: '';
-    border: 0.5vw solid rgba(137, 43, 226, 0.1);
-    width:11rem;
-    height: 11rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left:-1%;
-    animation: second 5s ease-in-out infinite;
-}
-
-@keyframes second {
-    0%, 100% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    }
-
-    50% {
-        border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
-    }
+@keyframes turnGreen {
+    0% {background-color: aliceblue;}
+    100%  {background-color: #480ca8;}
 }
 
 /* smallest circle - 3d most used language */
 
-.all-languages > div:last-child {
-    border:0.2vw solid rgba(62, 62, 255, 0.7);
-    width:6rem;
-    height: 6rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    right: 20%;
-    top:15%;
-    animation:moveLang 4.2s ease-in-out 1s forwards, last 5s linear infinite;
+.background > div:nth-of-type(8) {
+    opacity: 1;
+    animation: turnOrange 1s linear forwards;
 }
 
-.all-languages > div:last-child::after {
-    content: '';
-    border:0.2vw solid rgba(62, 62, 255, 0.36);
-    width:6rem;
-    height: 6rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -11;
-    left: -1%;
-    animation: last 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-}
-
-.all-languages > div:last-child::before {
-    content: '';
-    border:0.5vw solid rgba(62, 62, 255, 0.06);
-    width:6rem;
-    height: 6rem;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    left: -2%;
-    animation: last 5s linear infinite;
-}
-
-@keyframes last {
-    0%, 100% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    }
-
-    25% {
-        border-radius: 55% 45% 50% 40% / 40% 55% 45% 55%;
-    }
-
-    50% {
-        border-radius: 45% 55% 40% 50% / 50% 40% 55% 45%;
-    }
-
-    75% {
-        border-radius: 50% 40% 55% 45% / 45% 50% 45% 55%;
-    }
+@keyframes turnOrange {
+    0% {background-color: aliceblue;}
+    100%  {background-color: #0a9396;}
 }

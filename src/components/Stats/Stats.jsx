@@ -26,6 +26,31 @@ const Stats = () => {
     fetchData();
   }, []);
 
+    const hexagonsJSX = () => {
+      const hexArray = []; 
+
+      for(let i = 0; i < 5; i++)  {
+        hexArray.push((<div key={`empty-hex-${i}`} className='empty-hexagon' />));
+      }
+
+      languages.map((language, index) => (
+       hexArray.push(
+        <div 
+          key={`language-hex-${index}`} 
+          className={`language ${isInView ? 'animateHex' : ''}`}
+        >
+          {language[0]} {language[1]}
+        </div>
+        )));
+
+      for(let i = 0; i < 4; i++)  {
+        hexArray.push((<div key={`empty-hex-1${i}`} className='empty-hexagon' />));
+      }
+
+      console.log(hexArray, 'hex array');
+
+      return hexArray;
+    }
  
 
   return (
@@ -33,11 +58,8 @@ const Stats = () => {
     <section className='all-languages-section'>
       <h4 className={`${isInView ? 'animateh4' : ''}`}> Most used languages according to GitHub</h4>
         {/* dynamically apply animation */}
-        <div className={`all-languages`} ref={allLanguagesRef} >
-            {/* display most used languages */}
-            {languages.map((language, index) => (
-              <div key={index} className={`${isInView ? 'animate' : ''}`}>{language[0]} {language[1]}</div>
-            ))}
+        <div className='background' ref={allLanguagesRef}>
+          {hexagonsJSX()}
         </div>
     </section>
   )
