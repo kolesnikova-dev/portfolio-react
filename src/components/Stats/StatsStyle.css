@@ -1,3 +1,28 @@
+.all-languages-section {
+    border: 2px solid rgba(0, 0, 255, 0.39);
+    border-radius: 1em;
+    background: linear-gradient(90deg, rgba(28, 26, 61, 0.199) 0%, rgba(17, 45, 155, 0.74) 46%, rgba(187,113,90,0.2) 100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 77px 12px rgba(255,255,255,0.7);
+    
+}
+
+.animate {
+    animation: moveLang linear; 
+    animation-duration: 900ms;
+}
+
+
+@keyframes moveLang {
+    0% {transform: translateX(0%);}
+    33% {transform: translateX(3%);}
+    66% {transform: translateX(-1%);}
+    100% {transform: translateX(0%);}
+}
+
 .all-languages {
     width: 60%;
     position: relative;
@@ -5,7 +30,6 @@
     align-items: center;
     justify-content: space-around;
     height: 40vh;
-    border: solid blue;
 }
 
 /* largest circle - most used language */
@@ -16,6 +40,8 @@
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    left: 20%;
+    top: 5%;
     animation: first 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
@@ -69,6 +95,8 @@
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    bottom: 5%;
+    right: 18%;
     animation: second 5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
 }
 
@@ -115,6 +143,8 @@
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    right: 20%;
+    top:15%;
     animation: last 5s linear infinite;
 }
 

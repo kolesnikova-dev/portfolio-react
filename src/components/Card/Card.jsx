@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({data, thisClass, action}) => {
-  console.log('data inside card', data);
+  // console.log('data inside card', data);
 
   const imagesJXS = !data.details && 
   <div className='card-image-container'>

@@ -20,7 +20,7 @@ const Project = ({data, arrow}) => {
       {data.image ? ( 
          <img src={data.image} alt={data.title} />
       ) : (      
-        <video src={data.video} loop="true" autoplay="autoplay" controls="controls" muted />
+        <video src={data.video} loop={true} autoPlay="autoplay" controls="controls" muted />
       )}
       </div> 
    
