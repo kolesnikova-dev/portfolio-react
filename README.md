@@ -7,5 +7,7 @@
 <ul>
 <li>Button: Used in the Project and Card components</li>
 <li>Card: Utilized in the Certification and Skills components</li>
-<li>NavBar: Also employed in the Footer component</li>
+<li>NavBar: Also implemented in the Footer component</li>
 </ul>
+
+<p>Created a custom useIntersectionObserver hook that will help apply dynamic styling. Initial logic was written for Climate View project, that I reworked into the custom hook.</p>
