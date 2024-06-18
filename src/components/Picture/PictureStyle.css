@@ -156,7 +156,7 @@
     height: 100%;
     object-fit: fill;
     opacity: 0.8;
-    border-bottom: 1px solid salmon;   
+    border-bottom: 1px solid rgba(250, 128, 114, 0.767);   
 }
 
 
@@ -185,3 +185,32 @@
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+/* define custom angle for animation */
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+.picture-section .card-section {
+    width: 92vw;
+    border: 5px solid transparent;
+    /* make sure that entire border is filled with the gradient */
+    border-image-slice: 1; 
+    /* custom angle value */
+    --angle: 0deg;
+    border-image: linear-gradient(var(--angle), #733ad58f, rgba(240, 99, 84, 0.6)) 1;
+    animation: 5s rotate linear infinite;
+    box-shadow: 
+    10px 10px 5px 0px rgba(240, 99, 84, 0.1),
+    10px 10px 70px 0px rgba(255,255,255,0.15);
+}
+
+/* rotate the angle */
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+      }
+  }
+  

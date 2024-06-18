@@ -14,7 +14,7 @@ const Picture = () => {
   const isInView = useIntersectionObsever(pictureRef);
 
   return (
-    <section>
+    <section className='picture-section'>
 
     <div className="card-section gradient">
             {/* picture container */}
