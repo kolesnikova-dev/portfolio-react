@@ -11,7 +11,7 @@ const Contact = ({data}) => {
 
   return (
     <div className='link-container'>
-        {conditionalTitle}
+        <div>{conditionalTitle}</div>
         <a href={data.url} target='_blank'>
             <img src={data.logo} alt="Link" />
         </a>

@@ -32,7 +32,7 @@ const Stats = () => {
       for(let i = 0; i < 5; i++)  {
         hexArray.push((
         <div key={`empty-hex-${i}`} className='empty-hexagon'>
-           <span class="border-span"></span> 
+           <span className="border-span"></span> 
         </div>));
       }
 
@@ -41,7 +41,7 @@ const Stats = () => {
         <div 
           key={`language-hex-${index}`} 
           className={`language ${isInView ? 'animateHex' : ''}`}
-        ><span class="border-span"></span>
+        ><span className="border-span"></span>
           {language[0]} {language[1]}
         </div>
         )));
@@ -49,7 +49,7 @@ const Stats = () => {
       for(let i = 0; i < 4; i++)  {
         hexArray.push((
         <div key={`empty-hex-1${i}`} className='empty-hexagon' >
-          <span class="border-span"></span> 
+          <span className="border-span"></span> 
        </div>));
       }
 
