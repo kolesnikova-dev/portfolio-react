@@ -93,6 +93,13 @@
 /* -------------------------------------- mobile---------------- */
 
 @media (max-width: 480px) {
+
+    .image-container {
+        width: 58%;
+        margin-inline-start: 12%;
+        position: relative;
+    }
+
     .text-container {
         position: absolute;
         z-index: 4;
@@ -100,7 +107,7 @@
         flex-direction: column;
         align-items: end;
         text-align: start;
-        width: 80%;
+        width: 85%;
         top:13%;
         margin-right: auto;
         font-size: 150%;
@@ -136,12 +143,6 @@
 @keyframes softAppearance {
     0% {opacity: 0;}
     100% {opacity: 1;}
-}
-
-.image-container {
-    width: 60%;
-    margin-inline-start: -8%;
-    position: relative;
 }
 
 .image-container img {
