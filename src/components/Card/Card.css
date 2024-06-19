@@ -142,7 +142,10 @@
     width: 93vw;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .card-image-container {
     /* border: 1px solid black; */

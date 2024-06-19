@@ -23,7 +23,7 @@
   /* ---------------------------------------------------------------- */
   /* --------------------------------------mid-large------------------- */
   
-  @media (min-width: 880px) and (max-width: 1280px) {
+  @media (min-width: 760px) and (max-width: 1280px) {
 
   .contacts-section {
     display: flex;
@@ -48,7 +48,7 @@
   /* ---------------------------------------------------------------- */
   /* --------------------------------------mid------------------- */
   
-  @media (min-width: 403px) and (max-width: 880px) {
+  @media (min-width: 403px) and (max-width: 760px) {
 
   .contacts-section {
     display: flex;
