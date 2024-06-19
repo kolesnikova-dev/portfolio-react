@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import './CardNestHubStyle.css'
 
 const Card = ({data, thisClass, action}) => {
   // console.log('data inside card', data);

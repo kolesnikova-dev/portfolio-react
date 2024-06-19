@@ -6,6 +6,7 @@ import Card from '../Card/Card';
 import Button from '../Button/Button';
 //import style
 import './CertificationsStyle.css';
+import './CertificationsNestHubStyle.css'
 
 
 const Certifications = () => {
