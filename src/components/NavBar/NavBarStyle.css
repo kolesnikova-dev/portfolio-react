@@ -9,6 +9,7 @@
     }
 
     .link {
+        font-size: 1.2rem;
         margin: 1em;
         max-width: 1.5vw;
         letter-spacing: unset;
@@ -34,10 +35,11 @@
     }
 
     .link {
+        font-size: 1.6rem;
         margin: 1em;
-        max-width: 1.5vw;
+        max-width: unset;
         letter-spacing: unset;
-        transition: letter-spacing 100ms 40ms ease-in-out;
+        transition: none;
     }
 
     .link-skills, .link-projects {
@@ -61,6 +63,7 @@
     }
 
     .link {
+        font-size: 1.2rem;
         margin: 1em;
         max-width: 1.5vw;
         letter-spacing: unset;
@@ -93,6 +96,7 @@
     }
 
     .link {
+        font-size: 1.2rem;
         margin-inline-end: 10%;
     }
 }
@@ -102,6 +106,7 @@
 /* ---------------------------------------------------------------- */
 
 .nav-container {
+    font-size: unset;
     padding: 0;
     margin: 0;
     overflow: hidden;

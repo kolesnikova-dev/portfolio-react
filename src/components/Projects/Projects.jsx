@@ -26,9 +26,9 @@ const Projects = () => {
   };
 
   return (
-    <section>
+    <section className='projects-section'>
         <header>Projects</header>
-    <div className='projects-section'>
+    <div>
   
       <div className='projects-container'>
                   <Project data={projectsData[currentProject]} arrow={symbols.northEast}/>
