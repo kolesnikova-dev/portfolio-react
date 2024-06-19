@@ -11,3 +11,8 @@
 </ul>
 
 <p>Created a custom useIntersectionObserver hook that will help apply dynamic styling. Initial logic was written for Climate View project, that I reworked into the custom hook.</p>
+
+<p>Had fun with linear gradients for my Stats component, currently experiencing a conflict that doesnt allow to craete a spin on hover.</p>
+<p align='center'>
+    <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
+</p>
