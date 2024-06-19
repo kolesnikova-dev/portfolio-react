@@ -17,7 +17,7 @@ conditionally based on the URL being accessed.</p>
 </ul>
 <hr>
 <h3>Latest updates:</h3>
-<p>Had fun with linear gradients for my Stats component, currently experiencing a conflict that doesnt allow to craete a spin on hover.</p>
+<p>Had fun with linear gradients for my Stats component, currently experiencing a conflict that doesnt allow to create a spin on hover.</p>
 <p align='center'>
     <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
 </p>
