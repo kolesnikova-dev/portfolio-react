@@ -97,6 +97,16 @@ export const symbols = {
 };
 
 export const certificationsData = {
+    perScholas: {
+        name: 'Software Engineering Training',
+        level: '2024 - Per Scholas',
+        image: '../assets/certifications/per-scholas-certificate.png',
+        details: `Deep dive into web development with the MERN stack. 
+        I learned how to leverage the Node.js environment in order to use MongoDB for storing data and Express.js 
+        for delivering that data to the client while ensuring data integrity. With component-driven development in mind,
+        highly scalable and interactive React.js web applications can be enabled. 
+        With the power of these core technologies I learnt to build valuable full-stack applications.`
+    },
     async2024: {
         name: 'JavaScript: Asynchronous Programming',
         level: '2024 - Codecademy',
@@ -130,19 +140,6 @@ export const certificationsData = {
          to manage complex application states.
          Applied knowledge by developing practical projects, 
          including the To Do List and the Shopping Cart applications. `
-    },
-    agile2023: {
-        name: 'Introduction to Cloud Native, DevOps and Agile',
-        level: '2023 - IBM',
-        image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/agile.png',
-        details: `This course provides a comprehensive foundation in DevOps basics
-        and the principles of Agile development. 
-        Gained valuable insights into DevOps methodologies, 
-        including version control, continuous integration, 
-        and deployment strategies.
-        Learnt Agile framework, including how to effectively manage 
-        projects by writing user stories and implementing Agile practices
-        such as sprint planning, daily stand-ups, and retrospectives.`
     },
     dataibm23: {
         name: 'Python Basics for Data Science',
@@ -191,3 +188,18 @@ export const contactsData = {
         url: 'https://www.linkedin.com/in/vekolesnikova/'
     }
 };
+
+const allCertifications = { 
+    agile2023: {
+    name: 'Introduction to Cloud Native, DevOps and Agile',
+    level: '2023 - IBM',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/agile.png',
+    details: `This course provides a comprehensive foundation in DevOps basics
+    and the principles of Agile development. 
+    Gained valuable insights into DevOps methodologies, 
+    including version control, continuous integration, 
+    and deployment strategies.
+    Learnt Agile framework, including how to effectively manage 
+    projects by writing user stories and implementing Agile practices
+    such as sprint planning, daily stand-ups, and retrospectives.`
+}};
