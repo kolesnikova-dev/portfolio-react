@@ -1,8 +1,8 @@
 @media (min-width: 1280px) {
 
     .all-languages-section h4 {
-        width: unset;
-        font-size: unset;
+        width: 30%;
+        font-size: 2rem;
     }
 
     .all-languages-section {
