@@ -16,7 +16,7 @@ const Picture = () => {
   return (
     <section className='picture-section'>
 
-    <div className="card-section gradient">
+    <div className="gradient">
             {/* picture container */}
         <div className='image-container' ref={pictureRef}>
           <img src={picture} alt="Nika's Picture" />

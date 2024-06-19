@@ -1,4 +1,10 @@
 @media (min-width: 1280px) {
+    .image-container {
+        width: 58%;
+        margin-inline-start: 12%;
+        position: relative;
+    }
+
     .text-container {
         position: absolute;
         z-index: 4;
@@ -6,7 +12,7 @@
         flex-direction: column;
         align-items:end;
         text-align: start;
-        width: 68%;
+        width: 90%;
         top:25%;
         margin-right: unset;
         font-size: 150%;
@@ -30,6 +36,12 @@
 /* --------------------------------------mobile------------------- */
 
 @media (min-width: 880px) and (max-width: 1280px) {
+    .image-container {
+        width: 58%;
+        margin-inline-start: 12%;
+        position: relative;
+    }
+
     .text-container {
         position: absolute;
         z-index: 4;
@@ -61,6 +73,13 @@
 /* --------------------------------------mobile------------------- */
 
 @media (max-width: 880px) {
+
+    .image-container {
+        width: 58%;
+        margin-inline-start: 12%;
+        position: relative;
+    }
+
     .text-container {
         position: absolute;
         z-index: 4;
@@ -194,8 +213,10 @@
     inherits: false;
   }
 
-.picture-section .card-section {
+.picture-section {
     width: 92vw;
+    display: flex;
+    margin-block-start: 1%;
     border: 5px solid transparent;
     /* make sure that entire border is filled with the gradient */
     border-image-slice: 1; 
