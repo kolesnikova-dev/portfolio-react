@@ -132,7 +132,7 @@ export const certificationsData = {
          including the To Do List and the Shopping Cart applications. `
     },
     agile2023: {
-        name: 'Introduction to Cloud Native, DevOps, Agile, and NoSQL',
+        name: 'Introduction to Cloud Native, DevOps and Agile',
         level: '2023 - IBM',
         image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/agile.png',
         details: `This course provides a comprehensive foundation in DevOps basics

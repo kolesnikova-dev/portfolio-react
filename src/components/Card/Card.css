@@ -112,9 +112,10 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        width: 36%;
-        height: 18vh;
-        margin-inline-start: 5%;
+        width: 41%;
+        /* maintain height relative to the width */
+        min-height: calc((19 / 41) * 100%);
+        margin-inline-start:5%;
         margin-block-end: 5%;
         gap:3%;
         box-shadow: 0 0.5vw 1vw rgba(128, 128, 128, 0.678);
@@ -135,6 +136,12 @@
     font-size: 120%;
     letter-spacing: 0.1vw;
     width: 90%;
+}
+
+.card-section {
+    width: 93vw;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-image-container {

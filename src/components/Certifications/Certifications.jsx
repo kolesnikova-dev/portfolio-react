@@ -28,13 +28,13 @@ const Certifications = () => {
 
 
   return (
-    <section>
+    <section className='certifications-section'>
      <div className='top-certifications'>
       <header>Certifications</header>
       <p>click on a card to see credential</p>
      </div>
       
-      <div className='card-section certifications-section'>
+      <div className='card-section'>
 
         {/* loop through all credentials and return a card per credential */}
         {Object.values(certificationsData).map((item, index) => (
