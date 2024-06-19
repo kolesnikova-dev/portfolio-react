@@ -169,7 +169,7 @@
   @media (min-width: 403px) and (max-width: 880px) {
     .top-certifications {
     display: flex;
-    flex-direction: unset;
+    flex-direction: column;
     align-items: center;
     padding-inline-start: unset;
 }

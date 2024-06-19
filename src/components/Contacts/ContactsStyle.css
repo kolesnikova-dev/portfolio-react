@@ -52,21 +52,21 @@
 
   .contacts-section {
     display: flex;
-    flex-direction: unset;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     margin: auto;
     /* border: 1px solid blueviolet; */
 }
 
     .link-container {
-        display: unset;
-        width: 35%;
+        display: flex;
+        width: 90%;
         margin-block-end: 2%;
-        align-items: unset;
-        justify-content: unset;
+        align-items: center;
+        justify-content: space-around;
     }
   }
   /* --------------------------------------end mid---------------- */
