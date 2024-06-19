@@ -100,7 +100,7 @@ export const certificationsData = {
     perScholas: {
         name: 'Software Engineering Training',
         level: '2024 - Per Scholas',
-        image: '../assets/certifications/per-scholas-certificate.png',
+        image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/per-scholas-certificate.png?raw=true',
         details: `Deep dive into web development with the MERN stack. 
         I learned how to leverage the Node.js environment in order to use MongoDB for storing data and Express.js 
         for delivering that data to the client while ensuring data integrity. With component-driven development in mind,
