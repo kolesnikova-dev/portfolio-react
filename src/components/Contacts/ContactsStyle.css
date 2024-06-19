@@ -1,4 +1,25 @@
 @media (min-width: 1280px) {
+    .link-container div {
+    font-size: unset;
+}
+
+   .email-container {
+    border: 1px solid rgba(137, 43, 226, 0.336);
+    padding: 1vw;
+    display: grid;
+    gap: 15%;
+    margin-right: 7%;
+    font-size: unset;
+}
+
+.click-to-copy {
+    border-left: 1px solid rgba(240, 248, 255, 0.225);
+    border-right: 1px solid rgba(240, 248, 255, 0.225);
+    background-color: rgba(240, 248, 255, 0.105);
+    transition: background-color 400ms 40ms linear;
+    cursor: pointer;
+    font-size: unset;
+} 
 
   .contacts-section {
     display: flex;
@@ -23,7 +44,10 @@
   /* ---------------------------------------------------------------- */
   /* --------------------------------------mid-large------------------- */
   
-  @media (min-width: 760px) and (max-width: 1280px) {
+  @media (min-width: 760px) and (max-width: 1280px) { 
+    .link-container div {
+    font-size: 1.5rem;
+}
 
   .contacts-section {
     display: flex;
@@ -43,12 +67,51 @@
         align-items: unset;
         justify-content: unset;
     }
+
+    .email-container {
+        border: 1px solid rgba(137, 43, 226, 0.336);
+        padding: 1vw;
+        display: grid;
+        gap: 15%;
+        margin-right: 0;
+        font-size: 1.8rem;
+    }
+    
+    .click-to-copy {
+        border-left: 1px solid rgba(240, 248, 255, 0.225);
+        border-right: 1px solid rgba(240, 248, 255, 0.225);
+        background-color: rgba(240, 248, 255, 0.105);
+        transition: background-color 400ms 40ms linear;
+        cursor: pointer;
+        font-size: 2rem;
+    } 
   }
   /* --------------------------------------end mid-large---------------- */
   /* ---------------------------------------------------------------- */
   /* --------------------------------------mid------------------- */
   
   @media (min-width: 403px) and (max-width: 760px) {
+    .link-container div {
+    font-size: unset;
+}
+
+   .email-container {
+    border: 1px solid rgba(137, 43, 226, 0.336);
+    padding: 1vw;
+    display: grid;
+    gap: 15%;
+    margin-right: 7%;
+    font-size: unset;
+}
+
+.click-to-copy {
+    border-left: 1px solid rgba(240, 248, 255, 0.225);
+    border-right: 1px solid rgba(240, 248, 255, 0.225);
+    background-color: rgba(240, 248, 255, 0.105);
+    transition: background-color 400ms 40ms linear;
+    cursor: pointer;
+    font-size: unset;
+} 
 
   .contacts-section {
     display: flex;
@@ -74,6 +137,27 @@
   /* --------------------------------------mobile------------------- */
   
   @media (max-width: 403px) {
+    .link-container div {
+    font-size: unset;
+}
+
+   .email-container {
+    border: 1px solid rgba(137, 43, 226, 0.336);
+    padding: 1vw;
+    display: grid;
+    gap: 15%;
+    margin-right: 7%;
+    font-size: unset;
+}
+
+.click-to-copy {
+    border-left: 1px solid rgba(240, 248, 255, 0.225);
+    border-right: 1px solid rgba(240, 248, 255, 0.225);
+    background-color: rgba(240, 248, 255, 0.105);
+    transition: background-color 400ms 40ms linear;
+    cursor: pointer;
+    font-size: unset;
+} 
 
   .contacts-section {
     display: flex;
@@ -98,25 +182,6 @@
   /* --------------------------------------end mobile---------------- */
   /* ---------------------------------------------------------------- */
   
-  
-
-
-
-.email-container {
-    border: 1px solid rgba(137, 43, 226, 0.336);
-    padding: 1vw;
-    display: grid;
-    gap: 15%;
-    margin-right: 7%;
-}
-
-.click-to-copy {
-    border-left: 1px solid rgba(240, 248, 255, 0.225);
-    border-right: 1px solid rgba(240, 248, 255, 0.225);
-    background-color: rgba(240, 248, 255, 0.105);
-    transition: background-color 400ms 40ms linear;
-    cursor: pointer;
-}
 
 .click-to-copy:hover {
     border-left: 1px solid rgba(240, 248, 255, 0.425);
@@ -133,4 +198,3 @@
     width: 100%;
     height: 100%;
 }
-
