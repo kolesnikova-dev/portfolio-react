@@ -169,13 +169,13 @@
     
     .greeting {
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
-        width: 40%;
+        width: 34%;
         font-size: 120%;
         color:rgb(189, 189, 253);
     }
     
     .introduction {
-        width: 39%;
+        width: 40%;
         display: none;
         /* border: 1px solid rgba(255, 192, 203, 0.219) */
     }
@@ -223,9 +223,10 @@
     -webkit-animation: move 10s ease infinite;
     -moz-animation: move 10s ease infinite;
     animation: move 10s ease infinite;
+    position: relative;
 }
 
-@-webkit-keyframes move {
+@-webkit-keyframes move {s
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
