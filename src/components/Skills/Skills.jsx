@@ -6,7 +6,7 @@ import { skillsData } from '../../models/data';
 const Skills = () => {
   // console.log(skillsData)
   return (
-    <section>
+    <section className='skills-section'>
       <header>Skills</header>
       <div className='card-section'>
       {Object.values(skillsData).map((skill, index) => (

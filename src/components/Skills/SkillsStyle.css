@@ -1,5 +1,5 @@
 @media (min-width: 1280px) {
-    .card-section {
+    .skills-section .card-section {
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
@@ -13,7 +13,7 @@
 /* --------------------------------------mobile------------------- */
 
 @media (min-width: 880px) and (max-width: 1280px) {
-    .card-section {
+    .skills-section .card-section {
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
@@ -27,7 +27,7 @@
 /* --------------------------------------mobile------------------- */
 
 @media (max-width: 880px) {
-    .card-section {
+    .skills-section .card-section {
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
@@ -42,12 +42,11 @@
 /* ---------------------------------------------------------------- */
 
 @media (max-width: 680px) {
-    .card-section {
+    .skills-section .card-section {
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
         padding: 0.1em;
-
         justify-content: center;
     }
 }
