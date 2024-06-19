@@ -109,52 +109,50 @@
   @media (min-width: 403px) and (max-width: 880px) {
 
     .all-languages-section {
-    border: 3px solid rgba(105, 105, 117, 0.39);
-    border-radius: 1em;
-    background: linear-gradient(90deg, rgba(60, 61, 26, 0.199) 0%, rgba(33, 106, 241, 0.3) 46%, rgba(187,113,90,0.2) 100%);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 10px 10px 77px 12px rgba(255,255,255,0.7);   
-    overflow: hidden; 
-    position: relative; 
-    gap: 2rem;
-}
-
-   /* all languages background */
-.background {
-    gap:unset;
-    position: absolute;
-    z-index: -1; 
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 40vh;
-    /* border: solid orange; */
-    margin-top: -5%;
-    padding-bottom: 5%;
-}
-
-.empty-hexagon {
-    opacity: 0.3;
-    display: inherit;
-}
-
-
-
-.empty-hexagon, .language {
-    background-color: rgb(179, 177, 189);
-    width:11rem;
-    height: 11rem;
-    color: aliceblue;
-    font-weight: 600;
-    letter-spacing: 0.08rem;
-}
+        border: 3px solid rgba(105, 105, 117, 0.39);
+        border-radius: 1em;
+        background: linear-gradient(90deg, rgba(60, 61, 26, 0.199) 0%, rgba(33, 106, 241, 0.3) 46%, rgba(187,113,90,0.2) 100%);
+        width: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 10px 10px 77px 12px rgba(255,255,255,0.7);   
+        overflow: hidden; 
+        position: relative; 
+        gap: 2rem;
+    }
+    
+       /* all languages background */
+    .background {
+        gap:0.3rem;
+        position: absolute;
+        z-index: -1; 
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 28vh;
+        /* border: solid orange; */
+        margin-top: 0%;
+        padding-bottom: 0%;
+    }
+    
+    .empty-hexagon {
+        opacity: 0.3;
+        display: none;
+    }
+    
+    .language {
+        background-color: rgb(179, 177, 189);
+        width:8rem;
+        height: 8rem;
+        color: aliceblue;
+        font-weight: 600;
+        letter-spacing: 0.08rem;
+    }
   }
   /* --------------------------------------end mid---------------- */
   /* ---------------------------------------------------------------- */
