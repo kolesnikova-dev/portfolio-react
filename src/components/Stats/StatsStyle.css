@@ -1,5 +1,10 @@
 @media (min-width: 1280px) {
 
+    .all-languages-section h4 {
+        width: unset;
+        font-size: unset;
+    }
+
     .all-languages-section {
     border: 3px solid rgba(105, 105, 117, 0.39);
     border-radius: 1em;
@@ -54,6 +59,11 @@
   
   @media (min-width: 880px) and (max-width: 1280px) {
 
+    .all-languages-section h4 {
+        width: 30%;
+        font-size: 2.5rem;
+    }
+
     .all-languages-section {
     border: 3px solid rgba(105, 105, 117, 0.39);
     border-radius: 1em;
@@ -80,7 +90,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 40vh;
+    height: 30vh;
     /* border: solid orange; */
     margin-top: -5%;
     padding-bottom: 5%;
@@ -91,8 +101,6 @@
     display: inherit;
 }
 
-
-
 .empty-hexagon, .language {
     background-color: rgb(179, 177, 189);
     width:11rem;
@@ -101,12 +109,23 @@
     font-weight: 600;
     letter-spacing: 0.08rem;
 }
+
+.empty-hexagon:nth-of-type(1), 
+.empty-hexagon:nth-of-type(2),
+.empty-hexagon:last-of-type {
+    display: none;
+}
   }
   /* --------------------------------------end mid-large---------------- */
   /* ---------------------------------------------------------------- */
   /* --------------------------------------mid------------------- */
   
   @media (min-width: 403px) and (max-width: 880px) {
+
+    .all-languages-section h4 {
+        width: unset;
+        font-size: unset;
+    }
 
     .all-languages-section {
         border: 3px solid rgba(105, 105, 117, 0.39);
@@ -159,6 +178,11 @@
   /* --------------------------------------mobile------------------- */
   
   @media (max-width: 403px) {
+
+    .all-languages-section h4 {
+        width: unset;
+        font-size: unset;
+    }
 
 .all-languages-section {
     border: 3px solid rgba(105, 105, 117, 0.39);
