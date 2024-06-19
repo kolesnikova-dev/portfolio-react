@@ -140,7 +140,7 @@
 
 .card-section {
     width: 93vw;
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
