@@ -4,6 +4,7 @@
   /* padding: 2rem; */
   text-align: center;
   font-family: "Exo", sans-serif;
+  overflow-x: hidden;
 }
 
 body {
