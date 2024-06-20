@@ -66,7 +66,16 @@ export const projectsData = {
         title: "Weather App",
         githubLink: "https://github.com/firstnamenika/weather-app",
         video: weatherRecording,
-        details: "The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key. This is a fun cryptography project with Python 3."
+        details: `This is a weather app that fetches data from a third party api 
+        and displays it on a screen. The code defaults to looking up user location 
+        via navigator. A user can add a location to favorites, favorite location 
+        are displayed on a screen on the left side. Up to 5 favorite locations can 
+        be added. Favorite locations can be removed by clicking on a heart next 
+        to locations name and temperature. 
+        Fetched data includes hourly weather, sunrise and sunset information, 
+        as well as humidity, wind, precipitation and UV index information.
+
+.`
     },
     2: {
         title: "Vigenere Cipher in Python",
