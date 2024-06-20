@@ -97,7 +97,7 @@
 
     .link {
         font-size: 1.2rem;
-        margin-inline-end: 10%;
+        margin-inline-end: 15%;
     }
 }
     
@@ -115,6 +115,7 @@
 
 .nav-container li {
     list-style-type: none;
+    margin-left: 0;
 }
 
 .nav-container li:hover {
