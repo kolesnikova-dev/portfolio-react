@@ -1,7 +1,7 @@
 @media (min-width: 1280px) {
     .card-section {
         margin-left: unset;
-        width: 93vw;
+        width: 98%;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;
@@ -39,7 +39,7 @@
 @media (min-width: 880px) and (max-width: 1280px) {
     .card-section {
         margin-left: unset;
-        width: 93vw;
+        width: 98%;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;
@@ -78,7 +78,7 @@
 @media (max-width: 880px) {
     .card-section {
         margin-left: unset;
-        width: 93vw;
+        width: 98%;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;
@@ -116,7 +116,7 @@
 @media (max-width: 680px) {
     .card-section {
         margin-left: unset;
-        width: 93vw;
+        width: 98%;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;
@@ -150,7 +150,7 @@
 @media (max-width: 480px) {
     .card-section {
         margin-left: -2%;
-        width: 93vw;
+        width: 98%;
         display: flex; 
         flex-wrap: wrap;
         align-items: center;

@@ -215,7 +215,7 @@
 /* ---------------------------------------------------------------- */
 /* ------------------------------------------end of mobile----------- */
 .picture-section {
-    width: 92vw;
+    width: 95%;
     display: flex;
     margin-block-start: 5%;
     border: 5px solid transparent; 
