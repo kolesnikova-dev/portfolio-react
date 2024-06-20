@@ -3,7 +3,7 @@ import { DiGithubFull } from "react-icons/di";
 
 const Project = ({data, arrow}) => {
   return (
-    <>
+    <div className='project'>
     <div className="title-section">
       <div className='title'>{data.title}</div>
     
@@ -26,7 +26,7 @@ const Project = ({data, arrow}) => {
    
     
     <div className='details'>{data.details}</div>
-  </>
+  </div>
   )
 }
 
