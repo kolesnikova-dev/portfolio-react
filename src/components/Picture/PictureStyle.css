@@ -259,7 +259,8 @@
     /* custom angle value */
     --angle: 0deg;
     border-image: linear-gradient(var(--angle), #733ad58f, rgba(240, 99, 84, 0.6)) 1;
-    animation: 5s rotate linear infinite;
+    /* animation: 5s rotate linear infinite; */
+    /* position: relative; */
     box-shadow: 
     10px 10px 5px 0px rgba(240, 99, 84, 0.1),
     10px 10px 70px 0px rgba(255,255,255,0.15);

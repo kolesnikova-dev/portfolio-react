@@ -94,7 +94,7 @@ export const symbols = {
     northEast: '⇗',
     copyright: '©',
     closeButton: '⛒'
-};
+}; 
 
 export const certificationsData = {
     perScholas: {
