@@ -261,8 +261,14 @@
 /* largest circle - most used language */
 .background > .animateHex:nth-of-type(6) {
     opacity: 1;
-    animation: turnPink 80ms linear 1100ms forwards;
+    /* rotate 400ms linear 1.8s backwards; */
+    animation: turnPink 400ms linear 1100ms forwards; 
 }
+
+/* @keyframes rotate {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(360deg);}
+} */
 
 .background > .animateHex:nth-of-type(6) .border-span {
     content: ''; 
@@ -278,10 +284,13 @@
 }
 
 @keyframes turnPink {
-    0% {background: aliceblue;}
+    0% {background: aliceblue; transform: rotateY(0);}
+    65% {background: linear-gradient(to bottom, rgba(203,96,179,1) 0%, 
+        rgba(193,70,161,1) 37%, rgba(168,0,119,1) 43%, 
+        rgba(219,54,164,1) 96%, rgba(224,117,188,1) 100%); transform: rotateY(40deg);}
     100%  {background: linear-gradient(to bottom, rgba(203,96,179,1) 0%, 
         rgba(193,70,161,1) 37%, rgba(168,0,119,1) 43%, 
-        rgba(219,54,164,1) 96%, rgba(224,117,188,1) 100%);}
+        rgba(219,54,164,1) 96%, rgba(224,117,188,1) 100%); transform: rotateY(360deg);}
 }
 
 @keyframes borderTurnPink {
@@ -299,7 +308,16 @@
 /* mid sized circle - 2nd most used language */
 .background > .animateHex:nth-of-type(7) {
     opacity: 1;
-    animation: turnPurple 90ms linear 1200ms forwards;
+    animation: turnPurple 400ms linear 1200ms forwards;
+}
+
+.background > .animateHex:nth-of-type(7):hover {
+    animation: rotate 4ms 1200ms linear;
+}
+
+@keyframes rotate {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(360deg);}
 }
 
 .background > .animateHex:nth-of-type(7) .border-span {
@@ -311,16 +329,18 @@
                          50% 100%, 0% 75%, 0% 25%);     
     position: absolute;
     z-index:-1;
-    animation: borderTurnPurple 2ms linear 1200ms forwards, sheen 5s ease-out 1500ms infinite;
+    animation: borderTurnPurple 4ms linear 1200ms forwards, sheen 5s ease-out 1500ms infinite;
 }
 
 @keyframes turnPurple {
-    0% {background: aliceblue;}
+    0% {background: aliceblue; transform: rotateY(0);}
+    65% {background: linear-gradient(to bottom, rgb(133, 86, 209) 0%,     
+        rgba(65, 11, 151, 1) 37%,rgba(54, 9, 126, 1) 43%,    
+        rgba(99, 19, 241, 1) 96%, rgb(98, 46, 189) 100%); transform: rotateY(45deg);}
     100%  {background: linear-gradient(to bottom, rgb(133, 86, 209) 0%,     
         rgba(65, 11, 151, 1) 37%,rgba(54, 9, 126, 1) 43%,    
-        rgba(99, 19, 241, 1) 96%, rgb(98, 46, 189) 100%     
-    );}
-}
+        rgba(99, 19, 241, 1) 96%, rgb(98, 46, 189) 100%); transform: rotateY(360deg);}     
+    }
 
 @keyframes borderTurnPurple {
     0% {background: aliceblue;}
@@ -336,7 +356,7 @@
 
 .background > .animateHex:nth-of-type(8) {
     opacity: 1;
-    animation: turnAqua 100ms linear 1300ms forwards;
+    animation: turnAqua 400ms linear 1300ms forwards;
 }
 
 .background > .animateHex:nth-of-type(8) .border-span {
@@ -352,12 +372,17 @@
 }
 
 @keyframes turnAqua {
-    0% {background: aliceblue;}
+    0% {background: aliceblue; transform: rotateY(0deg);}
+    65% {background: linear-gradient(to bottom, rgb(115, 216, 218) 0%, 
+        rgba(9, 132, 135, 1) 37%, 
+        rgba(6, 113, 116, 1) 43%, 
+        rgba(15, 184, 187, 1) 96%, 
+        rgba(27, 225, 229, 1) 100%); transform: rotateY(50deg);}
     100%  {background: linear-gradient(to bottom, rgb(115, 216, 218) 0%, 
         rgba(9, 132, 135, 1) 37%, 
         rgba(6, 113, 116, 1) 43%, 
         rgba(15, 184, 187, 1) 96%, 
-        rgba(27, 225, 229, 1) 100%);
+        rgba(27, 225, 229, 1) 100%);transform: rotateY(360deg);
 }
 }
 

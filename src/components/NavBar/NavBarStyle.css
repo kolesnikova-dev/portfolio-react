@@ -42,7 +42,7 @@
         transition: none;
     }
 
-    .link-skills, .link-projects {
+    .link-skills, .link-projects, .link-certifications {
         display: block;
     }
 }
@@ -70,7 +70,7 @@
         transition: letter-spacing 100ms 40ms ease-in-out;
     }
 
-    .link-skills, .link-projects {
+    .link-skills, .link-projects,.link-certifications  {
         display: none;
     }
 }
@@ -91,7 +91,7 @@
         transition: letter-spacing 100ms 40ms ease-in-out;
     }
 
-    .link-skills, .link-projects {
+    .link-skills, .link-projects, .link-certifications  {
         display: none;
     }
 
