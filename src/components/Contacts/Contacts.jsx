@@ -23,7 +23,7 @@ const Contacts = () => {
 
   return (
     <section>
-      <header>Contact</header>
+      <header>Links</header>
       <div className="contacts-section">
 
         {/* current github */}

@@ -293,7 +293,7 @@
     .project-image-container {
         border: 5px solid rgba(43, 117, 255, 0.342);
         background-color: rgba(100, 148, 237, 0.212);
-        width: 89%;
+        width: 97%;
         max-height: 30vh;
         min-height: 30vh;
         display: flex;
@@ -318,8 +318,8 @@
     }
 
     .details {
-        height: 30vh;
-        margin-top: 1%;
+        height: 30.5vh;
+        margin-top: 2%;
         font-size: 2vh;
         border-left: 1px solid gray;
         border-right: 1px solid gray;
@@ -366,6 +366,20 @@
 
 /* --------------------------------------end mobile---------------- */
 /* ---------------------------------------------------------------- */
+
+@media (max-width: 350px) {
+    .details {
+        height: 45vh;
+        margin-top: 1%;
+        font-size: 2vh;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
+        padding-block-start: 1%;
+        padding-block-end: 1%;
+        background-color: rgba(128, 128, 128, 0.137);
+        width: 91%;
+    }
+}
 
 .details {
     display: flex;

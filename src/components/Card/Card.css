@@ -77,7 +77,7 @@
 
 @media (max-width: 880px) {
     .card-section {
-        margin-left: unset;
+        margin-left: -1%;
         width: 98%;
         display: flex; 
         flex-wrap: wrap;
