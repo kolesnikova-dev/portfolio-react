@@ -1,6 +1,10 @@
 @media (min-width: 1280px) {
+    .picture-section {
+        height: unset;
+    }
     .image-container {
         width: 58%;
+        margin-block-start: unset;
         margin-inline-start: 12%;
         position: relative;
     }
@@ -19,6 +23,7 @@
     }
     
     .greeting {
+        text-align: unset;
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
         width: 40%;
         font-size: 120%;
@@ -36,8 +41,12 @@
 /* --------------------------------------mid------------------- */
 
 @media (min-width: 915px) and (max-width: 1280px) {
+    .picture-section {
+        height: unset;
+    }
     .image-container {
         width: 58%;
+        margin-block-start: unset;
         margin-inline-start: 12%;
         position: relative;
     }
@@ -56,6 +65,7 @@
     }
     
     .greeting {
+        text-align: unset;
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
         width: 40%;
         font-size: 120%;
@@ -73,9 +83,13 @@
 /* --------------------------------------mobile------------------- */
 
 @media (max-width: 915px) {
+    .picture-section {
+        height: unset;
+    }
 
     .image-container {
         width: 58%;
+        margin-block-start: unset;
         margin-inline-start: 12%;
         position: relative;
     }
@@ -94,6 +108,7 @@
     }
     
     .greeting {
+        text-align: unset;
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
         width: 40%;
         font-size: 120%;
@@ -110,35 +125,44 @@
 /* ------------------------------------------------------ */
 /* ----------------------- Surface duo------------------- */
 @media (max-width: 550px) {
+    .picture-section {
+        height: 70vh;
+        flex-direction: column;
+    }
+
     .image-container {
         width: 58%;
-        margin-inline-start: 12%;
-        position: relative;
+        margin-block-start: 99%;
+        margin-inline-start: 8%;
+        /* position: relative; */
     }
 
     .text-container {
-        position: absolute;
-        z-index: 4;
+        /* position: absolute; */
+        /* z-index: 4; */
         display: flex;
         flex-direction: column;
         align-items: end;
         text-align: start;
-        width: 85%;
-        top:18%;
+        width: 90%;
+        top:8%;
         margin-right: auto;
         font-size: 150%;
+        text-align: justify;
     }
     
     .greeting {
+        text-align: end;
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
-        width: 40%;
+        width: inherit;
         font-size: 120%;
         color:rgb(189, 189, 253);
     }
     
     .introduction {
-        width: 39%;
-        display: none;
+        width: inherit;
+        display: block;
+        text-align: justify;
         /* border: 1px solid rgba(255, 192, 203, 0.219) */
     }
 }
@@ -146,37 +170,45 @@
 /* ------------------------------------------------------ */
 /* -------------------------------------- mobile---------------- */
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
+    .picture-section {
+        height: 80vh;
+        flex-direction: column;
+    }
 
     .image-container {
         width: 58%;
-        margin-inline-start: 12%;
-        position: relative;
+        margin-block-start: 90%;
+        margin-inline-start: 8%;
+        /* position: relative; */
     }
 
     .text-container {
-        position: absolute;
-        z-index: 4;
+        /* position: absolute; */
+        /* z-index: 4; */
         display: flex;
         flex-direction: column;
         align-items: end;
         text-align: start;
-        width: 85%;
-        top:13%;
+        width: 90%;
+        top:3%;
         margin-right: auto;
         font-size: 150%;
+        text-align: justify;
     }
     
     .greeting {
+        text-align: end;
         /* border: 1px solid rgba(220, 20, 60, 0.315); */
-        width: 34%;
+        width: inherit;
         font-size: 120%;
         color:rgb(189, 189, 253);
     }
     
     .introduction {
-        width: 40%;
-        display: none;
+        width: inherit;
+        display: block;
+        text-align: justify;
         /* border: 1px solid rgba(255, 192, 203, 0.219) */
     }
 }
@@ -185,7 +217,7 @@
 .picture-section {
     width: 92vw;
     display: flex;
-    margin-block-start: 3%;
+    margin-block-start: 5%;
     border: 5px solid transparent; 
     position: relative;
     box-shadow: 
@@ -230,6 +262,8 @@
 .gradient {
     background: linear-gradient(200deg, #212523, #465551);
     background-size: 400% 400%;
+    width: 100%;
+    height: 100%;
 
     -webkit-animation: move 10s ease infinite;
     -moz-animation: move 10s ease infinite;
