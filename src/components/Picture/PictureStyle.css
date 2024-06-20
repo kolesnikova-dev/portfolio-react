@@ -182,7 +182,18 @@
 }
 /* ---------------------------------------------------------------- */
 /* ------------------------------------------end of mobile----------- */
-
+.picture-section {
+    width: 92vw;
+    display: flex;
+    margin-block-start: 3%;
+    border: 5px solid transparent; 
+    position: relative;
+    box-shadow: 
+    10px 10px 5px 0px rgba(240, 99, 84, 0.1),
+    10px 10px 70px 0px rgba(255,255,255,0.15);
+    border-image-slice: 1;
+    border-image: linear-gradient(#733ad58f, rgba(240, 99, 84, 0.6)) 1;
+}
 
 .appear {
     animation: softAppearance 1s linear;
@@ -242,25 +253,14 @@
     100%{background-position:0% 50%}
 }
 
+
+/* ----------------- experimental border animation------------ */
 /* define custom angle for animation */
 /* @property --angle {
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
   } */
-
-.picture-section {
-    width: 92vw;
-    display: flex;
-    margin-block-start: 1%;
-    border: 5px solid transparent; 
-    position: relative;
-    box-shadow: 
-    10px 10px 5px 0px rgba(240, 99, 84, 0.1),
-    10px 10px 70px 0px rgba(255,255,255,0.15);
-    border-image-slice: 1;
-    border-image: linear-gradient(#733ad58f, rgba(240, 99, 84, 0.6)) 1;
-}
 
 /* .picture-section::before,
 .picture-section::after {
@@ -290,3 +290,4 @@
         --angle: 360deg;
       }
   } */
+/* ----------------- experimental border animation------------ */
