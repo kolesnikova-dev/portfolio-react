@@ -89,6 +89,16 @@ header {
   font-weight: 400; */
 }
 
+.display-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+
 /* define custom angle for Picture border animation */
 @property --angle {
   syntax: '<angle>';
