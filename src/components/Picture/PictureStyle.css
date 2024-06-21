@@ -223,8 +223,14 @@
     box-shadow: 
     10px 10px 5px 0px rgba(240, 99, 84, 0.1),
     10px 10px 70px 0px rgba(255,255,255,0.15);
-    border-image-slice: 1;
-    border-image: linear-gradient(#733ad58f, rgba(240, 99, 84, 0.6)) 1;
+    /* leave space for border */
+    border: 5px solid transparent;
+    /* make sure that entire border is filled with the gradient */
+   border-image-slice: 1; 
+   /* custom angle value */
+    --angle: 0deg;
+   border-image: linear-gradient(var(--angle), #733ad58f, rgba(241, 81, 63, 0.705)) 1;
+   animation: 4s rotateBorder linear infinite;
 }
 
 .appear {
@@ -237,11 +243,6 @@
     animation: softAppearance 1s linear 1s forwards;
 }
 
-@keyframes softAppearance {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 .image-container img {
     width: 100%;
     height: 100%;
@@ -252,13 +253,21 @@
     animation: float 5s ease-in-out infinite;
 }
 
+
+/* Soft appearance of text animation */
+@keyframes softAppearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Picture float animation */
 @keyframes float {
     0%, 100% { transform: translateY(0%);}
-    50% { transform: translateY(0.5%);}
+    50% { transform: translateY(1%);}
 }
 
 
-/* animation */
+/* Picture background animation */
 .gradient {
     background: linear-gradient(200deg, #212523, #465551);
     background-size: 400% 400%;
@@ -288,40 +297,11 @@
 }
 
 
-/* ----------------- experimental border animation------------ */
-/* define custom angle for animation */
-/* @property --angle {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-  } */
-
-/* .picture-section::before,
-.picture-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 5px solid transparent;
-     /* make sure that entire border is filled with the gradient */
-    /* border-image-slice: 1; */
-    /* custom angle value */
-    /* --angle: 0deg;
-    border-image: linear-gradient(var(--angle), #733ad58f, rgba(240, 99, 84, 0.6)) 1;
-    animation: 5s rotate linear infinite;
-} */
-
-/* .picture-section::after {
-    filter: blur(25px);
-    transform: translate3d(0, 0, 0);
-  }
-
+/* ----------------- experimental Picture border animation------------ */
 /* rotate the angle */
-/* @keyframes rotate {
+@keyframes rotateBorder {
     to {
         --angle: 360deg;
       }
-  } */
-/* ----------------- experimental border animation------------ */
+  }
+/* ----------------- experimental Picture border animation------------ */

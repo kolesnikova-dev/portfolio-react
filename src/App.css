@@ -88,3 +88,10 @@ header {
   /* font-family: "Permanent Marker", cursive;
   font-weight: 400; */
 }
+
+/* define custom angle for Picture border animation */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
