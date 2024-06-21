@@ -3,9 +3,10 @@
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
-        padding: 2em;
-
+        padding: 4em;
         justify-content: center;
+        width: 100%;
+        margin-inline-start: -6%;
     }
 }
 /* --------------------------------------end desktop---------------- */
@@ -20,6 +21,8 @@
         padding: 2em;
         justify-content: center;
         width: inherit;
+
+        margin-inline-start: -2%;
     }
 }
 /* --------------------------------------end mid---------------- */
@@ -32,8 +35,9 @@
         display: flex;
         flex-wrap: wrap;
         padding: 0.5em;
-
         justify-content: center;
+
+        margin-inline-start: -3%;
     }
 }
     
@@ -48,5 +52,7 @@
         flex-wrap: wrap;
         padding: 0.1em;
         justify-content: center;
+
+        margin-inline-start: -2%;
     }
 }
