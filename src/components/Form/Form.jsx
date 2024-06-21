@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 //import emailjs 
 import emailjs from '@emailjs/browser';
+//import style
+import './FormStyle.css';
 
 const Form = () => {
   //initialize form state
@@ -10,14 +12,17 @@ const Form = () => {
     message: ''
   });
 
+  const [success, setSuccess] = useState(false);
+  //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState(null);
+  //initialize error state to warn user of email rate limit
   const [error, setError] = useState('');
 
-  //import public key
+  //import emailjs public key
   const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
-  //import service id
+  //import emailjs service id
   const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
-  //import template id
+  //import emailjs template id
   const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID; 
 
   // initialize emailjs with the public key
@@ -26,41 +31,67 @@ const Form = () => {
   }, []);
   
 
+  // handle form submit
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    //get current time
     const now = new Date();
 
+    //check whether last email was sent less than a minute ago
     if (lastEmailSent && (now - lastEmailSent) < 60000) {
       setError('Too many attempts. Please wait a minute before sending another email.');
+      //remove from DOM
       removeError();
       return;
     }
 
+    //send email using email js service
     emailjs.sendForm(service_id_emailjs, template_id_emailjs, event.target)
+    //if successful, print to console
             .then(() => {
                 console.log('Email sent');
+                //set success message
+                setAlertBox();
+                //set time last email was sent
                 setLastEmailSent(new Date());
+                //update error state to null
                 setError('');
             }, (error) => {
                 console.log('Failed to send the email.', error);
                 setError('Failed to send the email.');
+                //remove fro DOM
                 removeError();
             });
 
+    //clear form
     event.target.reset();
     
   };
 
+  //dynamically handle state of form data
   const handleChange = (event) => {
+    //update from state
     setFormData((prev) => ({
       ...prev,
+      //update targeted value
       [event.target.name]: event.target.value
     }));
   };
 
+  //remove message from DOM
+  const setAlertBox = () => {
+    // display duccess message
+    setSuccess(true);
+    //remove message from DOM
+    setTimeout(() => {
+      setSuccess('');
+    }, 3000);
+  }
 
+//remove error message from DOM
   const removeError = () => {
+  //remove error message from DOM
     setTimeout(() => {
       setError('');
     }, 3000);
@@ -82,24 +113,13 @@ const Form = () => {
         <textarea name="message" onChange={handleChange}></textarea>
         <input type="submit" value="Send" />
 
-        {error && <p className='fade-out'>{error}</p>}
+        {/* display error of success message */}
+        <div className="alert-box">
+          {success && <p className='fade-out'>Sent!</p>}
+          {error && <p className='red fade-out'>{error}</p>}
+        </div>
     </form>
   )
 }
 
 export default Form;
-
-
-
-  // window.onload = function() {
-  //   document.getElementById('contact-form').addEventListener('submit', function(event) {
-  //       event.preventDefault();
-  //       // these IDs from the previous steps
-  //       emailjs.sendForm('contact_service', 'contact_form', this)
-  //           .then(() => {
-  //               console.log('SUCCESS!');
-  //           }, (error) => {
-  //               console.log('FAILED...', error);
-  //           });
-  //   });
-  // }
