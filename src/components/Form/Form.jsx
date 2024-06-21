@@ -1,31 +1,51 @@
 import React, { useState, useEffect } from 'react';
+//import emailjs 
+import emailjs from '@emailjs/browser';
 
 const Form = () => {
+  //initialize form state
   const [formData, setFormData] = useState({
-    name :'',
-    email: '',
+    user_name :'',
+    user_email: '',
     message: ''
   });
 
-  //import public key
-  const public_key_emailjs = import.meta.env.VITE_EMAILJS;
+  const [lastEmailSent, setLastEmailSent] = useState(null);
+  const [error, setError] = useState('');
 
-  (function() {
-    // https://dashboard.emailjs.com/admin/account
-    emailjs.init({
-      publicKey: {public_key_emailjs},
-    });
-  })();
+  //import public key
+  const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
+  //import service id
+  const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
+  //import template id
+  const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID; 
+
+  // initialize emailjs with the public key
+  useEffect(() => {   
+    emailjs.init(public_key_emailjs);
+  }, []);
   
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    emailjs.sendForm('contact_service', 'contact_form', formData)
+    const now = new Date();
+
+    if (lastEmailSent && (now - lastEmailSent) < 60000) {
+      setError('Too many attempts. Please wait a minute before sending another email.');
+      removeError();
+      return;
+    }
+
+    emailjs.sendForm(service_id_emailjs, template_id_emailjs, event.target)
             .then(() => {
-                console.log('SUCCESS!');
+                console.log('Email sent');
+                setLastEmailSent(new Date());
+                setError('');
             }, (error) => {
-                console.log('FAILED...', error);
+                console.log('Failed to send the email.', error);
+                setError('Failed to send the email.');
+                removeError();
             });
 
     event.target.reset();
@@ -39,10 +59,20 @@ const Form = () => {
     }));
   };
 
+
+  const removeError = () => {
+    setTimeout(() => {
+      setError('');
+    }, 3000);
+  }
+
+
+
   // main function-----------------------------------
   return (
     <form id="contact-form" onSubmit={handleSubmit}>
       <title>Contact Form</title>
+
         <input type="hidden" name="contact_number" value="697483" />
         <label>Name</label>
         <input type="text" name="user_name" onChange={handleChange} />
@@ -51,6 +81,8 @@ const Form = () => {
         <label>Message</label>
         <textarea name="message" onChange={handleChange}></textarea>
         <input type="submit" value="Send" />
+
+        {error && <p className='fade-out'>{error}</p>}
     </form>
   )
 }
