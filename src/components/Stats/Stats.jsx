@@ -5,7 +5,7 @@ import { fetchUserData } from '../../utils/fetchData';
 import useIntersectionObserver from '../../utils/useIntersectionObserver';
 //import styles
 import './StatsStyle.css';
-import './StatsNestHubStyle.css';
+// import './StatsNestHubStyle.css';
 
 const Stats = () => {
   // initialize state to store most used languages information
