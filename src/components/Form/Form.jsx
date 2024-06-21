@@ -105,7 +105,7 @@ const Form = () => {
     <form id="contact-form" onSubmit={handleSubmit}>
       <title>Contact Form</title>
 
-        <input type="hidden" name="contact_number" value="697483" />
+        <input type="hidden" name="contact_number"  value="697483" />
         <label>Name</label>
         <input type="text" name="user_name" onChange={handleChange} />
         <label>Email</label>

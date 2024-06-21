@@ -1,0 +1,16 @@
+.contact-page {
+    border: solid aliceblue;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.contact-form-container {
+    border: 1px solid purple;
+    width: 100%;
+    display: flex;
+}
+
+.contact-form-container p {
+    width: 50%;
+}
