@@ -12,10 +12,12 @@ const ContactPage = () => {
       {/* contact form container */}
       <div className="contact-form-container">
 
+      <div className='display-flex flex-center get-in-touch'><div><span>Let's</span><span>get</span><span>in</span><span>touch</span></div></div>
+
         {/* form */}
         <Form />
 
-        <p className='display-flex flex-center'>Let's get in touch</p>
+
 
       </div>
 
