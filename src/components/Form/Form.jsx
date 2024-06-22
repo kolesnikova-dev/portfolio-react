@@ -108,11 +108,11 @@ const Form = () => {
 
         <input type="hidden" name="contact_number"  value="697483" />
         <label>Name</label>
-        <input type="text" name="user_name" onChange={handleChange} />
+        <input type="text" name="user_name" onChange={handleChange} required/>
         <label>Email</label>
-        <input type="email" name="user_email" onChange={handleChange} />
+        <input type="email" name="user_email" onChange={handleChange} required/>
         <label>Message</label>
-        <textarea name="message" onChange={handleChange}></textarea>
+        <textarea name="message" onChange={handleChange} required></textarea>
         <input type="submit" value="Send" />
 
         {/* display error of success message */}

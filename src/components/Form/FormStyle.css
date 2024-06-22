@@ -125,6 +125,8 @@
     background-size: 100% 00%;
     background-color: white;
     color: black;
+    font-family: "Exo", sans-serif;
+    padding-inline-start: 2%;
 }
 
 @keyframes rotateBackground {
@@ -169,7 +171,8 @@ label {
 /* alert box */
 .alert-box {
 /* make sure that appearance of text doesn't move the layout */
-    min-height: 3rem;
+    min-height: 3.5rem;
+    height: 3.5rem;
     width: 95%;
 }
 
