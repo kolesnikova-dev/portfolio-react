@@ -89,8 +89,8 @@
   @media (max-width: 403px) {
     #contact-form {
         /* border: 1px solid green; */
-        width: 38%;
-        height: 70%;
+        width: 80%;
+        height: 80%;
         border-radius: 1em;
         display: flex;
         align-items: center;
