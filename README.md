@@ -2,6 +2,11 @@
 <p>This repository contains a single-page application built with React and Vite, leveraging React Router for navigation.</p>
 <p>All data is abstracted into a separate file, which helps maintain the application's codebase and facilitates future updates.</p>
 <p>FetchData.js contains logic for fetching user data of this account('kweeuhree'), extracting top three languages of all repositories and calculating percentage of the language used compared to others.</p>
+
+<p align='center'>
+    <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
+    <p align='center'>Stats component</p>
+</p>
 <p>The <code>useState</code> Hook is utilized throughout the application to enhance functionality. For instance, in the Projects component, it enables the carousel feature, while in the Certifications section, it enables overlay functionality. Additionally, in the Contacts component, <code>useState</code> keeps track of whether an email has been copied to the clipboard, dynamically changing the 'click to copy' button to 'copied' and back.</p>
 <p>In the Contacts component, external links are generated from a centralized array. The titles 'Actively updated account' and 'Original account' are rendered 
 conditionally based on the URL being accessed.</p>
@@ -17,7 +22,7 @@ conditionally based on the URL being accessed.</p>
 </ul>
 <hr>
 <h3>Latest updates:</h3>
-<p>Had fun with linear gradients for my Stats component, currently experiencing a conflict that doesnt allow to create a spin on hover.</p>
+<p>Added EmailJS functionality. Originally I wanted to build a backend server to be able to receive an email, but later I have learnt that sending an email straight from the JavaScript code allows for the feature to work without page reload, so I opted for EmailJS instead of a scratch backend.</p>
 <p align='center'>
-    <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
+    <img src="./src/assets/screenshots/contact-form.png" alt="Contact form" />
 </p>
