@@ -19,13 +19,13 @@
     border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
     animation: 10s rotateBorder ease-in-out infinite;
     margin-block-start: 5%;
-    margin-block-end: 20%;
-    width: 100%;
+    margin-block-end: 10%;
+    width: 99%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
-    height: 75vh;
+    height: 95vh;
     position: relative;
     box-shadow: 
     10px 15px 25px 0px rgba(195, 231, 179, 0.5),
@@ -91,28 +91,28 @@
     /* border: solid blue; */
     }
 
-.contact-form-container {
-    /* leave space for border */
-    border: 2px solid transparent;
-    /* make sure that entire border is filled with the gradient */
-    border-image-slice: 1; 
-    /* custom angle value */
-    --angle: 0deg;
-    border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
-    animation: 10s rotateBorder ease-in-out infinite;
-    margin-block-start: 5%;
-    margin-block-end: 20%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    height: 75vh;
-    position: relative;
-    box-shadow: 
-    10px 15px 25px 0px rgba(195, 231, 179, 0.5),
-    10px 10px 70px 0px rgba(255,255,255,0.15);
-}
+    .contact-form-container {
+        /* leave space for border */
+        border: 2px solid transparent;
+        /* make sure that entire border is filled with the gradient */
+        border-image-slice: 1; 
+        /* custom angle value */
+        --angle: 0deg;
+        border-image: linear-gradient(var(--angle), #8f4eff8f, rgb(0, 255, 128), #c3c5c5e5) 1;
+        animation: 10s rotateBorder ease-in-out infinite;
+        margin-block-start: 5%;
+        margin-block-end: 7%;
+        width: 99%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        height: 93vh;
+        position: relative;
+        box-shadow: 
+        10px 15px 25px 0px rgba(195, 231, 179, 0.5),
+        10px 10px 70px 0px rgba(255,255,255,0.15);
+    }
 
 .contact-form-container::before {
     content: '';

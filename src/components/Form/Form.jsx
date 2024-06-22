@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 //import style
 import './FormStyle.css';
+import './FormNestHubStyle.css';
 
 const Form = () => {
   //initialize form state
