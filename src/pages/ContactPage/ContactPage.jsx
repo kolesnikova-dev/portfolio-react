@@ -4,6 +4,7 @@ import Contacts from '../../components/Contacts/Contacts';
 import Form from '../../components/Form/Form';
 //import styles
 import './ContactPageStyle.css';
+import './ContactNestHubStyle.css';
 
 const ContactPage = () => {
   return (
@@ -11,7 +12,7 @@ const ContactPage = () => {
 
       {/* contact form container */}
       <div className="contact-form-container">
-        
+
           {/* lets get in touch */}
          <div className='display-flex flex-center get-in-touch'>
             <div>
