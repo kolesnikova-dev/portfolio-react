@@ -12,7 +12,7 @@ export const certificationsData = {
     backendEdx2024: {
         name: 'Back-end Application Development with Node.js and Express',
         level: '2024 - IBM',
-        image: 'src/assets/certifications/backend-edx2024.jpg',
+        image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/backend-edx2024.jpg?raw=true',
         details: `Honed my skills in building robust and efficient server-side applications. 
         Through this course, I have learned to develop applications using asynchronous callbacks and promises, 
         ensuring smooth and responsive user experiences. Created REST APIs 
@@ -81,7 +81,7 @@ export const allCertifications = {
     express2024: {
     name: 'Learn Express',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/express2024.png',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/express2024.png?raw=true',
     details: `Built an Application Programming Interface (API) in JavaScript using the popular Express framework.
     Learnt how to use Express middleware to improve  API's code quality and readability.`
 }, 
@@ -95,19 +95,19 @@ export const allCertifications = {
     css2024: {
     name: 'CSS: Transitions and Animations',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/css2024.png',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/css2024.png?raw=true',
     details: `Practiced implementing CSS animation using transitions.`
 }, 
     jsRequests2024: {
     name: 'JavaScript: Requests',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/jsRequests2024.png',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/jsRequests2024.png?raw=true',
     details: `Practiced requesting data asynchronously using the async/await syntax to dynamically use data from APIs. Completed a small Film Finder project.`
 }, 
     learnHtml2024: {
     name: 'HTML: Fundamentals',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/learnHtml2024.png',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/learnHtml2024.png?raw=true',
     details: `Practiced working with HTML elements and structure, the building blocks of websites. 
     I took this course to ensure semantic nature of my HTML structures.`
 }, 
@@ -127,7 +127,7 @@ export const allCertifications = {
     webDevelopment2023: {
     name: 'Web Development with HTML5, CSS3, and JavaScript',
     level: '2023 - IBM',
-    image: 'src/assets/certifications/introWeb2023.png',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/introWeb2023.png?raw=true',
     details: `Practiced and developed hands-on skills to work with HTML, CSS and JavaScript.
     Learnt to manage projects with Git and GitHub.`
 }
