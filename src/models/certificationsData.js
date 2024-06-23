@@ -125,7 +125,7 @@ export const allCertifications = {
     such as sprint planning, daily stand-ups, and retrospectives.`
 }, 
     webDevelopment2023: {
-    name: 'Introduction to Web Development with HTML5, CSS3, and JavaScript',
+    name: 'Web Development with HTML5, CSS3, and JavaScript',
     level: '2023 - IBM',
     image: 'src/assets/certifications/introWeb2023.png',
     details: `Practiced and developed hands-on skills to work with HTML, CSS and JavaScript.
