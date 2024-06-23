@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-//import text and symbols
+//import  symbols
 import { symbols } from '../../models/data';
-// import { certificationsData } from '../../models/certificationsData';
 //import components
 import Card from '../Card/Card';
 import Button from '../Button/Button';
-//import style
+//import styles
 import './CertificationsStyle.css';
 import './CertificationsNestHubStyle.css'
 
 
-const Certifications = ({ data, header}) => {
+const Certifications = ({ data, header }) => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
