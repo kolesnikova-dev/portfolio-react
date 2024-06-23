@@ -16,10 +16,12 @@ function App() {
 
   return (
     <div className='App'>
+      {/* navigation bar */}
       <nav>
           <NavBar />
       </nav>
 
+    {/* main section */}
       <main>
           <Routes>
             <Route path={'/'} element={<MainPage />} />
@@ -31,6 +33,7 @@ function App() {
         </Routes>
       </main>
 
+      {/* footer */}
       <footer>
           <Footer />
       </footer>
