@@ -37,7 +37,7 @@ export const skillsData = {
         level: 'Early Intermediate',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png'
     },
-    dsal: {
+    mongoose: {
         name: 'Mongoose',
         level: 'Early Intermediate',
         image: 'https://cdn-images-1.medium.com/max/449/1*NRCOyVBY6Jiqr4Q9A1zoaQ.png'

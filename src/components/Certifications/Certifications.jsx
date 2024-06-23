@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 //import text and symbols
-import { certificationsData, symbols } from '../../models/data';
+import { symbols } from '../../models/data';
+import { certificationsData } from '../../models/certificationsData';
 //import components
 import Card from '../Card/Card';
 import Button from '../Button/Button';
