@@ -1,12 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+// import components
 import NavBar from './components/NavBar/NavBar';
-import Projects from './components/Projects/Projects';
-import Certifications from './components/Certifications/Certifications';
-import ContactPage from './pages/ContactPage/ContactPage';
-import MainPage from './pages/MainPage';
 import Footer from './components/Footer/Footer';
 import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
+// import pages
+import CertificationsPage from './pages/CertificationsPage/CertificationsPage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import MainPage from './pages/MainPage';
+//import styles
+import './App.css';
 
 
 function App() {
@@ -23,7 +26,7 @@ function App() {
             <Route path={'/home'} element={<MainPage />} />
             <Route path={'/skills'} element={<Skills />} />
             <Route path={'/projects'} element={<Projects />} />
-            <Route path={'/certifications'} element={<Certifications />} />
+            <Route path={'/certifications'} element={<CertificationsPage />} />
             <Route path={'/contact'} element={<ContactPage />} />
         </Routes>
       </main>
