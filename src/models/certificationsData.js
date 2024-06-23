@@ -74,7 +74,7 @@ export const certificationsData = {
     },
  };
 
-const allCertifications = { 
+export const allCertifications = { 
     backendEdx2024: {
     name: 'Back-end Application Development with Node.js and Express',
     level: '2024 - IBM',
