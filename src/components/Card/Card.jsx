@@ -12,7 +12,14 @@ const Card = ({data, thisClass, action}) => {
 
   return (
     <div className={`card ${thisClass}`} onClick={action ? ()=>action(data) : null}>
-      {data.name.includes('Software Engineering Training') && <div className='per-scholas-logo'><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png" /></div>}
+      {
+      data.name.includes('Software Engineering Training') && 
+      <div className='per-scholas-logo'>
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png" 
+          alt="Per Scholas logo"
+        /></div>
+      }
       <div className='card-first-child'>{data.name}</div>
       <div className='card-second-child'>{data.level}</div>
       
