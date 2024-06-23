@@ -81,7 +81,7 @@ export const allCertifications = {
     express2024: {
     name: 'Learn Express',
     level: '2024 - Codecademy',
-    image: 'src/assets/certifications/express2024.png',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/express2024.png',
     details: `Built an Application Programming Interface (API) in JavaScript using the popular Express framework.
     Learnt how to use Express middleware to improve  API's code quality and readability.`
 }, 
@@ -95,19 +95,19 @@ export const allCertifications = {
     css2024: {
     name: 'CSS: Transitions and Animations',
     level: '2024 - Codecademy',
-    image: 'src/assets/certifications/css2024.png',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/css2024.png',
     details: `Practiced implementing CSS animation using transitions.`
 }, 
     jsRequests2024: {
     name: 'JavaScript: Requests',
     level: '2024 - Codecademy',
-    image: 'src/assets/certifications/jsRequests2024.png',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/jsRequests2024.png',
     details: `Practiced requesting data asynchronously using the async/await syntax to dynamically use data from APIs. Completed a small Film Finder project.`
 }, 
     learnHtml2024: {
     name: 'HTML: Fundamentals',
     level: '2024 - Codecademy',
-    image: 'src/assets/certifications/learnHtml2024.png',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/learnHtml2024.png',
     details: `Practiced working with HTML elements and structure, the building blocks of websites. 
     I took this course to ensure semantic nature of my HTML structures.`
 }, 
