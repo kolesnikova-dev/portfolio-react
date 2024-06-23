@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import text and symbols
 import { symbols } from '../../models/data';
-import { certificationsData } from '../../models/certificationsData';
+// import { certificationsData } from '../../models/certificationsData';
 //import components
 import Card from '../Card/Card';
 import Button from '../Button/Button';
@@ -10,7 +10,7 @@ import './CertificationsStyle.css';
 import './CertificationsNestHubStyle.css'
 
 
-const Certifications = () => {
+const Certifications = ({ data, header}) => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -32,14 +32,14 @@ const Certifications = () => {
   return (
     <section className='certifications-section'>
      <div className='top-certifications'>
-      <header>Certifications</header>
+      <header>{header}</header>
       <p>click on a card to see credential</p>
      </div>
       
       <div className='card-section'>
 
         {/* loop through all credentials and return a card per credential */}
-        {Object.values(certificationsData).map((item, index) => (
+        {Object.values(data).map((item, index) => (
           <Card 
             thisClass={'cert'} 
             data={item} 

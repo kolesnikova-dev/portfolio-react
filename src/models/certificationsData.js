@@ -9,6 +9,15 @@ export const certificationsData = {
         highly scalable and interactive React.js web applications can be enabled. 
         With the power of these core technologies I learnt to build valuable full-stack applications.`
     },
+    backendEdx2024: {
+        name: 'Back-end Application Development with Node.js and Express',
+        level: '2024 - IBM',
+        image: 'src/assets/certifications/backend-edx2024.jpg',
+        details: `Honed my skills in building robust and efficient server-side applications. 
+        Through this course, I have learned to develop applications using asynchronous callbacks and promises, 
+        ensuring smooth and responsive user experiences. Created REST APIs 
+        and performed CRUD operations, which are essential for building dynamic web applications.`
+    },
     async2024: {
         name: 'JavaScript: Asynchronous Programming',
         level: '2024 - Codecademy',
@@ -16,13 +25,7 @@ export const certificationsData = {
         details: `Learnt about asynchronous programming and leverage promises 
         in JavaScript. This course was great and helped me to fill the blanks. 
         Built a movie finder application using Fetch API upon completion.`
-    },
-    buildingInteractive2024: {
-        name: 'Building Interactive JavaScript Websites Course',
-        level: '2024 - Codecademy',
-        image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/building-interactive-2024.png',
-        details: `Learnt to create webpage interactivity by leveraging JavaScript 
-        events in the browser.`
+    
     },
     js2024: {
         name: 'JavaScript Course',
@@ -62,7 +65,7 @@ export const certificationsData = {
         This project not only reinforced my understanding of Python 
         fundamentals but also provided me with knowledge that helped me acquire programmatical style of thinking.`
     },
-    typescript: {
+    cloudComputing: {
         name: 'Introduction to Cloud Computing',
         level: '2023 - IBM',
         image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/cloud-ibm-2023.png',
@@ -70,36 +73,41 @@ export const certificationsData = {
         underpin cloud computing. From the basics of HTTP protocols 
         to advanced security measures and encryption techniques. 
         Gained understanding of how data is transmitted, stored, 
-        and secured in the cloud.`
+        and secured in the cloud.` 
     },
  };
 
-export const allCertifications = { 
-    backendEdx2024: {
-    name: 'Back-end Application Development with Node.js and Express',
-    level: '2024 - IBM',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/backend-edx2024.jpg',
-    details: `Honed my skills in building robust and efficient server-side applications. 
-    Through this course, I have learned to develop applications using asynchronous callbacks and promises, 
-    ensuring smooth and responsive user experiences. Created REST APIs 
-    and performed CRUD operations, which are essential for building dynamic web applications.`
+export const allCertifications = {
+    express2024: {
+    name: 'Learn Express',
+    level: '2024 - Codecademy',
+    image: 'src/assets/certifications/express2024.png',
+    details: `Built an Application Programming Interface (API) in JavaScript using the popular Express framework.
+    Learnt how to use Express middleware to improve  API's code quality and readability.`
 }, 
+    buildingInteractive2024: {
+    name: 'Building Interactive JavaScript Websites Course',
+    level: '2024 - Codecademy',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/building-interactive-2024.png',
+    details: `Learnt to create webpage interactivity by leveraging JavaScript 
+    events in the browser.`
+},
     css2024: {
     name: 'CSS: Transitions and Animations',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/css2024.png',
+    image: 'src/assets/certifications/css2024.png',
     details: `Practiced implementing CSS animation using transitions.`
 }, 
     jsRequests2024: {
     name: 'JavaScript: Requests',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/jsRequests2024.png',
+    image: 'src/assets/certifications/jsRequests2024.png',
     details: `Practiced requesting data asynchronously using the async/await syntax to dynamically use data from APIs. Completed a small Film Finder project.`
 }, 
     learnHtml2024: {
     name: 'HTML: Fundamentals',
     level: '2024 - Codecademy',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/learnHtml2024.png',
+    image: 'src/assets/certifications/learnHtml2024.png',
     details: `Practiced working with HTML elements and structure, the building blocks of websites. 
     I took this course to ensure semantic nature of my HTML structures.`
 }, 
@@ -119,7 +127,7 @@ export const allCertifications = {
     webDevelopment2023: {
     name: 'Introduction to Web Development with HTML5, CSS3, and JavaScript',
     level: '2023 - IBM',
-    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/introWeb2023.png',
+    image: 'src/assets/certifications/introWeb2023.png',
     details: `Practiced and developed hands-on skills to work with HTML, CSS and JavaScript.
     Learnt to manage projects with Git and GitHub.`
 }
