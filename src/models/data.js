@@ -1,6 +1,7 @@
 import githubLogo from '../assets/images/GitHub_Logo_White.png';
 import climateRecording from '../assets/videos/screen-recording.mp4';
 import weatherRecording from '../assets/videos/weather-recording.mp4';
+import vigenereRecording from '../assets/../videos/vigenere-recording.mov';
 
 export const navBarData = ['home', 'skills', 'projects', 'certifications', 'contact'];
 
@@ -79,8 +80,8 @@ export const projectsData = {
     },
     2: {
         title: "Vigenere Cipher in Python",
-        githubLink: "https://github.com/firstnamenika/Vigenere-Cipher",
-        image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/vigenere.png",
+        githubLink: "https://github.com/kweeuhree/vigenere",
+        image: vigenereRecording,
         details: "The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key. This is a fun cryptography project with Python 3."
     }, 
     3: {
