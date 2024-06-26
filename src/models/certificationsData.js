@@ -9,6 +9,13 @@ export const certificationsData = {
         highly scalable and interactive React.js web applications can be enabled. 
         With the power of these core technologies I learnt to build valuable full-stack applications.`
     },
+    js2024: {
+        name: 'Intermediate JavaScript',
+        level: '2024 - Codecademy',
+        image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/intermediateJs2024.png?raw=true',
+        details: `Learnt of the concurrency module and event loop in JavaScript. Practiced efficient error handling.
+        Used JavaScript modules to define reusable logic; identified the ways currying and hoisting contribute to how JavaScript works under the hood.`
+    },
     backendEdx2024: {
         name: 'Back-end Application Development with Node.js and Express',
         level: '2024 - IBM',
@@ -25,14 +32,6 @@ export const certificationsData = {
         details: `Learnt about asynchronous programming and leverage promises 
         in JavaScript. This course was great and helped me to fill the blanks. 
         Built a movie finder application using Fetch API upon completion.`
-    
-    },
-    js2024: {
-        name: 'JavaScript Course',
-        level: '2024 - Codecademy',
-        image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/js-2024.png',
-        details: `Grasped fundamentals of JavaScript, learnt how to work with 
-        basic array methods and classes. I am currently upskilling by taking JavaScript Intermediate course.`
     },
     reactibm2023: {
         name: 'Developing Front End Apps with React',
@@ -103,6 +102,13 @@ export const allCertifications = {
     level: '2024 - Codecademy',
     image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/jsRequests2024.png?raw=true',
     details: `Practiced requesting data asynchronously using the async/await syntax to dynamically use data from APIs. Completed a small Film Finder project.`
+},
+    js2024: {
+    name: 'JavaScript Course',
+    level: '2024 - Codecademy',
+    image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/js-2024.png',
+    details: `Grasped fundamentals of JavaScript, learnt how to work with 
+    basic array methods and classes.`
 }, 
     learnHtml2024: {
     name: 'HTML: Fundamentals',
