@@ -1,7 +1,7 @@
 import githubLogo from '../assets/images/GitHub_Logo_White.png';
 import climateRecording from '../assets/videos/screen-recording.mp4';
 import weatherRecording from '../assets/videos/weather-recording.mp4';
-import vigenereRecording from '../assets/videos/vigenere-recording.mov';
+import vigenereRecording from '../assets/videos/vigenere-recording.mp4';
 
 export const navBarData = ['home', 'skills', 'projects', 'certifications', 'contact'];
 
