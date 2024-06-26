@@ -1,7 +1,7 @@
 import githubLogo from '../assets/images/GitHub_Logo_White.png';
 import climateRecording from '../assets/videos/screen-recording.mp4';
 import weatherRecording from '../assets/videos/weather-recording.mp4';
-import vigenereRecording from '../assets/../videos/vigenere-recording.mov';
+import vigenereRecording from '../assets/videos/vigenere-recording.mov';
 
 export const navBarData = ['home', 'skills', 'projects', 'certifications', 'contact'];
 
@@ -81,8 +81,15 @@ export const projectsData = {
     2: {
         title: "Vigenere Cipher in Python",
         githubLink: "https://github.com/kweeuhree/vigenere",
-        image: vigenereRecording,
-        details: "The Vigenère cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key. This is a fun cryptography project with Python 3."
+        video: vigenereRecording,
+        details: `This Python script allows to encode or decode messages using a keyword-based cipher. 
+        It provides a command-line interface for user interaction.
+        Encoding and Decoding: Choose between encoding and decoding a message.
+        Keyword Input: Enter a keyword to modify the encoding pattern.
+        Interactive Interface: Continuously prompts the user for new messages until they choose to exit.
+        Human-like Interaction: Uses time delays to simulate a more natural interaction flow.
+
+        To run this program, users will need a Python-friendly environment.`
     }, 
     3: {
         title: "Towers Of Hanoi in Python",
