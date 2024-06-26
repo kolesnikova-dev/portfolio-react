@@ -96,14 +96,17 @@ export const projectsData = {
         githubLink: "https://github.com/firstnamenika/towers-of-hanoi",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/towers-of-hanoi-python.png",
         details: "This is a Python implementation of Towers of Hanoi game, demonstrating my understanding of stacks and linked list data structures. Working on this project has been valuable, as I was able to practice my skills in building classes." 
-    },
+    }
+ };
+
+ const allProjects = {
     4: {
         title: "Rock Paper Scissors React.js App",
         githubLink: "https://github.com/firstnamenika/rock-paper-scissors",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/rock-paper-scissors.png",
         details: "The task was to create an app entirely from scratch. I picked React to be able to manage states of styles of play cards and game result. I had some basic JavaScript code that I reworked into React and styled with vanilla CSS."
     }
- };
+ }
 
 export const symbols = {
     forward:`❯`,
