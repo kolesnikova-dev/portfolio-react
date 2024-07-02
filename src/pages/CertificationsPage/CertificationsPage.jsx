@@ -11,7 +11,7 @@ const CertificationsPage = () => {
   return (
     <section className='certificatons-page'>
         <Certifications data={certificationsData} header="Certifications Shortlist" />
-        <Certifications data={allCertifications} header="All Certifications" />
+        <Certifications data={allCertifications} header="Other Certifications" />
     </section>
   )
 }
