@@ -77,6 +77,12 @@ export const certificationsData = {
  };
 
 export const allCertifications = {
+    learnNext2024: {
+    name: 'Intro to Next.js',
+    level: '2024 - Codecademy',
+    image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/learn-next2024.jpg?raw=true',
+    details: `Learnt of key concepts of Next.js, such as Server-Side Rendering, Client-Side Rendering, file-based routing system, dynamic routing, error handling etc.`
+}, 
     express2024: {
     name: 'Learn Express',
     level: '2024 - Codecademy',
