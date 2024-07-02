@@ -5,7 +5,7 @@
 
 <figure align='center'>
     <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
-    <figcaption align='center'>Stats component</figcaption>
+    <p align='center'><figcaption>Stats component</figcaption></p>
 </figure>
 <p>The <code>useState</code> Hook is utilized throughout the application to enhance functionality. For instance, in the Projects component, it enables the carousel feature, while in the Certifications section, it enables overlay functionality. Additionally, in the Contacts component, <code>useState</code> keeps track of whether an email has been copied to the clipboard, dynamically changing the 'click to copy' button to 'copied' and back.</p>
 <p>In the Contacts component, external links are generated from a centralized array. The titles 'Actively updated account' and 'Original account' are rendered 
