@@ -5,7 +5,7 @@ import { symbols } from '../../models/data';
 //import styles
 import './OverlayStyle.css';
 
-const Overlay = ({ overlay }) => {
+const Overlay = ({ overlay, closeOverlay }) => {
   return (
     <div className='overlay'>
     <Button 

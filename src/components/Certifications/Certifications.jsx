@@ -49,7 +49,7 @@ const Certifications = ({ data, header }) => {
       </div>
 
       {/* if overlay exists return overlay with a credential and a closing button */}
-      { overlay && <Overlay overlay={overlay}/> }
+      { overlay && <Overlay overlay={overlay} closeOverlay={closeOverlay}/> }
 
     </section>
   );
