@@ -470,6 +470,7 @@
 
 .card {
     position: relative;
+    opacity: 0;
 }
 
 .card-image-container {

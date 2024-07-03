@@ -232,10 +232,6 @@
    animation: 4s rotateBorder linear infinite;
 }
 
-.appear {
-    animation: softAppearance 1s linear;
-}
-
 /* delay appearance of introduction by 1s */
 .introduction {
     opacity: 0;
@@ -250,13 +246,6 @@
     border-bottom: 1px solid rgba(250, 128, 114, 0.767);
     filter: drop-shadow(0 2px 3px); 
     animation: float 5s ease-in-out infinite;
-}
-
-
-/* Soft appearance of text animation */
-@keyframes softAppearance {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 /* Picture float animation */
