@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 
 //import styles
 import './CertificationsStyle.css';
-import './CertificationsNestHubStyle.css'
+// import './CertificationsNestHubStyle.css'
 
 
 
