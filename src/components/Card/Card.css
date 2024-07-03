@@ -386,9 +386,9 @@
     }
 
 .card {
-    font-size: unset;
+    font-size: 0.9rem;
     border: 1px solid rgba(98, 155, 241, 0.363); 
-    border-radius: 1vw;
+    border-radius: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
