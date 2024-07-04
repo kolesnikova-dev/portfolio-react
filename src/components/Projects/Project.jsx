@@ -1,5 +1,6 @@
 import React from 'react';
 import { DiGithubFull } from "react-icons/di";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Project = ({data, arrow}) => {
   return (
@@ -8,10 +9,18 @@ const Project = ({data, arrow}) => {
       <div className='title'>{data.title}</div>
     
       <div className='github-link-container'>
+        { 
+            data.liveLink && (
+              <a href={data.liveLink} target="_blank" rel="noopener noreferrer">
+                <span className='external-arrow'>Live <FaExternalLinkAlt /></span>
+              </a>
+            )
+          }
 
           <a href={data.githubLink} target="_blank" rel="noopener noreferrer">
-          <DiGithubFull className='react-icon'/><span className='external-arrow'>{arrow}</span>
+              <DiGithubFull className='react-icon'/><span className='external-arrow'> <FaExternalLinkAlt /></span>
           </a>
+         
       </div>
     </div>
     
