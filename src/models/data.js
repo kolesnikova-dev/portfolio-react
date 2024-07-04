@@ -54,48 +54,55 @@ export const projectsData = {
         githubLink: "https://github.com/kweeuhree/climate-view",
         liveLink: 'https://climate-view-1.onrender.com/',
         video: climateRecording,
-        details: "This a website that is meant to provide an overview of Earth's climate state as of 2024. It is a full MERN stack application where users can create an account and leave comments once logged in. Mongo provides persistence for user and comments data. The website includes animations, gifs and a video sourced mostly from NASA. Animations are achieved through state management. 'History' section involves data fetching and will display historical climate data."
+        details: [`An overview of Earth's climate state as of 2024.`, 
+        `It is a full MERN stack application where users can create an account and leave comments once logged in.`,
+        `Mongo provides persistence for user and comments data.`,
+        `The website includes animations, gifs and a video sourced mostly from NASA.`, 
+        `Animations are achieved through state management, and custom useIntersectionObserver hook.`,
+         `'History' section involves data fetching and will display historical climate data.`]
     }, 
     1: {
         title: "Weather App",
         githubLink: "https://github.com/firstnamenika/weather-app",
         video: weatherRecording,
-        details: `This is a weather app that fetches data from a third party api 
-        and displays it on a screen. The code defaults to looking up user location 
-        via navigator. A user can add a location to favorites, favorite location 
-        are displayed on a screen on the left side. Up to 5 favorite locations can 
+        details: [`A weather app that fetches data from a third party api and displays it on a screen.`, 
+        `The website will display user location based off navigator.`,
+        `A user can add a location to favorites, favorite locations 
+        are displayed on screen on the left side. Up to 5 favorite locations can 
         be added. Favorite locations can be removed by clicking on a heart next 
-        to locations name and temperature. 
-        Fetched data includes hourly weather, sunrise and sunset information, 
-        as well as humidity, wind, precipitation and UV index information.`
+        to locations name and temperature.`, 
+        `Fetched data includes hourly weather, sunrise and sunset information, 
+        as well as humidity, wind, precipitation and UV index information.`]
     },
     2: {
         title: "Vigenere Cipher in Python",
         githubLink: "https://github.com/kweeuhree/vigenere",
         video: vigenereRecording,
-        details: `This Python script allows to encode or decode messages using a keyword-based cipher. 
-        It provides a command-line interface for user interaction.
-        Encoding and Decoding: Choose between encoding and decoding a message.
-        Keyword Input: Enter a keyword to modify the encoding pattern.
-        Interactive Interface: Continuously prompts the user for new messages until they choose to exit.
-        Human-like Interaction: Uses time delays to simulate a more natural interaction flow.
-
-        To run this program, users will need a Python-friendly environment.`
+        details: [`This Python script allows to encode or decode messages using a keyword-based cipher. 
+        It provides a command-line interface for user interaction.`,
+        `Encoding and Decoding: Choose between encoding and decoding a message.`,
+        `Keyword Input: Enter a keyword to modify the encoding pattern.`,
+        `Interactive Interface: Continuously prompts the user for new messages until they choose to exit.`,
+        `To run this program, users will need a Python-friendly environment.`]
     }, 
     3: {
         title: "Towers Of Hanoi in Python",
         githubLink: "https://github.com/firstnamenika/towers-of-hanoi",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/towers-of-hanoi-python.png",
-        details: "This is a Python implementation of Towers of Hanoi game, demonstrating my understanding of stacks and linked list data structures. Working on this project has been valuable, as I was able to practice my skills in building classes." 
+        details:[ `This is a Python implementation of Towers of Hanoi game, demonstrating my understanding of 
+        stacks and linked list data structures.`, 
+        `Working on this project has been valuable, as I was able to practice my skills in building classes.` ]
     }
  };
 
- const allProjects = {
-    4: {
+ const otherProjects = {
+    0: {
         title: "Rock Paper Scissors React.js App",
         githubLink: "https://github.com/firstnamenika/rock-paper-scissors",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/rock-paper-scissors.png",
-        details: "The task was to create an app entirely from scratch. I picked React to be able to manage states of styles of play cards and game result. I had some basic JavaScript code that I reworked into React and styled with vanilla CSS."
+        details: `The task was to create an app entirely from scratch. 
+        I picked React to be able to manage states of styles of play cards and game result. 
+        I had some basic JavaScript code that I reworked into React and styled with vanilla CSS.`
     }
  }
 
