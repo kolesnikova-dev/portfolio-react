@@ -15,6 +15,7 @@ export const introductionData = {
 export const skillsData = {
     javascript: {
         name: 'JavaScript',
+
         image: 'https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png'
     },
     typescript: {
@@ -65,9 +66,7 @@ export const projectsData = {
         be added. Favorite locations can be removed by clicking on a heart next 
         to locations name and temperature. 
         Fetched data includes hourly weather, sunrise and sunset information, 
-        as well as humidity, wind, precipitation and UV index information.
-
-.`
+        as well as humidity, wind, precipitation and UV index information.`
     },
     2: {
         title: "Vigenere Cipher in Python",
