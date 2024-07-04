@@ -5,6 +5,8 @@ import { introductionData } from '../../models/data';
 import useIntersectionObsever from '../../utils/useIntersectionObserver';
 //import main image
 import picture from '../../assets/images/picture.png'; 
+// import components
+import ImageContainer from '../ImageContainer/ImageContainer';
 //import styles
 import './PictureStyle.css';
 
@@ -16,11 +18,12 @@ const Picture = () => {
   return (
     <section className='picture-section'>
 
-    <div className="gradient">
+    <div className="gradient" ref={pictureRef}>
             {/* picture container */}
-        <div className='image-container' ref={pictureRef}>
+            <ImageContainer thisClass={'image-container'} src={picture} alt="Nika's Picture"/>
+        {/* <div className='image-container' ref={pictureRef}>
           <img src={picture} alt="Nika's Picture" />
-        </div>
+        </div> */}
           {/* text container */}
         <div className={`text-container ${isInView ? 'appear' : ''}`}>
           {/* greeting */}
