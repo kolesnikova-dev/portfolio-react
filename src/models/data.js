@@ -52,6 +52,7 @@ export const projectsData = {
     0: {
         title: "Climate View",
         githubLink: "https://github.com/kweeuhree/climate-view",
+        liveLink: 'https://climate-view-1.onrender.com/',
         video: climateRecording,
         details: "This a website that is meant to provide an overview of Earth's climate state as of 2024. It is a full MERN stack application where users can create an account and leave comments once logged in. Mongo provides persistence for user and comments data. The website includes animations, gifs and a video sourced mostly from NASA. Animations are achieved through state management. 'History' section involves data fetching and will display historical climate data."
     }, 
