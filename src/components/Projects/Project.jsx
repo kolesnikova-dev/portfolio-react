@@ -12,7 +12,7 @@ const Project = ({data, arrow}) => {
         { 
             data.liveLink && (
               <a href={data.liveLink} target="_blank" rel="noopener noreferrer">
-                <span className='external-arrow'>Live <FaExternalLinkAlt /></span>
+                <span className='external-arrow'>Live<FaExternalLinkAlt /></span>
               </a>
             )
           }

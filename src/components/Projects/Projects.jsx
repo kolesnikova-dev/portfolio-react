@@ -31,7 +31,7 @@ const Projects = () => {
     <div>
   
       <div className='projects-container'>
-                  <Project data={projectsData[currentProject]} arrow={symbols.northEast}/>
+                  <Project data={projectsData[currentProject]} />
                   
                     {/* button container */}
                   <div className="button-container">
