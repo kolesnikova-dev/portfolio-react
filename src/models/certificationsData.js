@@ -14,7 +14,8 @@ export const certificationsData = {
         level: '2024 - Codecademy',
         image: 'https://github.com/kweeuhree/react-website/blob/master/src/assets/certifications/intermediateJs2024.png?raw=true',
         details: `Learnt of the concurrency module and event loop in JavaScript. Practiced efficient error handling.
-        Used JavaScript modules to define reusable logic; identified the ways currying and hoisting contribute to how JavaScript works under the hood.`
+        Used JavaScript modules to define reusable logic; identified the ways currying and hoisting contribute to 
+        how JavaScript works under the hood.`
     },
     backendEdx2024: {
         name: 'Back-end Application Development with Node.js and Express',
