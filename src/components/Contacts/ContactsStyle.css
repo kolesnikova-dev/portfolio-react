@@ -147,7 +147,7 @@
     display: grid;
     gap: 15%;
     margin-right: unset;
-    font-size: unset;
+    font-size: 1.1rem;
 }
 
 .click-to-copy {
@@ -176,6 +176,10 @@
     margin-block-end: 2%;
     align-items: center;
     justify-content: space-around;
+}
+
+.link-container img {
+    max-width: 65%;
 }
       
   }
