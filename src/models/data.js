@@ -15,45 +15,36 @@ export const introductionData = {
 export const skillsData = {
     javascript: {
         name: 'JavaScript',
-        level: 'Intermediate',
         image: 'https://cdn.iconscout.com/icon/free/png-256/free-javascript-2038874-1720087.png'
+    },
+    typescript: {
+        name: 'TypeScript',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png'
+    },
+    python: {
+        name: 'Python',
+        image: 'https://docs.python.org/3/_static/py.svg'
     },
     git: {
         name: 'Git',
-        level: 'Intermediate',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png'
     },
     react: {
         name: 'React',
-        level: 'Early Intermediate',
         image: 'https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-svg-vector.svg'
-    },
-    express: {
-        name: 'Express',
-        level: 'Early Intermediate',
-        image: 'https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png'
     },
     css: {
         name: 'CSS',
-        level: 'Early Intermediate',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png'
+    },
+    express: {
+        name: 'Express',
+        image: 'https://ajeetchaulagain.com/static/7cb4af597964b0911fe71cb2f8148d64/87351/express-js.png'
     },
     mongoose: {
         name: 'Mongoose',
-        level: 'Early Intermediate',
         image: 'https://cdn-images-1.medium.com/max/449/1*NRCOyVBY6Jiqr4Q9A1zoaQ.png'
     },
-    python: {
-        name: 'Python',
-        level: 'Early Intermediate',
-        image: 'https://docs.python.org/3/_static/py.svg'
-    },
-    typescript: {
-        name: 'TypeScript',
-        level: 'Beginner',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png'
-    },
-
  };
 
 export const projectsData = {

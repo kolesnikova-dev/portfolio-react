@@ -3,10 +3,10 @@
         /* border: 1px solid aliceblue; */
         display: flex;
         flex-wrap: wrap;
-        padding: 4em;
+        padding: 1em;
         justify-content: center;
-        width: 100%;
-        margin-inline-start: -6%;
+        width: 70vw;
+        margin-inline-start: 0%;
     }
 }
 /* --------------------------------------end desktop---------------- */
@@ -55,4 +55,9 @@
 
         margin-inline-start: -2%;
     }
+}
+/* ----------------------------------------------------------- */
+
+.skill {
+    width: 20%;
 }

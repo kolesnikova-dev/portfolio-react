@@ -21,9 +21,6 @@ const Picture = () => {
     <div className="gradient" ref={pictureRef}>
             {/* picture container */}
             <ImageContainer thisClass={'image-container'} src={picture} alt="Nika's Picture"/>
-        {/* <div className='image-container' ref={pictureRef}>
-          <img src={picture} alt="Nika's Picture" />
-        </div> */}
           {/* text container */}
         <div className={`text-container ${isInView ? 'appear' : ''}`}>
           {/* greeting */}

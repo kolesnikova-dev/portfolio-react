@@ -10,7 +10,7 @@ const Skills = () => {
       <header>Skills</header>
       <div className='card-section'>
       {Object.values(skillsData).map((skill, index) => (
-        <Card key={index} data={skill} />
+        <Card key={index} data={skill} thisClass={'skill'}/>
       ))}
       </div>
     </section>
