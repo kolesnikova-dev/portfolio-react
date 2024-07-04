@@ -34,7 +34,11 @@ const Project = ({data, arrow}) => {
       </div> 
    
     
-    <div className='details'>{data.details}</div>
+    <div className='details'>{
+      data.details.map((line) => (
+        (<p key={line}>{line}</p>)
+      ))
+      }</div>
   </div>
   )
 }
