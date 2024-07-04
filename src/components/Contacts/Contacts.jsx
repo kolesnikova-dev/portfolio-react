@@ -26,14 +26,12 @@ const Contacts = () => {
       <header>Links</header>
       <div className="contacts-section">
 
-        {/* current github */}
+        {/* github */}
         <Contact data={contactsData.currentGithub} />
 
         {/* linked in */}
         <Contact data={contactsData.linkedIn} />
 
-        {/* main github */}
-        <Contact data={contactsData.github} />
 
         {/* email container */}
         <div className="email-container">
