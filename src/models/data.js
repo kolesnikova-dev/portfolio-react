@@ -50,11 +50,11 @@ export const skillsData = {
 
 export const projectsData = {
     0: {
-        title: "Climate View",
+        title: "Climate View MERN stack",
         githubLink: "https://github.com/kweeuhree/climate-view",
         liveLink: 'https://climate-view-1.onrender.com/',
         video: climateRecording,
-        details: [`An overview of Earth's climate state as of 2024.`, 
+        details: [`An overview of Earth's climate state as of 2024`, 
         `It is a full MERN stack application where users can create an account and leave comments once logged in.`,
         `Mongo provides persistence for user and comments data.`,
         `The website includes animations, gifs and a video sourced mostly from NASA.`, 
@@ -62,11 +62,11 @@ export const projectsData = {
          `'History' section involves data fetching and will display historical climate data.`]
     }, 
     1: {
-        title: "Weather App",
+        title: "Weather App in React.js",
         githubLink: "https://github.com/firstnamenika/weather-app",
         video: weatherRecording,
-        details: [`A weather app that fetches data from a third party api and displays it on a screen.`, 
-        `The website will display user location based off navigator.`,
+        details: [`A weather app that fetches data from a third party api and displays it on a screen`, 
+        `The website will display user's location based on their browser's location navigator.`,
         `A user can add a location to favorites, favorite locations 
         are displayed on screen on the left side. Up to 5 favorite locations can 
         be added. Favorite locations can be removed by clicking on a heart next 
@@ -79,7 +79,7 @@ export const projectsData = {
         githubLink: "https://github.com/kweeuhree/vigenere",
         video: vigenereRecording,
         details: [`This Python script allows to encode or decode messages using a keyword-based cipher. 
-        It provides a command-line interface for user interaction.`,
+        It provides a command-line interface for user interaction`,
         `Encoding and Decoding: Choose between encoding and decoding a message.`,
         `Keyword Input: Enter a keyword to modify the encoding pattern.`,
         `Interactive Interface: Continuously prompts the user for new messages until they choose to exit.`,
@@ -89,8 +89,8 @@ export const projectsData = {
         title: "Towers Of Hanoi in Python",
         githubLink: "https://github.com/firstnamenika/towers-of-hanoi",
         image: "https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/images/towers-of-hanoi-python.png",
-        details:[ `This is a Python implementation of Towers of Hanoi game, demonstrating my understanding of 
-        stacks and linked list data structures.`, 
+        details:[`Python implementation of Towers of Hanoi game`, 
+        `Goal of this project is to apply knowledge of stacks and linked list data structures.`, 
         `Working on this project has been valuable, as I was able to practice my skills in building classes.` ]
     }
  };
