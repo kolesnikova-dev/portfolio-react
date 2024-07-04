@@ -34,11 +34,11 @@ const Contacts = () => {
 
 
         {/* email container */}
-        <div className="email-container">
+        <div className="email-container" onClick={copyEmail}>
           <div className='email'>
             {contactsData.email}
           </div>
-          <div className="click-to-copy" onClick={copyEmail}>{copied ? 'copied!' : 'click to copy'}</div>
+          <div className="click-to-copy">{copied ? 'copied!' : 'click to copy'}</div>
 
         </div>
 
