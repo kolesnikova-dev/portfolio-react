@@ -106,7 +106,7 @@ header {
 }
 
 .appear {
-  animation: softAppearance 1s linear;
+  animation: softAppearance 1s linear forwards;
 }
 
 /* Soft appearance of text animation */
@@ -121,4 +121,14 @@ header {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-out {
+  transform: translateX(-110%);
+  opacity: 0;
 }

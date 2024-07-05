@@ -2,7 +2,7 @@ import React from 'react';
 import { DiGithubFull } from "react-icons/di";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const Project = ({data}) => {
+const Project = ({data, isTransitioning}) => {
   return (
     <div className='project'>
     <div className="title-section">
@@ -23,18 +23,19 @@ const Project = ({data}) => {
          
       </div>
     </div>
-    
-   
-      <div className="project-image-container">
+
+    <div className={`project-wrapper ${isTransitioning ? 'fade-out' : 'delayedAppear'}`}>
+      <div className={`project-image-container project-wrapper ${isTransitioning ? 'fade-out' : 'delayedAppear'}`}>
       {data.image ? ( 
          <img src={data.image} alt={data.title} />
       ) : (      
         <video src={data.video} loop={true} autoPlay="autoplay" controls="controls" muted />
       )}
       </div> 
+    </div>
    
     
-    <div className='details'>
+    <div className={`details details-wrapper ${isTransitioning ? 'fade-out' : 'appear'}`}>
       {
       data.details.map((line) => (
         (<p key={line}>{line}</p>)
