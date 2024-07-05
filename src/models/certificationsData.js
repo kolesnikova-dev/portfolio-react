@@ -30,8 +30,9 @@ export const certificationsData = {
         name: 'JavaScript: Asynchronous Programming',
         level: '2024 - Codecademy',
         image: 'https://github.com/firstnamenika/firstnamenika.github.io/blob/main/certifications/async-2024.png?raw=true',
-        details: `Learnt about asynchronous programming and leverage promises 
-        in JavaScript. This course was great and helped me to fill the blanks. 
+        details: `Learnt how asynchronous operations work in JavaScript using callbacks, promises, and async/await syntax.
+        Used async functions and the await keyword to write asynchronous code in a more synchronous style, enhancing readability and maintainability.
+        Practiced handling errors in asynchronous JavaScript code.
         Built a movie finder application using Fetch API upon completion.`
     },
     reactibm2023: {
