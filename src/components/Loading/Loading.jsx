@@ -1,4 +1,6 @@
 import React from 'react'
+//import styles
+import './LoadingStyle.css';
 
 const Loading = () => {
     console.log('loading component rendered');
