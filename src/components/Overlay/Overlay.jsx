@@ -1,6 +1,10 @@
 import { Suspense, lazy } from 'react';
 //import components
-const ImageContainer = lazy(() => import('../ImageContainer/ImageContainer'));
+const ImageContainer = lazy(() => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(import('../ImageContainer/ImageContainer')), 700); // 3-second delay
+  });
+});
 import Button from '../Button/Button';
 import Loading from '../Loading/Loading';
 //import  symbols
