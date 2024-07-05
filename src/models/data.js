@@ -3,7 +3,7 @@ import climateRecording from '../assets/videos/screen-recording.mp4';
 import weatherRecording from '../assets/videos/weather-recording.mp4';
 import vigenereRecording from '../assets/videos/vigenere-recording.mp4';
 
-export const navBarData = ['home', 'skills', 'projects', 'certifications', 'contact'];
+export const navBarData = ['home', 'projects', 'certifications', 'contact'];
 
 export const introductionData = {
     greeting: "Hi, I'm Nika!",
