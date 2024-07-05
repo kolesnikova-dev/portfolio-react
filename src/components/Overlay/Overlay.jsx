@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 //import components
 const ImageContainer = lazy(() => {
   return new Promise(resolve => {
-    setTimeout(() => resolve(import('../ImageContainer/ImageContainer')), 700); // 3-second delay
+    setTimeout(() => resolve(import('../ImageContainer/ImageContainer')), 700); //add delay to display Loading
   });
 });
 import Button from '../Button/Button';
