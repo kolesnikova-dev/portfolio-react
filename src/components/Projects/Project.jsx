@@ -2,7 +2,7 @@ import React from 'react';
 import { DiGithubFull } from "react-icons/di";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-const Project = ({data, arrow}) => {
+const Project = ({data}) => {
   return (
     <div className='project'>
     <div className="title-section">
@@ -34,11 +34,13 @@ const Project = ({data, arrow}) => {
       </div> 
    
     
-    <div className='details'>{
+    <div className='details'>
+      {
       data.details.map((line) => (
         (<p key={line}>{line}</p>)
       ))
-      }</div>
+      }
+      </div>
   </div>
   )
 }
