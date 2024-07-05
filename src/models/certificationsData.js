@@ -60,7 +60,7 @@ export const certificationsData = {
         name: 'Python 3 Course',
         level: '2023 - Codecademy',
         image: 'https://raw.githubusercontent.com/firstnamenika/firstnamenika.github.io/main/certifications/python-2023.png',
-        details: ` Learnt the fundamental concepts of Python, including variables,
+        details: `Learnt the fundamental concepts of Python, including variables,
         data types, control flow structures, and functions. 
         Built Vigenere Cipher implementation upon completion. 
         This project not only reinforced my understanding of Python 
