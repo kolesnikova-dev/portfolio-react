@@ -1,6 +1,7 @@
 import React from 'react';
 import { DiGithubFull } from "react-icons/di";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import FormattedArray from '../FormattedArray/FormattedArray';
 
 const Project = ({data, isTransitioning}) => {
   return (
@@ -36,11 +37,12 @@ const Project = ({data, isTransitioning}) => {
    
     
     <div className={`details details-wrapper ${isTransitioning ? 'fade-out' : 'appear'}`}>
-      {
+      <FormattedArray arr={data.details} />
+      {/* {
       data.details.map((line) => (
         (<p key={line}>{line}</p>)
       ))
-      }
+      } */}
       </div>
   </div>
   )

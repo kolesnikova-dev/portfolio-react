@@ -7,10 +7,12 @@ const ImageContainer = lazy(() => {
 });
 import Button from '../Button/Button';
 import Loading from '../Loading/Loading';
+import FormattedArray from '../FormattedArray/FormattedArray';
 //import  symbols
 import { symbols } from '../../models/data';
 //import styles
 import './OverlayStyle.css';
+
 
 const Overlay = ({ overlay, closeOverlay }) => {
   return (
@@ -33,7 +35,7 @@ const Overlay = ({ overlay, closeOverlay }) => {
     {/* short description */}
     <div className='overlay-details-container'>
       <div className="overlay-details">
-      {overlay.details}
+        <FormattedArray arr={overlay.details} />
       </div>
     </div>
 
