@@ -35,11 +35,11 @@ const Projects = () => {
   };
 
   return (
-    <section className='projects-section'>
+    <section>
         <header>Projects</header>
     <div>
   
-      <div className='projects-container'>
+      <div>
            
                 <Suspense fallback={<Loading />}>
                   <LazyProject data={projectsData[currentProject]} isTransitioning={isTransitioning}/>
@@ -49,7 +49,7 @@ const Projects = () => {
 
                   
                     {/* button container */}
-                  <div className="button-container">
+                  <div>
                     <Button thisClass='slider-button' symbol={symbols.backward} action={()=> changeProjectImage('backward')} />
                     <Button thisClass='slider-button' symbol={symbols.forward} action={()=> changeProjectImage('forward')} />
                   </div>

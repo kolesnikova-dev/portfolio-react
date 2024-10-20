@@ -5,28 +5,28 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Project = ({data, isTransitioning}) => {
   return (
-    <div className='project'>
-    <div className="title-section">
-      <div className='title'>{data.title}</div>
+    <div>
+    <div>
+      <div >{data.title}</div>
     
-      <div className='github-link-container'>
+      <div>
         { 
             data.liveLink && (
               <a href={data.liveLink} target="_blank" rel="noopener noreferrer">
-                <span className='external-arrow'>Live<FaExternalLinkAlt /></span>
+                <span>Live<FaExternalLinkAlt /></span>
               </a>
             )
           }
 
           <a href={data.githubLink} target="_blank" rel="noopener noreferrer">
-              <DiGithubFull className='react-icon'/><span className='external-arrow'> <FaExternalLinkAlt /></span>
+              <DiGithubFull/><span> <FaExternalLinkAlt /></span>
           </a>
          
       </div>
     </div>
 
-    <div className={`project-wrapper ${isTransitioning ? 'fade-out' : 'delayedAppear'}`}>
-      <div className={`project-image-container project-wrapper ${isTransitioning ? 'fade-out' : 'delayedAppear'}`}>
+    <div className={isTransitioning ? 'fade-out' : 'delayedAppear'}>
+      <div className={isTransitioning ? 'fade-out' : 'delayedAppear'}>
       {data.image ? ( 
          <img src={data.image} alt={data.title} />
       ) : (      
@@ -36,13 +36,8 @@ const Project = ({data, isTransitioning}) => {
     </div>
    
     
-    <div className={`details details-wrapper ${isTransitioning ? 'fade-out' : 'appear'}`}>
+    <div className={isTransitioning ? 'fade-out' : 'appear'}>
       <FormattedArray arr={data.details} />
-      {/* {
-      data.details.map((line) => (
-        (<p key={line}>{line}</p>)
-      ))
-      } */}
       </div>
   </div>
   )
