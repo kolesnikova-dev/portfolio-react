@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 import './SkillsStyle.css';
 import { skillsData } from '../../models/data';
 
-const Skills = () => {
+export const Skills = () => {
   
   return (
     <section className='skills-section'>
@@ -16,5 +16,3 @@ const Skills = () => {
     </section>
   )
 }
-
-export default Skills;

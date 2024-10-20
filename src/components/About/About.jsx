@@ -8,9 +8,9 @@ import picture from '../../assets/images/picture.png';
 // import components
 import ImageContainer from '../ImageContainer/ImageContainer';
 //import styles
-import './PictureStyle.css';
+import './AboutStyle.css';
 
-const Picture = () => {
+export const About = () => {
 
   const pictureRef = useRef(null);
   const isInView = useIntersectionObsever(pictureRef);
@@ -34,5 +34,3 @@ const Picture = () => {
     </section>
   )
 }
-
-export default Picture;

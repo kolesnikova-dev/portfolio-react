@@ -7,7 +7,7 @@ import useIntersectionObserver from '../../utils/useIntersectionObserver';
 import './StatsStyle.css';
 import './StatsNestHubStyle.css';
 
-const Stats = () => {
+export const Stats = () => {
   // initialize state to store most used languages information
   const [languages, setLanguages] = useState([]);
    //reference for the container with images
@@ -72,4 +72,3 @@ const Stats = () => {
   )
 }
 
-export default Stats;

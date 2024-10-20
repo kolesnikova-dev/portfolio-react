@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import './FormStyle.css';
 import './FormNestHubStyle.css';
 
-const Form = () => {
+export const Form = () => {
   //initialize form state
   const [formData, setFormData] = useState({
     user_name :'',
@@ -121,4 +121,3 @@ const Form = () => {
   )
 }
 
-export default Form;

@@ -9,7 +9,7 @@ import './CertificationsStyle.css';
 
 
 
-const Certifications = ({ data, header }) => {
+export const Certifications = ({ data, header }) => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -55,5 +55,3 @@ const Certifications = ({ data, header }) => {
     </section>
   );
 };
-
-export default Certifications;

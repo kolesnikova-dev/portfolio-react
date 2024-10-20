@@ -4,7 +4,7 @@ import Contact from './Contact';
 import { useState } from 'react';
 import { contactsData } from '../../models/data';
 
-const Contacts = () => {
+export const Contacts = () => {
   
   const [copied, setCopied] = useState(false);
  
@@ -50,5 +50,3 @@ const Contacts = () => {
     </section>
   )
 }
-
-export default Contacts;
