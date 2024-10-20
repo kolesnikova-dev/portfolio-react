@@ -4,7 +4,7 @@ import { ErrorFallback } from './ErrorFallback';
 class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { hasError: false };
+      this.state = { hasError: false, errorInfo: '' };
     }
   
     static getDerivedStateFromError(error) {
@@ -13,13 +13,14 @@ class ErrorBoundary extends React.Component {
     }
   
     componentDidCatch(error, errorInfo) {
+        this.setState({ errorInfo });
         console.error('Error caught in ErrorBoundary:', error, errorInfo);
     }
   
     render() {
       if (this.state.hasError) {
         // You can render any custom fallback UI
-        return <ErrorFallback />;
+        return <ErrorFallback error={this.state.errorInfo}/>;
       }
   
       return this.props.children; 

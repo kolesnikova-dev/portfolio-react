@@ -6,12 +6,15 @@ import Button from '../Button/Button';
 const LazyProject = lazy(() => import('./Project'));
 // import styles
 import './ProjectsStyle.css';
+const dataKeys = Object.keys(projectsData);
 
 const Projects = () => {
-
-  const dataKeys = Object.keys(projectsData);
+  
   const [currentProject, setCurrentProject] = useState(dataKeys[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  
+  console.log(projectsData[currentProject]);
 
   const changeProjectImage = (action) => {
     if (isTransitioning) return; // Prevent changing during transition

@@ -9,8 +9,8 @@ const Skills = () => {
     <section className='skills-section'>
       <header>Skills</header>
       <div className='card-section'>
-      {Object.values(skillsData).map((skill, index) => (
-        <Card key={index} data={skill} thisClass={'skill'}/>
+      {Object.values(skillsData).map((skill) => (
+        <Card key={skill} data={skill} thisClass={'skill'}/>
       ))}
       </div>
     </section>
