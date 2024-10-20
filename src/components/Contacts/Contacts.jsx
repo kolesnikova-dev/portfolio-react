@@ -25,7 +25,7 @@ export const Contacts = () => {
   return (
     <section>
       <header>Links</header>
-      <div className="contacts-section">
+      <div>
 
         {/* github */}
         <Contact data={contactsData.currentGithub} />
@@ -35,11 +35,11 @@ export const Contacts = () => {
 
 
         {/* email container */}
-        <div className="email-container" onClick={copyEmail}>
-          <div className='email'>
+        <div onClick={copyEmail}>
+          <div>
             {contactsData.email}
           </div>
-          <div className="click-to-copy">{copied ? 'copied!' : 'click to copy'}</div>
+          <div>{copied ? 'copied!' : 'click to copy'}</div>
 
         </div>
 
