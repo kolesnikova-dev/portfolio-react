@@ -10,7 +10,7 @@ export const introductionData = {
      I am having fun in React and RESTing in between.`
  };
 
- const image = 'https://static.vecteezy.com/system/resources/thumbnails/013/995/977/small_2x/question-mark-red-hand-drawn-doodle-faq-symbol-vector.jpg';
+ const image = '';
 
 export const skillsData = {
     javascript: {

@@ -5,7 +5,7 @@ import { NavBar, Footer } from '../components/index';
 
 export const Layout = () => {
   return (
-    <div className='App'>
+    <div>
         {/* navigation bar */}
         <nav>
             <NavBar />

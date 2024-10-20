@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import './NavBarStyle.css';
 
-const navBarData = ['','contact'];
+const navBarData = ['home','contact'];
 
 export const NavBar = () => {
     const linkJSX = navBarData.map((item, index) => (

@@ -19,11 +19,11 @@ function App() {
           <Route path="/" element={<Layout />}>
             
             <Route index element={<MainPage	/>}	/>
-            <Route path={'/contact'} element={<ContactPage />} />
-            
-            {/* catch all route - replace to a 404 page */}
+            <Route path={'contact'} element={<ContactPage />} />
+          
+          </Route>
+             {/* catch all route - replace to a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
-        </Route>
       </Routes>
      
       {/* </Suspense> */}
