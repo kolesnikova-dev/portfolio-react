@@ -12,10 +12,7 @@ export const ContactPage = () => {
           {/* lets get in touch */}
          <div>
             <div>
-              <span>Let's</span>
-              <span>get</span>
-              <span>in</span>
-              <span>touch</span>
+             Send me an email: 
             </div>
           </div>
 

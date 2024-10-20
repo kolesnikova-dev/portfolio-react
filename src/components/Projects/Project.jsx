@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { FormattedArray } from '../index';
 import { DiGithubFull } from "react-icons/di";
 import { FaExternalLinkAlt } from "react-icons/fa";
@@ -12,21 +13,21 @@ const Project = ({data, isTransitioning}) => {
       <div>
         { 
             data.liveLink && (
-              <a href={data.liveLink} target="_blank" rel="noopener noreferrer">
+              <NavLink href={data.liveLink} target="_blank" rel="noopener noreferrer">
                 <span>Live<FaExternalLinkAlt /></span>
-              </a>
+              </NavLink>
             )
           }
 
-          <a href={data.githubLink} target="_blank" rel="noopener noreferrer">
+          <NavLink href={data.githubLink} target="_blank" rel="noopener noreferrer">
               <DiGithubFull/><span> <FaExternalLinkAlt /></span>
-          </a>
+          </NavLink>
          
       </div>
     </div>
 
-    <div className={isTransitioning ? 'fade-out' : 'delayedAppear'}>
-      <div className={isTransitioning ? 'fade-out' : 'delayedAppear'}>
+    <div>
+      <div>
       {data.image ? ( 
          <img src={data.image} alt={data.title} />
       ) : (      
@@ -36,8 +37,8 @@ const Project = ({data, isTransitioning}) => {
     </div>
    
     
-    <div className={isTransitioning ? 'fade-out' : 'appear'}>
-      <FormattedArray arr={data.details} />
+      <div>
+        <FormattedArray arr={data.details} />
       </div>
   </div>
   )

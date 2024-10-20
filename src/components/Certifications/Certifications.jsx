@@ -3,10 +3,11 @@ import {useState } from 'react';
 import Overlay from '../Overlay/Overlay';
 import { Card } from '../index';
 
+import { certificationsData as data } from '../../models/certificationsData'
 import './CertificationsStyle.css';
 
 
-export const Certifications = ({ data, header }) => {
+export const Certifications = () => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -27,7 +28,7 @@ export const Certifications = ({ data, header }) => {
   return (
     <section>
      <div>
-      <header>{header}</header>
+      <header>Certifications</header>
       <p>click on a card to see credential</p>
      </div>
       

@@ -7,18 +7,23 @@ import {
   Stats 
 } from '../components';
 
-import { certificationsData } from '../models/certificationsData';
+const sections = [
+  About,
+  Skills,
+  Projects,
+  Stats,
+  Certifications,
+  Contacts
+]
+
 
 const MainPage = () => {
   return (
- <>
-      <About />
-      <Skills />
-      <Projects />
-      <Stats />
-      <Certifications data={certificationsData} header="Certifications" />
-      <Contacts />
- </>
+    <>
+         {sections.map((Section, index) => (
+          <Section key={index} />
+         ))}
+    </>
 
   );
 };

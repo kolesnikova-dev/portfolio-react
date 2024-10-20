@@ -1,4 +1,5 @@
 import { useState, Suspense, lazy } from 'react';
+import { getNewProjectIndex } from '../../utils';
 
 import { Loading, Button } from '../index';
 
@@ -18,16 +19,11 @@ const Projects = () => {
     if (isTransitioning) return; 
 
     setIsTransitioning(true);
+    
+    const currentIndex = dataKeys.indexOf(currentProject);
+    const newIndex = getNewProjectIndex(action, currentIndex, dataKeys.length);
+
     setTimeout(() => {
-      const currentIndex = dataKeys.indexOf(currentProject);
-      let newIndex;
-
-      if(action === 'backward') {
-        newIndex = (currentIndex - 1 + dataKeys.length) % dataKeys.length;
-      } else {
-        newIndex = (currentIndex + 1) % dataKeys.length;
-      }
-
       setCurrentProject(dataKeys[newIndex]);
       setIsTransitioning(false);
     }, 500); 
