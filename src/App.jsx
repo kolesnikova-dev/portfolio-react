@@ -5,6 +5,7 @@ import { ErrorBoundary } from './components';
 
 import './App.css';
 
+// lazy load MainPage and ContactPage
 const MainPage = lazy(() => import('./pages/MainPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
