@@ -1,13 +1,12 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { Layout } from './pages';
+import { Layout, ContactPage } from './pages';
 import { ErrorBoundary, Loading } from './components';
 
 import './App.css';
 
-// lazy load MainPage and ContactPage
+// lazy load MainPage
 const MainPage = lazy(() => import('./pages/MainPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
 
 function App() {
 

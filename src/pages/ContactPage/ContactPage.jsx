@@ -4,13 +4,13 @@ import './ContactPageStyle.css';
 
 export const ContactPage = () => {
   return (
-    <section className='display-flex contact-page'>
+    <section>
 
       {/* contact form container */}
-      <div className="contact-form-container">
+      <div>
 
           {/* lets get in touch */}
-         <div className='display-flex flex-center get-in-touch'>
+         <div>
             <div>
               <span>Let's</span>
               <span>get</span>
