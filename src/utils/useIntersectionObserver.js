@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useIntersectionObserver = (containerRef) => {
+export const useIntersectionObserver = (containerRef) => {
   //trigger animation once container in view
   const [isInView, setIsInView] = useState(false);
 
@@ -25,13 +25,14 @@ const useIntersectionObserver = (containerRef) => {
  
      //if images parent exists start observing
      if (containerRef.current) {
-      observer.observe(containerRef.current);
+      const currentlyObserving = containerRef.current;
+      observer.observe(currentlyObserving);
     } 
  
-     return () => { // clean up
-       if (containerRef.current) {
+     return (currentlyObserving) => { // clean up
+       if (currentlyObserving) {
          //stop observing once unmounted
-         observer.unobserve(containerRef.current);
+         observer.unobserve(currentlyObserving);
        }
      };
    }, []);
@@ -40,4 +41,3 @@ const useIntersectionObserver = (containerRef) => {
    return isInView;
 };
 
-export default useIntersectionObserver;

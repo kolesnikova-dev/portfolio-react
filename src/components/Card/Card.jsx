@@ -1,10 +1,11 @@
-import React, { useRef } from 'react';
-import './Card.css';
-import './CardNestHubStyle.css'
-import ImageContainer from '../ImageContainer/ImageContainer';
-import useIntersectionObserver from '../../utils/useIntersectionObserver';
+import { useRef } from 'react';
 
-const Card = ({data, thisClass, action}) => {
+import ImageContainer from '../ImageContainer/ImageContainer';
+import { useIntersectionObserver } from '../../utils';
+
+import './Card.css';
+
+export const Card = ({data, thisClass, action}) => {
 
   const cardRef = useRef();
   const isInView = useIntersectionObserver(cardRef);
@@ -41,5 +42,3 @@ const Card = ({data, thisClass, action}) => {
     </div>
   );
 };
-
-export default Card;

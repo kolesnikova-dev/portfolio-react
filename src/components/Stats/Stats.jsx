@@ -1,11 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-//github api logic for fetching user data
-import { fetchUserData } from '../../utils/fetchData';
-//import custom hook
-import useIntersectionObserver from '../../utils/useIntersectionObserver';
-//import styles
+import { useState, useEffect, useRef } from 'react';
+import { fetchUserData, useIntersectionObserver } from '../../utils';
+
 import './StatsStyle.css';
-import './StatsNestHubStyle.css';
 
 export const Stats = () => {
   // initialize state to store most used languages information

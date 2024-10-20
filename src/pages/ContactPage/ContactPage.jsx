@@ -1,9 +1,6 @@
-import React from 'react';
-// import components
 import { Contacts, Form } from '../../components';
-//import styles
+
 import './ContactPageStyle.css';
-import './ContactNestHubStyle.css';
 
 export const ContactPage = () => {
   return (

@@ -1,8 +1,10 @@
-import React from 'react';
-import './ContactsStyle.css';
-import Contact from './Contact';
 import { useState } from 'react';
+
+import Contact from './Contact';
+
 import { contactsData } from '../../models/data';
+
+import './ContactsStyle.css';
 
 export const Contacts = () => {
   
@@ -40,10 +42,6 @@ export const Contacts = () => {
           <div className="click-to-copy">{copied ? 'copied!' : 'click to copy'}</div>
 
         </div>
-
-
-
-
 
 
       </div>

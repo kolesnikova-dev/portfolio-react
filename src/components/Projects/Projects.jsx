@@ -1,11 +1,12 @@
-import React, { useState, Suspense, lazy } from 'react';
+import { useState, Suspense, lazy } from 'react';
+
+import { Loading, Button } from '../index';
+
 import { projectsData, symbols } from '../../models/data';
-//import components
-import Loading from '../Loading/Loading';
-import Button from '../Button/Button';
-const LazyProject = lazy(() => import('./Project'));
-// import styles
 import './ProjectsStyle.css';
+
+const LazyProject = lazy(() => import('./Project'));
+
 const dataKeys = Object.keys(projectsData);
 
 const Projects = () => {

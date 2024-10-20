@@ -1,12 +1,9 @@
-import React, {useState } from 'react';
-//import components
+import {useState } from 'react';
+
 import Overlay from '../Overlay/Overlay';
-import Card from '../Card/Card';
+import { Card } from '../index';
 
-//import styles
 import './CertificationsStyle.css';
-// import './CertificationsNestHubStyle.css'
-
 
 
 export const Certifications = ({ data, header }) => {

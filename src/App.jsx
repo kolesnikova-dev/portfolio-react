@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout } from './pages';
-import { ErrorBoundary } from './components';
+import { ErrorBoundary, Loading } from './components';
 
 import './App.css';
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
       <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<MainPage	/>}	/>

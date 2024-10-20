@@ -13,4 +13,5 @@ export * from './Certifications/Certifications';
 export * from './Contacts/Contact';
 export * from './Contacts/Contacts';
 export { default as Projects } from './Projects/Projects'
+export { default as Overlay } from './Overlay/Overlay'
 // export * from './/';

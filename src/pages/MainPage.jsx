@@ -1,5 +1,3 @@
-import React from 'react';
-// import components
 import { 
   About, 
   Skills, 
@@ -9,7 +7,6 @@ import {
   Stats 
 } from '../components';
 
-// import certifications data
 import { certificationsData } from '../models/certificationsData';
 
 const MainPage = () => {
