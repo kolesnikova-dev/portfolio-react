@@ -7,8 +7,6 @@ export const Footer = () => {
 
   return (
     <div className='footer-container'>
-      {/* social media? */}
-      {/* idk what */}
       <div className="copyright">{symbols.copyright} Veronika Kolesnikova, {year}</div>
     </div>
   )
