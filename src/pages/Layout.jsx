@@ -6,16 +6,17 @@ import { NavBar, Footer } from '../components/index';
 export const Layout = () => {
   return (
     <div>
-        {/* navigation bar */}
-        <nav>
-            <NavBar />
-        </nav>
 
     {/* main section */}
         <main>
             <Outlet />
         </main>
 
+        {/* navigation bar */}
+        <nav>
+            <NavBar />
+        </nav>
+        
         {/* footer */}
         <footer>
             <Footer />

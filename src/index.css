@@ -1,4 +1,6 @@
 :root {
+  --color-pale-blue-gradient: linear-gradient(45deg, rgba(117, 124, 232, 0.2) 0%, rgba(117, 124, 232, 0.05) 100%);
+  --color-pale-blue: rgba(117, 124, 232, 0.2);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   /* line-height: 1.5;
   font-weight: 400; */
