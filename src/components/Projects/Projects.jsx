@@ -15,23 +15,22 @@ const Projects = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const changeProjectImage = (action) => {
-    if (isTransitioning) return; // Prevent changing during transition
+    if (isTransitioning) return; 
 
     setIsTransitioning(true);
     setTimeout(() => {
       const currentIndex = dataKeys.indexOf(currentProject);
-      switch(action) {
-        case 'backward':
-          const prevIndex = (currentIndex - 1 + dataKeys.length) % dataKeys.length;
-          setCurrentProject(dataKeys[prevIndex]);
-          break;
-        case 'forward':
-          const nextIndex = (currentIndex + 1) % dataKeys.length;
-          setCurrentProject(dataKeys[nextIndex]);
-          break;
+      let newIndex;
+
+      if(action === 'backward') {
+        newIndex = (currentIndex - 1 + dataKeys.length) % dataKeys.length;
+      } else {
+        newIndex = (currentIndex + 1) % dataKeys.length;
       }
+
+      setCurrentProject(dataKeys[newIndex]);
       setIsTransitioning(false);
-    }, 500); // Transition duration
+    }, 500); 
   };
 
   return (
@@ -45,9 +44,6 @@ const Projects = () => {
                   <LazyProject data={projectsData[currentProject]} isTransitioning={isTransitioning}/>
                 </Suspense>
 
-                    
-
-                  
                     {/* button container */}
                   <div>
                     <Button thisClass='slider-button' symbol={symbols.backward} action={()=> changeProjectImage('backward')} />
