@@ -9,6 +9,7 @@ export * from './FormattedArray/FormattedArray';
 export * from './Form/Form';
 export * from './Button/Button';
 export * from './Card/Card';
+export * from './ImageContainer/ImageContainer';
 export * from './Certifications/Certifications';
 export * from './Contacts/Contact';
 export * from './Contacts/Contacts';

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils';
-import ImageContainer from '../ImageContainer/ImageContainer';
+import { ImageContainer } from '../index';
 //import main image
 import picture from '../../assets/images/picture.png'; 
 //import descriptions
