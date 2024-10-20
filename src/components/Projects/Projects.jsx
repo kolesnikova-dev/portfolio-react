@@ -1,20 +1,18 @@
-import React, { useState, Suspense, lazy } from 'react';
+import { useState, Suspense, lazy } from 'react';
+
+import { Loading, Button } from '../index';
+
 import { projectsData, symbols } from '../../models/data';
-//import components
-import Loading from '../Loading/Loading';
-import Button from '../Button/Button';
-const LazyProject = lazy(() => import('./Project'));
-// import styles
 import './ProjectsStyle.css';
+
+const LazyProject = lazy(() => import('./Project'));
+
 const dataKeys = Object.keys(projectsData);
 
 const Projects = () => {
   
   const [currentProject, setCurrentProject] = useState(dataKeys[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
-
-  
-  console.log(projectsData[currentProject]);
 
   const changeProjectImage = (action) => {
     if (isTransitioning) return; // Prevent changing during transition
