@@ -3,25 +3,52 @@ import {
   Skills, 
   Projects, 
   Certifications, 
-  Contacts, 
   Stats 
 } from '../components';
+import { Box } from '@mui/material';
 
-const sections = [
-  { component: About, key: 'about-section' },
-  { component: Skills, key: 'skills-section' },
-  { component: Projects, key: 'projects-section' },
-  { component: Stats, key: 'stats-section' },
-  { component: Certifications, key: 'certifications-section' },
-  { component: Contacts, key: 'contacts-section' }
-];
+const sections = { 
+  top: {
+    left: { component: About, key: 'about-section' },
+    right: { component: Skills, key: 'skills-section' },
+  },
+  middle: {
+   component: Projects, key: 'projects-section' 
+  },
+  bottom: {
+    left: { component: Stats, key: 'stats-section' },
+    right: { component: Certifications, key: 'certifications-section' },
+  },
+
+};
+
+const Section = ({ component: Component }) => {
+  return (
+    <Box component="section">
+      <Component />
+    </Box>
+  )
+}
+
+const SideBySideSection = ({ section }) => {
+  console.log(section);
+  return (
+    <>
+      {
+       Object.values(section).map(side => (
+        <Section key={side.key} component={side.component} />
+       ))
+      }
+    </>
+  )
+}
 
 const MainPage = () => {
   return (
     <>
-      {sections.map(({ component: Section, key }) => (
-        <Section key={key} />
-      ))}
+      <SideBySideSection section={sections.top} />
+      <Section component={sections.middle.component} />
+      <SideBySideSection section={sections.bottom} />
     </>
   );
 };
