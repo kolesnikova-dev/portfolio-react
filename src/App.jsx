@@ -1,18 +1,19 @@
-import { Suspense, lazy } from 'react';
+// import { Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout, ContactPage } from './pages';
-import { ErrorBoundary, Loading } from './components';
+import { default as MainPage } from '../src/pages/MainPage';
+import { ErrorBoundary } from './components';
 
 import './App.css';
 
-// lazy load MainPage
-const MainPage = lazy(() => import('./pages/MainPage'));
+// // lazy load MainPage
+// const MainPage = lazy(() => import('./pages/MainPage'));
 
 function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<Loading />}>
+      {/* <Suspense fallback={<Loading />}> */}
      
       <Routes>
           <Route path="/" element={<Layout />}>
@@ -25,7 +26,7 @@ function App() {
         </Route>
       </Routes>
      
-      </Suspense>
+      {/* </Suspense> */}
     </ErrorBoundary>
   );
 }

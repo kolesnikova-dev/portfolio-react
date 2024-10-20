@@ -8,23 +8,21 @@ import {
 } from '../components';
 
 const sections = [
-  About,
-  Skills,
-  Projects,
-  Stats,
-  Certifications,
-  Contacts
-]
-
+  { component: About, key: 'about-section' },
+  { component: Skills, key: 'skills-section' },
+  { component: Projects, key: 'projects-section' },
+  { component: Stats, key: 'stats-section' },
+  { component: Certifications, key: 'certifications-section' },
+  { component: Contacts, key: 'contacts-section' }
+];
 
 const MainPage = () => {
   return (
     <>
-         {sections.map((Section, index) => (
-          <Section key={index} />
-         ))}
+      {sections.map(({ component: Section, key }) => (
+        <Section key={key} />
+      ))}
     </>
-
   );
 };
 
