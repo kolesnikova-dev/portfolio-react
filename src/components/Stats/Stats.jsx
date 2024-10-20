@@ -54,7 +54,7 @@ const Stats = () => {
        </div>));
       }
 
-      console.log(hexArray, 'hex array');
+      // console.log(hexArray, 'hex array');
 
       return hexArray;
     }

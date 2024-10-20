@@ -15,8 +15,7 @@ const Contacts = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch(error) {
-      alert('Could not copy to clipboard')
-      console.log(`Error: couldnt copy email: ${error}`);
+      alert(`Error: couldnt copy email: ${error}`);
     }
   };
 

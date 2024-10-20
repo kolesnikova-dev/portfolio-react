@@ -18,7 +18,6 @@ const Certifications = ({ data, header }) => {
   const showOverlay = (credential) => {
     // set current credential as overlay
     setOverlay(credential);
-    // console.log(credential);
   };
 
   // stop displaaying an overlay

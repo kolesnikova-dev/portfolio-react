@@ -6,7 +6,6 @@ const useIntersectionObserver = (containerRef) => {
 
   //observe intersections with viewport
    useEffect(() => {
-    console.log('attempting to observe');
      //create a new IntersectionObserver object
      const observer = new IntersectionObserver((entries) => {
 
@@ -16,7 +15,6 @@ const useIntersectionObserver = (containerRef) => {
 
          // if observed element is currently intersecting with the root container
          if (entry.isIntersecting) {
-          console.log('Element is intersecting');
            //change isInView state, trigger map animations
            setIsInView(true);
            // from the list of elements being observed by the observer
@@ -27,15 +25,11 @@ const useIntersectionObserver = (containerRef) => {
  
      //if images parent exists start observing
      if (containerRef.current) {
-      console.log('Observing:', containerRef.current);
       observer.observe(containerRef.current);
-    } else {
-      console.log('containerRef.current is null');
-    }
+    } 
  
      return () => { // clean up
        if (containerRef.current) {
-        console.log('Unobserving:', containerRef.current);
          //stop observing once unmounted
          observer.unobserve(containerRef.current);
        }

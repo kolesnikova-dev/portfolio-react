@@ -13,9 +13,6 @@ const Projects = () => {
   const [currentProject, setCurrentProject] = useState(dataKeys[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  
-  console.log(projectsData[currentProject]);
-
   const changeProjectImage = (action) => {
     if (isTransitioning) return; // Prevent changing during transition
 

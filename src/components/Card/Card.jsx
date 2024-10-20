@@ -14,7 +14,6 @@ const Card = ({data, thisClass, action}) => {
     src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png",
     alt: "Per Scholas logo"
   }
-  // console.log('data inside card', data);
 
   const imagesJXS = !data.details && 
   <div className='card-image-container'>
