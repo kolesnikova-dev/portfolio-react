@@ -1,4 +1,5 @@
 import { symbols } from '../../models/data.js';
+import { Box } from '@mui/material';
 import './FooterStyle.css';
 
 export const Footer = () => {
@@ -6,8 +7,8 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <div className='footer-container'>
-      <div className="copyright">{symbols.copyright} Veronika Kolesnikova, {year}</div>
-    </div>
+    <Box component="footer" className='footer-container'>
+      <Box className="copyright">{symbols.copyright} Veronika Kolesnikova, {year}</Box>
+    </Box>
   )
 }

@@ -14,9 +14,9 @@ export const About = () => {
   const isInView = useIntersectionObserver(pictureRef);
   
   return (
-    <section className='picture-section'>
+    <section>
 
-      <div className="gradient" ref={pictureRef}>
+      <div ref={pictureRef}>
               {/* picture container */}
               <Avatar sx={{ width: 44, height: 44 }} src={picture} alt="Nika's Picture"/>
             {/* text container */}

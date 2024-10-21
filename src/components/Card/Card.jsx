@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils';
-import { Avatar } from '@mui/material';
+import { Box, Avatar } from '@mui/material';
 import { ImageContainer } from '../index';
 
 import './Card.css';
@@ -12,23 +12,23 @@ const perScholasLogo = {
 
 
 export const Card = ({data, thisClass, action}) => {
-
+  console.log(data, 'data in card')
   const cardRef = useRef();
   const isInView = useIntersectionObserver(cardRef);
 
-  const perScholasLogoJSX = data.name.includes('Software Engineering Training') && 
-    <Avatar 
-      sx={{ width: 44, height: 44 }}
-      src={perScholasLogo.src} 
-      alt={perScholasLogo.alt} 
-    />; 
+  // const perScholasLogoJSX = data.includes('perScholas') && 
+  //   <Avatar 
+  //     sx={{ width: 44, height: 44 }}
+  //     src={perScholasLogo.src} 
+  //     alt={perScholasLogo.alt} 
+  //   />; 
 
-  const imagesJXS = !data.details && 
-    <Avatar 
-      sx={{ width: 44, height: 44 }}
-      src={data.image} 
-      alt={data.name} 
-    />;
+  const ReactIcon = !data.details && data.image;
+
+  const imagesJXS = !data.image && 
+    <Box>
+      <ReactIcon />
+    </Box>;
 
   return (
     <div 
@@ -37,13 +37,12 @@ export const Card = ({data, thisClass, action}) => {
       onClick={action ? () => action(data) : undefined}
     >
 
-      {perScholasLogoJSX}
+      {/* {perScholasLogoJSX} */}
 
-      <div className='card-first-child'>{data.name}</div>
-      <div className='card-second-child'>{data.level}</div>
+      {/* <div>{data.name}</div> */}
       
       {/* image */}
-      {imagesJXS}
+      {/* {imagesJXS} */}
 
     </div>
   );

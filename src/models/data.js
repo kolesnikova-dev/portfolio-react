@@ -3,6 +3,7 @@ import climateRecording from '../assets/videos/screen-recording.mp4';
 import weatherRecording from '../assets/videos/weather-recording.mp4';
 import vigenereRecording from '../assets/videos/vigenere-recording.mp4';
 
+
 export const introductionData = {
     greeting: "Hi, I'm Nika!",
     introduction: `I am a software engineer. 
@@ -12,41 +13,8 @@ export const introductionData = {
 
  const image = '';
 
-export const skillsData = {
-    javascript: {
-        name: 'JavaScript',
 
-        image: image,
-    },
-    typescript: {
-        name: 'TypeScript',
-        image: image,
-    },
-    python: {
-        name: 'Python',
-        image: image,
-    },
-    git: {
-        name: 'Git',
-        image: image,
-    },
-    react: {
-        name: 'React',
-        image: image,
-    },
-    css: {
-        name: 'CSS',
-        image: image,
-    },
-    express: {
-        name: 'Express',
-        image: image,
-    },
-    mongoose: {
-        name: 'Mongoose',
-        image: image,
-    },
- };
+ 
 
 export const projectsData = {
     0: {

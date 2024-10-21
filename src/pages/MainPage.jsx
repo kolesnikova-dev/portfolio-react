@@ -35,7 +35,7 @@ const SideBySideSection = ({ section }) => {
     <>
       {
        Object.values(section).map(side => (
-        <Section key={side.key} component={side.component} />
+        <Section className="display-flex" key={side.key} component={side.component} />
        ))
       }
     </>
@@ -47,7 +47,7 @@ const gridSize = 8;
 const MainPage = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={0} sx={{ flexDirection: 'column' }} >
+      <Grid container spacing={0} className="display-flex flex-center" >
         <Grid size={gridSize}>
           <SideBySideSection section={sections.top} />
         </Grid>

@@ -14,8 +14,8 @@ const navBarJSX = Object.entries(navBarLinks).map(([text, path]) => (
         </ListItem>
 ));
 
-export const NavBar = () => {
 
+export const NavBar = () => {
   return (
     <Box component="nav" className="nav-container">
       <List className="display-flex">
