@@ -10,6 +10,16 @@
     animation: 4s rotateBorder linear infinite;
 }
 
+.avatar {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+}
+
+.text-no-wrap {
+    text-wrap:nowrap;
+}
+
 .introduction {
     opacity: 0;
     animation: softAppearance 1s linear 1s forwards;

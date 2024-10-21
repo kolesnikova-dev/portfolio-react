@@ -12,7 +12,6 @@ const perScholasLogo = {
 
 
 export const Card = ({data, thisClass, action}) => {
-  console.log(data, 'data in card')
   const cardRef = useRef();
   const isInView = useIntersectionObserver(cardRef);
 

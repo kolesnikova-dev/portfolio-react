@@ -5,22 +5,36 @@ import {
   Certifications, 
   Stats 
 } from '../components';
-import { Box, Grid2 as Grid } from '@mui/material';
+import { lightPaperStyle } from './MUIStyles';
+import { Paper, Box, Grid2 as Grid } from '@mui/material';
 
 const sections = { 
   top: {
-    left: { component: About, key: 'about-section' },
-    right: { component: Skills, key: 'skills-section' },
+    left: { component: About, size: 6, key: 'about-section' },
+    right: { component: Skills, size: 4, key: 'skills-section' },
   },
   middle: {
    component: Projects, key: 'projects-section' 
   },
   bottom: {
-    left: { component: Stats, key: 'stats-section' },
-    right: { component: Certifications, key: 'certifications-section' },
+    left: { component: Stats, size: 4, key: 'stats-section' },
+    right: { component: Certifications, size: 8, key: 'certifications-section' },
   },
 
 };
+
+const fullBorderGridStyle = {
+  width: '100%',
+  '--Grid-borderWidth': '1px',
+  borderTop: 'var(--Grid-borderWidth) solid',
+  borderLeft: 'var(--Grid-borderWidth) solid',
+  borderRight: 'var(--Grid-borderWidth) solid',
+  borderBottom: 'var(--Grid-borderWidth) solid',
+  borderColor: 'white',
+  p: 1,
+}
+
+const gridSize = 10;
 
 const Section = ({ component: Component }) => {
   return (
@@ -32,31 +46,44 @@ const Section = ({ component: Component }) => {
 
 const SideBySideSection = ({ section }) => {
   return (
-    <>
+    <Box component="section">
+      <Grid container direction='column' columnSpacing={{ xs: 1, sm: 2, md: 3 }} className='display-flex flex-center'>
       {
        Object.values(section).map(side => (
-        <Section className="display-flex" key={side.key} component={side.component} />
+        <Grid  key={side.key} size={side.size} sx={fullBorderGridStyle}>
+          <Section className="display-flex" component={side.component} />
+        </Grid>
        ))
       }
-    </>
+      </Grid>
+    </Box>
   )
 }
 
-const gridSize = 8;
+const StyledGrid = ({ children }) => {
+  return (
+    <Paper sx={lightPaperStyle} className='display-flex flex-center'>
+      <Grid size={gridSize} sx={{width: '100%'}}>
+        {children}
+      </Grid>
+    </Paper>
+  )
+}
+
 
 const MainPage = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={0} className="display-flex flex-center" >
-        <Grid size={gridSize}>
-          <SideBySideSection section={sections.top} />
-        </Grid>
-        <Grid size={gridSize}>
-          <Section component={sections.middle.component} />
-        </Grid>
-        <Grid size={gridSize}>
-          <SideBySideSection section={sections.bottom} />
-        </Grid>
+    <Box sx={{ flexGrow: 1, width: '100%' }} >
+      <Grid container spacing={2} sx={{width: '100%'}} >
+          <StyledGrid>
+            <SideBySideSection section={sections.top} />
+          </StyledGrid>
+          <StyledGrid>
+            <Section component={sections.middle.component} />
+          </StyledGrid>
+          <StyledGrid>
+            <SideBySideSection section={sections.bottom} />
+          </StyledGrid>
       </Grid>
     
     </Box>

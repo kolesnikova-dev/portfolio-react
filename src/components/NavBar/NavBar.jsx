@@ -8,7 +8,7 @@ const navBarLinks = {
 
 const navBarJSX = Object.entries(navBarLinks).map(([text, path]) => (
       <ListItem key={text} className="display-flex flex-center">
-          <Link href={path}>
+          <Link sx={{color: 'white'}} href={path} underline="hover">
             {text}
           </Link>
         </ListItem>

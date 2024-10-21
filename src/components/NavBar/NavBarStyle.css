@@ -4,7 +4,7 @@
 }
 
 .nav-container {
-    border: 1px solid rgba(28, 9, 194, 0.589);
+    /* border: 1px solid rgba(28, 9, 194, 0.589); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,5 +24,6 @@ ul {
     color: #bec1ff;
     letter-spacing: 0.05vw;
 }
+
 
 

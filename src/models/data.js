@@ -4,12 +4,6 @@ import weatherRecording from '../assets/videos/weather-recording.mp4';
 import vigenereRecording from '../assets/videos/vigenere-recording.mp4';
 
 
-export const introductionData = {
-    greeting: "Hi, I'm Nika!",
-    introduction: `I am a software engineer. 
-     My interest lies in finding ways to make living more sustainable and less intrusive. 
-     I am having fun in React and RESTing in between.`
- };
 
  const image = '';
 
