@@ -6,10 +6,7 @@ export const Layout = () => {
   return (
     <Box>
       {/* Navigation bar */}
-      <Box component="nav">
         <NavBar />
-      </Box>
-
       {/* Main section */}
       <Box component="main" sx={{ flexGrow: 1 }}>
         <Outlet />

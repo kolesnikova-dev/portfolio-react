@@ -42,6 +42,15 @@ button:active {
   border-color: #2631ff;
 }
 
+.display-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

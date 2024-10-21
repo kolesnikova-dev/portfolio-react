@@ -1,20 +1,22 @@
-import { NavLink } from 'react-router-dom';
+import { Box, Link, List, ListItem } from '@mui/material'
 import './NavBarStyle.css';
 
 export const NavBar = () => {
 
   return (
-    <ul>
-     <li>
-        <NavLink  to=''>
-            Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink  to='contact'>
-            Contact
-        </NavLink>
-      </li>
-    </ul>
+    <Box component="nav" className="nav-container">
+      <List className="display-flex">
+      <ListItem className="display-flex flex-center">
+          <Link href=''>
+              Home
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href='contact'>
+              Contact
+          </Link>
+        </ListItem>
+      </List>
+    </Box>
   );
 };

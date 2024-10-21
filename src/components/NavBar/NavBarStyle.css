@@ -1,14 +1,23 @@
+.MuiBox-root.MuiList-root {
+    display: flex,
+     /* alignContent: 'center', justifyContent: 'center' */
+}
+
 .nav-container {
     border: 1px solid rgba(28, 9, 194, 0.589);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
-    max-width: 100%;
+}
+
+ul {
+    width: 100%;
 }
 
 .nav-container li {
     list-style-type: none;
+    width: 100%;
+    justify-content: center;
 }
 
 .nav-container li:hover {
@@ -16,11 +25,4 @@
     letter-spacing: 0.05vw;
 }
 
-.link {
-    letter-spacing: unset;
-    transition: letter-spacing 100ms 40ms ease-in-out;
-}
 
-.link-skills, .link-projects, .link-certifications {
-    display: block;
-}
