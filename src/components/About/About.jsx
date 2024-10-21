@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils';
-import { ImageContainer } from '../index';
+// import { ImageContainer } from '../index';
+import Avatar from '@mui/material/Avatar';
 //import main image
 import picture from '../../assets/images/picture.png'; 
 //import descriptions
@@ -17,7 +18,7 @@ export const About = () => {
 
       <div className="gradient" ref={pictureRef}>
               {/* picture container */}
-              <ImageContainer thisClass={'image-container'} src={picture} alt="Nika's Picture"/>
+              <Avatar sx={{ width: 44, height: 44 }} src={picture} alt="Nika's Picture"/>
             {/* text container */}
           <div className={`text-container ${isInView && 'appear'}`}>
             {/* greeting and introduction */}

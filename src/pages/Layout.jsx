@@ -1,27 +1,24 @@
 import { Outlet } from 'react-router-dom';
-
+import { Box } from '@mui/material';
 import { NavBar, Footer } from '../components/index';
-
 
 export const Layout = () => {
   return (
-    <div>
+    <Box>
+      {/* Navigation bar */}
+      <Box component="nav">
+        <NavBar />
+      </Box>
 
-    {/* main section */}
-        <main>
-            <Outlet />
-        </main>
+      {/* Main section */}
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <Outlet />
+      </Box>
 
-        {/* navigation bar */}
-        <nav>
-            <NavBar />
-        </nav>
-        
-        {/* footer */}
-        <footer>
-            <Footer />
-        </footer>
-
-     </div>
-  )
-}
+      {/* Footer */}
+      <Box component="footer">
+        <Footer />
+      </Box>
+    </Box>
+  );
+};

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils';
+import { Avatar } from '@mui/material';
 import { ImageContainer } from '../index';
 
 import './Card.css';
@@ -16,15 +17,15 @@ export const Card = ({data, thisClass, action}) => {
   const isInView = useIntersectionObserver(cardRef);
 
   const perScholasLogoJSX = data.name.includes('Software Engineering Training') && 
-    <ImageContainer 
-      thisClass='per-scholas-logo'
+    <Avatar 
+      sx={{ width: 44, height: 44 }}
       src={perScholasLogo.src} 
       alt={perScholasLogo.alt} 
     />; 
 
   const imagesJXS = !data.details && 
-    <ImageContainer 
-      thisClass='card-image-container' 
+    <Avatar 
+      sx={{ width: 44, height: 44 }}
       src={data.image} 
       alt={data.name} 
     />;

@@ -5,7 +5,7 @@ import {
   Certifications, 
   Stats 
 } from '../components';
-import { Box } from '@mui/material';
+import { Box, Grid2 as Grid } from '@mui/material';
 
 const sections = { 
   top: {
@@ -31,7 +31,6 @@ const Section = ({ component: Component }) => {
 }
 
 const SideBySideSection = ({ section }) => {
-  console.log(section);
   return (
     <>
       {
@@ -43,13 +42,26 @@ const SideBySideSection = ({ section }) => {
   )
 }
 
+const gridSize = 8;
+
 const MainPage = () => {
   return (
-    <>
-      <SideBySideSection section={sections.top} />
-      <Section component={sections.middle.component} />
-      <SideBySideSection section={sections.bottom} />
-    </>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={0} sx={{ flexDirection: 'column' }} >
+        <Grid size={gridSize}>
+          <SideBySideSection section={sections.top} />
+        </Grid>
+        <Grid size={gridSize}>
+          <Section component={sections.middle.component} />
+        </Grid>
+        <Grid size={gridSize}>
+          <SideBySideSection section={sections.bottom} />
+        </Grid>
+      </Grid>
+    
+      
+     
+    </Box>
   );
 };
 
