@@ -63,14 +63,6 @@ button:active {
   width: 100%;
 }
 
-.height95vh {
-  height: 95vh;
-}
-
-.height90vh {
-  height: 90vh;
-}
-
 .inherit-height {
   height: inherit;
 }

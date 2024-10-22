@@ -1,14 +1,16 @@
+import { NavBar, Contacts } from '../index';
 import { symbols } from '../../models/data.js';
 import { Box } from '@mui/material';
-import './FooterStyle.css';
 
 export const Footer = () => {
   
   const year = new Date().getFullYear();
 
   return (
-    <Box component="footer" className='footer-container'>
-      <Box className="copyright">{symbols.copyright} Veronika Kolesnikova, {year}</Box>
+    <Box component="footer">
+      <NavBar />
+      <Contacts />
+      <Box mt={6}>{symbols.copyright} Veronika Kolesnikova, {year}</Box>
     </Box>
   )
 }

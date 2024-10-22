@@ -45,7 +45,7 @@ const Projects = () => {
 
 
   return (
-    <Box component="section" className="height95vh">
+    <Box component="section">
        <Box>
         <Typography m={1} variant="h5">Projects</Typography>
        </Box>

@@ -27,7 +27,7 @@ export const Stats = () => {
 
   return (
    
-    <section className='all-languages-section'>
+    <section>
       <h4 className={isInView ? 'animateh4' : ''}> Most used languages according to GitHub</h4>
         {/* dynamically apply animation */}
         <div className='background' ref={allLanguagesRef}>
@@ -35,12 +35,7 @@ export const Stats = () => {
             <Loading />
           ) : (
             languages.map((lang, index) => (
-              <div 
-                  key={`language-hex-${index}`} 
-                  className={`language ${isInView ? 'animateHex' : ''}`}
-                ><span className="border-span"></span>
-                    {lang[0]} {lang[1]}
-              </div>
+             <div key={index}>{lang[0]}</div>
         ))
        )}
         </div>
@@ -48,36 +43,4 @@ export const Stats = () => {
   )
 }
 
-
-    // const hexagonsJSX = () => {
-    //   const hexArray = []; 
-
-    //   for(let i = 0; i < 5; i++)  {
-    //     hexArray.push((
-    //     <div key={`empty-hex-${i}`} className='empty-hexagon'>
-    //        <span className="border-span"></span> 
-    //     </div>));
-    //   }
-
-    //   languages.map((language, index) => (
-    //    hexArray.push(
-    //     <div 
-    //       key={`language-hex-${index}`} 
-    //       className={`language ${isInView ? 'animateHex' : ''}`}
-    //     ><span className="border-span"></span>
-    //       {language[0]} {language[1]}
-    //     </div>
-    //     )));
-
-    //   for(let i = 0; i < 4; i++)  {
-    //     hexArray.push((
-    //     <div key={`empty-hex-1${i}`} className='empty-hexagon' >
-    //       <span className="border-span"></span> 
-    //    </div>));
-    //   }
-
-    //   // console.log(hexArray, 'hex array');
-
-    //   return hexArray;
-    // }
 

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 
-import Contact from './Contact';
+import { Contact } from './Contact';
+import { Box, Paper, Tooltip, Grid2 as Grid } from '@mui/material';
+import { CheckCircle } from '@mui/icons-material';
+import { fullBorderGridStyle, lightPaperStyle } from '../../MUIStyles/MUIStyles'
 
-import { contactsData } from '../../models/data';
 
-import './ContactsStyle.css';
+const email = 'firstnamenika@gmail.com';
 
 export const Contacts = () => {
   
@@ -13,7 +15,7 @@ export const Contacts = () => {
   const copyEmail = () => {
       try { 
        // Copy the text inside the text field
-      navigator.clipboard.writeText(contactsData.email);
+      navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch(error) {
@@ -21,30 +23,31 @@ export const Contacts = () => {
     }
   };
 
+  const contacts = ['Github', 'LinkedIn'].map((contact, index) => (
+       <Grid key={index}>
+         <Contact contact={contact} />
+       </Grid>
+  ))
 
   return (
-    <section>
-      <header>Links</header>
-      <div>
-
-        {/* github */}
-        <Contact data={contactsData.currentGithub} />
-
-        {/* linked in */}
-        <Contact data={contactsData.linkedIn} />
-
+    <Box component="section">
+      <Grid container spacing={2} className="display-flex flex-center full-width">
+      <Paper elevation={2} sx={{...lightPaperStyle, p: 1}} className="display-flex flex-center">
+        <Grid container spacing={2}>
+          {contacts}
+        </Grid>
+      </Paper>
 
         {/* email container */}
-        <div onClick={copyEmail}>
-          <div>
-            {contactsData.email}
-          </div>
-          <div>{copied ? 'copied!' : 'click to copy'}</div>
-
-        </div>
-
-
-      </div>
-    </section>
+      <Tooltip title={copied ? 'Copied!' : 'Click to copy my email'}>
+        <Grid container onClick={copyEmail} sx={{...fullBorderGridStyle('bottomSectionWidth'), cursor: 'pointer', display: { xs: 'none', sm: 'block'}}} > 
+            <Grid>
+              {email}
+            </Grid>
+            <Grid sx={{ height: '2vh' }}>{copied ? <CheckCircle /> : 'click to copy'}</Grid>
+          </Grid>
+      </Tooltip>
+      </Grid>
+    </Box>
   )
 }

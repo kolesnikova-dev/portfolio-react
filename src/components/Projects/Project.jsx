@@ -27,7 +27,7 @@ export const Project = ({ project, fullDisplay, toggleDisplay }) => {
 
   const displayFull = () => {
    return (
-      <Box className="height90vh full-width">
+      <Box className="full-width">
         <Card className="full-width"  sx={{backgroundColor: 'whitesmoke'}}>
           <CardContent>
                 <CardHeader

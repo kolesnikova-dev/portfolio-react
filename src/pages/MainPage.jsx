@@ -2,10 +2,9 @@ import {
   About, 
   Skills, 
   Projects, 
-  Certifications, 
-  Stats 
+  Contacts 
 } from '../components';
-import { lightPaperStyle } from '../MUIStyles/MUIStyles';
+import { lightPaperStyle, fullBorderGridStyle } from '../MUIStyles/MUIStyles';
 import { Paper, Box, Grid2 as Grid } from '@mui/material';
 
 const sections = { 
@@ -17,22 +16,12 @@ const sections = {
    component: Projects, key: 'projects-section' 
   },
   bottom: {
-    left: { component: Stats, size: 4, key: 'stats-section' },
-    right: { component: Certifications, size: 8, key: 'certifications-section' },
+   component: Contacts, key: 'contacts-section' 
+    // left: { component: Certifications, size: 8, key: 'certifications-section' },
+    // right: { component: Contacts, size: 4, key: 'contacts-section' },
   },
 
 };
-
-const fullBorderGridStyle = {
-  width: '100%',
-  '--Grid-borderWidth': '1px',
-  borderTop: 'var(--Grid-borderWidth) solid',
-  borderLeft: 'var(--Grid-borderWidth) solid',
-  borderRight: 'var(--Grid-borderWidth) solid',
-  borderBottom: 'var(--Grid-borderWidth) solid',
-  borderColor: 'white',
-  p: 1,
-}
 
 const gridSize = 10;
 
@@ -47,10 +36,10 @@ const Section = ({ component: Component }) => {
 const SideBySideSection = ({ section }) => {
   return (
     <Box component="section">
-      <Grid container direction='column' columnSpacing={{ xs: 1, sm: 2, md: 3 }} className='display-flex flex-center'>
+      <Grid container direction={{xs: 'column', md: 'row'}} columnSpacing={{ xs: 1, sm: 2, md: 3 }} className='display-flex flex-center'>
       {
        Object.values(section).map(side => (
-        <Grid  key={side.key} size={side.size} sx={fullBorderGridStyle}>
+        <Grid  key={side.key} size={side.size} sx={fullBorderGridStyle('topSectionWidth')}>
           <Section className="display-flex" component={side.component} />
         </Grid>
        ))
@@ -75,15 +64,18 @@ const MainPage = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className="full-width">
       <Grid container spacing={2} className="full-width" >
+        {/* about and skills section */}
           <StyledGrid>
             <SideBySideSection section={sections.top} />
           </StyledGrid>
+          {/* projects section */}
           <StyledGrid>
             <Section component={sections.middle.component} />
           </StyledGrid>
-          <StyledGrid>
-            <SideBySideSection section={sections.bottom} />
-          </StyledGrid>
+          {/* contacts section */}
+          {/* <StyledGrid>
+            <Section component={sections.bottom.component} />
+          </StyledGrid> */}
       </Grid>
     
     </Box>

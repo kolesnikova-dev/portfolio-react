@@ -1,5 +1,30 @@
 import '../index.css'
 
+const sectionWidthOptions = {
+	topSectionWidth: {
+		xs: '100%',
+		sm: '100%',
+		md: '40%',
+	},
+	bottomSectionWidth: {
+		xs: '100%',
+		sm: '40%',
+		md: '30%',
+		lg: '20%',
+	}
+}
+
+export const fullBorderGridStyle = (section) => ({
+	width: sectionWidthOptions[section],
+	'--Grid-borderWidth': '1px',
+	borderTop: 'var(--Grid-borderWidth) solid',
+	borderLeft: 'var(--Grid-borderWidth) solid',
+	borderRight: 'var(--Grid-borderWidth) solid',
+	borderBottom: 'var(--Grid-borderWidth) solid',
+	borderColor: 'white',
+	p: 1,
+  })
+
 const paperStyle = {
 	color: 'white',
 };
@@ -24,8 +49,8 @@ export const regularGridStyle = (thumbnails) => ({
 		lg: '38vw',
 	},
 	height: {
-		sm: 'calc(32vw * 9 / 16)',   
-		md: 'calc(35vw * 9 / 16)',  // 9:16 aspect ratio for medium screens
+		sm: 'calc(32vw * 3 / 4)',   
+		md: 'calc(35vw * 3 / 4)', 
 		lg: 'calc(38vw * 9 / 16)', 
 	},
 	border: '3px solid var(--color-pale-blue)',
