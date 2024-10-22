@@ -20,11 +20,13 @@ export const regularGridStyle = (thumbnails) => ({
 	position: 'relative',
 	width: {
 		sm: '32vw',
+		md: '35vw',
 		lg: '38vw',
 	},
 	height: {
-		sm: '32vh',
-		lg: '42vh',
+		sm: 'calc(32vw * 9 / 16)',   
+		md: 'calc(35vw * 9 / 16)',  // 9:16 aspect ratio for medium screens
+		lg: 'calc(38vw * 9 / 16)', 
 	},
 	border: '3px solid var(--color-pale-blue)',
 	backgroundColor: darkPaperStyle,
@@ -47,10 +49,10 @@ export const regularGridStyle = (thumbnails) => ({
 	},
   });
 
-  export const expandedGridStyle = (darkPaperStyle) => ({
+  export const expandedGridStyle = {
     ...darkPaperStyle,
     border: '4px solid var(--color-pale-blue)',
     width: '100%'
-  });
+  };
   
   // projects section grid ---------- [end]

@@ -62,7 +62,7 @@ const SideBySideSection = ({ section }) => {
 
 const StyledGrid = ({ children }) => {
   return (
-    <Paper sx={lightPaperStyle} className='display-flex flex-center full-width' >
+    <Paper sx={{...lightPaperStyle, paddingBlockStart: '2vh', paddingBlockEnd: '2vh'}} className='display-flex flex-center full-width' >
       <Grid size={gridSize} >
         {children}
       </Grid>
