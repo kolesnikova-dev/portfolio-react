@@ -9,35 +9,36 @@ export const Project = ({ project, fullDisplay, toggleDisplay }) => {
   const displayPreview = () => {
     return (
       <Box className="full-width">
-        <Card>
-        <CardContent>
-           <CardHeader
-            action={
-              <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
-            }
-            title={title}
-            subheader={subheader}
-          />
+        <Card sx={{backgroundColor: 'whitesmoke', opacity: '0.9'}}>
+          <CardContent>
+            <CardHeader
+              action={
+                <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
+              }
+              title={title}
+              subheader={subheader}
+            />
             </CardContent>
        </Card>
       </Box>
     )
   }
 
+
   const displayFull = () => {
    return (
       <Box className="height90vh full-width">
-     <Card className="full-width">
-     <CardContent>
-          <CardHeader
-          action={
-            <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
-          }
-          title={title}
-          subheader={subheader}
-        />
-          </CardContent>
-     </Card>
+        <Card className="full-width"  sx={{backgroundColor: 'whitesmoke'}}>
+          <CardContent>
+                <CardHeader
+                action={
+                  <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
+                }
+                title={title}
+                subheader={subheader}
+              />
+                </CardContent>
+        </Card>
       </Box>
     )
   }
