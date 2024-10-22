@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import { Box, Typography, Grid2 as Grid } from '@mui/material';
 import { StyledProject } from '../index';
-import { darkPaperStyle, regularGridStyle } from '../../MUIStyles/MUIStyles';
+import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
 import { projectsData } from '../../models/projectsData';
 import './ProjectsStyle.css';
 
@@ -14,24 +14,20 @@ const Projects = () => {
     setExpandedProject(projectsData[newIndex]);
   }
 
-  const expandedGridStyle = {
-    ...darkPaperStyle,
-    border: '4px solid var(--color-pale-blue)',
-    width: '100%'
-  };
+  const styledProjectProps = (project, index) => ({
+    project,
+    fullDisplay,
+    index,
+    toggleDisplay,
+    sx: fullDisplay ? expandedGridStyle : regularGridStyle(project.thumbnails),
+  })
 
   const displayAllProjects = () => {
     return (
       <Grid container rowSpacing={4} columnSpacing={3} className="display-flex flex-center"> 
       {
        Object.values(projectsData).map((project, index) => (
-        <StyledProject  
-          key={project.title} 
-          project={project} 
-          fullDisplay={fullDisplay} 
-          index={index}
-          toggleDisplay={toggleDisplay} 
-          sx={regularGridStyle(project.thumbnails)} />
+        <StyledProject key={project.title} {...styledProjectProps(project, index)} />
        ))
        }
       </Grid>
@@ -42,14 +38,11 @@ const Projects = () => {
     return (
       <StyledProject   
         key={expandedProject.title} 
-        project={expandedProject} 
-        fullDisplay={fullDisplay} 
-        index={-1} 
-        toggleDisplay={toggleDisplay}
-        sx={expandedGridStyle} 
+        {...styledProjectProps(expandedProject, -1)}
       />
     )
   }
+
 
   return (
     <Box component="section" className="height95vh">
@@ -61,9 +54,9 @@ const Projects = () => {
          !fullDisplay ? displayAllProjects() : displayExpandedProject()
         }
       </Box>
-
     </Box>
   )
 }
 
 export default Projects;
+

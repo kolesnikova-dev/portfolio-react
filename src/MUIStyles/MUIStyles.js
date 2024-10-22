@@ -15,6 +15,7 @@ export const lightPaperStyle = {
 	background: `var(--color-pale-blue)`,
 };
 
+// projects section grid ---------- [start]
 export const regularGridStyle = (thumbnails) => ({
 	position: 'relative',
 	width: {
@@ -45,4 +46,11 @@ export const regularGridStyle = (thumbnails) => ({
 		opacity: 0.8,
 	},
   });
+
+  export const expandedGridStyle = (darkPaperStyle) => ({
+    ...darkPaperStyle,
+    border: '4px solid var(--color-pale-blue)',
+    width: '100%'
+  });
   
+  // projects section grid ---------- [end]
