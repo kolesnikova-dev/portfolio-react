@@ -13,6 +13,8 @@ export * from './ImageContainer/ImageContainer';
 export * from './Certifications/Certifications';
 export * from './Contacts/Contact';
 export * from './Contacts/Contacts';
+export * from './Projects/Project';
+export * from './Projects/StyledProject';
 export { default as Projects } from './Projects/Projects'
 export { default as Overlay } from './Overlay/Overlay'
 // export * from './/';

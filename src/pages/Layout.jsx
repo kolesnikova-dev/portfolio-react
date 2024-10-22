@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Paper, Box } from '@mui/material';
 import { NavBar, Footer } from '../components/index';
-import { darkPaperStyle } from './MUIStyles';
+import { darkPaperStyle } from '../MUIStyles/MUIStyles';
 
 export const Layout = () => {
   return (

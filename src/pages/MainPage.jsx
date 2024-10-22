@@ -5,7 +5,7 @@ import {
   Certifications, 
   Stats 
 } from '../components';
-import { lightPaperStyle } from './MUIStyles';
+import { lightPaperStyle } from '../MUIStyles/MUIStyles';
 import { Paper, Box, Grid2 as Grid } from '@mui/material';
 
 const sections = { 
@@ -62,8 +62,8 @@ const SideBySideSection = ({ section }) => {
 
 const StyledGrid = ({ children }) => {
   return (
-    <Paper sx={lightPaperStyle} className='display-flex flex-center'>
-      <Grid size={gridSize} sx={{width: '100%'}}>
+    <Paper sx={lightPaperStyle} className='display-flex flex-center full-width' >
+      <Grid size={gridSize} >
         {children}
       </Grid>
     </Paper>
@@ -73,8 +73,8 @@ const StyledGrid = ({ children }) => {
 
 const MainPage = () => {
   return (
-    <Box sx={{ flexGrow: 1, width: '100%' }} >
-      <Grid container spacing={2} sx={{width: '100%'}} >
+    <Box sx={{ flexGrow: 1 }} className="full-width">
+      <Grid container spacing={2} className="full-width" >
           <StyledGrid>
             <SideBySideSection section={sections.top} />
           </StyledGrid>

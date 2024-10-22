@@ -33,14 +33,11 @@ section {
   margin-block-end: 7%;
 }
 
-header {
+.header {
   text-align: start;
-  margin: 5%;
-  font-size: 195%;
   letter-spacing: 0.6vw;
   font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
-  position: relative;
 }
 
 .delayedAppear {

@@ -1,55 +1,68 @@
-import { useState, Suspense, lazy } from 'react';
-import { getNewProjectIndex } from '../../utils';
-
-import { Loading, Button } from '../index';
-
-import { projectsData, symbols } from '../../models/data';
+import { useState} from 'react';
+import { Box, Typography, Grid2 as Grid } from '@mui/material';
+import { StyledProject } from '../index';
+import { darkPaperStyle, regularGridStyle } from '../../MUIStyles/MUIStyles';
+import { projectsData } from '../../models/projectsData';
 import './ProjectsStyle.css';
 
-const LazyProject = lazy(() => import('./Project'));
-
-const dataKeys = Object.keys(projectsData);
-
 const Projects = () => {
-  
-  const [currentProject, setCurrentProject] = useState(dataKeys[0]);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [fullDisplay, setFullDisplay] = useState(false);
+  const [expandedProject, setExpandedProject] = useState(-1);
 
-  const changeProjectImage = (action) => {
-    if (isTransitioning) return; 
+  const toggleDisplay = (newIndex) => {
+    setFullDisplay((prev) => !prev);
+    setExpandedProject(projectsData[newIndex]);
+  }
 
-    setIsTransitioning(true);
-    
-    const currentIndex = dataKeys.indexOf(currentProject);
-    const newIndex = getNewProjectIndex(action, currentIndex, dataKeys.length);
-
-    setTimeout(() => {
-      setCurrentProject(dataKeys[newIndex]);
-      setIsTransitioning(false);
-    }, 500); 
+  const expandedGridStyle = {
+    ...darkPaperStyle,
+    border: '4px solid var(--color-pale-blue)',
+    width: '100%'
   };
 
+  const displayAllProjects = () => {
+    return (
+      <Grid container rowSpacing={4} columnSpacing={3} className="display-flex flex-center"> 
+      {
+       Object.values(projectsData).map((project, index) => (
+        <StyledProject  
+          key={project.title} 
+          project={project} 
+          fullDisplay={fullDisplay} 
+          index={index}
+          toggleDisplay={toggleDisplay} 
+          sx={regularGridStyle(project.thumbnails)} />
+       ))
+       }
+      </Grid>
+    )
+  }
+
+  const displayExpandedProject = () => {
+    return (
+      <StyledProject   
+        key={expandedProject.title} 
+        project={expandedProject} 
+        fullDisplay={fullDisplay} 
+        index={-1} 
+        toggleDisplay={toggleDisplay}
+        sx={expandedGridStyle} 
+      />
+    )
+  }
+
   return (
-    <section>
-        <header>Projects</header>
-    <div>
-  
-      <div>
-           
-                <Suspense fallback={<Loading />}>
-                  <LazyProject data={projectsData[currentProject]} isTransitioning={isTransitioning}/>
-                </Suspense>
+    <Box component="section" className="height95vh">
+       <Box>
+        <Typography m={1} variant="h5">Projects</Typography>
+       </Box>
+       <Box className="display-flex flex-center inherit-height">
+        {
+         !fullDisplay ? displayAllProjects() : displayExpandedProject()
+        }
+      </Box>
 
-                    {/* button container */}
-                  <div>
-                    <Button thisClass='slider-button' symbol={symbols.backward} action={()=> changeProjectImage('backward')} />
-                    <Button thisClass='slider-button' symbol={symbols.forward} action={()=> changeProjectImage('forward')} />
-                  </div>
-              </div>
-
-      </div>
-
-    </section>
+    </Box>
   )
 }
 

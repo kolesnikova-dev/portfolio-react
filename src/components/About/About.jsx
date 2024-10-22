@@ -50,7 +50,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const ImageWrapper = styled(Box)(({ theme }) => ({
   float: 'left',
-  marginTop: theme.spacing(8),
+  marginTop: theme.spacing(1),
   marginRight: theme.spacing(2),
   marginBottom: theme.spacing(1),
 }));
@@ -62,6 +62,11 @@ export const About = () => {
   return (
     <section>
       <Box ref={pictureRef}>
+      <Typography variant="h3" style={lightPaperStyle}>
+           <Box className='display-flex flex-center text-no-wrap' >
+            {introductionData.greeting}
+           </Box>
+          </Typography>
         <ImageWrapper>
           <StyledBadge
             overlap="circular"
@@ -72,11 +77,6 @@ export const About = () => {
           </StyledBadge>
         </ImageWrapper>
         <Box className={isInView ? 'appear' : ''}>
-          <Typography variant="h3" style={lightPaperStyle}>
-           <Box className='display-flex flex-center text-no-wrap' >
-            {introductionData.greeting}
-           </Box>
-          </Typography>
           <Typography variant="h6" sx={{ textAlign: 'center', mx: 1}}>
             {introductionData.introduction}
           </Typography>
