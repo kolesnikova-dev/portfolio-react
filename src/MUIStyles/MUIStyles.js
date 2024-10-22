@@ -37,9 +37,12 @@ export const regularGridStyle = (thumbnails) => ({
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		backgroundImage: `url(${thumbnails})`,
-		opacity: 0.5,
+		transition: 'opacity 0.3s ease-in-out',
+		opacity: 0.4,
 		zIndex: -1,
 	},
-	zIndex: 0,
+	'&:hover::before': {
+		opacity: 0.8,
+	},
   });
   
