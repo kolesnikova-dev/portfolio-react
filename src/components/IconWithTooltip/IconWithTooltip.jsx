@@ -15,7 +15,7 @@ export const IconWithTooltip = ({ icon, onClick, link }) => {
               <Icon />
             </IconButton>
           ) : (
-            <Link to={link}>
+            <Link to={link} target="_blank" rel="noopener">
               <Icon />
             </Link>
           )

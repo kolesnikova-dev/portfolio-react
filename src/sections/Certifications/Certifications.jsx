@@ -1,7 +1,7 @@
 import {useState } from 'react';
 
-import Overlay from '../Overlay/Overlay';
-import { Card } from '../index';
+import Overlay from '../../components/Overlay/Overlay';
+import { Card } from '../../components/index';
 
 import { certificationsData as data } from '../../models/certificationsData'
 import './CertificationsStyle.css';

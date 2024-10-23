@@ -39,15 +39,19 @@ export const Contacts = () => {
         </Grid>
       </Paper>
 
+      <Paper elevation={2} sx={{...lightPaperStyle, p: 1}} className="display-flex flex-center">
         {/* email container */}
       <Tooltip title={copied ? 'Copied!' : 'Click to copy my email'}>
-        <Grid container onClick={copyEmail} sx={{...fullBorderGridStyle('bottomSectionWidth'), cursor: 'pointer', display: { xs: 'none', sm: 'block'}}} > 
+        <Grid container direction="column" sx={{cursor: 'pointer'}} onClick={copyEmail}> 
+       
             <Grid>
               {email}
             </Grid>
+         
             <Grid sx={{ height: '2vh' }}>{copied ? <CheckCircle /> : 'click to copy'}</Grid>
           </Grid>
       </Tooltip>
+      </Paper>
       </Grid>
     </Box>
   )

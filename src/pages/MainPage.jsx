@@ -3,7 +3,7 @@ import {
   Skills, 
   Projects, 
   Contacts 
-} from '../components';
+} from '../sections';
 import { lightPaperStyle, fullBorderGridStyle } from '../MUIStyles/MUIStyles';
 import { Paper, Box, Grid2 as Grid } from '@mui/material';
 

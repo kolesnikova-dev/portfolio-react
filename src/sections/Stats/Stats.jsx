@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { fetchUserData, useIntersectionObserver } from '../../utils';
-import { Loading } from '../index';
+import { Loading } from '../../components/index';
 
 import './StatsStyle.css';
 

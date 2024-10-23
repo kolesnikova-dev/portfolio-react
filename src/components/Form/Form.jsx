@@ -18,11 +18,9 @@ export const Form = () => {
   //initialize error state to warn user of email rate limit
   const [error, setError] = useState('');
 
-  //import emailjs public key
+  //import emailjs public key, service id and template id
   const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
-  //import emailjs service id
   const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
-  //import emailjs template id
   const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID; 
 
   // initialize emailjs with the public key
@@ -35,7 +33,7 @@ export const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    //get current time
+
     const now = new Date();
 
     //check whether last email was sent less than a minute ago

@@ -1,4 +1,5 @@
-import { NavBar, Contacts } from '../index';
+import { Contacts } from '../../sections';
+import { NavBar } from '../index';
 import { symbols } from '../../models/data.js';
 import { Box } from '@mui/material';
 

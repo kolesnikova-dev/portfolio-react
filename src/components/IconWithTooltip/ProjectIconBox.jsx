@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { UnfoldMoreDoubleSharp, UnfoldLessDoubleSharp, OpenInNewSharp, GitHub } from '@mui/icons-material';
-import { IconWithTooltip } from '../index';
+import { IconWithTooltip } from './IconWithTooltip';
 
 const unfoldIconOptions = {
     true: {
@@ -14,7 +14,7 @@ const unfoldIconOptions = {
   }
   
   const githubIconOptions = {
-    ariaLabel: 'Navigate to Github',
+    ariaLabel: 'View on GitHub',
     icon: GitHub,
   }
   
@@ -23,12 +23,14 @@ const unfoldIconOptions = {
     icon: OpenInNewSharp,
   }
   
-export const ProjectIconBox = ({ project, fullDisplay, toggleDisplay}) => {
+export const ProjectIconBox = ({ projectLinks, fullDisplay, toggleDisplay}) => {
+  const { liveLink, githubLink } = projectLinks;
+  
     return (
       <Box className="display-flex flex-center center-column">
           <IconWithTooltip icon={unfoldIconOptions[fullDisplay]} onClick={toggleDisplay}/>
-          <IconWithTooltip icon={githubIconOptions} link={project.githubLink} />
-          <IconWithTooltip icon={externalLinkOptions} link={project.liveLink} />
+          <IconWithTooltip icon={githubIconOptions} link={githubLink} />
+          <IconWithTooltip icon={externalLinkOptions} link={liveLink} />
       </Box>
     )
   }

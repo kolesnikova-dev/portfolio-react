@@ -1,6 +1,6 @@
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { Box } from '@mui/material';
-import { IconWithTooltip } from '../IconWithTooltip/IconWithTooltip';
+import { IconWithTooltip } from '../../components/index';
 
 
 const contactsData = {
@@ -27,7 +27,7 @@ export const Contact = ({ contact }) => {
 
   return (
     <Box>
-     <IconWithTooltip {...iconProps} />
+      <IconWithTooltip {...iconProps} />
     </Box>
   );
 };

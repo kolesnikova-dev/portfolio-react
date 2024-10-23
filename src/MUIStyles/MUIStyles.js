@@ -26,7 +26,7 @@ export const fullBorderGridStyle = (section) => ({
   })
 
 const paperStyle = {
-	color: 'white',
+	color: 'whitesmoke',
 };
 
 export const darkPaperStyle = {
@@ -39,6 +39,11 @@ export const lightPaperStyle = {
 	...paperStyle,
 	background: `var(--color-pale-blue)`,
 };
+
+export const testPaperStyle = {
+	...paperStyle,
+	background: `var(--color-test)`,
+}
 
 // projects section grid ---------- [start]
 export const regularGridStyle = (thumbnails) => ({

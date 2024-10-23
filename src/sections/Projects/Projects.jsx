@@ -27,7 +27,9 @@ const Projects = () => {
       <Grid container rowSpacing={4} columnSpacing={3} className="display-flex flex-center"> 
       {
        Object.values(projectsData).map((project, index) => (
-        <StyledProject key={project.title} {...styledProjectProps(project, index)} />
+        <StyledProject 
+          key={project.title} 
+          {...styledProjectProps(project, index)} />
        ))
        }
       </Grid>

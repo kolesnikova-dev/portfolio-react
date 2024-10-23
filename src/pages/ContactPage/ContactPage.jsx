@@ -1,4 +1,6 @@
-import { Contacts, Form } from '../../components';
+import { Box, Typography, Card, CardMedia, CardContent, CardHeader, Grid2 as Grid, Paper, Button, Link } from '@mui/material';
+import { Contacts } from '../../sections';
+import { Form } from '../../components';
 
 import './ContactPageStyle.css';
 
@@ -19,9 +21,6 @@ export const ContactPage = () => {
           {/* form */}
           <Form />
       </div>
-
-      {/* contacts, or relevant links */}
-      <Contacts />
     </section>
   )
 }
