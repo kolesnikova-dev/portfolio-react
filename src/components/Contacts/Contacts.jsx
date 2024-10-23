@@ -8,6 +8,13 @@ import { fullBorderGridStyle, lightPaperStyle } from '../../MUIStyles/MUIStyles'
 
 const email = 'firstnamenika@gmail.com';
 
+const contacts = ['Github', 'LinkedIn'].map((contact, index) => (
+  <Grid key={index}>
+    <Contact contact={contact} />
+  </Grid>
+))
+
+
 export const Contacts = () => {
   
   const [copied, setCopied] = useState(false);
@@ -22,12 +29,6 @@ export const Contacts = () => {
       alert(`Error: couldnt copy email: ${error}`);
     }
   };
-
-  const contacts = ['Github', 'LinkedIn'].map((contact, index) => (
-       <Grid key={index}>
-         <Contact contact={contact} />
-       </Grid>
-  ))
 
   return (
     <Box component="section">

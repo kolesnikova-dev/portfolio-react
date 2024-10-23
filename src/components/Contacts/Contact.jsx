@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
-import { Box, Tooltip, IconButton } from '@mui/material';
+import { Box } from '@mui/material';
+import { IconWithTooltip } from '../IconWithTooltip/IconWithTooltip';
 
 
 const contactsData = {
@@ -15,15 +15,19 @@ const contactsData = {
 };
 
 export const Contact = ({ contact }) => {
-  const { icon: Icon, url } = contactsData[contact];
+  const { icon, url } = contactsData[contact];
+
+  const iconProps = {
+    icon: {
+      ariaLabel: contact,
+      icon,
+    }, 
+    link: url,
+  }
 
   return (
     <Box>
-     <Tooltip title={contact}>
-      <Link to={url}>
-        <Icon />
-      </Link>
-     </Tooltip>
+     <IconWithTooltip {...iconProps} />
     </Box>
   );
 };

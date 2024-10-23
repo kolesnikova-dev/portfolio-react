@@ -1,7 +1,18 @@
 import { Box, Typography, Card, CardActions, CardContent, CardHeader } from '@mui/material';
-import { OpenInNewSharp, GitHub } from '@mui/icons-material';
-import { UnfoldIcon } from '../UnfoldIcon/UnfoldIcon';
+import { UnfoldMoreDoubleSharp, UnfoldLessDoubleSharp } from '@mui/icons-material';
+import { IconWithTooltip } from '../index';
+import { ProjectIconBox } from './ProjectIconBox';
 
+const unfoldIconOptions = {
+  true: {
+    ariaLabel: "See less information",
+    icon: UnfoldLessDoubleSharp,
+  },
+  false: {
+    ariaLabel: "See more information",
+    icon: UnfoldMoreDoubleSharp,
+  },
+}
 
 export const Project = ({ project, fullDisplay, toggleDisplay }) => {
   const { title, githubLink, liveLink, video, details, subheader } = project;
@@ -13,7 +24,11 @@ export const Project = ({ project, fullDisplay, toggleDisplay }) => {
           <CardContent>
             <CardHeader
               action={
-                <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
+                <ProjectIconBox 
+                  project={project} 
+                  fullDisplay={fullDisplay} 
+                  toggleDisplay={toggleDisplay}
+                />
               }
               title={title}
               subheader={subheader}
@@ -32,7 +47,7 @@ export const Project = ({ project, fullDisplay, toggleDisplay }) => {
           <CardContent>
                 <CardHeader
                 action={
-                  <UnfoldIcon mode={fullDisplay} toggleDisplay={toggleDisplay}/>
+                  <IconWithTooptip icon={unfoldIconOptions[fullDisplay]} onClick={toggleDisplay}/>
                 }
                 title={title}
                 subheader={subheader}

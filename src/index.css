@@ -13,11 +13,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
   font-weight: 500;
-  color: #7c80ffda;
+  color: rgb(92, 101, 223);
   text-decoration: inherit;
 }
 a:hover {

@@ -8,11 +8,13 @@ export * from './Loading/Loading';
 export * from './FormattedArray/FormattedArray';
 export * from './Form/Form';
 export * from './Button/Button';
+export * from './IconWithTooltip/IconWithTooltip';
 export * from './Card/Card';
 export * from './ImageContainer/ImageContainer';
 export * from './Certifications/Certifications';
 export * from './Contacts/Contact';
 export * from './Contacts/Contacts';
+export * from './Projects/ProjectIconBox';
 export * from './Projects/Project';
 export * from './Projects/StyledProject';
 export { default as Projects } from './Projects/Projects'
