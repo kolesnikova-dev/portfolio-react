@@ -25,17 +25,16 @@ export const useIntersectionObserver = (containerRef) => {
  
      //if images parent exists start observing
      if (containerRef.current) {
-      const currentlyObserving = containerRef.current;
-      observer.observe(currentlyObserving);
+      observer.observe(containerRef.current);
     } 
  
-     return (currentlyObserving) => { // clean up
-       if (currentlyObserving) {
+     return () => { // clean up
+      if (containerRef.current) {
          //stop observing once unmounted
-         observer.unobserve(currentlyObserving);
+         observer.unobserve(containerRef.current);
        }
      };
-   }, []);
+   }, [containerRef]);
 
    //main function -------------------------------------------
    return isInView;

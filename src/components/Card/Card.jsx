@@ -1,44 +1,48 @@
 import { useRef } from 'react';
-
-import ImageContainer from '../ImageContainer/ImageContainer';
 import { useIntersectionObserver } from '../../utils';
+import { Box, Avatar } from '@mui/material';
+import { ImageContainer } from '../index';
 
 import './Card.css';
 
-export const Card = ({data, thisClass, action}) => {
+const perScholasLogo = {
+  src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png",
+  alt: "Per Scholas logo"
+}
 
+
+export const Card = ({data, thisClass, action}) => {
   const cardRef = useRef();
   const isInView = useIntersectionObserver(cardRef);
 
+  // const perScholasLogoJSX = data.includes('perScholas') && 
+  //   <Avatar 
+  //     sx={{ width: 44, height: 44 }}
+  //     src={perScholasLogo.src} 
+  //     alt={perScholasLogo.alt} 
+  //   />; 
 
-  const perScholasLogo = {
-    src: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png",
-    alt: "Per Scholas logo"
-  }
+  const ReactIcon = !data.details && data.image;
 
-  const imagesJXS = !data.details && 
-  <div className='card-image-container'>
-    <img src={data.image} alt={data.name} />
-  </div>;
+  const imagesJXS = !data.image && 
+    <Box>
+      <ReactIcon />
+    </Box>;
 
   return (
     <div 
       ref={cardRef}
-      className={`card ${thisClass} ${isInView ? 'delayedAppear' : ''}`} 
-      onClick={action ? ()=>action(data) : null}>
+      className={`card ${thisClass} ${isInView && 'delayedAppear'}`} 
+      onClick={action ? () => action(data) : undefined}
+    >
 
-      { data.name.includes('Software Engineering Training') && 
-        <ImageContainer 
-          thisClass={'per-scholas-logo'} 
-          src={perScholasLogo.src} 
-          alt={perScholasLogo.alt} 
-        /> }
+      {/* {perScholasLogoJSX} */}
 
-      <div className='card-first-child'>{data.name}</div>
-      <div className='card-second-child'>{data.level}</div>
+      {/* <div>{data.name}</div> */}
       
       {/* image */}
-      {imagesJXS}
+      {/* {imagesJXS} */}
+
     </div>
   );
 };

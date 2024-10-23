@@ -1,26 +1,20 @@
 import { Outlet } from 'react-router-dom';
-
-import { NavBar, Footer } from '../components/index';
-
+import { Paper, Box } from '@mui/material';
+import { Footer } from '../components/index';
+import { darkPaperStyle } from '../MUIStyles/MUIStyles';
 
 export const Layout = () => {
   return (
-    <div className='App'>
-        {/* navigation bar */}
-        <nav>
-            <NavBar />
-        </nav>
+    <Paper sx={darkPaperStyle}>
+      <Box className="App">
 
-    {/* main section */}
-        <main>
-            <Outlet />
-        </main>
+        {/* Main section */}
+          <Outlet />
 
-        {/* footer */}
-        <footer>
-            <Footer />
-        </footer>
-
-     </div>
-  )
-}
+        {/* Footer */}
+          <Footer />
+      
+      </Box>
+    </Paper>
+  );
+};

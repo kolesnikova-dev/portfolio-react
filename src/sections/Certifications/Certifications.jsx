@@ -1,12 +1,13 @@
 import {useState } from 'react';
 
-import Overlay from '../Overlay/Overlay';
-import { Card } from '../index';
+import Overlay from '../../components/Overlay/Overlay';
+import { Card } from '../../components/index';
 
+import { certificationsData as data } from '../../models/certificationsData'
 import './CertificationsStyle.css';
 
 
-export const Certifications = ({ data, header }) => {
+export const Certifications = () => {
 
   // initialize state for setting an overlay with a certification
   const [overlay, setOverlay] = useState(null);
@@ -25,13 +26,13 @@ export const Certifications = ({ data, header }) => {
 
 
   return (
-    <section className='certifications-section'>
-     <div className='top-certifications'>
-      <header>{header}</header>
+    <section>
+     <div>
+      <header>Certifications</header>
       <p>click on a card to see credential</p>
      </div>
       
-      <div className='card-section'>
+      <div>
 
         {/* loop through all credentials and return a card per credential */}
         {Object.values(data).map((item, index) => (

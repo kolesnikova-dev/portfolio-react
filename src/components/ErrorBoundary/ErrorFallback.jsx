@@ -1,4 +1,4 @@
-import ImageContainer from "../ImageContainer/ImageContainer";
+import { ImageContainer } from "../index";
 import errorFallbackImage from "../../assets/images/error.png";
 
 const errorUI = {

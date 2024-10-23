@@ -1,28 +1,32 @@
-import { Suspense, lazy } from 'react';
+// import { Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout } from './pages';
-import { ErrorBoundary, Loading } from './components';
+import { default as MainPage } from '../src/pages/MainPage';
+import { ErrorBoundary } from './components';
 
 import './App.css';
 
-// lazy load MainPage and ContactPage
-const MainPage = lazy(() => import('./pages/MainPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
+// // lazy load MainPage
+// const MainPage = lazy(() => import('./pages/MainPage'));
 
 function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense fallback={<Loading />}>
+      {/* <Suspense fallback={<Loading />}> */}
+     
       <Routes>
           <Route path="/" element={<Layout />}>
+            
             <Route index element={<MainPage	/>}	/>
-            <Route path={'/contact'} element={<ContactPage />} />
-            {/* catch all route - replace to a 404 page */}
+            {/* <Route path={'contact'} element={<ContactPage />} /> */}
+          
+          </Route>
+             {/* catch all route - replace to a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
-        </Route>
       </Routes>
-      </Suspense>
+     
+      {/* </Suspense> */}
     </ErrorBoundary>
   );
 }
