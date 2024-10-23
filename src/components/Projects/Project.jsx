@@ -47,7 +47,7 @@ export const Project = ({ project, fullDisplay, toggleDisplay }) => {
           <CardContent>
                 <CardHeader
                 action={
-                  <IconWithTooptip icon={unfoldIconOptions[fullDisplay]} onClick={toggleDisplay}/>
+                  <IconWithTooltip icon={unfoldIconOptions[fullDisplay]} onClick={toggleDisplay}/>
                 }
                 title={title}
                 subheader={subheader}
