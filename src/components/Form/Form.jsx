@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Button, TextField, Typography, Box } from '@mui/material';
 
 import emailjs from '@emailjs/browser';
 
@@ -93,28 +94,27 @@ export const Form = () => {
     }, 3000);
   }
 
-
+  const alertMessage = success ? 'Sent!' : error;
 
   // main function-----------------------------------
   return (
-    <form id="contact-form" onSubmit={handleSubmit}>
-      <title>Contact Form</title>
-
-        <input type="hidden" name="contact_number"  value="697483" />
-        <label>Name</label>
-        <input type="text" name="user_name" onChange={handleChange} required/>
-        <label>Email</label>
-        <input type="email" name="user_email" onChange={handleChange} required/>
-        <label>Message</label>
-        <textarea name="message" onChange={handleChange} required></textarea>
-        <input type="submit" value="Send" />
+    <Box component="form" id="contact-form" onSubmit={handleSubmit} >
+        <Typography>Name</Typography>
+        <TextField  sx={{background: 'whitesmoke'}} variant="filled" type="text" name="user-name" onChange={handleChange} required />
+        <br />
+        <Typography>Email</Typography>
+        <TextField   sx={{background: 'whitesmoke'}} variant="filled" type="email" name="user-email" onChange={handleChange} required />
+        <br />
+        <Typography>Message</Typography>
+        <TextField multiline sx={{background: 'whitesmoke'}} variant="filled" maxRows={8} name="message" onChange={handleChange} required />
+        <br />
+        <Button type="submit" variant="filled">Send</Button>
 
         {/* display error of success message */}
-        <div className="alert-box">
-          {success && <p className='fade-out'>Sent!</p>}
-          {error && <p className='red fade-out'>{error}</p>}
-        </div>
-    </form>
+        <Box className="alert-box">
+          <Typography>{alertMessage}</Typography>
+        </Box>
+    </Box>
   )
 }
 

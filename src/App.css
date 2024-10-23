@@ -12,6 +12,7 @@ body {
 
 .App {
   width: 100%;
+  padding-block-start: 1vh;
 }
 
 .header {

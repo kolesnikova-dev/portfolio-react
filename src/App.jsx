@@ -1,6 +1,6 @@
 // import { Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { Layout, ContactPage } from './pages';
+import { Layout } from './pages';
 import { default as MainPage } from '../src/pages/MainPage';
 import { ErrorBoundary } from './components';
 
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             
             <Route index element={<MainPage	/>}	/>
-            <Route path={'contact'} element={<ContactPage />} />
+            {/* <Route path={'contact'} element={<ContactPage />} /> */}
           
           </Route>
              {/* catch all route - replace to a 404 page */}

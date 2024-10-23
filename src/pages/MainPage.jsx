@@ -2,7 +2,8 @@ import {
   About, 
   Skills, 
   Projects, 
-  Contacts 
+  Contacts,
+  SendEmail 
 } from '../sections';
 import { lightPaperStyle, fullBorderGridStyle } from '../MUIStyles/MUIStyles';
 import { Paper, Box, Grid2 as Grid } from '@mui/material';
@@ -16,9 +17,8 @@ const sections = {
    component: Projects, key: 'projects-section' 
   },
   bottom: {
-   component: Contacts, key: 'contacts-section' 
-    // left: { component: Certifications, size: 8, key: 'certifications-section' },
-    // right: { component: Contacts, size: 4, key: 'contacts-section' },
+    left: { component: SendEmail, size: 8, key: 'certifications-section' },
+    right: { component: Contacts, size: 4, key: 'contacts-section' },
   },
 
 };
@@ -73,9 +73,9 @@ const MainPage = () => {
             <Section component={sections.middle.component} />
           </StyledGrid>
           {/* contacts section */}
-          {/* <StyledGrid>
-            <Section component={sections.bottom.component} />
-          </StyledGrid> */}
+          <StyledGrid>
+            <SideBySideSection section={sections.bottom} />
+          </StyledGrid>
       </Grid>
     
     </Box>
