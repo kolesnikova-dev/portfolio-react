@@ -2,7 +2,6 @@ import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { Box } from '@mui/material';
 import { IconWithTooltip } from '../../components/index';
 
-
 const contactsData = {
   Github: {
       icon: SiGithub, 
@@ -13,6 +12,7 @@ const contactsData = {
       url: 'https://www.linkedin.com/in/vekolesnikova/'
   }
 };
+
 
 export const Contact = ({ contact }) => {
   const { icon, url } = contactsData[contact];

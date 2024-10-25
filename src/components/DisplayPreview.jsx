@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardHeader } from '@mui/material';
-import { ProjectIconBox } from '../../components';
+import { ProjectIconBox } from './IconWithTooltip/ProjectIconBox';
 
 export const DisplayPreview = ({ project, fullDisplay, toggleDisplay}) => {
     const { title, subheader, githubLink, liveLink } = project;

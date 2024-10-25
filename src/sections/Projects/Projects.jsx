@@ -1,6 +1,6 @@
 import { useState} from 'react';
 import { Box, Typography, Grid2 as Grid } from '@mui/material';
-import { StyledProject } from '../index';
+import { StyledProject } from '../../components/index';
 import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
 import { projectsData } from '../../models/projectsData';
 import './ProjectsStyle.css';

@@ -1,8 +1,7 @@
 import { useRef } from 'react';
-import { useIntersectionObserver } from '../../utils';
+import { useIntersectionObserver } from '../utils';
 import { Box, Typography, Tooltip, IconButton } from '@mui/material';
 import { SiTypescript, SiJavascript, SiPython, SiGit, SiReact, SiCss3, SiExpress, SiMongoose } from "react-icons/si";
-import './SkillsStyle.css';
 
 const skillsData = {
   JavaScript: SiJavascript, 
@@ -26,7 +25,7 @@ export const Skills = () => {
       {Object.entries(skillsData).map(([skill, ReactIcon]) => (
         <Box ref={skillRef} key={skill} className={`display-flex flex-center ${isInView && 'delayedAppear'}`} >
           <Typography>{skill}</Typography>
-          <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
+          <Tooltip title={<p>{skill}</p>} placement="right" arrow>
             <IconButton fontSize="large" sx={{ color: 'white' }} aria-label={skill}>
               <ReactIcon />
             </IconButton>

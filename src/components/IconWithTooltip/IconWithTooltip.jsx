@@ -7,11 +7,11 @@ export const IconWithTooltip = ({ icon, onClick, link }) => {
     const { ariaLabel, icon: Icon} = icon;
 
     return (
-      <Tooltip title={ariaLabel}>
+      <Tooltip title={ariaLabel} placement="bottom" arrow>
         {
           onClick 
           ? (
-            <IconButton aria-label={ariaLabel} onClick={onClick}>
+            <IconButton  fontSize="large" aria-label={ariaLabel} onClick={onClick}>
               <Icon />
             </IconButton>
           ) : (
