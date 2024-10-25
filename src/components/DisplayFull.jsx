@@ -45,12 +45,16 @@ export const DisplayFull = ({ project, fullDisplay, toggleDisplay}) => {
     
      {/* Bottom section: project details */}
      <Box sx={{ marginTop: '2rem' }}>
-     <Paper elevation={2} sx={{...testPaperStyle, p: 1}} className="display-flex flex-center center-column">
-       <Typography variant="h5" component="h2" gutterBottom>Project Overview</Typography>
-       {details.map((detail, index) => (
-         <Typography variant="body1" key={index}>{detail}</Typography>
-       ))}
-            </Paper>
+        <Paper elevation={2} sx={{...testPaperStyle, p: 1}} className="display-flex flex-center center-column">
+          <Typography variant="h5" component="h2" gutterBottom>
+            Project Overview
+          </Typography>
+          
+          {details.map((detail, index) => (
+            <Typography variant="body1" key={index}>{detail}</Typography>
+          ))}
+          
+        </Paper>
      </Box>
 
    </Box>
