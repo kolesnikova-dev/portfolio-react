@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { Box, Paper, Tooltip, Grid2 as Grid } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
@@ -9,14 +9,15 @@ import { Contact } from './Contact';
 
 const email = 'firstnamenika@gmail.com';
 
-const contacts = ['Github', 'LinkedIn'].map((contact, index) => (
+const contacts: JSX.Element[] = ['Github', 'LinkedIn'].map((contact, index) => (
   <Grid key={index}>
     <Contact contact={contact} />
   </Grid>
 ));
 
-export const Contacts = () => {
-  const [copied, setCopied] = useState(false);
+
+export const Contacts: React.FC = () => {
+  const [copied, setCopied] = useState<boolean>(false);
 
   const copyEmail = () => {
     try {
@@ -25,7 +26,7 @@ export const Contacts = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
     } catch (error) {
-      alert(`Error: couldnt copy email: ${error}`);
+      alert(`Couldn't copy email. Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
