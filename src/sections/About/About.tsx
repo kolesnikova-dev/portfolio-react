@@ -1,8 +1,13 @@
 import { useRef } from 'react';
-import { useIntersectionObserver } from '../../utils';
+import type { MutableRefObject } from 'react';
+
 import { styled } from '@mui/material/styles';
 import { Avatar, Box, Badge, Typography } from '@mui/material';
+
 import { lightPaperStyle } from '../../pages';
+
+import { useIntersectionObserver } from '../../utils';
+
 //import main image
 import picture from '../../assets/images/picture.png';
 
@@ -51,8 +56,9 @@ const ImageWrapper = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(1),
 }));
 
-export const About = () => {
-  const pictureRef = useRef(null);
+
+export const About: React.FC = () => {
+  const pictureRef = useRef<HTMLElement | null>(null);
   const isInView = useIntersectionObserver(pictureRef);
 
   return (

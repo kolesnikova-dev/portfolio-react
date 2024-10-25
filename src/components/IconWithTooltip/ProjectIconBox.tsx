@@ -5,7 +5,9 @@ import {
   OpenInNewSharp,
   GitHub,
 } from '@mui/icons-material';
+
 import { IconWithTooltip } from './IconWithTooltip';
+import { SetStateAction } from 'react';
 
 const unfoldIconOptions = {
   true: {
@@ -28,18 +30,32 @@ const externalLinkOptions = {
   icon: OpenInNewSharp,
 };
 
+
 export const ProjectIconBox = ({
   projectLinks,
   fullDisplay,
   toggleDisplay,
+  index,
+}: {
+  projectLinks: {
+    liveLink: string,
+    githubLink: string,
+  },
+  fullDisplay: boolean,
+  toggleDisplay: (newIndex: number) => void,
+  index: number,
 }) => {
   const { liveLink, githubLink } = projectLinks;
+
+  const handleToggleDisplay = () => {
+    toggleDisplay(index);
+  };
 
   return (
     <Box className="display-flex flex-center center-column">
       <IconWithTooltip
-        icon={unfoldIconOptions[fullDisplay]}
-        onClick={toggleDisplay}
+        icon={unfoldIconOptions[fullDisplay.toString()]}
+        onClick={handleToggleDisplay}
       />
       <IconWithTooltip icon={githubIconOptions} link={githubLink} />
       <IconWithTooltip icon={externalLinkOptions} link={liveLink} />

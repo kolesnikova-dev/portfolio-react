@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
 
   const toggleDisplay = (newIndex: number) => {
     setFullDisplay((prev) => !prev);
-    setExpandedProject(projectsData[newIndex]);
+    setExpandedProject(newIndex);
   };
 
   const styledProjectProps = (project: Project, index: number) => ({

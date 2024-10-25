@@ -13,7 +13,7 @@ const contactsData = {
   },
 };
 
-export const Contact = ({ contact }) => {
+export const Contact = ({ contact }: {contact: string}) => {
   const { icon, url } = contactsData[contact];
 
   const iconProps = {
