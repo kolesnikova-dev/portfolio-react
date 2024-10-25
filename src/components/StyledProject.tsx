@@ -1,5 +1,5 @@
 import { Paper, Grid2 as Grid } from '@mui/material';
-import { DisplayFull, DisplayPreview } from '../components/index';
+import { DisplayFull, DisplayPreview } from './index';
 import {  } from './DisplayFull';
 
 const displayOptions = {

@@ -1,6 +1,6 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout } from './pages';
-import { default as MainPage } from '../src/pages/MainPage';
+import { default as MainPage } from './pages/MainPage';
 import { ErrorBoundary } from './components';
 
 import './App.css';
