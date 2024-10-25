@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
-export const useIntersectionObserver = (containerRef) => {
+
+export const useIntersectionObserver = (containerRef: React.RefObject<HTMLElement>): boolean => {
   //trigger animation once container in view
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState<boolean>(false);
 
   //observe intersections with viewport
    useEffect(() => {
@@ -36,7 +37,7 @@ export const useIntersectionObserver = (containerRef) => {
      };
    }, [containerRef]);
 
-   //main function -------------------------------------------
+
    return isInView;
 };
 
