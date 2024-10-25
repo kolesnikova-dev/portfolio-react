@@ -31,7 +31,7 @@ export const Form = () => {
   const form = useRef();
 
    //initialize state for email last email sent to enable rate limit
-  const [lastEmailSent, setLastEmailSent] = useState(null);
+  const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
 
   const [status, setStatus] = useState('');
 

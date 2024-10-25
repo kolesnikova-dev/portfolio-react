@@ -3,4 +3,4 @@ export * from './Contacts/Contact';
 export * from './Contacts/Contacts';
 export * from './Skills';
 export * from './SendEmail';
-export { default as Projects } from './Projects/Projects'
+export { default as Projects } from './Projects/Projects';
