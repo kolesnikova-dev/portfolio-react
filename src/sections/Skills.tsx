@@ -1,9 +1,15 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { useIntersectionObserver } from '../utils';
-import { Box, Typography, Tooltip, IconButton } from '@mui/material';
+import { Box, Typography, Tooltip } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 import { SiTypescript, SiJavascript, SiPython, SiGit, SiReact, SiCss3, SiExpress, SiMongoose } from "react-icons/si";
+import { IconType } from 'react-icons';
 
-const skillsData = {
+type SkillsDataType = {
+  [key: string]: IconType,
+}
+
+const skillsData: SkillsDataType = {
   JavaScript: SiJavascript, 
   TypeScript: SiTypescript, 
   Python: SiPython, 
@@ -14,9 +20,9 @@ const skillsData = {
   Mongoose: SiMongoose,
 };
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   
-  const skillRef = useRef();
+  const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
   const isInView = useIntersectionObserver(skillRef);
 
   return (
@@ -26,8 +32,8 @@ export const Skills = () => {
         <Box ref={skillRef} key={skill} className={`display-flex flex-center ${isInView && 'delayedAppear'}`} >
           <Typography>{skill}</Typography>
           <Tooltip title={<p>{skill}</p>} placement="right" arrow>
-            <IconButton fontSize="large" sx={{ color: 'white' }} aria-label={skill}>
-              <ReactIcon />
+            <IconButton sx={{ color: 'white' }} aria-label={skill}>
+              <ReactIcon fontSize='large' />
             </IconButton>
           </Tooltip>
         </Box>
