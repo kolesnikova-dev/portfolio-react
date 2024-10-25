@@ -1,6 +1,6 @@
 import { Paper, Grid2 as Grid } from '@mui/material';
-import { DisplayPreview } from './DisplayPreview';
-import { DisplayFull } from './DisplayFull';
+import { DisplayFull, DisplayPreview } from '../components/index';
+import {  } from './DisplayFull';
 
 const displayOptions = {
   true: DisplayFull,

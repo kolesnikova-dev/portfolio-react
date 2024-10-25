@@ -1,13 +1,10 @@
 import { useRef } from 'react';
 import { useIntersectionObserver } from '../../utils';
-// import { ImageContainer } from '../index';
 import { styled } from '@mui/material/styles';
-import { Box, Badge, Typography } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
+import { Avatar, Box, Badge, Typography } from '@mui/material';
 import { lightPaperStyle } from '../../pages'
 //import main image
 import picture from '../../assets/images/picture.png'; 
-
 
 import './AboutStyle.css';
 
@@ -54,6 +51,7 @@ const ImageWrapper = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(2),
   marginBottom: theme.spacing(1),
 }));
+
 
 export const About = () => {
   const pictureRef = useRef(null);

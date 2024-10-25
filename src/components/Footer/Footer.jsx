@@ -1,6 +1,6 @@
-import { Contacts } from '../../sections';
-import { symbols } from '../../models/data.js';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import CopyrightIcon from '@mui/icons-material/Copyright';
+
 
 export const Footer = () => {
   
@@ -8,7 +8,12 @@ export const Footer = () => {
 
   return (
     <Box component="footer" pt={2}>
-      <Box>{symbols.copyright} Veronika Kolesnikova, {year}</Box>
+      <Box className="display-flex flex-center">
+        <CopyrightIcon />
+        <Typography variant='body1' sx={{color: 'whitesmoke'}}>
+          Veronika Kolesnikova, {year}
+        </Typography>
+      </Box>
     </Box>
   )
 }

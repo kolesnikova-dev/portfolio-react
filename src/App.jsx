@@ -1,4 +1,3 @@
-// import { Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout } from './pages';
 import { default as MainPage } from '../src/pages/MainPage';
@@ -6,8 +5,6 @@ import { ErrorBoundary } from './components';
 
 import './App.css';
 
-// // lazy load MainPage
-// const MainPage = lazy(() => import('./pages/MainPage'));
 
 function App() {
 

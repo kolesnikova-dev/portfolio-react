@@ -1,27 +1,15 @@
-import { Box, Typography, Card, CardMedia, CardContent, CardHeader, Grid2 as Grid, Paper, Button, Link } from '@mui/material';
-import { UnfoldMoreDoubleSharp, UnfoldLessDoubleSharp } from '@mui/icons-material';
-import { IconWithTooltip, ProjectIconBox } from '../../components';
-import { testPaperStyle } from '../../pages';
-
-const unfoldIconOptions = {
-    true: {
-      ariaLabel: "See less information",
-      icon: UnfoldLessDoubleSharp,
-    },
-    false: {
-      ariaLabel: "See more information",
-      icon: UnfoldMoreDoubleSharp,
-    },
-  }
+import { Box, Typography, Card, CardMedia, CardContent, CardHeader, Grid2 as Grid, Paper } from '@mui/material';
+import { ProjectIconBox } from '.';
+import { testPaperStyle } from '../pages';
 
   
 export const DisplayFull = ({ project, fullDisplay, toggleDisplay}) => {
-    const { title, githubLink, liveLink, video, details, subheader, thumbnails } = project;
+    const { title, githubLink, liveLink, video, details, subheader } = project;
     const projectLinks = { liveLink, githubLink };
 
     return (
      <Box component="section" sx={{ padding: '2rem' }}>
-     {/* Top Section: Title and Links */}
+     {/* Top Section: title and links */}
        <Card>
           <CardContent sx={{padding:'0', paddingBottom:'0'}}>
             <CardHeader
@@ -39,7 +27,7 @@ export const DisplayFull = ({ project, fullDisplay, toggleDisplay}) => {
              </CardContent>
            </Card>
  
-     {/* Middle Section: Video and Thumbnails */}
+     {/* Middle Section: video and thumbnails */}
      <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
        <Grid xs={12} md={7}>
          <Card>
@@ -55,7 +43,7 @@ export const DisplayFull = ({ project, fullDisplay, toggleDisplay}) => {
      </Grid>
  
     
-     {/* Bottom Section: Project Details */}
+     {/* Bottom section: project details */}
      <Box sx={{ marginTop: '2rem' }}>
      <Paper elevation={2} sx={{...testPaperStyle, p: 1}} className="display-flex flex-center center-column">
        <Typography variant="h5" component="h2" gutterBottom>Project Overview</Typography>
