@@ -1,20 +1,25 @@
-import { useState } from 'react';
+import React,  { useState } from 'react';
+
 import { Box, Typography, Grid2 as Grid } from '@mui/material';
+
 import { StyledProject } from '../../components/index';
 import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
-import { projectsData } from '../../models/projectsData';
+import { projectsData } from '../../data/projectsData';
+import { Project } from '../../types';
+
 import './ProjectsStyle.css';
 
-const Projects = () => {
-  const [fullDisplay, setFullDisplay] = useState(false);
-  const [expandedProject, setExpandedProject] = useState(-1);
 
-  const toggleDisplay = (newIndex) => {
+const Projects: React.FC = () => {
+  const [fullDisplay, setFullDisplay] = useState<boolean>(false);
+  const [expandedProject, setExpandedProject] = useState<number>(-1);
+
+  const toggleDisplay = (newIndex: number) => {
     setFullDisplay((prev) => !prev);
     setExpandedProject(projectsData[newIndex]);
   };
 
-  const styledProjectProps = (project, index) => ({
+  const styledProjectProps = (project: Project, index: number) => ({
     project,
     fullDisplay,
     index,
@@ -30,9 +35,9 @@ const Projects = () => {
         columnSpacing={3}
         className="display-flex flex-center"
       >
-        {Object.values(projectsData).map((project, index) => (
+        {Object.values(projectsData).map((project: Project, index: number) => (
           <StyledProject
-            key={project.title}
+            key={index}
             {...styledProjectProps(project, index)}
           />
         ))}
@@ -43,8 +48,7 @@ const Projects = () => {
   const displayExpandedProject = () => {
     return (
       <StyledProject
-        key={expandedProject.title}
-        {...styledProjectProps(expandedProject, -1)}
+        {...styledProjectProps(projectsData[expandedProject], -1)}
       />
     );
   };

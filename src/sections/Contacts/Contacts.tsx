@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Contact } from './Contact';
+
 import { Box, Paper, Tooltip, Grid2 as Grid } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
+
 import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
+import { Contact } from './Contact';
+
 
 const email = 'firstnamenika@gmail.com';
 

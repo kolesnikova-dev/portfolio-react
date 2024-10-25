@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { useIntersectionObserver } from '../utils';
-import { Box, Typography, Tooltip } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
+
+import { IconType } from 'react-icons';
 import {
   SiTypescript,
   SiJavascript,
@@ -12,7 +11,12 @@ import {
   SiExpress,
   SiMongoose,
 } from 'react-icons/si';
-import { IconType } from 'react-icons';
+
+import { Box, Typography, Tooltip } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+
+import { useIntersectionObserver } from '../utils';
+
 
 type SkillsDataType = {
   [key: string]: IconType;
@@ -28,6 +32,7 @@ const skillsData: SkillsDataType = {
   Express: SiExpress,
   Mongoose: SiMongoose,
 };
+
 
 export const Skills: React.FC = () => {
   const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
