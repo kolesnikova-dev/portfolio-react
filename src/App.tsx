@@ -6,24 +6,21 @@ import { ErrorBoundary } from './components';
 import './App.css';
 
 
-function App() {
+const App: React.FC = () => {
 
   return (
     <ErrorBoundary>
-      {/* <Suspense fallback={<Loading />}> */}
      
       <Routes>
           <Route path="/" element={<Layout />}>
             
             <Route index element={<MainPage	/>}	/>
-            {/* <Route path={'contact'} element={<ContactPage />} /> */}
           
           </Route>
              {/* catch all route - replace to a 404 page */}
           <Route path="*" element={<Navigate to="/" />} />
       </Routes>
      
-      {/* </Suspense> */}
     </ErrorBoundary>
   );
 }
