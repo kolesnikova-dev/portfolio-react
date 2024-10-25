@@ -7,13 +7,11 @@ export const Layout = () => {
   return (
     <Paper sx={darkPaperStyle}>
       <Box className="App">
-
         {/* Main section */}
-          <Outlet />
+        <Outlet />
 
         {/* Footer */}
-          <Footer />
-      
+        <Footer />
       </Box>
     </Paper>
   );

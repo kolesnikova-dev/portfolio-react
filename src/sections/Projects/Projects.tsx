@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { Box, Typography, Grid2 as Grid } from '@mui/material';
 import { StyledProject } from '../../components/index';
 import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
@@ -12,7 +12,7 @@ const Projects = () => {
   const toggleDisplay = (newIndex) => {
     setFullDisplay((prev) => !prev);
     setExpandedProject(projectsData[newIndex]);
-  }
+  };
 
   const styledProjectProps = (project, index) => ({
     project,
@@ -20,45 +20,47 @@ const Projects = () => {
     index,
     toggleDisplay,
     sx: fullDisplay ? expandedGridStyle : regularGridStyle(project.thumbnails),
-  })
+  });
 
   const displayAllProjects = () => {
     return (
-      <Grid container rowSpacing={4} columnSpacing={3} className="display-flex flex-center"> 
-      {
-       Object.values(projectsData).map((project, index) => (
-        <StyledProject 
-          key={project.title} 
-          {...styledProjectProps(project, index)} />
-       ))
-       }
+      <Grid
+        container
+        rowSpacing={4}
+        columnSpacing={3}
+        className="display-flex flex-center"
+      >
+        {Object.values(projectsData).map((project, index) => (
+          <StyledProject
+            key={project.title}
+            {...styledProjectProps(project, index)}
+          />
+        ))}
       </Grid>
-    )
-  }
+    );
+  };
 
   const displayExpandedProject = () => {
     return (
-      <StyledProject   
-        key={expandedProject.title} 
+      <StyledProject
+        key={expandedProject.title}
         {...styledProjectProps(expandedProject, -1)}
       />
-    )
-  }
-
+    );
+  };
 
   return (
     <Box component="section">
-       <Box>
-        <Typography m={1} variant="h5">Projects</Typography>
-       </Box>
-       <Box className="display-flex flex-center inherit-height">
-        {
-         !fullDisplay ? displayAllProjects() : displayExpandedProject()
-        }
+      <Box>
+        <Typography m={1} variant="h5">
+          Projects
+        </Typography>
+      </Box>
+      <Box className="display-flex flex-center inherit-height">
+        {!fullDisplay ? displayAllProjects() : displayExpandedProject()}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 export default Projects;
-

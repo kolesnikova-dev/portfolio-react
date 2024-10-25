@@ -4,15 +4,14 @@ import { IconWithTooltip } from '../../components/index';
 
 const contactsData = {
   Github: {
-      icon: SiGithub, 
-      url:"https://github.com/kweeuhree"
+    icon: SiGithub,
+    url: 'https://github.com/kweeuhree',
   },
   LinkedIn: {
-      icon: SiLinkedin,
-      url: 'https://www.linkedin.com/in/vekolesnikova/'
-  }
+    icon: SiLinkedin,
+    url: 'https://www.linkedin.com/in/vekolesnikova/',
+  },
 };
-
 
 export const Contact = ({ contact }) => {
   const { icon, url } = contactsData[contact];
@@ -21,9 +20,9 @@ export const Contact = ({ contact }) => {
     icon: {
       ariaLabel: contact,
       icon,
-    }, 
+    },
     link: url,
-  }
+  };
 
   return (
     <Box>
@@ -31,4 +30,3 @@ export const Contact = ({ contact }) => {
     </Box>
   );
 };
-
