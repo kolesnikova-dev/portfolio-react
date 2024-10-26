@@ -1,9 +1,14 @@
+import React from 'react';
 import { Outlet } from 'react-router-dom';
+
 import { Paper, Box } from '@mui/material';
-import { Footer } from '../components/index';
+
 import { darkPaperStyle } from '../MUIStyles/MUIStyles';
 
-export const Layout = () => {
+import { Footer } from '../components/index';
+
+
+export const Layout: React.FC = () => {
   return (
     <Paper sx={darkPaperStyle}>
       <Box className="App">

@@ -1,8 +1,13 @@
-import { About, Skills, Projects, Contacts, SendEmail } from '../sections';
-import { StyledGrid, Section, SideBySideSection } from '../components';
+import React from 'react';
+
 import { Box, Grid2 as Grid } from '@mui/material';
 
-const sections = {
+import { About, Skills, Projects, Contacts, SendEmail } from '../sections';
+import { StyledGrid, Section, SideBySideSection } from '../components';
+import type { Sections } from '../types/sectionTypes';
+
+
+const sections: Sections = {
   top: {
     left: { component: About, size: 6, key: 'about-section' },
     right: { component: Skills, size: 4, key: 'skills-section' },
@@ -17,7 +22,8 @@ const sections = {
   },
 };
 
-const MainPage = () => {
+
+const MainPage: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className="full-width">
       <Grid container spacing={2} className="full-width">

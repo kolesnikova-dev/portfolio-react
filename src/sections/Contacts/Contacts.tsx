@@ -5,11 +5,14 @@ import { CheckCircle } from '@mui/icons-material';
 
 import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
 import { Contact } from './Contact';
+import { ContactKey } from '../../types/contactTypes';
 
 
 const email: string = 'firstnamenika@gmail.com';
 
-const contacts: JSX.Element[] = ['Github', 'LinkedIn'].map((contact, index) => (
+const contactOptions: ContactKey[] = ['Github', 'LinkedIn'];
+
+const contacts = contactOptions.map((contact, index) => (
   <Grid key={index}>
     <Contact contact={contact} />
   </Grid>
