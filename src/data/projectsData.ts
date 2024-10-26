@@ -1,13 +1,10 @@
-import climateRecording from '../assets/videos/screen-recording.mp4';
-import weatherRecording from '../assets/videos/weather-recording.mp4';
-import vigenereRecording from '../assets/videos/vigenere-recording.mp4';
-import shopGif from '../assets/videos/shop-video.gif';
-import climate from '../assets/projectScreenshots/climate.png';
-import shoppingList from '../assets/projectScreenshots/shopping-list.png';
-import vigenere from '../assets/projectScreenshots/vigenere.png';
-import weather from '../assets/projectScreenshots/weather.png';
+import { climateRecording, weatherRecording, vigenereRecording, shopGif } from '../assets/videos';
+import { climate, shoppingList, vigenere, weather } from '../assets/projectScreenshots';
 
-export const projectsData = {
+import type { Projects } from '../types';
+
+
+export const projectsData: Projects = {
   0: {
     title: 'Smart Shopping List',
     subheader: 'React.js - Material UI - Firebase',
