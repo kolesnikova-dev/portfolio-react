@@ -7,7 +7,7 @@ import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
 import { Contact } from './Contact';
 
 
-const email = 'firstnamenika@gmail.com';
+const email: string = 'firstnamenika@gmail.com';
 
 const contacts: JSX.Element[] = ['Github', 'LinkedIn'].map((contact, index) => (
   <Grid key={index}>
