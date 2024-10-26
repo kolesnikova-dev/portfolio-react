@@ -4,8 +4,13 @@ export interface Section {
     size?: number,
   }
   
-export  interface SideBySideSection {
-    [key: string] : Section,
+  export interface SideBySideSection {
+    left: Section,  
+    right: Section,
   }
   
-export type Sections = Record<string, Section | SideBySideSection>;
+  export type Sections = {
+    top: SideBySideSection,  
+    middle: Section,          
+    bottom: SideBySideSection 
+  };
