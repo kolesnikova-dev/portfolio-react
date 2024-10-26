@@ -1,4 +1,4 @@
-export * from './ErrorBoundary/ErrorBoundary';
+export { default as ErrorBoundary } from './ErrorBoundary/ErrorBoundary';
 export * from './DisplayFull';
 export * from './DisplayPreview';
 export * from './Footer';
