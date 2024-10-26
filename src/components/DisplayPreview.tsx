@@ -1,7 +1,16 @@
 import { Box, Card, CardContent, CardHeader } from '@mui/material';
-import { ProjectIconBox } from './IconWithTooltip/ProjectIconBox';
 
-export const DisplayPreview = ({ project, fullDisplay, toggleDisplay }) => {
+import { ProjectIconBox } from './IconWithTooltip/ProjectIconBox';
+import { Project } from '../types';
+
+type Props = {
+  project: Project,
+  fullDisplay: boolean,
+  toggleDisplay: (newIndex: number) => void;
+  index: number,
+}
+
+export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, subheader, githubLink, liveLink } = project;
   const projectLinks = { githubLink, liveLink };
 
@@ -15,6 +24,7 @@ export const DisplayPreview = ({ project, fullDisplay, toggleDisplay }) => {
                 projectLinks={projectLinks}
                 fullDisplay={fullDisplay}
                 toggleDisplay={toggleDisplay}
+                index={index}
               />
             }
             title={title}

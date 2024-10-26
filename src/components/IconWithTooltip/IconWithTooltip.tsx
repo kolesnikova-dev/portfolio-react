@@ -34,9 +34,9 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
 
   const DisplayIcon: React.FC = () => {
     if(onClick) {
-      return <>{MIconButton}</>;
+      return MIconButton;
     } else if (link) {
-      return <>{LinkElement}</>;
+      return LinkElement;
     }
 
     return;
@@ -44,7 +44,7 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
 
   return (
     <Tooltip title={ariaLabel} placement="bottom" arrow>
-      <DisplayIcon />
+      <><DisplayIcon /></>
     </Tooltip>
   );
 };

@@ -35,6 +35,7 @@ export const StyledProject: React.FC<Props> = ({
           project={project}
           fullDisplay={fullDisplay}
           toggleDisplay={() => toggleDisplay(index)}
+          index={index}
         />
       </Grid>
     </Paper>

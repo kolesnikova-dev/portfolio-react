@@ -7,7 +7,7 @@ import {
 } from '@mui/icons-material';
 
 import { IconWithTooltip } from './IconWithTooltip';
-import { SetStateAction } from 'react';
+
 
 const unfoldIconOptions = {
   true: {
@@ -38,7 +38,7 @@ export const ProjectIconBox = ({
   index,
 }: {
   projectLinks: {
-    liveLink: string,
+    liveLink?: string,
     githubLink: string,
   },
   fullDisplay: boolean,

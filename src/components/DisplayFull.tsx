@@ -8,10 +8,21 @@ import {
   Grid2 as Grid,
   Paper,
 } from '@mui/material';
+
 import { ProjectIconBox } from '.';
 import { testPaperStyle } from '../pages';
+import type { Project } from '../types/projectTypes'
 
-export const DisplayFull = ({ project, fullDisplay, toggleDisplay }) => {
+
+type Props = {
+  project: Project,
+  fullDisplay: boolean,
+  toggleDisplay: (newIndex: number) => void;
+  index: number,
+}
+
+
+export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, githubLink, liveLink, video, details, subheader } = project;
   const projectLinks = { liveLink, githubLink };
 
@@ -27,6 +38,7 @@ export const DisplayFull = ({ project, fullDisplay, toggleDisplay }) => {
                 projectLinks={projectLinks}
                 fullDisplay={fullDisplay}
                 toggleDisplay={toggleDisplay}
+                index={index}
               />
             }
             title={title}
@@ -37,7 +49,7 @@ export const DisplayFull = ({ project, fullDisplay, toggleDisplay }) => {
 
       {/* Middle Section: video and thumbnails */}
       <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
-        <Grid xs={12} md={7}>
+        <Grid size={{ xs: 12, md: 7 }}>
           <Card>
             <CardMedia
               component="video"

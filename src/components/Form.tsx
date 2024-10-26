@@ -1,15 +1,19 @@
 import { useState, useEffect, useRef, Fragment } from 'react';
-import { Button, TextField, Typography, Box } from '@mui/material';
-import { isTimePeriodValid } from '../utils/isTimePeriodValid';
 
 import emailjs from '@emailjs/browser';
+
+import { Button, TextField, Typography, Box } from '@mui/material';
+
+import { isTimePeriodValid } from '../utils/isTimePeriodValid';
+import type { TextInputField } from '../types/textInputFieldTypes';
+
 
 //import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
 const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
 
-const textInputFields = {
+const textInputFields: TextInputField = {
   Name: {
     type: 'text',
     name: 'user-name',
@@ -26,20 +30,21 @@ const textInputFields = {
   },
 };
 
-export const Form = () => {
-  const form = useRef();
+
+export const Form: React.FC = () => {
+  const form = useRef<HTMLFormElement | string>('');
 
   //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState<string | Error>('');
 
   // initialize emailjs with the public key
   useEffect(() => {
     emailjs.init(public_key_emailjs);
   }, []);
 
-  const setStatusBox = (newStatus) => {
+  const setStatusBox = (newStatus: string | Error) => {
     setStatus(newStatus);
     setTimeout(() => {
       setStatus('');
@@ -99,7 +104,7 @@ export const Form = () => {
         sx={{ minHeight: '4vh', paddingBlockStart: '1vh' }}
       >
         {status ? (
-          <Typography>{status}</Typography>
+          <Typography><>{status}</></Typography>
         ) : (
           <Button type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
             Send
