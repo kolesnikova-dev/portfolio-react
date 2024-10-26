@@ -7,7 +7,7 @@ import { ErrorBoundary } from './components';
 import './App.css';
 
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <Routes>
@@ -21,4 +21,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+ 
