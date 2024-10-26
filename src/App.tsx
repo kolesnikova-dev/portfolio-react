@@ -1,5 +1,4 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
-
+import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
 import { Layout } from './pages';
 import { default as MainPage } from './pages/MainPage';
 import { ErrorBoundary } from './components';
@@ -9,6 +8,7 @@ import './App.css';
 
 export const App: React.FC = () => {
   return (
+    <Router>
     <ErrorBoundary>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -18,6 +18,7 @@ export const App: React.FC = () => {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </ErrorBoundary>
+    </Router>
   );
 };
 

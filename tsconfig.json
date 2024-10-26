@@ -14,9 +14,10 @@
 		"checkJs": false,
 		"noEmit": true,
         "allowImportingTsExtensions": true,
+        "types": ["vitest/globals"]
 
     },
     "include": [
         "./src/"
-    ]
+, "tests"    ]
 }
