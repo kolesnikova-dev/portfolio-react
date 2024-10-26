@@ -1,8 +1,15 @@
 import { Box, Grid2 as Grid } from '@mui/material';
 import { Section } from './Section';
 import { fullBorderGridStyle } from '../pages';
+import type { SideBySideSection as SideBySide} from '../types/sectionTypes';
 
-export const SideBySideSection = ({ section }) => {
+
+type Props = {
+  section: SideBySide,
+}
+
+
+export const SideBySideSection: React.FC<Props> = ({ section }) => {
   return (
     <Box component="section">
       <Grid
@@ -17,7 +24,10 @@ export const SideBySideSection = ({ section }) => {
             size={side.size}
             sx={fullBorderGridStyle('topSectionWidth')}
           >
-            <Section className="display-flex" component={side.component} />
+              {/* removed 
+                        className="display-flex"
+                from Section below */}
+            <Section component={side.component} /> 
           </Grid>
         ))}
       </Grid>

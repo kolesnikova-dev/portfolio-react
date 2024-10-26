@@ -1,20 +1,32 @@
-import { Paper, Grid2 as Grid } from '@mui/material';
+import { Paper, Grid2 as Grid, SxProps } from '@mui/material';
+
 import { DisplayFull, DisplayPreview } from './index';
-import {} from './DisplayFull';
+import { Project } from '../types';
+
 
 const displayOptions = {
   true: DisplayFull,
   false: DisplayPreview,
 };
 
-export const StyledProject = ({
+type Props = {
+  project: Project,
+  sx: SxProps,
+  toggleDisplay: (newIndex: number) => void,
+  index: number,
+  fullDisplay: boolean,
+}
+
+
+export const StyledProject: React.FC<Props> = ({
   project,
   sx,
   toggleDisplay,
   index,
   fullDisplay,
 }) => {
-  const DisplayProject = displayOptions[fullDisplay];
+
+  const DisplayProject = displayOptions[fullDisplay.toString()];
 
   return (
     <Paper sx={sx} elevation={3} className="display-flex flex-center">

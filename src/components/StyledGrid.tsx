@@ -1,7 +1,14 @@
 import { Paper, Grid2 as Grid } from '@mui/material';
+
 import { lightPaperStyle } from '../pages';
 
-export const StyledGrid = ({ children }) => {
+
+type Props = {
+  children: React.ReactNode,
+}
+
+
+export const StyledGrid: React.FC<Props> = ({ children }) => {
   return (
     <Paper
       sx={{

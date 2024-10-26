@@ -1,6 +1,14 @@
+import React, { ElementType } from 'react';
+
 import { Box } from '@mui/material';
 
-export const Section = ({ component: Component }) => {
+
+type Props = {
+  component: ElementType,
+}
+
+
+export const Section: React.FC<Props> = ({ component: Component }) => {
   return (
     <Box component="section">
       <Component />
