@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export const useIntersectionObserver = (
-  containerRef: React.MutableRefObject<HTMLElement | null>,
+  containerRef: React.MutableRefObject<HTMLElement | undefined>,
 ): boolean => {
   //trigger animation once container in view
   const [isInView, setIsInView] = useState<boolean>(false);

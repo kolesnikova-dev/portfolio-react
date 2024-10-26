@@ -1,9 +1,11 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
+
 import { Layout } from './pages';
 import { default as MainPage } from './pages/MainPage';
 import { ErrorBoundary } from './components';
 
 import './App.css';
+
 
 const App: React.FC = () => {
   return (
