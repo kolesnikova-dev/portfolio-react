@@ -23,7 +23,7 @@ const sections: Sections = {
 };
 
 
-const MainPage: React.FC = () => {
+export const MainPage: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }} className="full-width">
       <Grid container spacing={2} className="full-width">
@@ -44,4 +44,3 @@ const MainPage: React.FC = () => {
   );
 };
 
-export default MainPage;
