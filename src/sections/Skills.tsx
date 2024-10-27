@@ -1,37 +1,10 @@
 import React, { useRef } from 'react';
 
-import { IconType } from 'react-icons';
-import {
-  SiTypescript,
-  SiJavascript,
-  SiPython,
-  SiGit,
-  SiReact,
-  SiCss3,
-  SiExpress,
-  SiMongoose,
-} from 'react-icons/si';
-
 import { Box, Typography, Tooltip } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
 import { useIntersectionObserver } from '../utils';
-
-
-type SkillsDataType = {
-  [key: string]: IconType;
-};
-
-const skillsData: SkillsDataType = {
-  JavaScript: SiJavascript,
-  TypeScript: SiTypescript,
-  Python: SiPython,
-  Git: SiGit,
-  React: SiReact,
-  CSS: SiCss3,
-  Express: SiExpress,
-  Mongoose: SiMongoose,
-};
+import { skillsData } from '../data/skillsData';
 
 
 export const Skills: React.FC = () => {
