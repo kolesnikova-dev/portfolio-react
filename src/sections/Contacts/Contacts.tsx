@@ -6,9 +6,8 @@ import { CheckCircle } from '@mui/icons-material';
 import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
 import { Contact } from './Contact';
 import { ContactKey } from '../../types/contactTypes';
+import { email } from '../../data/contactsData';
 
-
-const email: string = 'firstnamenika@gmail.com';
 
 const contactOptions: ContactKey[] = ['Github', 'LinkedIn'];
 
