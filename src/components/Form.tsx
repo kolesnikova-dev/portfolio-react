@@ -45,6 +45,12 @@ export const Form: React.FC = () => {
 
       //check whether last email was sent less than a minute ago
       if (isTimePeriodValid(currentTime, lastEmailSent)) {
+        console.log('Form submission initiated'); // Log when submission is initiated
+
+        // Log form data
+        const formData = new FormData(event.target); // Assuming you are using FormData
+        console.log('Form data:', Object.fromEntries(formData.entries()));
+
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {
@@ -64,6 +70,7 @@ export const Form: React.FC = () => {
     <Box
       component="form"
       id="contact-form"
+      data-testid="emaill-js-form"
       ref={form}
       onSubmit={handleSubmit}
       className="full-width"
@@ -72,7 +79,7 @@ export const Form: React.FC = () => {
         <Fragment key={label}>
           <Typography>{label}</Typography>
           <TextField
-            aria-label={props.name}
+            data-testid={props.name}
             sx={{ background: 'whitesmoke' }}
             variant="filled"
             required
@@ -90,7 +97,7 @@ export const Form: React.FC = () => {
         {status ? (
           <Typography><>{status}</></Typography>
         ) : (
-          <Button type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
+          <Button aria-label="Send the form" type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
             Send
           </Button>
         )}

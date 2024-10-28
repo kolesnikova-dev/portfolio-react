@@ -3,7 +3,9 @@ export interface Project {
         subheader: string,
         githubLink: string,
         thumbnails: string,
-        details: string[],
+        details: {
+                [key: string] : string,
+        },
         liveLink?: string,
         video?: string,
 }
