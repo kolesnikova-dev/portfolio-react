@@ -13,13 +13,6 @@ describe('About component', () => {
                 <About />
             </MemoryRouter>
         );
-    //     const { container } = render(
-    //         <MemoryRouter>
-    //           <About />
-    //         </MemoryRouter>
-    //       );
-
-    //    console.log(container.innerHTML);
 
        expect(screen.getByAltText('Nika\'s Picture')).toBeInTheDocument();
        expect(screen.getByText('Hi, I\'m Nika!')).toBeInTheDocument();
