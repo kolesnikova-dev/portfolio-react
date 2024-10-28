@@ -5,30 +5,13 @@ import emailjs from '@emailjs/browser';
 import { Button, TextField, Typography, Box } from '@mui/material';
 
 import { isTimePeriodValid } from '../utils/isTimePeriodValid';
-import type { TextInputField } from '../types/textInputFieldTypes';
+import { textInputFields } from '../data/formData';
 
 
 //import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
 const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
-
-const textInputFields: TextInputField = {
-  Name: {
-    type: 'text',
-    name: 'user-name',
-  },
-  Email: {
-    type: 'email',
-    name: 'user-email',
-  },
-  Message: {
-    type: 'text',
-    name: 'message',
-    maxRows: 8,
-    multiline: true,
-  },
-};
 
 
 export const Form: React.FC = () => {
@@ -89,6 +72,7 @@ export const Form: React.FC = () => {
         <Fragment key={label}>
           <Typography>{label}</Typography>
           <TextField
+            aria-label={props.name}
             sx={{ background: 'whitesmoke' }}
             variant="filled"
             required
