@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-// import type { MutableRefObject } from 'react';
+import LazyLoad from 'react-lazyload';
 
 import { Avatar, Box, Typography } from '@mui/material';
 
@@ -21,7 +21,7 @@ const introductionData = {
 };
 
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
   const pictureRef = useRef<HTMLElement | undefined>(undefined);
   const isInView = useIntersectionObserver(pictureRef);
 
@@ -33,19 +33,23 @@ export const About: React.FC = () => {
             {introductionData.greeting}
           </Box>
         </Typography>
-        <ImageWrapper>
-          <StyledBadge
-            overlap="circular"
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            variant="dot"
-          >
-            <Avatar
-              sx={{ width: 114, height: 104 }}
-              src={picture}
-              alt="Nika's Picture"
-            />
-          </StyledBadge>
-        </ImageWrapper>
+
+            <LazyLoad>
+            <ImageWrapper>
+              <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                variant="dot"
+              >
+                <Avatar
+                  sx={{ width: 114, height: 104 }}
+                  src={picture}
+                  alt="Nika's Picture"
+                />
+              </StyledBadge>
+            </ImageWrapper>
+            </LazyLoad>
+
         <Box className={isInView ? 'appear' : ''}>
           <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
             {introductionData.introduction}
@@ -55,3 +59,5 @@ export const About: React.FC = () => {
     </section>
   );
 };
+
+export default About;
