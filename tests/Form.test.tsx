@@ -15,7 +15,6 @@ vi.mock('@emailjs/browser', () => ({
   }
 }));
 
-// Mock isTimePeriodValid
 vi.mock('../src/utils/isTimePeriodValid', () => ({
   isTimePeriodValid: vi.fn(() => true),
 }));
@@ -25,8 +24,6 @@ describe('Form Component', () => {
     vi.clearAllMocks();
 
     render(<MemoryRouter><Form /></MemoryRouter>);
-    // const { container } = render(<MemoryRouter><Form /></MemoryRouter>);
-    // console.log(container.innerHTML);
   });
 
   afterEach(() => {
