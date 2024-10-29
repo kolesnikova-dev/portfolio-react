@@ -9,7 +9,7 @@ import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 import { useIntersectionObserver } from '../../utils';
 
 //import main image
-import picture from '../../assets/images/picture.png';
+import picture from '../../assets/images/picture.webp';
 
 import './AboutStyle.css';
 
