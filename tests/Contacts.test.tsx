@@ -23,7 +23,7 @@ describe('Contacts component', () => {
         const links = screen.getAllByRole('link');
 
         links.map((link, index) => {
-            const contactURL = contacts[index].url;
+            const contactURL = contacts[index].link.url;
             expect(link).toHaveAttribute('href', contactURL);
         })
     })

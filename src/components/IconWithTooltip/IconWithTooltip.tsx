@@ -13,7 +13,10 @@ type Props = {
     icon: OverridableComponent<SvgIconTypeMap>,
   },
   onClick?: MouseEventHandler<HTMLButtonElement>,
-  link?: string,
+  link?: {
+    ariaLabel: string,
+    url: string,
+  },
 }
 
 
@@ -27,7 +30,7 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
  );
 
   const LinkElement = link &&(
-    <Link to={link} target="_blank" rel="noopener">
+    <Link to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
       <Icon />
     </Link>
  );

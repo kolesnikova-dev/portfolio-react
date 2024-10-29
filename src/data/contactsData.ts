@@ -7,10 +7,18 @@ export const email: string = 'firstnamenika@gmail.com';
 export const contactsData: Contacts = {
     Github: {
       icon: SiGithub,
-      url: 'https://github.com/kweeuhree',
+      link: {
+        ariaLabel: 'Navigate to GitHub',
+        url: 'https://github.com/kweeuhree',
+      }
+      
     },
     LinkedIn: {
       icon: SiLinkedin,
-      url: 'https://www.linkedin.com/in/vekolesnikova/',
+      link: {
+        ariaLabel: 'Navigate to LinkedIn',
+        url: 'https://www.linkedin.com/in/vekolesnikova/',
+      }
+      
     },
   };

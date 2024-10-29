@@ -2,7 +2,10 @@ import { IconType } from 'react-icons';
 
 interface Contact {
     icon: IconType,
-    url: string,
+    link: {
+      ariaLabel: string,
+      url: string,
+    }
   }
   
 export type Contacts = Record<string, Contact>;

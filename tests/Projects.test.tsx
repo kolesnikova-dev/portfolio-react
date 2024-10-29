@@ -20,7 +20,7 @@ beforeEach(() => {
 
 describe('Projects component', () => {
     test('renders all projects of Projects section', () => {
-        projects.map((project) => {
+        projects.forEach((project) => {
             expect(screen.getByText(project.title)).toBeInTheDocument();
         })
 
@@ -39,7 +39,7 @@ describe('Projects component', () => {
             await userEvent.click(icon);
             const projectDetails = projects[index].details;
             
-            projectDetails.map(async (detail) => {
+            Object.values(projectDetails).map(async (detail) => {
             const element = await screen.findByText(detail);
             expect(element).toBeInTheDocument();
 
