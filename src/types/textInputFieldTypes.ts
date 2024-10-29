@@ -1,6 +1,7 @@
 interface Input {
     type: string,
     name: string,
+    'aria-label': string,
     maxRows?: number,
     multiline?: boolean,
   }

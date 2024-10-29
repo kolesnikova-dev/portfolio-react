@@ -7,6 +7,12 @@ import {
   CardHeader,
   Grid2 as Grid,
   Paper,
+  Table, 
+  TableBody, 
+  TableCell, 
+  TableContainer, 
+  TableHead, 
+  TableRow, 
 } from '@mui/material';
 
 import { ProjectIconBox } from '.';
@@ -25,7 +31,7 @@ type Props = {
 export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, githubLink, liveLink, video, details, subheader } = project;
   const projectLinks = { liveLink, githubLink };
-
+  const rows = Object.entries(details);
   return (
     <Box component="section" sx={{ padding: '2rem' }}>
       {/* Top Section: title and links */}
@@ -48,8 +54,8 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
       </Card>
 
       {/* Middle Section: video and thumbnails */}
-      <Grid container spacing={2} sx={{ marginTop: '2rem' }}>
-        <Grid size={{ xs: 12, md: 7 }}>
+      <Grid container spacing={2} sx={{ marginTop: '2rem' }} className='display-flex flex-center center-column'>
+        <Grid>
           <Card>
             <CardMedia
               component="video"
@@ -73,11 +79,27 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
             Project Overview
           </Typography>
 
-          {details.map((detail, index) => (
-            <Typography variant="body1" key={index}>
-              {detail}
-            </Typography>
-          ))}
+         <TableContainer className="w-full max-w-4xl mx-auto my-4">
+            <Table>
+              <TableBody>
+                {Object.entries(details).map(([point, detail]) => (
+                  <TableRow key={point} className="hover:bg-gray-50">
+                    <TableCell className="border">
+                      <Typography variant="h6" className="font-medium capitalize" sx={{ color: 'whitesmoke'}}>
+                        {point}
+                      </Typography>
+                    </TableCell>
+                    <TableCell className="border">
+                      <Typography variant="body1" sx={{ color: 'whitesmoke'}}>
+                        {detail}
+                      </Typography>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          
         </Paper>
       </Box>
     </Box>

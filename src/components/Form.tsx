@@ -5,30 +5,13 @@ import emailjs from '@emailjs/browser';
 import { Button, TextField, Typography, Box } from '@mui/material';
 
 import { isTimePeriodValid } from '../utils/isTimePeriodValid';
-import type { TextInputField } from '../types/textInputFieldTypes';
+import { textInputFields } from '../data/formData';
 
 
 //import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
 const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
-
-const textInputFields: TextInputField = {
-  Name: {
-    type: 'text',
-    name: 'user-name',
-  },
-  Email: {
-    type: 'email',
-    name: 'user-email',
-  },
-  Message: {
-    type: 'text',
-    name: 'message',
-    maxRows: 8,
-    multiline: true,
-  },
-};
 
 
 export const Form: React.FC = () => {
@@ -62,6 +45,12 @@ export const Form: React.FC = () => {
 
       //check whether last email was sent less than a minute ago
       if (isTimePeriodValid(currentTime, lastEmailSent)) {
+        console.log('Form submission initiated'); // Log when submission is initiated
+
+        // Log form data
+        const formData = new FormData(event.target); // Assuming you are using FormData
+        console.log('Form data:', Object.fromEntries(formData.entries()));
+
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {
@@ -81,6 +70,7 @@ export const Form: React.FC = () => {
     <Box
       component="form"
       id="contact-form"
+      data-testid="emaill-js-form"
       ref={form}
       onSubmit={handleSubmit}
       className="full-width"
@@ -89,6 +79,7 @@ export const Form: React.FC = () => {
         <Fragment key={label}>
           <Typography>{label}</Typography>
           <TextField
+            data-testid={props.name}
             sx={{ background: 'whitesmoke' }}
             variant="filled"
             required
@@ -106,7 +97,7 @@ export const Form: React.FC = () => {
         {status ? (
           <Typography><>{status}</></Typography>
         ) : (
-          <Button type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
+          <Button aria-label="Send the form" type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
             Send
           </Button>
         )}

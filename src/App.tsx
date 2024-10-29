@@ -1,14 +1,14 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
 
-import { Layout } from './pages';
-import { default as MainPage } from './pages/MainPage';
-import { ErrorBoundary } from './components';
+import { MainPage, Layout } from './pages/index';
+import { ErrorBoundary } from './components/index';
 
 import './App.css';
 
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
   return (
+    <Router>
     <ErrorBoundary>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -18,7 +18,8 @@ const App: React.FC = () => {
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </ErrorBoundary>
+    </Router>
   );
 };
 
-export default App;
+ 

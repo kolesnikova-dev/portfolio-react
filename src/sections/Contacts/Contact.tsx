@@ -1,23 +1,11 @@
 import React from 'react';
 
-import { SiGithub, SiLinkedin } from 'react-icons/si';
-
 import { Box } from '@mui/material';
 
 import { IconWithTooltip } from '../../components/index';
-import type { Contacts, ContactKey } from '../../types/contactTypes';
+import type { ContactKey } from '../../types/contactTypes';
+import { contactsData } from '../../data/contactsData';
 
-
-const contactsData: Contacts = {
-  Github: {
-    icon: SiGithub,
-    url: 'https://github.com/kweeuhree',
-  },
-  LinkedIn: {
-    icon: SiLinkedin,
-    url: 'https://www.linkedin.com/in/vekolesnikova/',
-  },
-};
 
 type Props = {
   contact: ContactKey,

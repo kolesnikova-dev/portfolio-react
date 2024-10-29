@@ -14,9 +14,11 @@
 		"checkJs": false,
 		"noEmit": true,
         "allowImportingTsExtensions": true,
+        "types": ["vitest/globals"],
+        "typeRoots": ["./node_modules/@types", "./types"],
 
     },
     "include": [
-        "./src/"
-    ]
+       "src/**/*.ts", "src/**/*.tsx", "vite-env.d.ts"
+   ]
 }
