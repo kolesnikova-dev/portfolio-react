@@ -31,7 +31,7 @@ type Props = {
 export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, githubLink, liveLink, video, details, subheader } = project;
   const projectLinks = { liveLink, githubLink };
-  const rows = Object.entries(details);
+
   return (
     <Box component="section" sx={{ padding: '2rem' }}>
       {/* Top Section: title and links */}

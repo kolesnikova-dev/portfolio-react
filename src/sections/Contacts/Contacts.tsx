@@ -44,6 +44,7 @@ export const Contacts: React.FC = () => {
           sx={{ ...lightPaperStyle, p: 1 }}
           className="display-flex flex-center"
         >
+          {/* GitHub and LinkedIn container */}
           <Grid container spacing={2}>
             {contacts}
           </Grid>

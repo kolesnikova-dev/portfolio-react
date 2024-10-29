@@ -13,14 +13,14 @@ type Props = {
 
 
 export const Contact: React.FC<Props> = ({ contact }) => {
-  const { icon, url } = contactsData[contact];
+  const { icon, link } = contactsData[contact];
 
   const iconProps = {
     icon: {
       ariaLabel: contact,
       icon,
     },
-    link: url,
+    link,
   };
 
   return (
