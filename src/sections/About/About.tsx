@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import LazyLoad from 'react-lazyload';
 
 import { Avatar, Box, Typography } from '@mui/material';
 
@@ -34,7 +33,6 @@ const About: React.FC = () => {
           </Box>
         </Typography>
 
-            <LazyLoad>
             <ImageWrapper>
               <StyledBadge
                 overlap="circular"
@@ -48,7 +46,6 @@ const About: React.FC = () => {
                 />
               </StyledBadge>
             </ImageWrapper>
-            </LazyLoad>
 
         <Box className={isInView ? 'appear' : ''}>
           <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
