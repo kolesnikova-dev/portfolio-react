@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
 #root {
   text-align: center;
-  font-family: "Exo", sans-serif;
 }
 
 body {
@@ -18,7 +15,6 @@ body {
 .header {
   text-align: start;
   letter-spacing: 0.6vw;
-  font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
 }
 
