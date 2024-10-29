@@ -18,11 +18,10 @@ describe('SendEmail component', () => {
             </MemoryRouter>
         );
 
-
        expect(screen.getByText('Send me an email:')).toBeInTheDocument();
 
         inputFields.map((input) => (
-            expect(screen.getByLabelText(input.name)).toBeInTheDocument()
+            expect(screen.getByLabelText(input['aria-label'])).toBeInTheDocument()
         ));
     })
 })

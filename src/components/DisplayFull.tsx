@@ -80,25 +80,25 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
           </Typography>
 
          <TableContainer className="w-full max-w-4xl mx-auto my-4">
-      <Table>
-        <TableBody>
-          {Object.entries(details).map(([point, detail]) => (
-            <TableRow key={point} className="hover:bg-gray-50">
-              <TableCell className="border">
-                <Typography variant="h6" className="font-medium capitalize" sx={{ color: 'whitesmoke'}}>
-                  {point}
-                </Typography>
-              </TableCell>
-              <TableCell className="border">
-                <Typography variant="body1" sx={{ color: 'whitesmoke'}}>
-                  {detail}
-                </Typography>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+            <Table>
+              <TableBody>
+                {Object.entries(details).map(([point, detail]) => (
+                  <TableRow key={point} className="hover:bg-gray-50">
+                    <TableCell className="border">
+                      <Typography variant="h6" className="font-medium capitalize" sx={{ color: 'whitesmoke'}}>
+                        {point}
+                      </Typography>
+                    </TableCell>
+                    <TableCell className="border">
+                      <Typography variant="body1" sx={{ color: 'whitesmoke'}}>
+                        {detail}
+                      </Typography>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
           
         </Paper>
       </Box>
