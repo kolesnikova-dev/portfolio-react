@@ -1,6 +1,5 @@
-import { climateRecording, weatherRecording, vigenereRecording, smartShoppingListRecording } from '../assets/videos';
 import { climate, shoppingList, vigenere, weather } from '../assets/projectScreenshots';
-
+import { getUrl } from '../utils/cloudinaryUtils';
 import type { Projects } from '../types';
 
 
@@ -10,7 +9,7 @@ export const projectsData: Projects = {
     subheader: 'React.js - Material UI - Firebase',
     githubLink: 'https://github.com/the-collab-lab/tcl-75-smart-shopping-list',
     liveLink: 'https://tcl-75-smart-shopping-list.web.app/',
-    video: smartShoppingListRecording,
+    video: getUrl('smartShoppingListRecording'),
     thumbnails: shoppingList,
     details: {
       Problem: `Traditional shopping lists are static and don't adapt to users' 
@@ -37,7 +36,7 @@ export const projectsData: Projects = {
     subheader: 'React.js - Mongo - Express - Node',
     githubLink: 'https://github.com/kweeuhree/climate-view',
     liveLink: 'https://climate-view-1.onrender.com/',
-    video: climateRecording,
+    video: getUrl('climateRecording'),
     thumbnails: climate,
     details: {
       Problem: `As climate data becomes more critical, many platforms fail to present 
@@ -62,7 +61,7 @@ export const projectsData: Projects = {
     title: 'Weather App',
     subheader: 'React.js - Weather API',
     githubLink: 'https://github.com/firstnamenika/weather-app',
-    video: weatherRecording,
+    video: getUrl('weatherRecording'),
     thumbnails: weather,
     details: {
       Problem: `Most weather apps lack personalization, providing generic data without 
@@ -87,7 +86,7 @@ export const projectsData: Projects = {
     title: 'Vigenere Cipher',
     subheader: 'Python',
     githubLink: 'https://github.com/kweeuhree/vigenere',
-    video: vigenereRecording,
+    video: getUrl('vigenereRecording'),
     thumbnails: vigenere,
     details: {
       Problem: `Basic encryption methods are often too easy to break, 
