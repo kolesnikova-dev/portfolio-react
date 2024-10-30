@@ -3,13 +3,13 @@ import React, { useRef } from 'react';
 import { Box, Typography, Tooltip } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 
-import { useIntersectionObserver } from '../utils';
+// import { useIntersectionObserver } from '../utils';
 import { skillsData } from '../data/skillsData';
 
 
 export const Skills: React.FC = () => {
   const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
-  const isInView = useIntersectionObserver(skillRef);
+  // const isInView = useIntersectionObserver(skillRef);
 
   return (
     <section>
@@ -18,7 +18,7 @@ export const Skills: React.FC = () => {
           <Box
             ref={skillRef}
             key={skill}
-            className={`display-flex flex-center ${isInView && 'delayedAppear'}`}
+            className={`display-flex flex-center `}
           >
             <Typography>{skill}</Typography>
             <Tooltip title={<p>{skill}</p>} placement="right" arrow>

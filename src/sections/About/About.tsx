@@ -5,7 +5,7 @@ import { Avatar, Box, Typography } from '@mui/material';
 import { lightPaperStyle } from '../../pages';
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 
-import { useIntersectionObserver } from '../../utils';
+// import { useIntersectionObserver } from '../../utils';
 
 //import main image
 import picture from '../../assets/images/picture.webp';
@@ -22,7 +22,7 @@ const introductionData = {
 
 const About: React.FC = () => {
   const pictureRef = useRef<HTMLElement | undefined>(undefined);
-  const isInView = useIntersectionObserver(pictureRef);
+  // const isInView = useIntersectionObserver(pictureRef);
 
   return (
     <section>
@@ -47,10 +47,11 @@ const About: React.FC = () => {
               </StyledBadge>
             </ImageWrapper>
 
-        <Box className={isInView ? 'appear' : ''}>
-          <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
+        <Box>
+          <Box component="p">{introductionData.introduction}</Box>
+          {/* <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
             {introductionData.introduction}
-          </Typography>
+          </Typography> */}
         </Box>
       </Box>
     </section>
