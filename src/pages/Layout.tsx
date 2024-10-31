@@ -3,11 +3,9 @@ import { Outlet } from 'react-router-dom';
 import { Canvas } from '@react-three/fiber';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-import { Paper, Box } from '@mui/material';
-
 import { darkPaperStyle } from '../MUIStyles/MUIStyles';
 
-import { ShootingStar } from '../components/THREEJsComponents/ShootingStar';
+import { ShootingStar, Particles } from '../components/THREEJsComponents/index';
 import { Footer } from '../components/index';
 
 
@@ -16,13 +14,14 @@ export const Layout: React.FC = () => {
    <>
     {/* canvas -- start */}
       <Canvas
+        // frameloop="demand"
         style={{
           position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
-          opacity: '0.8',
+          // opacity: '0.8',
           zIndex: -1,  // set the particles are behind the main content
         }}
       >
@@ -31,23 +30,25 @@ export const Layout: React.FC = () => {
         <ShootingStar />
 
         <EffectComposer>
-          <Bloom mipmapBlur luminanceThreshold={0.5} />
+          <Bloom mipmapBlur luminanceThreshold={0.5} intensity={0.3} />
         </EffectComposer>
+    
+          <Particles />
       </Canvas>
       {/* canvas -- end */}
 
 
       {/* layout */}
-      <Paper sx={darkPaperStyle}>
+      <div style={darkPaperStyle}>
 
-        <Box className="App">
+        <div className="App">
           {/* Main section */}
           <Outlet />
 
           {/* Footer */}
           <Footer />
-        </Box>
-      </Paper>
+        </div>
+      </div>
    </>
   );
 };
