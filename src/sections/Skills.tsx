@@ -19,11 +19,7 @@ export const Skills: React.FC = () => {
             // ref={skillRef}
             key={skill}
           >
-            {/* <Typography>{skill}</Typography> */}
-            <Tooltip title={<p>{skill}</p>} placement="right" arrow>
-              {/* <IconButton sx={{ color: 'white' }} aria-label={skill}>
-                <ReactIcon fontSize="large" />
-              </IconButton> */}
+            <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
               {SvgPath}
             </Tooltip>
           </div>
