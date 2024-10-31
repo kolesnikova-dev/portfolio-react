@@ -1,4 +1,6 @@
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+// import { SiGithub, SiLinkedin } from 'react-icons/si';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import type { Contacts } from '../types/contactTypes';
 
@@ -6,7 +8,7 @@ export const email: string = 'firstnamenika@gmail.com';
 
 export const contactsData: Contacts = {
     Github: {
-      icon: SiGithub,
+      icon: GitHubIcon,
       link: {
         ariaLabel: 'Navigate to GitHub',
         url: 'https://github.com/kweeuhree',
@@ -14,7 +16,7 @@ export const contactsData: Contacts = {
       
     },
     LinkedIn: {
-      icon: SiLinkedin,
+      icon: LinkedInIcon,
       link: {
         ariaLabel: 'Navigate to LinkedIn',
         url: 'https://www.linkedin.com/in/vekolesnikova/',
