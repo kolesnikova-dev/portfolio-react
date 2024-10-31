@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Box, Grid2 as Grid } from '@mui/material';
-
 import { About, Skills, Projects, Contacts, SendEmail } from '../sections';
 import { StyledGrid, Section, SideBySideSection } from '../components';
 import type { Sections } from '../types/sectionTypes';
@@ -25,8 +23,8 @@ const sections: Sections = {
 
 export const MainPage: React.FC = () => {
   return (
-    <Box sx={{ flexGrow: 1 }} className="full-width">
-      <Grid container spacing={2} className="full-width">
+    <div style={{ flexGrow: 1 }} className="full-width">
+      <div className="full-width">
         {/* about and skills section */}
         <StyledGrid>
           <SideBySideSection section={sections.top} />
@@ -39,8 +37,8 @@ export const MainPage: React.FC = () => {
         <StyledGrid>
           <SideBySideSection section={sections.bottom} />
         </StyledGrid>
-      </Grid>
-    </Box>
+      </div>
+    </div>
   );
 };
 
