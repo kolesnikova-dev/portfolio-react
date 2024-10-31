@@ -1,9 +1,6 @@
-import { Canvas } from '@react-three/fiber';
-
-import { Paper, Grid2 as Grid } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
 
 import { lightPaperStyle } from '../pages';
-import { Particles } from './THREEJsComponents/Particles';
 
 type Props = {
   children: React.ReactNode,
@@ -12,8 +9,8 @@ type Props = {
 
 export const StyledGrid: React.FC<Props> = ({ children }) => {
   return (
-    <Paper
-      sx={{
+    <div
+      style={{
         ...lightPaperStyle,
         paddingBlockStart: '2vh',
         paddingBlockEnd: '2vh',
@@ -21,24 +18,9 @@ export const StyledGrid: React.FC<Props> = ({ children }) => {
       }}
       className="display-flex flex-center full-width"
     >
-        {/* canvas -- start */}
-        <Canvas
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: 1,  // set the particles are behind the content
-          }}
-        >
-          <Particles />
-        </Canvas>
-      {/* canvas -- end */}
-
-      <Grid size={10} style={{ zIndex: 2 }}>
+      <Grid2 size={10} style={{ zIndex: 2 }}>
         {children}
-      </Grid>
-    </Paper>
+      </Grid2>
+    </div>
   );
 };

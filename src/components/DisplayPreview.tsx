@@ -1,4 +1,6 @@
-import { Box, Card, CardContent, CardHeader } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
 
 import { ProjectIconBox } from './IconWithTooltip/ProjectIconBox';
 import { Project } from '../types';
@@ -15,7 +17,7 @@ export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDi
   const projectLinks = { githubLink, liveLink };
 
   return (
-    <Box className="full-width">
+    <div className="full-width">
       <Card sx={{ backgroundColor: 'whitesmoke', opacity: '0.9' }}>
         <CardContent>
           <CardHeader
@@ -32,6 +34,6 @@ export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDi
           />
         </CardContent>
       </Card>
-    </Box>
+    </div>
   );
 };

@@ -1,13 +1,17 @@
 import React,  { useState } from 'react';
 
-import { Box, Typography, Grid2 as Grid } from '@mui/material';
+import { Typography, Grid2 as Grid } from '@mui/material';
 
-import { StyledProject } from '../../components/index';
+import { DisplayFull, DisplayPreview } from '../../components/index';
 import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
 import { projectsData } from '../../data/projectsData';
 import { Project } from '../../types';
 
 import './ProjectsStyle.css';
+
+
+const FullMemoizedStyledProject = React.memo(DisplayFull);
+const PreviewMemoizedStyledProject = React.memo(DisplayPreview);
 
 
 const Projects: React.FC = () => {
@@ -36,7 +40,7 @@ const Projects: React.FC = () => {
         className="display-flex flex-center"
       >
         {Object.values(projectsData).map((project: Project, index: number) => (
-          <StyledProject
+          <PreviewMemoizedStyledProject
             key={index}
             {...styledProjectProps(project, index)}
           />
@@ -47,23 +51,23 @@ const Projects: React.FC = () => {
 
   const displayExpandedProject = () => {
     return (
-      <StyledProject
+      <FullMemoizedStyledProject
         {...styledProjectProps(projectsData[expandedProject], -1)}
       />
     );
   };
 
   return (
-    <Box component="section">
-      <Box>
+    <section>
+      <div>
         <Typography m={1} variant="h5">
           Projects
         </Typography>
-      </Box>
-      <Box className="display-flex flex-center inherit-height">
+      </div>
+      <div className="display-flex flex-center inherit-height">
         {!fullDisplay ? displayAllProjects() : displayExpandedProject()}
-      </Box>
-    </Box>
+      </div>
+    </section>
   );
 };
 

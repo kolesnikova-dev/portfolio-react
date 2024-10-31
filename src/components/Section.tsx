@@ -1,8 +1,5 @@
 import React, { ElementType } from 'react';
 
-import { Box } from '@mui/material';
-
-
 type Props = {
   component: ElementType,
 }
@@ -10,8 +7,8 @@ type Props = {
 
 export const Section: React.FC<Props> = ({ component: Component }) => {
   return (
-    <Box component="section">
+    <section>
       <Component />
-    </Box>
+    </section>
   );
 };
