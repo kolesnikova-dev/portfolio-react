@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 
-import { Avatar, Box, Typography } from '@mui/material';
+import { Avatar, Typography } from '@mui/material';
 
 import { lightPaperStyle } from '../../pages';
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
@@ -26,11 +26,9 @@ const About: React.FC = () => {
 
   return (
     <section>
-      <Box ref={pictureRef}>
-        <Typography variant="h3" style={lightPaperStyle}>
-          <Box className="display-flex flex-center text-no-wrap">
+      <div ref={pictureRef}>
+        <Typography variant="h3" style={lightPaperStyle} className="display-flex flex-center text-no-wrap">
             {introductionData.greeting}
-          </Box>
         </Typography>
 
             <ImageWrapper>
@@ -47,13 +45,13 @@ const About: React.FC = () => {
               </StyledBadge>
             </ImageWrapper>
 
-        <Box>
-          <Box component="p">{introductionData.introduction}</Box>
+        <div>
+          <p>{introductionData.introduction}</p>
           {/* <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
             {introductionData.introduction}
           </Typography> */}
-        </Box>
-      </Box>
+        </div>
+      </div>
     </section>
   );
 };
