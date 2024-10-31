@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { Box, Paper, Tooltip, Grid2 as Grid } from '@mui/material';
-import { CheckCircle } from '@mui/icons-material';
+import { Paper, Tooltip, Grid2 as Grid } from '@mui/material';
+import CheckCircle from '@mui/icons-material/CheckCircle';
 
 import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
 import { Contact } from './Contact';
@@ -16,6 +16,22 @@ const contacts = contactOptions.map((contact, index) => (
     <Contact contact={contact} />
   </Grid>
 ));
+
+type Props = {
+  children: React.ReactNode,
+}
+
+const StyledPaper: React.FC<Props> = ({ children }) => {
+ return (
+    <Paper
+    elevation={2}
+    sx={{ ...lightPaperStyle, p: 1 }}
+    className="display-flex flex-center"
+  >
+      {children}
+    </Paper>
+ );
+} 
 
 
 export const Contacts: React.FC = () => {
@@ -33,28 +49,20 @@ export const Contacts: React.FC = () => {
   };
 
   return (
-    <Box component="section">
+    <section>
       <Grid
         container
         spacing={2}
         className="display-flex flex-center full-width"
       >
-        <Paper
-          elevation={2}
-          sx={{ ...lightPaperStyle, p: 1 }}
-          className="display-flex flex-center"
-        >
+        <StyledPaper>
           {/* GitHub and LinkedIn container */}
           <Grid container spacing={2}>
             {contacts}
           </Grid>
-        </Paper>
+        </StyledPaper>
 
-        <Paper
-          elevation={2}
-          sx={{ ...lightPaperStyle, p: 1 }}
-          className="display-flex flex-center"
-        >
+        <StyledPaper>
           {/* email container */}
           <Tooltip title={copied ? 'Copied!' : 'Click to copy my email'}>
             <Grid
@@ -70,8 +78,8 @@ export const Contacts: React.FC = () => {
               </Grid>
             </Grid>
           </Tooltip>
-        </Paper>
+        </StyledPaper>
       </Grid>
-    </Box>
+    </section>
   );
 };
