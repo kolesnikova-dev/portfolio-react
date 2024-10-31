@@ -10,4 +10,3 @@ export * from './Loading/Loading';
 export * from './Section';
 export * from './SideBySideSection';
 export * from './StyledGrid';
-export * from './StyledProject';
