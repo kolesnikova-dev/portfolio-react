@@ -1,12 +1,26 @@
 import Grid2 from '@mui/material/Grid2';
 import { Section } from './Section';
-import { fullBorderGridStyle } from '../pages';
 import type { SideBySideSection as SideBySide} from '../types/sectionTypes';
 
 
 type Props = {
   section: SideBySide,
 }
+
+const fullBorderGridStyle = (section) => ({
+  width:  {
+    xs: '100%',
+    sm: '100%',
+    md: '40%',
+  },
+  '--Grid-borderWidth': '1px',
+  borderTop: 'var(--Grid-borderWidth) solid',
+  borderLeft: 'var(--Grid-borderWidth) solid',
+  borderRight: 'var(--Grid-borderWidth) solid',
+  borderBottom: 'var(--Grid-borderWidth) solid',
+  borderColor: 'white',
+  p: 1,
+});
 
 
 export const SideBySideSection: React.FC<Props> = ({ section }) => {
@@ -22,7 +36,7 @@ export const SideBySideSection: React.FC<Props> = ({ section }) => {
           <Grid2
             key={side.key}
             size={side.size}
-            sx={fullBorderGridStyle('topSectionWidth')}
+            sx={fullBorderGridStyle}
           >
             <Section component={side.component} /> 
           </Grid2>

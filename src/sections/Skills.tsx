@@ -12,21 +12,14 @@ export const Skills: React.FC = () => {
 
   return (
     <section>
-      <div>
+      <div  className='display-flex flex-center'>
         {Object.entries(skillsData).map(([skill, svg]) => (
-          <div
-            ref={skillRef}
-            key={skill}
-            className='display-flex flex-center'
-          >
-            {/* <Typography>{skill}</Typography> */}
-            <Tooltip title={<p>{skill}</p>} placement="right" arrow> 
+            <Tooltip title={<p>{skill}</p>} placement="bottom" arrow> 
               {svg}
             </Tooltip> 
-          </div>
         ))}
       </div>
-      <Typography variant="h3">Skills</Typography>
+      <Typography variant="h5">Skills</Typography>
     </section>
   );
 };

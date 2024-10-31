@@ -1,11 +1,10 @@
-import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
-import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 
-import { ProjectIconBox } from './IconWithTooltip/ProjectIconBox';
-import { Project } from '../types';
-import { regularGridStyle } from '../MUIStyles/MUIStyles';
+import { ProjectIconBox } from '../IconWithTooltip/ProjectIconBox';
+import { Project } from '../../types';
+
+import { PreviewBox } from './MUIStyles';
+
 
 type Props = {
   project: Project,
@@ -19,11 +18,10 @@ export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDi
   const projectLinks = { githubLink, liveLink };
 
   return (
-    <Box sx={regularGridStyle(thumbnails)}>
-      <div>
-        {/* <CardContent> */}
+      <>
+       <PreviewBox thumbnails={thumbnails}>
           <CardHeader
-          sx={{ backgroundColor: 'whitesmoke', opacity: '0.9', color: 'black' }}
+           className='bg-whitesmoke border-radius-4px'
             action={
               <ProjectIconBox
                 projectLinks={projectLinks}
@@ -35,9 +33,8 @@ export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDi
             title={title}
             subheader={subheader}
           />
-        {/* </CardContent> */}
-      </div>
-    </Box>
+      </PreviewBox>
+      </>
   );
 
 }

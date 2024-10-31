@@ -28,10 +28,9 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
   return (
     <section className='padding-2rem'>
       {/* Top Section: title and links */}
-      <Card>
-        <CardContent className='no-padding no-padding-bottom'>
+        <div className='bg-whitesmoke border-radius-4px'>
           <CardHeader
-            className='no-padding opacity0-9'
+            // className='no-padding opacity0-9'
             action={
               <ProjectIconBox
                 projectLinks={projectLinks}
@@ -43,20 +42,17 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
             title={title}
             subheader={subheader}
           />
-        </CardContent>
-      </Card>
+        </div>
 
       {/* Middle Section: video and thumbnails */}
-      <Grid container spacing={2} className='display-flex flex-center center-column margin-top-2rem'>
-          <Card>
+          <div className='display-flex flex-center center-column margin-top-2rem'>
             <CardMedia
               component="video"
               src={video}
               controls
              className='full-width border-radius-4px'
             />
-          </Card>
-      </Grid>
+          </div>
 
       {/* Bottom section: project details */}
       <div className='margin-top-2rem'>

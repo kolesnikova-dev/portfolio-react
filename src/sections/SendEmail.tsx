@@ -4,13 +4,12 @@ import { Typography, Paper} from '@mui/material';
 
 import { Form } from '../components';
 
-import { lightPaperStyle } from '../MUIStyles/MUIStyles';
 
 
 export const SendEmail: React.FC = () => {
   return (
     <section className='display-flex flex-center center-column'>
-    <Paper elevation={2} sx={{...lightPaperStyle, p: 4}}  className="display-flex flex-center center-column">
+    <div className="display-flex flex-center center-column light-paper border-radius-4px padding-2rem">
 
       {/* contact form container */}
       <div>
@@ -25,7 +24,7 @@ export const SendEmail: React.FC = () => {
           {/* form */}
           <Form />
       </div>
-      </Paper>
+      </div>
     </section>
   )
 }

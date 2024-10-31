@@ -1,5 +1,6 @@
 :root {
   --color-pale-blue-gradient: linear-gradient(45deg, rgba(117, 124, 232, 0.2) 0%, rgba(117, 124, 232, 0.05) 100%);
+  --color-blue: rgba(117, 124, 232, 0.6);
   --color-pale-blue: rgba(117, 124, 232, 0.2);
   --color-test: #2e37436c;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -65,6 +66,10 @@ button:active {
   width: 100%;
 }
 
+.full-height {
+  height: 100vh;
+}
+
 .inherit-height {
   height: inherit;
 }
@@ -105,7 +110,29 @@ button:active {
   border: 1px solid blue;
 }
 
-.test-background {
+.bg-test {
   background-color: var(--color-test),
 }
 
+.styled-grid {
+  padding-block-end: 15vh;
+  padding-block-start: 15vh;
+  position: relative;
+}
+
+.bg-whitesmoke {
+  background-color: whitesmoke;
+  color: black;
+  opacity: 0.9;
+}
+
+.dark-paper {
+  background: var(--color-pale-blue-gradient);
+  box-shadow: 1px 6px 5px 0px rgb(39, 41, 40);
+}
+
+.light-paper {
+  background: var(--color-pale-blue);
+  /* backdrop-filter: blur(2px); */
+  box-shadow: 1px 3px 5px 0px rgba(39, 41, 40, 0.8);
+}

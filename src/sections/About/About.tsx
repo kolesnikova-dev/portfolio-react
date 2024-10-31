@@ -2,7 +2,6 @@ import { useRef } from 'react';
 
 import { Avatar, Typography } from '@mui/material';
 
-import { lightPaperStyle } from '../../pages';
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 
 // import { useIntersectionObserver } from '../../utils';
@@ -27,7 +26,7 @@ const About: React.FC = () => {
   return (
     <section>
       <div ref={pictureRef}>
-        <Typography variant="h3" style={lightPaperStyle} className="display-flex flex-center text-no-wrap">
+        <Typography variant="h3" className="display-flex flex-center text-no-wrap light-paper">
             {introductionData.greeting}
         </Typography>
 
@@ -47,9 +46,6 @@ const About: React.FC = () => {
 
         <div>
           <p>{introductionData.introduction}</p>
-          {/* <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
-            {introductionData.introduction}
-          </Typography> */}
         </div>
       </div>
     </section>

@@ -23,13 +23,10 @@ type Props = {
 
 const StyledPaper: React.FC<Props> = ({ children }) => {
  return (
-    <Paper
-    elevation={2}
-    sx={{ ...lightPaperStyle, p: 1 }}
-    className="display-flex flex-center"
+    <div className="display-flex flex-center light-paper padding-2rem border-radius-4px"
   >
       {children}
-    </Paper>
+    </div>
  );
 } 
 

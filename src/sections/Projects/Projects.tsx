@@ -3,7 +3,7 @@ import React,  { useState } from 'react';
 import { Typography, Grid2 as Grid } from '@mui/material';
 
 import { DisplayFull, DisplayPreview } from '../../components/index';
-import { regularGridStyle, expandedGridStyle } from '../../MUIStyles/MUIStyles';
+import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
 import { projectsData } from '../../data/projectsData';
 import { Project } from '../../types';
 
@@ -28,7 +28,6 @@ const Projects: React.FC = () => {
     fullDisplay,
     index,
     toggleDisplay,
-    sx: fullDisplay ? expandedGridStyle : regularGridStyle(project.thumbnails),
   });
 
   const displayAllProjects = () => {
@@ -58,9 +57,9 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section>
+    <section className='styled-grid light-paper'>
       <div>
-        <Typography m={1} variant="h5">
+        <Typography mb={4} variant="h5">
           Projects
         </Typography>
       </div>

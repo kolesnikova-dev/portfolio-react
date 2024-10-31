@@ -39,7 +39,7 @@ export const Layout: React.FC = () => {
 
 
       {/* layout */}
-      <div style={darkPaperStyle}>
+      <div className='dark-paper'>
 
         <div className="App">
           {/* Main section */}
