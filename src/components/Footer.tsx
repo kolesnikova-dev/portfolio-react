@@ -1,17 +1,18 @@
-import { Box, Typography } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
-export const Footer: React.FC = () => {
-  const year: number = new Date().getFullYear();
 
+const year: number = new Date().getFullYear();
+
+
+export const Footer: React.FC = () => {
   return (
-    <Box component="footer" pt={2}>
-      <Box className="display-flex flex-center">
+    <footer>
+      <div className="display-flex flex-center">
         <CopyrightIcon />
-        <Typography variant="body1" sx={{ color: 'whitesmoke' }}>
+        <p>
           Veronika Kolesnikova, {year}
-        </Typography>
-      </Box>
-    </Box>
+        </p>
+      </div>
+    </footer>
   );
 };
