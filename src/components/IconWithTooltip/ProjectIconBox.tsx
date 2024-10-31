@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import {
   UnfoldMoreDoubleSharp,
   UnfoldLessDoubleSharp,
@@ -51,14 +50,15 @@ export const ProjectIconBox = ({
     toggleDisplay(index);
   };
 
+
   return (
-    <Box className="display-flex flex-center center-column">
+    <div className="display-flex flex-center center-column">
       <IconWithTooltip
         icon={unfoldIconOptions[fullDisplay.toString()]}
         onClick={handleToggleDisplay}
       />
       <IconWithTooltip icon={githubIconOptions} link={githubLink} />
       <IconWithTooltip icon={externalLinkOptions} link={liveLink} />
-    </Box>
+    </div>
   );
 };
