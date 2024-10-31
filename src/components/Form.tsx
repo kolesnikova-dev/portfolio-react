@@ -2,7 +2,9 @@ import { useState, useEffect, useRef, Fragment } from 'react';
 
 import emailjs from '@emailjs/browser';
 
-import { Button, TextField, Typography, Box } from '@mui/material';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 
 import { isTimePeriodValid } from '../utils/isTimePeriodValid';
 import { textInputFields } from '../data/formData';
@@ -67,8 +69,7 @@ export const Form: React.FC = () => {
   };
 
   return (
-    <Box
-      component="form"
+    <form
       id="contact-form"
       data-testid="emaill-js-form"
       ref={form}
@@ -90,9 +91,9 @@ export const Form: React.FC = () => {
       ))}
 
       {/* display SEND button or status message */}
-      <Box
+      <div
         className="alert-box"
-        sx={{ minHeight: '4vh', paddingBlockStart: '1vh' }}
+        style={{ minHeight: '4vh', paddingBlockStart: '1vh' }}
       >
         {status ? (
           <Typography><>{status}</></Typography>
@@ -101,7 +102,7 @@ export const Form: React.FC = () => {
             Send
           </Button>
         )}
-      </Box>
-    </Box>
+      </div>
+    </form>
   );
 };
