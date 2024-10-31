@@ -40,10 +40,6 @@ export const lightPaperStyle = {
   background: `var(--color-pale-blue)`,
 };
 
-export const testPaperStyle = {
-  ...paperStyle,
-  background: `var(--color-test)`,
-};
 
 // projects section grid ---------- [start]
 export const regularGridStyle = (thumbnails) => ({

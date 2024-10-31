@@ -1,7 +1,7 @@
-import { IconType } from 'react-icons';
+import { SvgIconComponent } from '@mui/icons-material';
 
 interface Contact {
-    icon: IconType,
+    icon: SvgIconComponent,
     link: {
       ariaLabel: string,
       url: string,
