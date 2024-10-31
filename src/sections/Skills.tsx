@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 
-import { Box, Typography, Tooltip } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
+import { Typography, Tooltip } from '@mui/material';
 
 // import { useIntersectionObserver } from '../utils';
 import { skillsData } from '../data/skillsData';
@@ -14,19 +13,17 @@ export const Skills: React.FC = () => {
   return (
     <section>
       <div>
-        {Object.entries(skillsData).map(([skill, ReactIcon]) => (
-          <Box
+        {Object.entries(skillsData).map(([skill, svg]) => (
+          <div
             ref={skillRef}
             key={skill}
-            className={`display-flex flex-center `}
+            className='display-flex flex-center'
           >
-            <Typography>{skill}</Typography>
-            <Tooltip title={<p>{skill}</p>} placement="right" arrow>
-              <IconButton sx={{ color: 'white' }} aria-label={skill}>
-                <ReactIcon fontSize="large" />
-              </IconButton>
-            </Tooltip>
-          </Box>
+            {/* <Typography>{skill}</Typography> */}
+            <Tooltip title={<p>{skill}</p>} placement="right" arrow> 
+              {svg}
+            </Tooltip> 
+          </div>
         ))}
       </div>
       <Typography variant="h3">Skills</Typography>
