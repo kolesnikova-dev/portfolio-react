@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Box } from '@mui/material';
-
 import { IconWithTooltip } from '../../components/index';
 import type { ContactKey } from '../../types/contactTypes';
 import { contactsData } from '../../data/contactsData';
@@ -24,8 +22,8 @@ export const Contact: React.FC<Props> = ({ contact }) => {
   };
 
   return (
-    <Box>
+    <div>
       <IconWithTooltip {...iconProps} />
-    </Box>
+    </div>
   );
 };
