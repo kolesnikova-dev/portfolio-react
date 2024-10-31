@@ -17,10 +17,10 @@ export const Particles = () => {
     return (
       <group ref={groupRef}>
         <Stars
-        radius={100}      // Radius of the inner sphere
-        depth={50}        // Depth of the stars
-        count={1500}      // Number of stars
-        factor={4}        // Size factor
+        radius={1}      // Radius of the inner sphere
+        depth={3}        // Depth of the stars
+        count={1000}      // Number of stars
+        factor={0.3}        // Size factor
         saturation={0}    // Color saturation
         fade={true}       // Fading of stars at edges
         />
