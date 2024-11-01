@@ -1,28 +1,17 @@
 import React, { useState } from 'react';
 
 import Tooltip from '@mui/material/Tooltip';
-import CheckCircle from '@mui/icons-material/CheckCircle';
 
-import { ContactKey } from '../../types/contactTypes';
+import { icons } from '../../data/icons';
 import { email, contactsData } from '../../data/contactsData';
 import { IconWithTooltip } from '../../components/index';
 
-const contactOptions: ContactKey[] = ['Github', 'LinkedIn'];
 
-const contacts = contactOptions.map((contact, index) => {
-  const { icon, link } = contactsData[contact];
-
-  const iconProps = {
-    icon: {
-      ariaLabel: contact,
-      icon,
-    },
-    link,
-  };
+const contacts = contactsData.map((contact, index) => {
 
   return  (
     <div key={index} className='display-flex flex-center'>
-      <IconWithTooltip {...iconProps} />
+      <IconWithTooltip icon={contact.icon} link={contact.link} />
     </div>
 )
 });
@@ -63,7 +52,7 @@ export const Contacts: React.FC = () => {
               <div>{email}</div>
 
               <div className='height-2vh'>
-                {copied ? <CheckCircle /> : 'click to copy'}
+                {copied ? icons.CheckCircle : 'click to copy'}
               </div>
             </div>
           </Tooltip>

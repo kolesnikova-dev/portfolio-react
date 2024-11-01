@@ -1,5 +1,4 @@
 export { default as About} from './About/About';
-export * from './Contacts/Contact';
 export * from './Contacts/Contacts';
 export * from './Skills';
 export * from './SendEmail';

@@ -1,14 +1,14 @@
-import { SvgIconComponent } from '@mui/icons-material';
-
-interface Contact {
-    icon: SvgIconComponent,
+export interface Contact {
+    icon: {
+      ariaLabel: string,
+      icon: React.ReactNode,
+    },
     link: {
       ariaLabel: string,
       url: string,
     }
   }
   
-export type Contacts = Record<string, Contact>;
 
 export type ContactKey = 'Github' | 'LinkedIn';
   

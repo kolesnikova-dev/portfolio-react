@@ -19,6 +19,7 @@ export const Skills: React.FC = () => {
             // ref={skillRef}
             aria-label={skill}
             key={skill}
+            className='pointer'
           >
             <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
               {SvgPath}

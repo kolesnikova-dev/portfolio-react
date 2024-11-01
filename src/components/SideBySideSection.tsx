@@ -1,5 +1,5 @@
 import Grid2 from '@mui/material/Grid2';
-import { Section } from './Section';
+// import { Section } from './Section';
 import type { SideBySideSection as SideBySide} from '../types/sectionTypes';
 
 
@@ -29,15 +29,18 @@ export const SideBySideSection: React.FC<Props> = ({ section }) => {
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
         className="display-flex flex-center"
       >
-        {Object.values(section).map((side) => (
-          <Grid2
-            key={side.key}
-            size={side.size}
-            sx={fullBorderGridStyle}
-          >
-            <Section component={side.component} /> 
-          </Grid2>
-        ))}
+        {Object.values(section).map((side) => {
+          const Component = side.component;
+          return (
+            <Grid2
+              key={side.key}
+              size={side.size}
+              sx={fullBorderGridStyle}
+            >
+              <Component  /> 
+             </Grid2>
+          )
+        })}
       </Grid2>
     </section>
   );

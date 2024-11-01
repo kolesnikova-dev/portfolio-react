@@ -1,8 +1,7 @@
 import { ImageContainer } from '../index';
-import errorFallbackImage from '../../assets/images/error.png';
 
 const errorUI = {
-  src: errorFallbackImage,
+  src: 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468549/error_eeeg0e.png',
   alt: 'Error!',
 };
 

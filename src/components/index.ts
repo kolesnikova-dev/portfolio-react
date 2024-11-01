@@ -7,5 +7,4 @@ export * from './IconWithTooltip/IconWithTooltip';
 export * from './IconWithTooltip/ProjectIconBox';
 export * from './ImageContainer';
 export * from './Loading/Loading';
-export * from './Section';
 export * from './SideBySideSection';

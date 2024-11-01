@@ -6,9 +6,6 @@ import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 
 // import { useIntersectionObserver } from '../../utils';
 
-//import main image
-import picture from '../../assets/images/picture.webp';
-
 import './AboutStyle.css';
 
 const introductionData = {
@@ -17,6 +14,8 @@ const introductionData = {
    My interest lies in finding ways to make living more sustainable and less intrusive. 
    I am having fun in React and RESTing in between.`,
 };
+
+const picture = 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468689/picture_uaypob.webp';
 
 
 const About: React.FC = () => {

@@ -3,14 +3,13 @@ import type { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
 
 import IconButton from '@mui/material/IconButton';
-import { SvgIconTypeMap, Tooltip } from '@mui/material';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
+import Tooltip from '@mui/material/Tooltip';
 
 
 type Props = {
   icon: {
     ariaLabel: string,
-    icon: OverridableComponent<SvgIconTypeMap>,
+    icon: React.ReactNode,
   },
   onClick?: MouseEventHandler<HTMLButtonElement>,
   link?: {
@@ -21,17 +20,17 @@ type Props = {
 
 
 export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
-  const { ariaLabel, icon: Icon } = icon;
+  const { ariaLabel, icon: svg } = icon;
 
   const MIconButton = onClick && (
     <IconButton aria-label={ariaLabel} onClick={onClick}>
-      <Icon />
-  </IconButton>
+      {svg}
+    </IconButton>
  );
 
   const LinkElement = link &&(
     <Link to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
-      <Icon />
+      {svg}
     </Link>
  );
 
@@ -47,7 +46,7 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
 
   return (
     <Tooltip title={ariaLabel} placement="bottom" arrow>
-      <><DisplayIcon /></>
+      {DisplayIcon()}
     </Tooltip>
   );
 };

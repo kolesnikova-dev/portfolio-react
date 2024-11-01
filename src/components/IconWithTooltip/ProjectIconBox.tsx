@@ -1,9 +1,4 @@
-import {
-  UnfoldMoreDoubleSharp,
-  UnfoldLessDoubleSharp,
-  OpenInNewSharp,
-  GitHub,
-} from '@mui/icons-material';
+import { icons } from '../../data/icons';
 
 import { IconWithTooltip } from './IconWithTooltip';
 
@@ -11,23 +6,35 @@ import { IconWithTooltip } from './IconWithTooltip';
 const unfoldIconOptions = {
   true: {
     ariaLabel: 'See less information',
-    icon: UnfoldLessDoubleSharp,
+    icon: icons.UnfoldLess,
   },
   false: {
     ariaLabel: 'See more information',
-    icon: UnfoldMoreDoubleSharp,
+    icon: icons.UnfoldMore,
   },
 };
 
-const githubIconOptions = {
-  ariaLabel: 'View on GitHub',
-  icon: GitHub,
-};
+const githubIconOptions = (githubLink: string) => ({
+  icon: {
+    ariaLabel: 'View on GitHub',
+    icon: icons.GithubBlack,
+  }, 
+  link: {
+    ariaLabel: 'View on GitHub',
+    url: githubLink,
+  }
+});
 
-const externalLinkOptions = {
-  ariaLabel: 'Navigate to live website',
-  icon: OpenInNewSharp,
-};
+const externalLinkOptions = (liveLink: string) => ({
+  icon: { 
+    ariaLabel: 'Navigate to live website',
+    icon: icons.ExternalLink,
+  },
+  link: {
+    ariaLabel: 'Navigate to live website',
+    url: liveLink ?? undefined,
+  }
+});
 
 
 export const ProjectIconBox = ({
@@ -57,8 +64,8 @@ export const ProjectIconBox = ({
         icon={unfoldIconOptions[fullDisplay.toString()]}
         onClick={handleToggleDisplay}
       />
-      <IconWithTooltip icon={githubIconOptions} link={githubLink} />
-      <IconWithTooltip icon={externalLinkOptions} link={liveLink} />
+      <IconWithTooltip {...githubIconOptions(githubLink)} />
+      <IconWithTooltip {...externalLinkOptions(liveLink)} />
     </div>
   );
 };

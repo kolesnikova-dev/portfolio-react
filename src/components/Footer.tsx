@@ -1,18 +1,13 @@
-import CopyrightIcon from '@mui/icons-material/Copyright';
-
+import { icons } from "../data/icons";
 
 const year: number = new Date().getFullYear();
-
 
 export const Footer: React.FC = () => {
   return (
     <footer>
-      <div className="display-flex flex-center">
-        <CopyrightIcon />
-        <p>
-          Veronika Kolesnikova, {year}
+        <p className="display-flex flex-center padding-2rem">
+        {icons.Copyright}&nbsp; Veronika Kolesnikova, {year}
         </p>
-      </div>
     </footer>
   );
 };
