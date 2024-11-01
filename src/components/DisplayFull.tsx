@@ -28,7 +28,6 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
       {/* Top Section: title and links */}
         <div className='bg-whitesmoke border-radius-4px'>
           <CardHeader
-            // className='no-padding opacity0-9'
             action={
               <ProjectIconBox
                 projectLinks={projectLinks}

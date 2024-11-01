@@ -28,25 +28,17 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
     </IconButton>
  );
 
-  const LinkElement = link &&(
+  const LinkElement = link && (
     <Link to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
       {svg}
     </Link>
  );
 
-  const DisplayIcon: React.FC = () => {
-    if(onClick) {
-      return MIconButton;
-    } else if (link) {
-      return LinkElement;
-    }
+  const displayIcon = onClick ? MIconButton : link ? LinkElement : null;
 
-    return;
-  }
-
-  return (
+  if (displayIcon) return (
     <Tooltip title={ariaLabel} placement="bottom" arrow>
-      {DisplayIcon()}
+      {displayIcon}
     </Tooltip>
   );
 };

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import Tooltip from '@mui/material/Tooltip';
+import { Typography, Tooltip } from '@mui/material';
 
-import { icons } from '../../data/icons';
-import { email, contactsData } from '../../data/contactsData';
-import { IconWithTooltip } from '../../components/index';
+import { IconWithTooltip } from '../components/index';
+import { icons } from '../data/icons';
+import { email, contactsData } from '../data/contactsData';
 
 
 const contacts = contactsData.map((contact, index) => {
@@ -36,20 +36,20 @@ export const Contacts: React.FC = () => {
       <div className="display-flex flex-center center-column full-width flex-gap-2vw">
         
         {/* GitHub and LinkedIn container */}
-        <div className="display-flex flex-center flex-gap-2vw light-paper padding-2rem border-radius-4px">
+        <div className="display-flex flex-center flex-gap-2vw light-paper padding-2rem">
             {contacts}
         </div>
         
         
         {/* email container */}
         <div 
-          className="display-flex flex-center light-paper padding-2rem border-radius-4px pointer"
+          className="display-flex flex-center light-paper padding-2rem pointer"
           onClick={copyEmail}
           >
     
           <Tooltip title={copied ? 'Copied!' : 'Click to copy my email'}>
             <div className="display-flex flex-center center-column">
-              <div>{email}</div>
+              <Typography>{email}</Typography>
 
               <div className='height-2vh'>
                 {copied ? icons.CheckCircle : 'click to copy'}

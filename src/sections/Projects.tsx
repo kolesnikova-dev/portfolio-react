@@ -2,12 +2,9 @@ import React,  { useState } from 'react';
 
 import { Typography, Grid2 as Grid } from '@mui/material';
 
-import { DisplayFull, DisplayPreview } from '../../components/index';
-import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
-import { projectsData } from '../../data/projectsData';
-import { Project } from '../../types';
-
-import './ProjectsStyle.css';
+import { DisplayFull, DisplayPreview } from '../components/index';
+import { projectsData } from '../data/projectsData';
+import { Project } from '../types';
 
 
 const FullMemoizedStyledProject = React.memo(DisplayFull);
@@ -59,7 +56,7 @@ const Projects: React.FC = () => {
   return (
     <section className='styled-grid light-paper'>
       <div>
-        <Typography mb={4} variant="h5">
+        <Typography mb={4} variant="h4">
           Projects
         </Typography>
       </div>

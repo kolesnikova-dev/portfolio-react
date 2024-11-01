@@ -1,14 +1,13 @@
-import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
 
 import { Typography, Tooltip } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
 
 // import { useIntersectionObserver } from '../utils';
 import { skillsData } from '../data/skillsData';
 
 
 export const Skills: React.FC = () => {
-  const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
+  // const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
   // const isInView = useIntersectionObserver(skillRef);
 
   return (

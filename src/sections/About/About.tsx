@@ -1,12 +1,7 @@
-import { useRef } from 'react';
-
 import { Avatar, Typography } from '@mui/material';
 
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 
-// import { useIntersectionObserver } from '../../utils';
-
-import './AboutStyle.css';
 
 const introductionData = {
   greeting: "Hi, I'm Nika!",
@@ -19,12 +14,10 @@ const picture = 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468689/p
 
 
 const About: React.FC = () => {
-  const pictureRef = useRef<HTMLElement | undefined>(undefined);
-  // const isInView = useIntersectionObserver(pictureRef);
 
   return (
     <section>
-      <div ref={pictureRef}>
+      <div>
         <Typography variant="h3" className="display-flex flex-center text-no-wrap light-paper">
             {introductionData.greeting}
         </Typography>

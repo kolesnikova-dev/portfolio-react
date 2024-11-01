@@ -20,7 +20,7 @@ export const Particles = () => {
         radius={1}      // Radius of the inner sphere
         depth={3}        // Depth of the stars
         count={1000}      // Number of stars
-        factor={0.3}        // Size factor
+        factor={0.2}        // Size factor
         saturation={0}    // Color saturation
         fade={true}       // Fading of stars at edges
         />

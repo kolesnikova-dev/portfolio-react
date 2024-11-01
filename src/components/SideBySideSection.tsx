@@ -1,5 +1,5 @@
 import Grid2 from '@mui/material/Grid2';
-// import { Section } from './Section';
+
 import type { SideBySideSection as SideBySide} from '../types/sectionTypes';
 
 

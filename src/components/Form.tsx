@@ -2,9 +2,7 @@ import { useState, useEffect, useRef, Fragment } from 'react';
 
 import emailjs from '@emailjs/browser';
 
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import { TextField, Typography } from '@mui/material';
 
 import { isTimePeriodValid } from '../utils/isTimePeriodValid';
 import { textInputFields } from '../data/formData';
@@ -17,7 +15,7 @@ const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
 
 
 export const Form: React.FC = () => {
-  const form = useRef<HTMLFormElement | string>('');
+  const form = useRef<any>('');
 
   //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
@@ -47,12 +45,6 @@ export const Form: React.FC = () => {
 
       //check whether last email was sent less than a minute ago
       if (isTimePeriodValid(currentTime, lastEmailSent)) {
-        console.log('Form submission initiated'); // Log when submission is initiated
-
-        // Log form data
-        const formData = new FormData(event.target); // Assuming you are using FormData
-        console.log('Form data:', Object.fromEntries(formData.entries()));
-
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {
@@ -91,16 +83,13 @@ export const Form: React.FC = () => {
       ))}
 
       {/* display SEND button or status message */}
-      <div
-        className="alert-box"
-        style={{ minHeight: '4vh', paddingBlockStart: '1vh' }}
-      >
+      <div className="alert-box drop-shadow">
         {status ? (
           <Typography><>{status}</></Typography>
         ) : (
-          <Button aria-label="Send the form" type="submit" variant="outlined" sx={{ color: 'whitesmoke' }}>
+          <button aria-label="Send the form" type="submit">
             Send
-          </Button>
+          </button>
         )}
       </div>
     </form>
