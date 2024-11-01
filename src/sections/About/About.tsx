@@ -1,0 +1,47 @@
+import { Avatar, Typography } from '@mui/material';
+
+import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
+
+
+const introductionData = {
+  greeting: "Hi, I'm Nika!",
+  introduction: `I am a software engineer. 
+   My interest lies in finding ways to make living more sustainable and less intrusive. 
+   I am having fun in React and RESTing in between.`,
+};
+
+const picture = 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468689/picture_uaypob.webp';
+
+
+const About: React.FC = () => {
+
+  return (
+    <section>
+      <div>
+        <Typography variant="h3" className="display-flex flex-center text-no-wrap light-paper">
+            {introductionData.greeting}
+        </Typography>
+
+            <ImageWrapper>
+              <StyledBadge
+                overlap="circular"
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                variant="dot"
+              >
+                <Avatar
+                  sx={{ width: 114, height: 104 }}
+                  src={picture}
+                  alt="Nika's Picture"
+                />
+              </StyledBadge>
+            </ImageWrapper>
+
+        <div>
+          <p>{introductionData.introduction}</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
