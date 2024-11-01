@@ -1,32 +1,29 @@
-import React, { useRef } from 'react';
+// import React, { useRef } from 'react';
 
-import { Box, Typography, Tooltip } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
+import { Typography, Tooltip } from '@mui/material';
 
-import { useIntersectionObserver } from '../utils';
+// import { useIntersectionObserver } from '../utils';
 import { skillsData } from '../data/skillsData';
 
 
 export const Skills: React.FC = () => {
-  const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
-  const isInView = useIntersectionObserver(skillRef);
+  // const skillRef: React.MutableRefObject<HTMLElement | undefined> = useRef();
+  // const isInView = useIntersectionObserver(skillRef);
 
   return (
     <section>
-      <div>
-        {Object.entries(skillsData).map(([skill, ReactIcon]) => (
-          <Box
-            ref={skillRef}
+      <div className='display-flex flex-center flex-gap-1vw'>
+        {skillsData.map(({skill, icon: SvgPath}) => (
+          <div
+            // ref={skillRef}
+            aria-label={skill}
             key={skill}
-            className={`display-flex flex-center ${isInView && 'delayedAppear'}`}
+            className='pointer'
           >
-            <Typography>{skill}</Typography>
-            <Tooltip title={<p>{skill}</p>} placement="right" arrow>
-              <IconButton sx={{ color: 'white' }} aria-label={skill}>
-                <ReactIcon fontSize="large" />
-              </IconButton>
+            <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
+              {SvgPath}
             </Tooltip>
-          </Box>
+          </div>
         ))}
       </div>
       <Typography variant="h3">Skills</Typography>

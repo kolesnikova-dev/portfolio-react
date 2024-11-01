@@ -1,23 +1,50 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { Paper, Box } from '@mui/material';
+import { Canvas } from '@react-three/fiber';
+import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
-import { darkPaperStyle } from '../MUIStyles/MUIStyles';
-
+import { ShootingStar, Particles } from '../components/THREEJsComponents/index';
 import { Footer } from '../components/index';
 
 
 export const Layout: React.FC = () => {
   return (
-    <Paper sx={darkPaperStyle}>
-      <Box className="App">
-        {/* Main section */}
-        <Outlet />
+   <>
+    {/* canvas -- start */}
+      <Canvas
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: -1, 
+        }}
+      >
+        <ambientLight intensity={1} />
 
-        {/* Footer */}
-        <Footer />
-      </Box>
-    </Paper>
+        <ShootingStar />
+
+        <EffectComposer>
+          <Bloom mipmapBlur luminanceThreshold={0.5} intensity={0.4} />
+        </EffectComposer>
+    
+          <Particles />
+      </Canvas>
+      {/* canvas -- end */}
+
+
+      {/* layout */}
+      <div className='dark-paper'>
+
+        <div className="App">
+          {/* Main section */}
+          <Outlet />
+
+          {/* Footer */}
+          <Footer />
+        </div>
+      </div>
+   </>
   );
 };

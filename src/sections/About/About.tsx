@@ -1,16 +1,7 @@
-import { useRef } from 'react';
+import { Avatar, Typography } from '@mui/material';
 
-import { Avatar, Box, Typography } from '@mui/material';
-
-import { lightPaperStyle } from '../../pages';
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
 
-import { useIntersectionObserver } from '../../utils';
-
-//import main image
-import picture from '../../assets/images/picture.webp';
-
-import './AboutStyle.css';
 
 const introductionData = {
   greeting: "Hi, I'm Nika!",
@@ -19,18 +10,16 @@ const introductionData = {
    I am having fun in React and RESTing in between.`,
 };
 
+const picture = 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468689/picture_uaypob.webp';
+
 
 const About: React.FC = () => {
-  const pictureRef = useRef<HTMLElement | undefined>(undefined);
-  const isInView = useIntersectionObserver(pictureRef);
 
   return (
     <section>
-      <Box ref={pictureRef}>
-        <Typography variant="h3" style={lightPaperStyle}>
-          <Box className="display-flex flex-center text-no-wrap">
+      <div>
+        <Typography variant="h3" className="display-flex flex-center text-no-wrap light-paper">
             {introductionData.greeting}
-          </Box>
         </Typography>
 
             <ImageWrapper>
@@ -47,12 +36,10 @@ const About: React.FC = () => {
               </StyledBadge>
             </ImageWrapper>
 
-        <Box className={isInView ? 'appear' : ''}>
-          <Typography variant="h6" sx={{ textAlign: 'center', mx: 1 }}>
-            {introductionData.introduction}
-          </Typography>
-        </Box>
-      </Box>
+        <div>
+          <p>{introductionData.introduction}</p>
+        </div>
+      </div>
     </section>
   );
 };

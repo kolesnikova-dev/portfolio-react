@@ -7,21 +7,19 @@ import { Skills } from '../src/sections/index';
 import { skillsData } from '../src/data/skillsData';
 
 
-const skills = Object.keys(skillsData);
-
-
 describe('Skills component', () => {
-    test('renders all skills of Skills section', () => {
+    test('renders all skills of Skills section', async () => {
         render(
             <MemoryRouter>
                 <Skills />
             </MemoryRouter>
         );
         
-
-        skills.forEach((skill) => {
-            expect(screen.getByText(skill)).toBeInTheDocument();
-        })
-
+        await Promise.all(
+            skillsData.map(async (skill) => {
+                const ariaLabel = await screen.findByLabelText(skill.skill);
+                expect(ariaLabel).toBeInTheDocument();
+            })
+        );
     })
 })

@@ -19,17 +19,11 @@ const PWAConfig = {
 			},
 			{
 				src: 'logo192.png',
-				type: 'image/png',
 				sizes: '192x192',
-			},
-			{
-				src: 'logo512.png',
 				type: 'image/png',
-				sizes: '512x512',
-			},
+			  },
 		],
 		start_url: '.',
-		display: 'standalone',
 		theme_color: '#000000',
 		background_color: '#ffffff',
 	},
@@ -37,7 +31,25 @@ const PWAConfig = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), VitePWA(PWAConfig),],
+	build: {
+		rollupOptions: {
+		  output: {
+			manualChunks: (id) => {
+			  // Customize chunking logic here
+			  if (id.includes('node_modules')) {
+				return 'vendor'; 
+			  }
+			  if (id.includes('src/components')) {
+				return 'components';
+			  }
+			  if (id.includes('src/utils')) {
+				return 'utils'; 
+			  }
+			},
+		  },
+		},
+	  },
+  plugins: [react(), VitePWA(PWAConfig)],
   server: {
     port: 3000
   },

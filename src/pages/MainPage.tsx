@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Box, Grid2 as Grid } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
 
 import { About, Skills, Projects, Contacts, SendEmail } from '../sections';
-import { StyledGrid, Section, SideBySideSection } from '../components';
+import { SideBySideSection } from '../components';
 import type { Sections } from '../types/sectionTypes';
 
 
@@ -24,23 +24,24 @@ const sections: Sections = {
 
 
 export const MainPage: React.FC = () => {
+
+  const ProjectsSection = sections.middle.component;
+
   return (
-    <Box sx={{ flexGrow: 1 }} className="full-width">
-      <Grid container spacing={2} className="full-width">
+    <div className="full-width flex-grow-1">
         {/* about and skills section */}
-        <StyledGrid>
+        <Grid2 className="styled-grid">
           <SideBySideSection section={sections.top} />
-        </StyledGrid>
+        </Grid2>
         {/* projects section */}
-        <StyledGrid>
-          <Section component={sections.middle.component} />
-        </StyledGrid>
+        <Grid2 className="styled-grid">
+          <ProjectsSection />
+        </Grid2>
         {/* contacts section */}
-        <StyledGrid>
+        <Grid2 className="styled-grid">
           <SideBySideSection section={sections.bottom} />
-        </StyledGrid>
-      </Grid>
-    </Box>
+        </Grid2>
+    </div>
   );
 };
 

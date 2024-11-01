@@ -1,23 +1,14 @@
 import {
-  Box,
   Typography,
-  Card,
   CardMedia,
-  CardContent,
   CardHeader,
-  Grid2 as Grid,
-  Paper,
-  Table, 
-  TableBody, 
+  TableRow,
   TableCell, 
-  TableContainer, 
-  TableHead, 
-  TableRow, 
+  TableContainer,
 } from '@mui/material';
 
 import { ProjectIconBox } from '.';
-import { testPaperStyle } from '../pages';
-import type { Project } from '../types/projectTypes'
+import type { Project } from '../types/projectTypes';
 
 
 type Props = {
@@ -33,12 +24,10 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
   const projectLinks = { liveLink, githubLink };
 
   return (
-    <Box component="section" sx={{ padding: '2rem' }}>
+    <section className='padding-2rem'>
       {/* Top Section: title and links */}
-      <Card>
-        <CardContent sx={{ padding: '0', paddingBottom: '0' }}>
+        <div className='bg-whitesmoke border-radius-4px'>
           <CardHeader
-            sx={{ opacity: '0.9', paddingBottom: '0' }}
             action={
               <ProjectIconBox
                 projectLinks={projectLinks}
@@ -50,58 +39,47 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
             title={title}
             subheader={subheader}
           />
-        </CardContent>
-      </Card>
+        </div>
 
       {/* Middle Section: video and thumbnails */}
-      <Grid container spacing={2} sx={{ marginTop: '2rem' }} className='display-flex flex-center center-column'>
-        <Grid>
-          <Card>
+          <div className='display-flex flex-center center-column margin-top-2rem'>
             <CardMedia
               component="video"
               src={video}
-              autoPlay
               controls
-              sx={{ width: '100%', borderRadius: '4px' }}
+             className='full-width border-radius-4px'
             />
-          </Card>
-        </Grid>
-      </Grid>
+          </div>
 
       {/* Bottom section: project details */}
-      <Box sx={{ marginTop: '2rem' }}>
-        <Paper
-          elevation={2}
-          sx={{ ...testPaperStyle, p: 1 }}
-          className="display-flex flex-center center-column"
+      <div className='margin-top-2rem'>
+        <div className="test-background display-flex flex-center center-column"
         >
           <Typography variant="h5" component="h2" gutterBottom>
             Project Overview
           </Typography>
 
-         <TableContainer className="w-full max-w-4xl mx-auto my-4">
-            <Table>
-              <TableBody>
+         <TableContainer className="full-width">
+            <table>
+              <tbody>
                 {Object.entries(details).map(([point, detail]) => (
-                  <TableRow key={point} className="hover:bg-gray-50">
+                  <TableRow key={point}>
                     <TableCell className="border">
-                      <Typography variant="h6" className="font-medium capitalize" sx={{ color: 'whitesmoke'}}>
+                      <h2>
                         {point}
-                      </Typography>
-                    </TableCell>
-                    <TableCell className="border">
-                      <Typography variant="body1" sx={{ color: 'whitesmoke'}}>
+                      </h2>
+                      <p>
                         {detail}
-                      </Typography>
+                      </p>
                     </TableCell>
                   </TableRow>
                 ))}
-              </TableBody>
-            </Table>
+              </tbody>
+            </table>
           </TableContainer>
           
-        </Paper>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </section>
   );
 };
