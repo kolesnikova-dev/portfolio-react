@@ -1,12 +1,10 @@
 import {
   Typography,
-  Card,
   CardMedia,
-  CardContent,
   CardHeader,
-  Grid2 as Grid,
+  TableRow,
   TableCell, 
-  TableContainer, 
+  TableContainer,
 } from '@mui/material';
 
 import { ProjectIconBox } from '.';
@@ -66,18 +64,16 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
             <table>
               <tbody>
                 {Object.entries(details).map(([point, detail]) => (
-                  <tr key={point}>
+                  <TableRow key={point}>
                     <TableCell className="border">
-                      <h3>
+                      <h2>
                         {point}
-                      </h3>
-                    </TableCell>
-                    <TableCell className="border">
+                      </h2>
                       <p>
                         {detail}
                       </p>
                     </TableCell>
-                  </tr>
+                  </TableRow>
                 ))}
               </tbody>
             </table>

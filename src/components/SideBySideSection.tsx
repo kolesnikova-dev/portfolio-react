@@ -14,10 +14,7 @@ const fullBorderGridStyle = (section) => ({
     md: '40%',
   },
   '--Grid-borderWidth': '1px',
-  borderTop: 'var(--Grid-borderWidth) solid',
-  borderLeft: 'var(--Grid-borderWidth) solid',
-  borderRight: 'var(--Grid-borderWidth) solid',
-  borderBottom: 'var(--Grid-borderWidth) solid',
+  border: 'var(--Grid-borderWidth) solid',
   borderColor: 'white',
   p: 1,
 });

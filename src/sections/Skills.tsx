@@ -17,6 +17,7 @@ export const Skills: React.FC = () => {
         {skillsData.map(({skill, icon: SvgPath}) => (
           <div
             // ref={skillRef}
+            aria-label={skill}
             key={skill}
           >
             <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>

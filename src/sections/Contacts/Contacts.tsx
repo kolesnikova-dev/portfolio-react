@@ -1,34 +1,31 @@
 import React, { useState } from 'react';
 
-import { Paper, Tooltip, Grid2 as Grid } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
 import CheckCircle from '@mui/icons-material/CheckCircle';
 
-import { lightPaperStyle } from '../../MUIStyles/MUIStyles';
-import { Contact } from './Contact';
 import { ContactKey } from '../../types/contactTypes';
-import { email } from '../../data/contactsData';
-
+import { email, contactsData } from '../../data/contactsData';
+import { IconWithTooltip } from '../../components/index';
 
 const contactOptions: ContactKey[] = ['Github', 'LinkedIn'];
 
-const contacts = contactOptions.map((contact, index) => (
-  <Grid key={index}>
-    <Contact contact={contact} />
-  </Grid>
-));
+const contacts = contactOptions.map((contact, index) => {
+  const { icon, link } = contactsData[contact];
 
-type Props = {
-  children: React.ReactNode,
-}
+  const iconProps = {
+    icon: {
+      ariaLabel: contact,
+      icon,
+    },
+    link,
+  };
 
-const StyledPaper: React.FC<Props> = ({ children }) => {
- return (
-    <div className="display-flex flex-center light-paper padding-2rem border-radius-4px"
-  >
-      {children}
+  return  (
+    <div key={index} className='display-flex flex-center'>
+      <IconWithTooltip {...iconProps} />
     </div>
- );
-} 
+)
+});
 
 
 export const Contacts: React.FC = () => {
@@ -47,36 +44,31 @@ export const Contacts: React.FC = () => {
 
   return (
     <section>
-      <Grid
-        container
-        spacing={2}
-        className="display-flex flex-center full-width"
-      >
-        <StyledPaper>
-          {/* GitHub and LinkedIn container */}
-          <Grid container spacing={2}>
+      <div className="display-flex flex-center center-column full-width flex-gap-2vw">
+        
+        {/* GitHub and LinkedIn container */}
+        <div className="display-flex flex-center flex-gap-2vw light-paper padding-2rem border-radius-4px">
             {contacts}
-          </Grid>
-        </StyledPaper>
-
-        <StyledPaper>
-          {/* email container */}
+        </div>
+        
+        
+        {/* email container */}
+        <div 
+          className="display-flex flex-center light-paper padding-2rem border-radius-4px pointer"
+          onClick={copyEmail}
+          >
+    
           <Tooltip title={copied ? 'Copied!' : 'Click to copy my email'}>
-            <Grid
-              container
-              direction="column"
-              sx={{ cursor: 'pointer' }}
-              onClick={copyEmail}
-            >
-              <Grid>{email}</Grid>
+            <div className="display-flex flex-center center-column">
+              <div>{email}</div>
 
-              <Grid sx={{ height: '2vh' }}>
+              <div className='height-2vh'>
                 {copied ? <CheckCircle /> : 'click to copy'}
-              </Grid>
-            </Grid>
+              </div>
+            </div>
           </Tooltip>
-        </StyledPaper>
-      </Grid>
+        </div>
+      </div>
     </section>
   );
 };
