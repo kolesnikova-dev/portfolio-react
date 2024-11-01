@@ -8,8 +8,8 @@ export const projectsData: Projects = {
     subheader: 'React.js - Material UI - Firebase',
     githubLink: 'https://github.com/the-collab-lab/tcl-75-smart-shopping-list',
     liveLink: 'https://tcl-75-smart-shopping-list.web.app/',
-    video: getUrl('smartShopRecording', 'video'),
-    thumbnails: getUrl('smartShopThumbnails', 'image'),
+    video: ['smartShopRecording', 'video'],
+    thumbnails: ['smartShopThumbnails', 'image'],
     details: {
       Problem: `Traditional shopping lists are static and don't adapt to users' 
       purchasing patterns, leading to forgotten items and unnecessary store trips.`,
@@ -35,8 +35,8 @@ export const projectsData: Projects = {
     subheader: 'React.js - Mongo - Express - Node',
     githubLink: 'https://github.com/kweeuhree/climate-view',
     liveLink: 'https://climate-view-1.onrender.com/',
-    video: getUrl('climateRecording', 'video'),
-    thumbnails:  getUrl('climateThumbnails', 'image'),
+    video: ['climateRecording', 'video'],
+    thumbnails:  ['climateThumbnails', 'image'],
     details: {
       Problem: `As climate data becomes more critical, many platforms fail to present 
       the information in an engaging and informative way.`,
@@ -60,8 +60,8 @@ export const projectsData: Projects = {
     title: 'Weather App',
     subheader: 'React.js - Weather API',
     githubLink: 'https://github.com/firstnamenika/weather-app',
-    video: getUrl('weatherRecording', 'video'),
-    thumbnails: getUrl('weatherThumbnails', 'image'),
+    video: ['weatherRecording', 'video'],
+    thumbnails: ['weatherThumbnails', 'image'],
     details: {
       Problem: `Most weather apps lack personalization, providing generic data without 
       adapting to the user's specific needs.`,
@@ -85,8 +85,8 @@ export const projectsData: Projects = {
     title: 'Vigenere Cipher',
     subheader: 'Python',
     githubLink: 'https://github.com/kweeuhree/vigenere',
-    video: getUrl('vigenereRecording', 'video'),
-    thumbnails:  getUrl('vigenereThumbnails', 'image'),
+    video: ['vigenereRecording', 'video'],
+    thumbnails:  ['vigenereThumbnails', 'image'],
     details: {
       Problem: `Basic encryption methods are often too easy to break, 
       limiting their use for secure communication.`,

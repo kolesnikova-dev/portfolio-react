@@ -10,6 +10,8 @@ import {
 import { ProjectIconBox } from '.';
 import type { Project } from '../types/projectTypes';
 
+import { getUrl } from '../utils/cloudinaryUtils';
+
 
 type Props = {
   project: Project,
@@ -21,8 +23,13 @@ type Props = {
 
 export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, githubLink, liveLink, video, details, subheader } = project;
-  const projectLinks = { liveLink, githubLink };
+  if(!video) {
+    throw new Error('Could not load video');
+  }
 
+  const projectLinks = { liveLink, githubLink };
+  const cloudinaryUrl = getUrl(video);
+  console.log(cloudinaryUrl, 'url in display full');
   return (
     <section className='padding-2rem'>
       {/* Top Section: title and links */}
@@ -45,7 +52,7 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
           <div className='display-flex flex-center center-column margin-top-2rem'>
             <CardMedia
               component="video"
-              src={video}
+              src={cloudinaryUrl}
               controls
              className='full-width border-radius-4px'
             />

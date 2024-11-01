@@ -24,16 +24,16 @@ describe('Projects component', () => {
             expect(screen.getByText(project.title)).toBeInTheDocument();
         })
 
-        const githubIcons = screen.getAllByTestId('GitHubIcon');
+        const githubIcons = screen.getAllByLabelText("View on GitHub");
         expect(githubIcons.length).toBe(projects.length);
 
-        const moreInformationIcons = screen.getAllByTestId('UnfoldMoreDoubleSharpIcon');
+        const moreInformationIcons = screen.getAllByLabelText("See more information");
         expect(moreInformationIcons.length).toBe(projects.length);
     })
 
 
     test('expands a selected project', async () => {
-        const moreInformationIcons = screen.getAllByTestId('UnfoldMoreDoubleSharpIcon');
+        const moreInformationIcons = screen.getAllByLabelText("See more information");
 
         moreInformationIcons.map(async (icon, index) => {
             await userEvent.click(icon);

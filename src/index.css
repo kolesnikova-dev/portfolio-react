@@ -155,6 +155,7 @@ button:active {
 .dark-paper {
   background: var(--color-pale-blue-gradient);
   box-shadow: 1px 6px 5px 0px rgb(39, 41, 40);
+
 }
 
 .light-paper {
@@ -165,4 +166,13 @@ button:active {
 
 .drop-shadow {
   filter: drop-shadow(5px 5px 5px rgba(39, 41, 40, 0.8));
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;  
+  height: 100vh;
+  z-index: -1;  
 }

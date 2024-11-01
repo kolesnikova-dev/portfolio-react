@@ -2,7 +2,7 @@ import CardHeader from '@mui/material/CardHeader';
 
 import { ProjectIconBox } from '../IconWithTooltip/ProjectIconBox';
 import { Project } from '../../types';
-
+import { getUrl } from '../../utils/cloudinaryUtils';
 import { PreviewBox } from './MUIStyles';
 
 
@@ -16,10 +16,11 @@ type Props = {
 export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
   const { title, subheader, githubLink, liveLink, thumbnails } = project;
   const projectLinks = { githubLink, liveLink };
-
+  const cloudinaryUrl = getUrl(thumbnails);
+  
   return (
       <>
-       <PreviewBox thumbnails={thumbnails}>
+       <PreviewBox thumbnails={cloudinaryUrl}>
           <CardHeader
            className='bg-whitesmoke border-radius-4px'
             action={
