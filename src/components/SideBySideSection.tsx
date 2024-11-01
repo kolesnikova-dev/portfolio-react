@@ -13,10 +13,10 @@ const fullBorderGridStyle = (section) => ({
     sm: '100%',
     md: '40%',
   },
-  '--Grid-borderWidth': '1px',
-  border: 'var(--Grid-borderWidth) solid',
-  borderColor: 'white',
-  p: 1,
+  // '--Grid-borderWidth': '1px',
+  // border: 'var(--Grid-borderWidth) solid',
+  // borderColor: 'whitesmoke',
+  p: 2,
 });
 
 
@@ -27,6 +27,7 @@ export const SideBySideSection: React.FC<Props> = ({ section }) => {
         container
         direction={{ xs: 'column', md: 'row' }}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        rowSpacing={{ xs: 3}}
         className="display-flex flex-center"
       >
         {Object.values(section).map((side) => {

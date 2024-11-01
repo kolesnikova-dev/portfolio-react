@@ -12,7 +12,7 @@ export const Skills: React.FC = () => {
 
   return (
     <section>
-      <div className='display-flex flex-center'>
+      <div className='display-flex flex-center flex-gap-1vw'>
         {skillsData.map(({skill, icon: SvgPath}) => (
           <div
             // ref={skillRef}

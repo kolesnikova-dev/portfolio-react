@@ -18,15 +18,15 @@ export const Layout: React.FC = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1,  // set the particles are behind the main content
+          zIndex: -1, 
         }}
       >
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={1} />
 
         <ShootingStar />
 
         <EffectComposer>
-          <Bloom mipmapBlur luminanceThreshold={0.5} intensity={0.3} />
+          <Bloom mipmapBlur luminanceThreshold={0.5} intensity={0.4} />
         </EffectComposer>
     
           <Particles />

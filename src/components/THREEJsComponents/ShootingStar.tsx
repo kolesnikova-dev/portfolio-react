@@ -18,7 +18,7 @@ export const ShootingStar = () => {
       }
     });
     return (
-      <Trail width={3} length={2} color={new THREE.Color(2, 10, 10)} attenuation={(t) => t * t}>
+      <Trail width={5} length={2} color={new THREE.Color(2, 10, 10)} attenuation={(t) => t * t}>
         <mesh ref={ref}>
           <sphereGeometry args={[0.25]} />
           <meshBasicMaterial color={[3, 10, 5]} toneMapped={false} />

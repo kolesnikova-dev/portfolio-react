@@ -4,6 +4,7 @@
   --color-pale-blue: rgba(117, 124, 232, 0.2);
   --color-test: #2e37436c;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1.9vh;
   /* line-height: 1.5;
   font-weight: 400; */
 
@@ -68,6 +69,10 @@ button:active {
 
 .flex-gap-2vw {
   gap: 2vw;
+}
+
+.flex-gap-1vw {
+  gap: 1.1vw;
 }
 
 .flex-grow-1 {
@@ -136,8 +141,8 @@ button:active {
 }
 
 .styled-grid {
-  padding-block-end: 15vh;
-  padding-block-start: 15vh;
+  padding-block-end: 13vh;
+  padding-block-start: 13vh;
   position: relative;
 }
 
