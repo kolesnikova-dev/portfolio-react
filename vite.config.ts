@@ -8,8 +8,7 @@ const PWAConfig = {
 		short_name: 'Veronika Kolesnikova | Portfolio',
 		name: 'Veronika Kolesnikova | Portfolio',
 		description:
-			`Welcome to the portfolio webiste of Veronika Kolesnikova, a dedicated software engineer passionate about 
-      creating elegant solutions and user-friendly experiences. 
+			`Welcome to the portfolio webiste of Veronika Kolesnikova, a dedicated software engineer passionate about creating elegant solutions and user-friendly experiences. 
       Check out my projects — I’m excited to share my journey with you!`,
 		icons: [
 			{

@@ -1,5 +1,3 @@
-// import { climate, shoppingList, vigenere, weather } from '../assets/projectScreenshots';
-import { getUrl } from '../utils/cloudinaryUtils';
 import type { Projects } from '../types';
 
 export const projectsData: Projects = {

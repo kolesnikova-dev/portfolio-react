@@ -1,6 +1,7 @@
 import { Avatar, Typography } from '@mui/material';
 
 import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
+import { getUrl } from '../../utils/cloudinaryUtils';
 
 
 const introductionData = {
@@ -10,7 +11,7 @@ const introductionData = {
    I am having fun in React and RESTing in between.`,
 };
 
-const picture = 'https://res.cloudinary.com/dt3ttiwvd/image/upload/v1730468689/picture_uaypob.webp';
+const picture = getUrl(['avatar', 'image']);
 
 
 const About: React.FC = () => {

@@ -29,7 +29,7 @@ export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDispl
 
   const projectLinks = { liveLink, githubLink };
   const cloudinaryUrl = getUrl(video);
-  console.log(cloudinaryUrl, 'url in display full');
+
   return (
     <section className='padding-2rem'>
       {/* Top Section: title and links */}

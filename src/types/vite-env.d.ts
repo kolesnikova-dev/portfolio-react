@@ -13,6 +13,7 @@ interface ImportMetaEnv {
     VITE_VIGENERE_THUMBNAILS_ID: string;
     VITE_WEATHER_THUMBNAILS_ID: string;
     VITE_CLOUDINARY_BASE_URL: string;
+    VITE_AVATAR_ID: string;
   }
   
 interface ImportMeta {
