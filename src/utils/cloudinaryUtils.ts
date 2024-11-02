@@ -8,6 +8,7 @@ const cloudinaryMediaIds = {
   smartShopThumbnails: import.meta.env.VITE_SMART_SHOP_THUMBNAILS_ID,
   vigenereThumbnails: import.meta.env.VITE_VIGENERE_THUMBNAILS_ID,
   weatherThumbnails: import.meta.env.VITE_WEATHER_THUMBNAILS_ID,
+  avatar: import.meta.env.VITE_AVATAR_ID,
 }
 
 const cloudinaryBaseUrl = import.meta.env.VITE_CLOUDINARY_BASE_URL;
@@ -15,7 +16,5 @@ const cloudinaryBaseUrl = import.meta.env.VITE_CLOUDINARY_BASE_URL;
 export const getUrl = (array: string[]) => {
   const [mediaId, mediaType] = array;
   const mediaFormat = mediaType === 'image' ? 'webp' : 'mp4';
-  const result = `${cloudinaryBaseUrl}${mediaType}/upload/${cloudinaryMediaIds[mediaId]}.${mediaFormat}`;
-  console.log(result);
-  return result;
+  return `${cloudinaryBaseUrl}${mediaType}/upload/${cloudinaryMediaIds[mediaId]}.${mediaFormat}`;
 }
