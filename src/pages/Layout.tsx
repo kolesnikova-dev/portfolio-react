@@ -33,28 +33,28 @@ const Particles = () => {
   );
 };
 
-const ShootingStar = () => {
-  const ref = useRef<THREE.Mesh>(null);
+// const ShootingStar = () => {
+//   const ref = useRef<THREE.Mesh>(null);
 
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime() * 0.5; // speed factor set to 1 is default speed
-    if (ref.current) {
-      ref.current.position.set(
-        Math.sin(t) * 20,  // x-axis: horizontal range
-        Math.atan(t) * Math.cos(t / 2) * 20, // y-axis: vertical range
-        Math.cos(t) * 200  // z-axis: depth movement
-      );
-    }
-  });
-  return (
-    <Trail width={5} length={2} color={new THREE.Color(2, 10, 10)} attenuation={(t) => t * t}>
-      <mesh ref={ref}>
-        <sphereGeometry args={[0.25]} />
-        <meshBasicMaterial color={[3, 10, 5]} toneMapped={false} />
-      </mesh>
-    </Trail>
-  );
-}
+//   useFrame((state) => {
+//     const t = state.clock.getElapsedTime() * 0.5; // speed factor set to 1 is default speed
+//     if (ref.current) {
+//       ref.current.position.set(
+//         Math.sin(t) * 20,  // x-axis: horizontal range
+//         Math.atan(t) * Math.cos(t / 2) * 20, // y-axis: vertical range
+//         Math.cos(t) * 200  // z-axis: depth movement
+//       );
+//     }
+//   });
+//   return (
+//     <Trail width={5} length={2} color={new THREE.Color(2, 10, 10)} attenuation={(t) => t * t}>
+//       <mesh ref={ref}>
+//         <sphereGeometry args={[0.25]} />
+//         <meshBasicMaterial color={[3, 10, 5]} toneMapped={false} />
+//       </mesh>
+//     </Trail>
+//   );
+// }
 
 
 export const Layout: React.FC = () => {
@@ -71,13 +71,13 @@ export const Layout: React.FC = () => {
               zIndex: -1,
             }}>
 
-        <ambientLight intensity={0.5} />
+        {/* <ambientLight intensity={0.5} />
 
         <ShootingStar />
 
         <EffectComposer>
           <Bloom mipmapBlur luminanceThreshold={0.2} intensity={0.4} />
-        </EffectComposer>
+        </EffectComposer> */}
     
           <Particles />
       </Canvas>
