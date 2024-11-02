@@ -7,7 +7,7 @@ import {
   TableContainer,
 } from '@mui/material';
 
-import { ProjectIconBox } from '.';
+import { ProjectHeader } from './index';
 import type { Project } from '../types/projectTypes';
 
 import { getUrl } from '../utils/cloudinaryUtils';
@@ -22,31 +22,18 @@ type Props = {
 
 
 export const DisplayFull: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
-  const { title, githubLink, liveLink, video, details, subheader } = project;
+  const { video, details } = project;
   if(!video) {
     throw new Error('Could not load video');
   }
 
-  const projectLinks = { liveLink, githubLink };
+
   const cloudinaryUrl = getUrl(video);
 
   return (
     <section className='padding-2rem'>
       {/* Top Section: title and links */}
-        <div className='bg-whitesmoke border-radius-4px'>
-          <CardHeader
-            action={
-              <ProjectIconBox
-                projectLinks={projectLinks}
-                fullDisplay={fullDisplay}
-                toggleDisplay={toggleDisplay}
-                index={index}
-              />
-            }
-            title={title}
-            subheader={subheader}
-          />
-        </div>
+      <ProjectHeader project={project} fullDisplay={fullDisplay} toggleDisplay={toggleDisplay} index={index} />
 
       {/* Middle Section: video and thumbnails */}
           <div className='display-flex flex-center center-column margin-top-2rem'>

@@ -8,3 +8,4 @@ export * from './IconWithTooltip/ProjectIconBox';
 export * from './ImageContainer';
 export * from './Loading/Loading';
 export * from './SideBySideSection';
+export * from './ProjectHeader';
