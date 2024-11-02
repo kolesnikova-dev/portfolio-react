@@ -7,8 +7,8 @@ import { projectsData } from '../data/projectsData';
 import { Project } from '../types';
 
 
-const FullMemoizedStyledProject = React.memo(DisplayFull);
-const PreviewMemoizedStyledProject = React.memo(DisplayPreview);
+const FullMemoizedProject = React.memo(DisplayFull);
+const PreviewMemoizedProject = React.memo(DisplayPreview);
 
 
 const Projects: React.FC = () => {
@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
     setExpandedProject(newIndex);
   };
 
-  const styledProjectProps = (project: Project, index: number) => ({
+  const projectProps = (project: Project, index: number) => ({
     project,
     fullDisplay,
     index,
@@ -36,9 +36,9 @@ const Projects: React.FC = () => {
         className="display-flex flex-center"
       >
         {Object.values(projectsData).map((project: Project, index: number) => (
-          <PreviewMemoizedStyledProject
+          <PreviewMemoizedProject
             key={index}
-            {...styledProjectProps(project, index)}
+            {...projectProps(project, index)}
           />
         ))}
       </Grid>
@@ -47,8 +47,8 @@ const Projects: React.FC = () => {
 
   const displayExpandedProject = () => {
     return (
-      <FullMemoizedStyledProject
-        {...styledProjectProps(projectsData[expandedProject], -1)}
+      <FullMemoizedProject
+        {...projectProps(projectsData[expandedProject], -1)}
       />
     );
   };
