@@ -11,7 +11,7 @@ const contacts = contactsData.map((contact, index) => {
 
   return  (
     <div key={index} className='display-flex flex-center'>
-      <IconWithTooltip icon={contact.icon} link={contact.link} />
+      <IconWithTooltip icon={contact.icon} link={contact.link}  placement='bottom'/>
     </div>
 )
 });

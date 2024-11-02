@@ -63,9 +63,10 @@ export const ProjectIconBox = ({
       <IconWithTooltip
         icon={unfoldIconOptions[fullDisplay.toString()]}
         onClick={handleToggleDisplay}
+        placement='right'
       />
-      <IconWithTooltip {...githubIconOptions(githubLink)} />
-      <IconWithTooltip {...externalLinkOptions(liveLink)} />
+      <IconWithTooltip {...githubIconOptions(githubLink)} placement='right'/>
+      <IconWithTooltip {...externalLinkOptions(liveLink)} placement='right'/>
     </div>
   );
 };

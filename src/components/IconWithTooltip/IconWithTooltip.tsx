@@ -16,10 +16,11 @@ type Props = {
     ariaLabel: string,
     url: string,
   },
+  placement: 'bottom' | 'right',
 }
 
 
-export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
+export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link, placement }) => {
   const { ariaLabel, icon: svg } = icon;
 
   const MIconButton = onClick && (
@@ -37,7 +38,7 @@ export const IconWithTooltip: React.FC<Props> = ({ icon, onClick, link }) => {
   const displayIcon = onClick ? MIconButton : link ? LinkElement : null;
 
   if (displayIcon) return (
-    <Tooltip title={ariaLabel} placement="bottom" arrow>
+    <Tooltip title={ariaLabel} placement={placement} arrow>
       {displayIcon}
     </Tooltip>
   );
