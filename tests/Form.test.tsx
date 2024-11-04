@@ -1,11 +1,15 @@
 import React from 'react';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { Form } from '../src/components/Form';
-import emailjs from '@emailjs/browser';
 import { MemoryRouter } from 'react-router-dom';
+
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import emailjs from '@emailjs/browser';
+
+import { Form } from '../src/components/Form/Form';
 import { isTimePeriodValid } from '../src/utils/isTimePeriodValid';
+
 
 // Mock emailjs
 vi.mock('@emailjs/browser', () => ({
