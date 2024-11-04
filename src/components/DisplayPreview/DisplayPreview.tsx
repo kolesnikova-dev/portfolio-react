@@ -1,9 +1,8 @@
-import CardHeader from '@mui/material/CardHeader';
-
-import { ProjectIconBox } from '../IconWithTooltip/ProjectIconBox';
 import { Project } from '../../types';
 import { getUrl } from '../../utils/cloudinaryUtils';
+import { ProjectHeader } from '../index';
 import { PreviewBox } from './MUIStyles';
+
 
 
 type Props = {
@@ -14,28 +13,14 @@ type Props = {
 }
 
 export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
-  const { title, subheader, githubLink, liveLink, thumbnails } = project;
-  const projectLinks = { githubLink, liveLink };
-  const cloudinaryUrl = getUrl(thumbnails);
-  
+
+  const cloudinaryUrl = getUrl(project.thumbnails);
+
   return (
-      <>
        <PreviewBox thumbnails={cloudinaryUrl}>
-          <CardHeader
-           className='bg-whitesmoke border-radius-4px'
-            action={
-              <ProjectIconBox
-                projectLinks={projectLinks}
-                fullDisplay={fullDisplay}
-                toggleDisplay={toggleDisplay}
-                index={index}
-              />
-            }
-            title={title}
-            subheader={subheader}
-          />
+         <ProjectHeader project={project} fullDisplay={fullDisplay} toggleDisplay={toggleDisplay} index={index} />
       </PreviewBox>
-      </>
+
   );
 
 }

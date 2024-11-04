@@ -1,3 +1,3 @@
 export * from './Layout';
-export * from './MainPage';
+export * from './MainPage/MainPage';
 export * from '../sections/SendEmail';

@@ -4,9 +4,11 @@ import emailjs from '@emailjs/browser';
 
 import { TextField, Typography } from '@mui/material';
 
-import { isTimePeriodValid } from '../utils/isTimePeriodValid';
-import { textInputFields } from '../data/formData';
+import { isTimePeriodValid } from '../../utils/isTimePeriodValid';
+import { textInputFields } from '../../data/formData';
 
+
+import './formStyles.css';
 
 //import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;

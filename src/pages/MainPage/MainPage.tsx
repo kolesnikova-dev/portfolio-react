@@ -2,9 +2,11 @@ import React from 'react';
 
 import Grid2 from '@mui/material/Grid2';
 
-import { About, Skills, Projects, Contacts, SendEmail } from '../sections';
-import { SideBySideSection } from '../components';
-import type { Sections } from '../types/sectionTypes';
+import { About, Skills, Projects, Contacts, SendEmail } from '../../sections';
+import { SideBySideSection } from '../../components';
+import type { Sections } from '../../types/sectionTypes';
+
+import './mainPageStyles.css';
 
 
 const sections: Sections = {
@@ -29,15 +31,15 @@ export const MainPage: React.FC = () => {
 
   return (
     <div className="full-width flex-grow-1">
-        {/* about and skills section */}
+        {/* About and Skills section */}
         <Grid2 className="styled-grid">
           <SideBySideSection section={sections.top} />
         </Grid2>
-        {/* projects section */}
+        {/* Projects section */}
         <Grid2 className="styled-grid">
           <ProjectsSection />
         </Grid2>
-        {/* contacts section */}
+        {/* Contacts section */}
         <Grid2 className="styled-grid">
           <SideBySideSection section={sections.bottom} />
         </Grid2>
