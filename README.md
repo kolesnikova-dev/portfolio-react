@@ -1,72 +1,131 @@
-<h2>Portfolio Website</h2>
-<p>This repository contains a single-page application built with React and Vite, leveraging React Router for navigation.</p>
-<p>All data is abstracted into a separate file, which helps maintain the application's codebase and facilitates future updates.</p>
-<p>FetchData.js contains logic for fetching user data of this account('kweeuhree'), extracting top three languages of all repositories and calculating percentage of the language used compared to others.</p>
+# Portfolio Website Documentation
 
-<figure align='center'>
-    <img src="./src/assets/screenshots/stats.png" alt="Top used languages of kweeuhree user" />
-    <p align='center'><figcaption>Stats component</figcaption></p>
-</figure>
-<p>The <code>useState</code> Hook is utilized throughout the application to enhance functionality. For instance, in the Projects component, it enables the carousel feature, while in the Certifications section, it enables overlay functionality. Additionally, in the Contacts component, <code>useState</code> keeps track of whether an email has been copied to the clipboard, dynamically changing the 'click to copy' button to 'copied' and back.</p>
-<p>In the Contacts component, external links are generated from a centralized array. The titles 'Actively updated account' and 'Original account' are rendered 
-conditionally based on the URL being accessed.</p>
+## Introduction
 
-<p>Created a custom useIntersectionObserver hook that will help apply dynamic styling. Initial logic was written for Climate View project, that I reworked into the custom hook.</p>
+Welcome to the documentation for my portfolio website. This application showcases my projects and skills as a software engineer. Built using modern technologies, this portfolio demonstrates my proficiency in **React**, **Vite**, and **TypeScript**. The purpose of this documentation is to provide an overview of the project structure, features, and guidelines for running and contributing to the application.
 
-<p>Added EmailJS functionality. Originally I wanted to build a backend server to be able to receive an email, but later I have learnt that sending an email straight from the JavaScript code allows for the feature to work without page reload, so I opted for EmailJS instead of a scratch backend.</p>
-<p align='center'>
-    <img src="./src/assets/screenshots/contact-form.png" alt="Contact form" />
-</p>
+## Getting Started
 
-<p>The following components are designed with reusability in mind:</p>
-<ul>
-<li>Button: Used in the Project and Card components</li>
-<li>Card: Utilized in the Certification and Skills components</li>
-<li>NavBar: Also implemented in the Footer component</li>
-<li>useIntersectionObserver: Used thoroughout the app to enable dynamic styling</li>
-</ul>
-<hr>
-<h3>Latest updates:</h3>
-<p>CertificationsPage returns two Certifications components with different objects passed as props in order to display different data. Each Certifications component returns Card components. Overlay logic lives inside Certifications.</p>
-<code>
+### Prerequisites
 
-  return (<br>
-&nbsp;<section className='certificatons-page' &nbsp;><br>
-&nbsp;&nbsp;<Certifications data={certificationsData} header="Certifications Shortlist" / ><br>
-&nbsp;&nbsp;<Certifications data={allCertifications} header="All Certifications" / >
-&nbsp;</section ><br>
-  )}
+To run this portfolio website locally, you will need:
 
-</code>
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-<code>
+### Installation
 
-        {/* loop through all credentials and return a card per credential */}
-        {Object.values(data).map((item, index) => (
-          <Card 
-            thisClass={'cert'} 
-            data={item} 
-            key={index}
-            // if clicked show relevant credential 
-            action={()=>showOverlay(item)}
-          />
-        ))}
+To install the application, follow these steps:
 
-</code>
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/kweeuree/portfolio-react.git
+   ```
 
-<p>In Card component, Per Scholas logo conditionally renders if passed data contains 'Software Engineering Training'.</p>
-<code>
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd portfolio-react
+   ```
 
-      {
-      data.name.includes('Software Engineering Training') && 
-      <div className='per-scholas-logo'>
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Per-Scholas-Secondary-Logo-Dark.png" 
-          alt="Per Scholas logo"
-        /></div>
-      }
+3.  **Install Dependencies:**
+    ```bash
+       npm install
+    ```
 
-</code>
-<p align='center'>
-    <img src="./src/assets/screenshots/certifications-gif.gif" alt="Certifications Page screencapture" />
-</p>
+## Running the Application
+
+To start the development server, execute the following command:
+   ```bash
+   npm run dev
+   ```
+Once the server is running, open your browser and navigate to http://localhost:3000 to view the application.
+
+## Project Structure
+
+The project follows a structured approach to ensure maintainability and scalability. Below is an overview of the key directories and files:
+
+```plaintext
+src/
+├── components/      # Reusable React components used throughout the app
+├── data/            # Static data files used across the application
+├── pages/           # Page components, such as MainPage, wrapped in MUI Grid
+├── sections/        # Components that represent sections of the page
+├── types/           # TypeScript type declarations 
+├── utils/           # Utility functions, such as helpers for Cloudinary uploads, emailjs integrations, or other reusable logic
+
+tests/                # Directory containing Vitest unit tests, located outside of src to keep test code separate from production code
+
+```
+
+## Features
+
+### Current Features
+
+- **Type Safety with TypeScript**: Ensures code reliability and prevents runtime errors by implementing strict type checking throughout the application.
+
+- **Responsive Design with MUI and Custom Styling**: Utilizes Material-UI (MUI) Grid components and custom styling through the Layout component to create a consistent, responsive user interface across all devices.
+
+- **Three.js Animations with React-Three-Fiber**: Integrates dynamic particle effects through Three.js, rendered on a canvas within the `Layout` component for an engaging visual experience. Future enhancements will include additional Three.js animations optimized for performance.
+
+- **Optimized Media with Cloudinary**: Images and videos are hosted on Cloudinary to reduce load times and ensure efficient media delivery, providing an improved user experience.
+
+- **Single-Page Navigation with React Router**: Implements React Router to manage seamless navigation, with a blog tab planned for future enhancement to expand website content.
+
+- **Unit Testing with Vitest**: Utilizes Vitest for testing components, ensuring code quality and reliability through a suite of unit tests.
+
+- **Progressive Web App (PWA) Setup**: Configured with `vite-plugin-pwa` for offline support and installable capabilities, offering users a better mobile experience.
+
+
+### Future Enhancements
+
+- **Blog Tab**: A planned feature that will allow users to navigate to a dedicated blog section.
+
+- **Advanced Three.js Animations**: uture optimization techniques will be researched and implemented to enhance Three.js animations further.
+
+## Styling and Layout
+
+The application employs the Layout component to maintain a consistent styling framework across all pages. This component integrates Three.js for particle animations, enriching the visual experience. Each section of the MainPage is organized using MUI Grid to facilitate responsive layouts.
+
+## Testing
+
+The application uses Vitest for testing. To run the test suite, run:
+   ```bash
+       npm run test
+   ```
+
+## Deployment
+
+The portfolio website is deployed using a reliable and efficient setup to ensure optimal performance:
+
+- **Netlify for Hosting**: The application is hosted on Netlify, which provides fast and secure hosting, automatic deployments, and continuous integration. Netlify is integrated with GitHub to automatically deploy any updates pushed to the repository, streamlining the deployment process and ensuring that changes are quickly reflected online.
+
+- **Media Hosting on Cloudinary**: Images and videos are hosted on Cloudinary, a media management platform optimized for fast delivery. This helps reduce the app's load time and enhances user experience by offloading media assets from the main hosting platform.
+
+This deployment strategy combines Netlify's simplicity with Cloudinary’s efficient media delivery, creating a performant and user-friendly application.
+
+## Performance Optimization
+
+To ensure the app is as lightweight and responsive as possible, several optimizations have been implemented:
+
+- **SVG Icons for Optimization**: Originally, the app used icons from the React Icons and MUI Icons libraries, which increased the bundle size. To improve performance, I replaced these with custom SVG elements, which are significantly lighter and contribute to faster load times.
+
+- **Native HTML Elements**: Where possible, I opted for native HTML elements instead of Material UI components. This decision helped reduce dependency on MUI to only essential cases, minimizing bundle size and enhancing overall loading performance.
+
+This combination of optimized hosting, media delivery, and careful component selection ensures a smooth user experience and responsive application performance.
+
+## Future Enhancements
+
+Future updates will include additional features such as a blog section and optimizations for Three.js animations. These enhancements aim to provide users with a richer experience while showcasing my ongoing learning and development.
+
+## Dependencies
+
+ - **@emailjs/browser**: For email sending functionalities.
+- **@emotion/react and @emotion/styled**: For styling components.
+- **@mui/material**: For Material UI components.
+- **@react-three/drei, @react-three/fiber, and @react-three/postprocessing**: For Three.js integration.
+- **react-router-dom**: For client-side routing.
+- **vite-plugin-pwa**: For Progressive Web App features.
+
+
+## Conclusion
+Thank you for reviewing the documentation for my portfolio website. This documentation will be updated regularly as new features are added and improvements are made. If you have any questions or need further assistance, feel free to reach out.
