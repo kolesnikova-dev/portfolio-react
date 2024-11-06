@@ -58,6 +58,7 @@ export const projectsData: Projects = {
     title: 'Weather App',
     subheader: 'React.js - Weather API',
     githubLink: 'https://github.com/firstnamenika/weather-app',
+    liveLink: 'https://local-weather-watch.netlify.app/',
     video: ['weatherRecording', 'video'],
     thumbnails: ['weatherThumbnails', 'image'],
     details: {
