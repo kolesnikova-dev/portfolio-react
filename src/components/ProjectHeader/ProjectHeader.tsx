@@ -36,7 +36,7 @@ const unfoldIconOptions = {
     },
     link: {
       ariaLabel: 'Navigate to live website',
-      url: liveLink ?? undefined,
+      url: liveLink,
     }
   });
   

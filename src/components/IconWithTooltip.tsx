@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Tooltip from '@mui/material/Tooltip';
 
@@ -20,11 +20,16 @@ type Props = {
 
 const DisplayLink: React.FC<Props> = ({ icon, link, placement, fullDisplay }) => {
   if (!link) return;
-
+  const navigate = useNavigate();
   const { ariaLabel, icon: svg } = icon;
 
   const handleClick = (event: React.MouseEvent) => {
     event?.stopPropagation();
+  }
+
+  const handleRedirect = (event) => {
+    event?.stopPropagation();
+    window.open(link.url, "_blank");
   }
 
   const linkElement = (
@@ -35,9 +40,9 @@ const DisplayLink: React.FC<Props> = ({ icon, link, placement, fullDisplay }) =>
 
   if (fullDisplay) {
     return (
-      <button aria-label={ariaLabel} className='display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border'>
+      <button aria-label={ariaLabel} onClick={(event) => handleRedirect(event)} className='display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border'>
         <>{ariaLabel}</>
-        {linkElement}
+          {svg}
       </button>
     ); 
   } else {

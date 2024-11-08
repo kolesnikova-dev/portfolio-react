@@ -33,6 +33,8 @@ const Particles = () => {
   );
 };
 
+// const color = new THREE.Color(2, 10, 10);
+
 // const ShootingStar = () => {
 //   const ref = useRef<THREE.Mesh>(null);
 
@@ -47,7 +49,7 @@ const Particles = () => {
 //     }
 //   });
 //   return (
-//     <Trail width={5} length={2} color={new THREE.Color(2, 10, 10)} attenuation={(t) => t * t}>
+//     <Trail width={5} length={2} color={color} attenuation={(t) => t * t}>
 //       <mesh ref={ref}>
 //         <sphereGeometry args={[0.25]} />
 //         <meshBasicMaterial color={[3, 10, 5]} toneMapped={false} />
