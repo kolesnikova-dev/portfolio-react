@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 import Tooltip from '@mui/material/Tooltip';
 
+
 type Props = {
   icon: {
     ariaLabel: string,
@@ -25,31 +26,16 @@ const DisplayLink: React.FC<Props> = ({ icon, link, placement, fullDisplay }) =>
     event?.stopPropagation();
   }
 
-  const handleRedirect = (event: React.MouseEvent) => {
-    event?.stopPropagation();
-    window.open(link.url, "_blank");
-  }
-
-  const linkElement = (
-    <Link to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
-            {svg}
-    </Link>
-  );
-
-  if (fullDisplay) {
-    return (
-      <button aria-label={ariaLabel} onClick={(event) => handleRedirect(event)} className='display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border'>
-        <>{ariaLabel}</>
-          {svg}
+  return (
+    <Tooltip className='display-flex right-justify' title={ariaLabel} placement={placement} onClick={handleClick} arrow>
+        <button aria-label={ariaLabel} className='display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border'>
+          <Link  className='display-flex flex-space flex-gap-1rem' to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
+              { fullDisplay && <div>{ariaLabel}</div>}
+              <div>{svg}</div>
+          </Link>
       </button>
-    ); 
-  } else {
-    return (
-      <Tooltip className='display-flex right-justify' title={ariaLabel} placement={placement} onClick={handleClick} arrow>
-        {linkElement}
-      </Tooltip>
-  );
-  } 
+    </Tooltip>
+  ); 
 }
 
 
@@ -65,6 +51,5 @@ export const IconWithTooltip: React.FC<Props> = (props) => {
         <span className='pointer'>&nbsp;{svg}</span>
       </Tooltip>
     )
-
   };
-} ;
+};
