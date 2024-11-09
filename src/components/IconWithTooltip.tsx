@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Tooltip from '@mui/material/Tooltip';
 
@@ -20,14 +18,14 @@ type Props = {
 
 const DisplayLink: React.FC<Props> = ({ icon, link, placement, fullDisplay }) => {
   if (!link) return;
-  const navigate = useNavigate();
+
   const { ariaLabel, icon: svg } = icon;
 
   const handleClick = (event: React.MouseEvent) => {
     event?.stopPropagation();
   }
 
-  const handleRedirect = (event) => {
+  const handleRedirect = (event: React.MouseEvent) => {
     event?.stopPropagation();
     window.open(link.url, "_blank");
   }
