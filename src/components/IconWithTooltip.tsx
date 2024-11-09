@@ -28,7 +28,7 @@ const DisplayLink: React.FC<Props> = ({ icon, link, placement, fullDisplay }) =>
 
   return (
     <Tooltip className='display-flex right-justify' title={ariaLabel} placement={placement} onClick={handleClick} arrow>
-        <button aria-label={ariaLabel} className='display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border'>
+        <button aria-label={ariaLabel} className='display-flex flex-center flex-gap-1vw blue-border'>
           <Link  className='display-flex flex-space flex-gap-1rem' to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
               { fullDisplay && <div>{ariaLabel}</div>}
               <div>{svg}</div>
