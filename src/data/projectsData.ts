@@ -33,8 +33,8 @@ export const projectsData: Projects = {
     subheader: 'React.js - Go - MySQL',
     githubLink: 'https://github.com/kweeuhree/personal-budgeting-frontend',
     liveLink: 'https://personal-budgeting.onrender.com/',
-    video: ['personalBudgeting', 'video'],
-    thumbnails: ['personalBudgeting', 'image'],
+    video: ['budgetingRecording', 'video'],
+    thumbnails: ['budgetingThumbnails', 'image'],
     details: {
       Problem: `Managing personal finances efficiently requires a fast, secure, and intuitive solution for tracking expenses.`,
       Solution: `Personal Budgeting App is a full-stack application offering an easy way to create a budget and add expenses to it.
