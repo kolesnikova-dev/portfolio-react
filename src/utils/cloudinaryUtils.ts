@@ -15,6 +15,6 @@ const cloudinaryBaseUrl = import.meta.env.VITE_CLOUDINARY_BASE_URL;
 
 export const getUrl = (array: string[]) => {
   const [mediaId, mediaType] = array;
-  const mediaFormat = mediaType === 'image' ? 'webp' : 'mp4';
+  const mediaFormat = mediaType === "image" ? "webp" : "mp4";
   return `${cloudinaryBaseUrl}${mediaType}/upload/${cloudinaryMediaIds[mediaId]}.${mediaFormat}`;
 };

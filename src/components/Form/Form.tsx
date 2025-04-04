@@ -1,28 +1,26 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from "react";
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
-import { TextField, Typography } from '@mui/material';
+import { TextField, Typography } from "@mui/material";
 
-import { isTimePeriodValid } from '../../utils/isTimePeriodValid';
-import { textInputFields } from '../../data/formData';
+import { isTimePeriodValid } from "../../utils/index";
+import { textInputFields } from "../../data/formData";
 
-
-import './formStyles.css';
+import "./formStyles.css";
 
 //import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
 const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
 
-
 export const Form: React.FC = () => {
-  const form = useRef<any>('');
+  const form = useRef<HTMLFormElement | null>(null);
 
   //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
 
-  const [status, setStatus] = useState<string | Error>('');
+  const [status, setStatus] = useState<string | Error>("");
 
   // initialize emailjs with the public key
   useEffect(() => {
@@ -32,7 +30,7 @@ export const Form: React.FC = () => {
   const setStatusBox = (newStatus: string | Error) => {
     setStatus(newStatus);
     setTimeout(() => {
-      setStatus('');
+      setStatus("");
     }, 3000);
   };
 
@@ -40,17 +38,17 @@ export const Form: React.FC = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setStatus('Sending...');
+    setStatus("Sending...");
 
     try {
       const currentTime = new Date();
 
       //check whether last email was sent less than a minute ago
-      if (isTimePeriodValid(currentTime, lastEmailSent)) {
+      if (isTimePeriodValid(currentTime, lastEmailSent) && form.current) {
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {
-            setStatusBox('Sent!');
+            setStatusBox("Sent!");
             //set time last email was sent
             setLastEmailSent(currentTime);
           });
@@ -75,7 +73,7 @@ export const Form: React.FC = () => {
           <Typography>{label}</Typography>
           <TextField
             data-testid={props.name}
-            sx={{ background: 'whitesmoke' }}
+            sx={{ background: "whitesmoke" }}
             variant="filled"
             required
             {...props}
@@ -87,7 +85,9 @@ export const Form: React.FC = () => {
       {/* display SEND button or status message */}
       <div className="alert-box drop-shadow">
         {status ? (
-          <Typography><>{status}</></Typography>
+          <Typography>
+            <>{status}</>
+          </Typography>
         ) : (
           <button aria-label="Send the form" type="submit">
             Send

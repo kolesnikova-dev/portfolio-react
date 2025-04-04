@@ -1,20 +1,18 @@
-import 'intersection-observer';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { App } from "./App.tsx";
 
-import { App } from './App.tsx';
+import "./index.css";
 
-import './index.css';
-
-const rootElement: HTMLElement | null = document.getElementById('root');
+const rootElement: HTMLElement | null = document.getElementById("root");
 
 try {
   if (rootElement) {
     const root = createRoot(rootElement);
     root.render(
       <StrictMode>
-          <App />
+        <App />
       </StrictMode>,
     );
   }
