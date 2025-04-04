@@ -1,7 +1,7 @@
-import { Avatar, Typography } from '@mui/material';
+import { Avatar, Typography } from "@mui/material";
 
-import { ImageWrapper, StyledBadge } from './AboutMUIStyles';
-import { getUrl } from '../../utils/cloudinaryUtils';
+import { ImageWrapper, StyledBadge } from "./AboutMUIStyles";
+import { getUrl } from "../../utils/index";
 
 const introductionData = {
   greeting: "Hi, I'm Nika!",
@@ -10,7 +10,7 @@ const introductionData = {
   Welcome!`,
 };
 
-const picture = getUrl(['avatar', 'image']);
+const picture = getUrl(["avatar", "image"]);
 
 const About: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const About: React.FC = () => {
         <ImageWrapper>
           <StyledBadge
             overlap="circular"
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             variant="dot"
           >
             <Avatar

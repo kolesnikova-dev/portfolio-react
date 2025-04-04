@@ -1,26 +1,31 @@
-import { Project } from '../../types';
-import { getUrl } from '../../utils/cloudinaryUtils';
-import { ProjectHeader } from '../index';
-import { PreviewBox } from './MUIStyles';
-
-
+import { Project } from "../../types";
+import { getUrl } from "../../utils/index";
+import { ProjectHeader } from "../index";
+import { PreviewBox } from "./MUIStyles";
 
 type Props = {
-  project: Project,
-  fullDisplay: boolean,
+  project: Project;
+  fullDisplay: boolean;
   toggleDisplay: (newIndex: number) => void;
-  index: number,
-}
+  index: number;
+};
 
-export const DisplayPreview: React.FC<Props> = ({ project, fullDisplay, toggleDisplay, index }) => {
-
+export const DisplayPreview: React.FC<Props> = ({
+  project,
+  fullDisplay,
+  toggleDisplay,
+  index,
+}) => {
   const cloudinaryUrl = getUrl(project.thumbnails);
 
   return (
-       <PreviewBox thumbnails={cloudinaryUrl}>
-         <ProjectHeader project={project} fullDisplay={fullDisplay} toggleDisplay={toggleDisplay} index={index} />
-      </PreviewBox>
-
+    <PreviewBox thumbnails={cloudinaryUrl}>
+      <ProjectHeader
+        project={project}
+        fullDisplay={fullDisplay}
+        toggleDisplay={toggleDisplay}
+        index={index}
+      />
+    </PreviewBox>
   );
-
-}
+};
