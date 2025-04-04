@@ -15,7 +15,7 @@ const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
 
 export const Form: React.FC = () => {
-  const form = useRef<any>("");
+  const form = useRef<HTMLFormElement | null>(null);
 
   //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
@@ -44,7 +44,7 @@ export const Form: React.FC = () => {
       const currentTime = new Date();
 
       //check whether last email was sent less than a minute ago
-      if (isTimePeriodValid(currentTime, lastEmailSent)) {
+      if (isTimePeriodValid(currentTime, lastEmailSent) && form.current) {
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {

@@ -6,14 +6,14 @@ type Props = {
   section: SideBySide;
 };
 
-const fullBorderGridStyle = (section) => ({
+const fullBorderGridStyle = {
   width: {
     xs: "100%",
     sm: "100%",
     md: "40%",
   },
   p: 2,
-});
+};
 
 export const SideBySideSection: React.FC<Props> = ({ section }) => {
   return (

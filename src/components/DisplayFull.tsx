@@ -1,7 +1,6 @@
 import {
   Typography,
   CardMedia,
-  CardHeader,
   TableRow,
   TableCell,
   TableContainer,
