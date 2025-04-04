@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Group } from "three";
+import type { Group } from "three";
 import { Stars } from "@react-three/drei/core/Stars";
 import { Canvas, useFrame } from "@react-three/fiber";
 
