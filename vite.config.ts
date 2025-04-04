@@ -33,12 +33,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
-          if (id.includes("node_modules")) {
-            if (id.includes("three")) return "three";
-            if (id.includes("react")) return "react";
-            return "vendor";
-          }
+        manualChunks: {
+          react: ["react", "react-dom"],
+          three: ["three"],
+          drei: ["@react-three/drei"],
         },
       },
     },
