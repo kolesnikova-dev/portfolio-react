@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Outlet } from "react-router-dom";
 
-import * as THREE from "three";
+import { Group } from "three";
 import { Stars } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 // import { EffectComposer, Bloom } from '@react-three/postprocessing';
@@ -9,7 +9,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Footer } from "../components/index";
 
 const Particles = () => {
-  const groupRef = useRef<THREE.Group>(null!);
+  const groupRef = useRef<Group>(null!);
 
   // Animate the stars subtly by rotating them on the Y-axis
   useFrame(() => {
