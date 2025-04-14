@@ -2,6 +2,23 @@ import type { Projects } from '../types';
 
 export const projectsData: Projects = {
   0: {
+    title: 'Distributed Rate Limiter',
+    subheader: 'Go',
+    githubLink: 'https://github.com/kweeuhree/distributed-rate-limiter',
+    video: ['limiterRecording', 'video'],
+    thumbnails: ['limiterThumbnails', 'image'],
+    details: {
+      Problem: `Rate limiting in distributed systems.`,
+      Solution: `A distributed rate limiter implemented in Go using the Token Bucket algorithm 
+      and Redis for storing tokens. This program runs in a Docker container, 
+      and is designed to handle bursts of requests efficiently while ensuring atomicity and scalability.`,
+      'Core Features': `Handles bursts of requests by allowing a fixed number of tokens to be consumed within a time window.
+      Uses Redis as a centralized store for tokens, making it suitable for distributed systems. 
+      Ensures concurrent-safe operations using Lua scripting for Redis.`,
+      Impact: `Performant rate limiting with modular design using Token Bucket algorithm.`,
+    },
+  },
+  1: {
     title: 'Smart Shopping List',
     subheader: 'React.js - Material UI - Firebase',
     githubLink: 'https://github.com/the-collab-lab/tcl-75-smart-shopping-list',
@@ -28,7 +45,7 @@ export const projectsData: Projects = {
       a real-world problem through smart data analysis.`,
     },
   },
-  1: {
+  2: {
     title: 'Personal Budgeting App',
     subheader: 'React.js - Go - MySQL',
     githubLink: 'https://github.com/kweeuhree/personal-budgeting-frontend',
@@ -49,7 +66,7 @@ export const projectsData: Projects = {
       Impact: `This app offers a comprehensive, secure, and user-friendly way to track personal expenses, while keeping the data secure.`,
     },
   },
-  2: {
+  3: {
     title: 'Weather App',
     subheader: 'React.js - Weather API',
     githubLink: 'https://github.com/kweeuhree/weather-app',
@@ -73,28 +90,6 @@ export const projectsData: Projects = {
       Impact: `The app improves the user experience by offering a personalized and 
       visually appealing way to access detailed weather data, making it easy to plan 
       daily activities around weather conditions.`,
-    },
-  },
-  3: {
-    title: 'Vigenere Cipher',
-    subheader: 'Python',
-    githubLink: 'https://github.com/kweeuhree/vigenere',
-    video: ['vigenereRecording', 'video'],
-    thumbnails: ['vigenereThumbnails', 'image'],
-    details: {
-      Problem: `Basic encryption methods are often too easy to break, 
-      limiting their use for secure communication.`,
-      Solution: `A Python-based Vigenère cipher tool that allows users to encode and
-       decode messages using a keyword for enhanced security.`,
-      'Technical Implementation': `This command-line tool provides a user-friendly
-      interface for encoding and decoding messages. The user supplies a keyword, 
-      which alters the cipher’s encoding pattern, providing a level of security 
-      above basic ciphers.`,
-      'Core Features': `The interactive command-line interface allows users to enter 
-      new messages for encoding or decoding continuously, until they choose to exit. 
-      The program requires minimal setup and runs efficiently in any Python environment.`,
-      Impact: `This project offers a practical way to explore encryption, 
-      with a clear Python implementation of the Vigenère cipher.`,
     },
   },
 };
