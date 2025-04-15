@@ -17,7 +17,7 @@ export const DisplayPreview: React.FC<Props> = ({
   index,
 }) => {
   const cloudinaryUrl = project.thumbnails && getUrl(project.thumbnails);
-  if(!cloudinaryUrl) {
+  if (!cloudinaryUrl) {
     console.error(`${project.title} is missing its cloudinaryUrl`);
   }
   return (
