@@ -1,13 +1,20 @@
 //import cloudinary ids
 const cloudinaryMediaIds = {
+  // Prompto
+  // Stock Market Aggregator
+  // Smart Shopping List
   smartShopRecording: import.meta.env.VITE_SMART_SHOP_ID,
-  limiterRecording: import.meta.env.VITE_LIMITER_ID,
+  smartShopThumbnails: import.meta.env.VITE_SMART_SHOP_THUMBNAILS_ID,
+  // Weather app
   weatherRecording: import.meta.env.VITE_WEATHER_ID,
+  weatherThumbnails: import.meta.env.VITE_WEATHER_THUMBNAILS_ID,
+  // Personal budgeting app
   budgetingRecording: import.meta.env.VITE_BUDGETING_ID,
   budgetingThumbnails: import.meta.env.VITE_BUDGETING_THUMBNAILS_ID,
-  smartShopThumbnails: import.meta.env.VITE_SMART_SHOP_THUMBNAILS_ID,
+  // Distributed rate limiter
+  limiterRecording: import.meta.env.VITE_LIMITER_ID,
   limiterThumbnails: import.meta.env.VITE_LIMITER_THUMBNAILS_ID,
-  weatherThumbnails: import.meta.env.VITE_WEATHER_THUMBNAILS_ID,
+  // Avatar
   avatar: import.meta.env.VITE_AVATAR_ID,
 };
 
