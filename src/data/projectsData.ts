@@ -1,24 +1,24 @@
-import type { Projects } from '../types';
+import type { Project } from '../types';
 
-export const projectsData: Projects = {
-  0: {
+export const projectsData: Project[] = [
+  {
     title: 'Distributed Rate Limiter',
     subheader: 'Go',
     githubLink: 'https://github.com/kweeuhree/distributed-rate-limiter',
     video: ['limiterRecording', 'video'],
     thumbnails: ['limiterThumbnails', 'image'],
     details: {
-      Problem: `Rate limiting in distributed systems.`,
+      Problem: "Rate limiting in distributed systems.",
       Solution: `A distributed rate limiter implemented in Go using the Token Bucket algorithm 
       and Redis for storing tokens. This program runs in a Docker container, 
       and is designed to handle bursts of requests efficiently while ensuring atomicity and scalability.`,
       'Core Features': `Handles bursts of requests by allowing a fixed number of tokens to be consumed within a time window.
       Uses Redis as a centralized store for tokens, making it suitable for distributed systems. 
       Ensures concurrent-safe operations using Lua scripting for Redis.`,
-      Impact: `Performant rate limiting with modular design using Token Bucket algorithm.`,
+      Impact: "Performant rate limiting with modular design using Token Bucket algorithm.",
     },
   },
-  1: {
+  {
     title: 'Smart Shopping List',
     subheader: 'React.js - Material UI - Firebase',
     githubLink: 'https://github.com/the-collab-lab/tcl-75-smart-shopping-list',
@@ -45,7 +45,7 @@ export const projectsData: Projects = {
       a real-world problem through smart data analysis.`,
     },
   },
-  2: {
+  {
     title: 'Personal Budgeting App',
     subheader: 'React.js - Go - MySQL',
     githubLink: 'https://github.com/kweeuhree/personal-budgeting-frontend',
@@ -53,7 +53,8 @@ export const projectsData: Projects = {
     video: ['personalBudgeting', 'video'],
     thumbnails: ['personalBudgeting', 'image'],
     details: {
-      Problem: `Managing personal finances efficiently requires a fast, secure, and intuitive solution for tracking expenses.`,
+      Problem: `Managing personal finances efficiently requires a fast, secure, 
+      and intuitive solution for tracking expenses.`,
       Solution: `Personal Budgeting App is a full-stack application offering an easy way to create a budget and add expenses to it.
       Expenses are categorized according to users specific needs.`,
       'Technical Implementation': `Type-safety is considered across both frontend and backend of the application.  
@@ -63,10 +64,11 @@ export const projectsData: Projects = {
       'Core Features': `Users can create a budget and manage both checking and savings accounts. The expenses added are categorized. If the expense is more than what
       is available in the budget, the user will be warned of insufficient funds. Users can delete expenses and categories, with deleted expenses automatically restoring the corresponding funds.
       The security is handled with strict CORS policies, CSRF protection, and hashed passwords to protect user data.`,
-      Impact: `This app offers a comprehensive, secure, and user-friendly way to track personal expenses, while keeping the data secure.`,
+      Impact: `This app offers a comprehensive, secure, and user-friendly way to track personal expenses, 
+      while keeping the data secure.`,
     },
   },
-  3: {
+  {
     title: 'Weather App',
     subheader: 'React.js - Weather API',
     githubLink: 'https://github.com/kweeuhree/weather-app',
@@ -92,4 +94,4 @@ export const projectsData: Projects = {
       daily activities around weather conditions.`,
     },
   },
-};
+];
