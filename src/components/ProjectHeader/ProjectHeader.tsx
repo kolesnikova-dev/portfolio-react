@@ -71,8 +71,8 @@ export const ProjectHeader: React.FC<Props> = ({
   );
 
   const headerFlexDirection = fullDisplay
-    ? { xs: "column", sm: "column", md: "row" }
-    : { xs: "row", sm: "row" };
+  ? { xs: "column" as const, sm: "column" as const, md: "row" as const }
+  : { xs: "row" as const, sm: "row" as const };
 
   return (
     <Box
