@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef, Fragment } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
 
 import { TextField, Typography } from "@mui/material";
 
-import { isTimePeriodValid } from "../../utils/index";
 import { textInputFields } from "../../data/formData";
+import { isTimePeriodValid } from "../../utils/index";
 
 import "./formStyles.css";
 
@@ -20,14 +20,14 @@ export const Form: React.FC = () => {
   //initialize state for email last email sent to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
 
-  const [status, setStatus] = useState<string | Error>("");
+  const [status, setStatus] = useState<string>("");
 
   // initialize emailjs with the public key
   useEffect(() => {
     emailjs.init(public_key_emailjs);
   }, []);
 
-  const setStatusBox = (newStatus: string | Error) => {
+  const setStatusBox = (newStatus: string) => {
     setStatus(newStatus);
     setTimeout(() => {
       setStatus("");
@@ -85,9 +85,7 @@ export const Form: React.FC = () => {
       {/* display SEND button or status message */}
       <div className="alert-box drop-shadow">
         {status ? (
-          <Typography>
-            <>{status}</>
-          </Typography>
+          <Typography>{status}</Typography>
         ) : (
           <button aria-label="Send the form" type="submit">
             Send

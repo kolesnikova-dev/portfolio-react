@@ -1,4 +1,4 @@
-import { Typography, Tooltip } from "@mui/material";
+import { Tooltip, Typography } from "@mui/material";
 
 import { skillsData } from "../data/skillsData";
 

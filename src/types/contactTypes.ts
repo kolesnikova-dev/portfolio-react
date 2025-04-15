@@ -1,14 +1,12 @@
 export interface Contact {
-    icon: {
-      ariaLabel: string,
-      icon: React.ReactNode,
-    },
-    link: {
-      ariaLabel: string,
-      url: string,
-    }
-  }
-  
+  icon: {
+    ariaLabel: string;
+    icon: React.ReactNode;
+  };
+  link: {
+    ariaLabel: string;
+    url: string;
+  };
+}
 
-export type ContactKey = 'Github' | 'LinkedIn';
-  
+export type ContactKey = "Github" | "LinkedIn";

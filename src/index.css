@@ -1,5 +1,9 @@
 :root {
-  --color-pale-blue-gradient: linear-gradient(45deg, rgba(117, 124, 232, 0.2) 0%, rgba(117, 124, 232, 0.05) 100%);
+  --color-pale-blue-gradient: linear-gradient(
+    45deg,
+    rgba(117, 124, 232, 0.2) 0%,
+    rgba(117, 124, 232, 0.05) 100%
+  );
   --color-blue: rgba(117, 124, 232, 0.6);
   --color-pale-blue: rgba(117, 124, 232, 0.2);
   --color-dark-slate: #2e37436c;
@@ -50,7 +54,6 @@ button:active {
   cursor: pointer;
 }
 
-
 /* Flex box */
 .display-flex {
   display: flex;
@@ -87,7 +90,6 @@ button:active {
   flex-grow: 1;
 }
 
-
 /* Width and height */
 .full-width {
   width: 100%;
@@ -100,7 +102,6 @@ button:active {
 .height-2vh {
   height: 2vh;
 }
-
 
 /* Paddings */
 .padding-2rem {
@@ -123,12 +124,10 @@ button:active {
   padding-bottom: 0;
 }
 
-
 /* Margins */
 .margin-top-2rem {
   margin-top: 2rem;
 }
-
 
 /* Opacity */
 .opacity0-9 {
@@ -156,7 +155,6 @@ button:active {
   filter: drop-shadow(5px 5px 5px var(--color-drop-shadow));
 }
 
-
 /* Backgrounds */
 .bg-whitesmoke {
   background-color: whitesmoke;
@@ -173,6 +171,3 @@ button:active {
   box-shadow: var(--color-drop-shadow);
   border-radius: 4px;
 }
-
-
-

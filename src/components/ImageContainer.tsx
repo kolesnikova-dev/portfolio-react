@@ -1,9 +1,8 @@
 type Props = {
-  src: string,
-  alt: string,
-  thisClass?: string,
-}
-
+  src: string;
+  alt: string;
+  thisClass?: string;
+};
 
 export const ImageContainer: React.FC<Props> = ({ thisClass, src, alt }) => {
   return (

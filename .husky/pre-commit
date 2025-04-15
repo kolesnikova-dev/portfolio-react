@@ -1,1 +1,5 @@
+#!/bin/sh
+set -eu
+
+npm run biome
 npm run lint

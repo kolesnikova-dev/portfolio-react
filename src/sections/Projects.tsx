@@ -1,15 +1,13 @@
-import React,  { useState } from 'react';
+import React, { useState } from "react";
 
-import { Typography, Grid2 as Grid } from '@mui/material';
+import { Grid2 as Grid, Typography } from "@mui/material";
 
-import { DisplayFull, DisplayPreview } from '../components/index';
-import { projectsData } from '../data/projectsData';
-import { Project } from '../types';
-
+import { DisplayFull, DisplayPreview } from "../components/index";
+import { projectsData } from "../data/projectsData";
+import type { Project } from "../types";
 
 const FullMemoizedProject = React.memo(DisplayFull);
 const PreviewMemoizedProject = React.memo(DisplayPreview);
-
 
 const Projects: React.FC = () => {
   const [fullDisplay, setFullDisplay] = useState<boolean>(false);
@@ -35,9 +33,9 @@ const Projects: React.FC = () => {
         columnSpacing={3}
         className="display-flex flex-center"
       >
-        {Object.values(projectsData).map((project: Project, index: number) => (
+        {projectsData.map((project: Project, index: number) => (
           <PreviewMemoizedProject
-            key={index}
+            key={project.title}
             {...projectProps(project, index)}
           />
         ))}
@@ -54,7 +52,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className='styled-grid light-paper'>
+    <section className="styled-grid light-paper">
       <div>
         <Typography mb={4} variant="h4">
           Projects

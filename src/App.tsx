@@ -1,25 +1,27 @@
-import { Route, Routes, Navigate, BrowserRouter as Router } from 'react-router-dom';
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
 
-import { MainPage, Layout } from './pages/index';
-import { ErrorBoundary } from './components/index';
+import { ErrorBoundary } from "./components/index";
+import { Layout, MainPage } from "./pages/index";
 
-import './App.css';
-
+import "./App.css";
 
 export const App: React.FC = () => {
   return (
     <Router>
-    <ErrorBoundary>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<MainPage />} />
-        </Route>
-        {/* catch all route - replace to a 404 page */}
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-    </ErrorBoundary>
+      <ErrorBoundary>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<MainPage />} />
+          </Route>
+          {/* catch all route - replace to a 404 page */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </ErrorBoundary>
     </Router>
   );
 };
-
- 

@@ -1,13 +1,13 @@
 import {
-  Typography,
   CardMedia,
-  TableRow,
   TableCell,
   TableContainer,
+  TableRow,
+  Typography,
 } from "@mui/material";
 
-import { ProjectHeader } from "./index";
 import type { Project } from "../types/projectTypes";
+import { ProjectHeader } from "./index";
 
 import { getUrl } from "../utils/index";
 
