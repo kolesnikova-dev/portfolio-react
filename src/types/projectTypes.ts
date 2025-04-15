@@ -9,5 +9,3 @@ export interface Project {
         liveLink?: string,
         video?: string[],
 }
-
-export type Projects = Record<number, Project>;
