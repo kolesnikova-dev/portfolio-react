@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname "$0")/h"
+#!/bin/sh
 
 # Exit immediately on failure
 set -e

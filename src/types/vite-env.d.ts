@@ -20,3 +20,9 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+export interface PreviewBoxProps extends BoxProps {
+  theme?: Theme;
+  thumbnails?: string;
+  children?: React.ReactNode;
+}

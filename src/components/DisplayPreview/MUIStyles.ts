@@ -1,8 +1,9 @@
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
+import type { PreviewBoxProps } from "../../types/vite-env";
 import "../../index.css";
 
-export const PreviewBox = styled(Box)(({ theme, thumbnails }) => ({
+export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(({ theme, thumbnails }) => ({
   float: "left",
   position: "relative",
   marginTop: theme.spacing(1),
