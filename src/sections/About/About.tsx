@@ -1,7 +1,7 @@
 import { Avatar, Typography } from "@mui/material";
 
-import { ImageWrapper, StyledBadge } from "./AboutMUIStyles";
 import { getUrl } from "../../utils/index";
+import { ImageWrapper, StyledBadge } from "./AboutMUIStyles";
 
 const introductionData = {
   greeting: "Hi, I'm Nika!",

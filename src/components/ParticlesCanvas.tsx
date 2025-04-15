@@ -1,10 +1,10 @@
-import { useRef } from "react";
-import type { Group } from "three";
 import { Stars } from "@react-three/drei/core/Stars";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import type { Group } from "three";
 
 const Particles = () => {
-  const groupRef = useRef<Group>(null!);
+  const groupRef = useRef<Group>(null);
 
   // Animate the stars subtly by rotating them on the Y-axis
   useFrame(() => {

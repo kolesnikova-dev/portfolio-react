@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
 import Grid2 from "@mui/material/Grid2";
 
-import { About, Skills, Projects, Contacts, SendEmail } from "../../sections";
 import { SideBySideSection } from "../../components";
+import { About, Contacts, Projects, SendEmail, Skills } from "../../sections";
 import type { Sections } from "../../types/sectionTypes";
 
 import "./mainPageStyles.css";

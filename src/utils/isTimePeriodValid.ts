@@ -9,7 +9,7 @@ export const isTimePeriodValid = (
     currentTime.getTime() - lastEmailSent.getTime() < ONE_MINUTE_IN_MILLISECONDS
   ) {
     throw new Error(
-      'Too many attempts. Please wait a minute before sending another email.',
+      "Too many attempts. Please wait a minute before sending another email.",
     );
   }
 

@@ -1,4 +1,4 @@
-import { Project } from "../../types";
+import type { Project } from "../../types";
 import { getUrl } from "../../utils/index";
 import { ProjectHeader } from "../index";
 import { PreviewBox } from "./MUIStyles";
