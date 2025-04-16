@@ -51,8 +51,8 @@ export const projectsData: Project[] = [
     subheader: "React.js - Go - MySQL",
     githubLink: "https://github.com/kweeuhree/personal-budgeting-frontend",
     liveLink: "https://personal-budgeting.onrender.com/",
-    video: ["personalBudgeting", "video"],
-    thumbnails: ["personalBudgeting", "image"],
+    video: ["budgetingRecording", "video"],
+    thumbnails: ["budgetingThumbnails", "image"],
     details: {
       Problem: `Managing personal finances efficiently requires a fast, secure, 
       and intuitive solution for tracking expenses.`,
