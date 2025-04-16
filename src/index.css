@@ -59,6 +59,11 @@ button:active {
   display: flex;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-center {
   align-items: center;
   justify-content: center;
@@ -67,6 +72,10 @@ button:active {
 .flex-space {
   align-items: center;
   justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .right-justify {
@@ -95,6 +104,10 @@ button:active {
   width: 100%;
 }
 
+.width-80 {
+  width: 80%;
+}
+
 .inherit-height {
   height: inherit;
 }
@@ -104,6 +117,10 @@ button:active {
 }
 
 /* Paddings */
+.padding-05rem {
+  padding: 0.5rem;
+}
+
 .padding-2rem {
   padding: 2rem;
 }
