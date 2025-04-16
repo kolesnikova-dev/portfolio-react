@@ -43,27 +43,27 @@ const DisplayLink: React.FC<Props> = ({
   if (fullDisplay) {
     return (
       <button
+        type="button"
         aria-label={ariaLabel}
         onClick={(event) => handleRedirect(event)}
         className="display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border"
       >
-        <>{ariaLabel}</>
+        {ariaLabel}
         {svg}
       </button>
     );
-  } else {
-    return (
-      <Tooltip
-        className="display-flex right-justify"
-        title={ariaLabel}
-        placement={placement}
-        onClick={handleClick}
-        arrow
-      >
-        {linkElement}
-      </Tooltip>
-    );
   }
+  return (
+    <Tooltip
+      className="display-flex right-justify"
+      title={ariaLabel}
+      placement={placement}
+      onClick={handleClick}
+      arrow
+    >
+      {linkElement}
+    </Tooltip>
+  );
 };
 
 export const IconWithTooltip: React.FC<Props> = (props) => {
@@ -72,11 +72,10 @@ export const IconWithTooltip: React.FC<Props> = (props) => {
 
   if (link) {
     return <DisplayLink {...props} />;
-  } else {
-    return (
-      <Tooltip title={ariaLabel} placement={placement} arrow>
-        <span className="pointer">&nbsp;{svg}</span>
-      </Tooltip>
-    );
   }
+  return (
+    <Tooltip title={ariaLabel} placement={placement} arrow>
+      <span className="pointer">&nbsp;{svg}</span>
+    </Tooltip>
+  );
 };

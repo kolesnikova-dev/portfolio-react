@@ -1,7 +1,7 @@
 import { Avatar, Typography } from "@mui/material";
 
-import { getUrl } from "../../utils/index";
 import { aboutData } from "../../data/aboutData";
+import { getUrl } from "../../utils/index";
 import { ImageWrapper, StyledBadge } from "./AboutMUIStyles";
 
 const picture = getUrl(["avatar", "image"]);

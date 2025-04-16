@@ -4,11 +4,11 @@
 set -e
 
 echo "🔍 Running linter..."
-npm run lint
+yarn run lint
 
 # Compile TypeScript
 echo "Compiling TypeScript.."
-npm run typecheck
+yarn run typecheck
 
 # Check if tests passed
 if [ $? -ne 0 ]; then
@@ -18,7 +18,7 @@ fi
 
 # Run tests
 echo "Running tests.."
-npm run test
+yarn run test --run
 
 # Check if tests passed
 if [ $? -ne 0 ]; then

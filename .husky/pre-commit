@@ -1,5 +1,5 @@
 #!/bin/sh
 set -eu
 
-npm run biome
-npm run lint
+yarn run biome
+yarn run lint
