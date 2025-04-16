@@ -1,14 +1,8 @@
 import { Avatar, Typography } from "@mui/material";
 
 import { getUrl } from "../../utils/index";
+import { aboutData } from "../../data/aboutData";
 import { ImageWrapper, StyledBadge } from "./AboutMUIStyles";
-
-const introductionData = {
-  greeting: "Hi, I'm Nika!",
-  introduction: `I love building things for the web and figuring out how it all works under the hood. 
-  Hard work and curiousity keep me going. 
-  Welcome!`,
-};
 
 const picture = getUrl(["avatar", "image"]);
 
@@ -20,7 +14,7 @@ const About: React.FC = () => {
           variant="h3"
           className="display-flex flex-center text-no-wrap light-paper"
         >
-          {introductionData.greeting}
+          {aboutData.greeting}
         </Typography>
 
         <ImageWrapper>
@@ -38,7 +32,7 @@ const About: React.FC = () => {
         </ImageWrapper>
 
         <div>
-          <p>{introductionData.introduction}</p>
+          <p>{aboutData.introduction}</p>
         </div>
       </div>
     </section>

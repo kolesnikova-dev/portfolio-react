@@ -1,5 +1,4 @@
 import react from "@vitejs/plugin-react";
-import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
@@ -41,7 +40,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), VitePWA(PWAConfig), visualizer()],
+  plugins: [react(), VitePWA(PWAConfig)],
   server: {
     port: 3000,
   },

@@ -4,8 +4,9 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "intersection-observer";
 import "@testing-library/jest-dom";
+
 import "@testing-library/jest-dom/vitest";
-import { vi } from "vitest";
+import { vi, expect } from "vitest";
 
 beforeAll(() => {
   global.IntersectionObserver = vi.fn(() => ({
