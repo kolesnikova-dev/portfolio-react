@@ -3,7 +3,7 @@ import type { Project } from "../types";
 export const projectsData: Project[] = [
   {
     title: "Distributed Rate Limiter",
-    subheader: "Go",
+    subheader: "Go - Redis - Docker",
     githubLink: "https://github.com/kweeuhree/distributed-rate-limiter",
     video: ["limiterRecording", "video"],
     thumbnails: ["limiterThumbnails", "image"],
