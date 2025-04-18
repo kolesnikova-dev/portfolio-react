@@ -10,13 +10,13 @@ export const projectsData: Project[] = [
     details: {
       Problem: "Rate limiting in distributed systems.",
       Solution: `A distributed rate limiter implemented in Go using the Token Bucket algorithm 
-      and Redis for storing tokens. This program runs in a Docker container, 
-      and is designed to handle bursts of requests efficiently while ensuring atomicity and scalability.`,
+      and Redis for storing tokens. This program is designed to handle bursts of requests 
+      efficiently while ensuring atomicity and scalability.`,
+      "Technical Implementation": `Runs in a Docker container, to ensure consistent environment.
+      Lua scripting for Redis allows for concurrent-safe and atomic operations. 
+      The Lua script is loaded and cached on Redis' server, ensuring fast execution`,
       "Core Features": `Handles bursts of requests by allowing a fixed number of tokens to be consumed within a time window.
-      Uses Redis as a centralized store for tokens, making it suitable for distributed systems. 
-      Ensures concurrent-safe operations using Lua scripting for Redis.`,
-      Impact:
-        "Performant rate limiting with modular design using Token Bucket algorithm.",
+      Uses Redis as a centralized store for tokens, making it suitable for distributed systems.`,
     },
   },
   {
@@ -41,9 +41,6 @@ export const projectsData: Project[] = [
       Items are grouped into urgency categories such as "overdue," "soon," "kind of soon," 
       and "not soon," depending on their expected repurchase date. Lists can be pinned 
       for quick access, and items are intelligently sorted based on purchase urgency.`,
-      Impact: `Users report fewer forgotten items and reduced emergency store visits. 
-      The application demonstrates clean, maintainable code architecture while solving 
-      a real-world problem through smart data analysis.`,
     },
   },
   {
@@ -65,8 +62,6 @@ export const projectsData: Project[] = [
       "Core Features": `Users can create a budget and manage both checking and savings accounts. The expenses added are categorized. If the expense is more than what
       is available in the budget, the user will be warned of insufficient funds. Users can delete expenses and categories, with deleted expenses automatically restoring the corresponding funds.
       The security is handled with strict CORS policies, CSRF protection, and hashed passwords to protect user data.`,
-      Impact: `This app offers a comprehensive, secure, and user-friendly way to track personal expenses, 
-      while keeping the data secure.`,
     },
   },
   {
@@ -90,9 +85,6 @@ export const projectsData: Project[] = [
       "Core Features": `Favorites management allows users to easily add and remove locations, 
       providing quick access to weather data for the places they care about. 
       The interface is intuitive, making navigation and interaction seamless across devices.`,
-      Impact: `The app improves the user experience by offering a personalized and 
-      visually appealing way to access detailed weather data, making it easy to plan 
-      daily activities around weather conditions.`,
     },
   },
 ];
