@@ -99,6 +99,11 @@ button:active {
   flex-grow: 1;
 }
 
+/* Text alignment */
+.text-left {
+  text-align: left;
+}
+
 /* Width and height */
 .full-width {
   width: 100%;
