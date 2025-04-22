@@ -5,7 +5,6 @@ interface ImportMetaEnv {
   VITE_SERVICE_ID: string;
   VITE_TEMPLATE_ID: string;
   VITE_SMART_SHOP_ID: string;
-  s;
   VITE_VIGENERE_ID: string;
   VITE_WEATHER_ID: string;
   VITE_CLIMATE_ID: string;
@@ -25,4 +24,5 @@ export interface PreviewBoxProps extends BoxProps {
   theme?: Theme;
   thumbnails?: string;
   children?: React.ReactNode;
+  className?: string;
 }
