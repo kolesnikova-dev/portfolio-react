@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";
 
 type Props = {
@@ -13,6 +14,12 @@ type Props = {
   };
   placement: "bottom" | "right";
   fullDisplay?: boolean;
+};
+
+const ariaLabelDisplay = {
+  xs: "none",
+  sm: "none",
+  md: "inline",
 };
 
 const DisplayLink: React.FC<Props> = ({
@@ -39,7 +46,7 @@ const DisplayLink: React.FC<Props> = ({
       {svg}
     </Link>
   );
-
+  console.log(fullDisplay);
   if (fullDisplay) {
     return (
       <button
@@ -48,8 +55,10 @@ const DisplayLink: React.FC<Props> = ({
         onClick={(event) => handleRedirect(event)}
         className="display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border"
       >
-        {ariaLabel}
-        {svg}
+        <Box component="span" sx={{ display: ariaLabelDisplay }}>
+          {ariaLabel}
+        </Box>
+        <span>{svg}</span>
       </button>
     );
   }

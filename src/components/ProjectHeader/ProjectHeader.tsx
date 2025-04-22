@@ -7,14 +7,8 @@ import { IconWithTooltip } from "../index";
 import "./projectHeaderStyles.css";
 
 const unfoldIconOptions = {
-  true: {
-    ariaLabel: "See less information",
-    icon: icons.UnfoldLess,
-  },
-  false: {
-    ariaLabel: "See more information",
-    icon: icons.UnfoldMore,
-  },
+  ariaLabel: "See more information",
+  icon: icons.UnfoldMore,
 };
 
 const githubIconOptions = (githubLink: string) => ({
@@ -41,14 +35,12 @@ const liveLinkOptions = (liveLink: string) => ({
 
 type Props = {
   project: Project;
-  fullDisplay: boolean;
   toggleDisplay: (newIndex: number) => void;
   index: number;
 };
 
 export const ProjectHeader: React.FC<Props> = ({
   project,
-  fullDisplay,
   toggleDisplay,
   index,
 }) => {
@@ -62,42 +54,41 @@ export const ProjectHeader: React.FC<Props> = ({
     <div>
       <span className="title">{title}</span>
       <span>
-        <IconWithTooltip
-          icon={unfoldIconOptions[fullDisplay.toString()]}
-          placement="right"
-        />
+        <IconWithTooltip icon={unfoldIconOptions} placement="right" />
       </span>
     </div>
   );
 
-  const headerFlexDirection = fullDisplay
-    ? { xs: "column" as const, sm: "column" as const, md: "row" as const }
-    : { xs: "row" as const, sm: "row" as const };
+  const headerFlexDirection = {
+    xs: "row" as const,
+    sm: "column" as const,
+    md: "row" as const,
+  };
 
   return (
     <Box
-      className="display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
+      className="full-width display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
       flexDirection={headerFlexDirection}
       onClick={handleToggleDisplay}
     >
-      <div className="full-width">
+      <div>
         <div>{titleBox}</div>
         <p className="subheader">{subheader}</p>
       </div>
 
       <div
-        className={`display-flex ${!fullDisplay && "center-column"} ${liveLink && "flex-gap-1vw"}`}
+        className={`display-flex center-column ${liveLink && "flex-gap-1vw"}`}
       >
         <IconWithTooltip
           {...githubIconOptions(githubLink)}
           placement="right"
-          fullDisplay={fullDisplay}
+          fullDisplay={false}
         />
         {liveLink && (
           <IconWithTooltip
             {...liveLinkOptions(liveLink)}
             placement="right"
-            fullDisplay={fullDisplay}
+            fullDisplay={false}
           />
         )}
       </div>
