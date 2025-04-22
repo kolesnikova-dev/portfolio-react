@@ -151,6 +151,11 @@ button:active {
   opacity: 0.9;
 }
 
+/* Font colors */
+.blue-font {
+  color: var(--color-blue);
+}
+
 /* Borders */
 .border-radius-4px {
   border-radius: 4px;
