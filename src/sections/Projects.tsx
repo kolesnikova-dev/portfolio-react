@@ -34,12 +34,12 @@ const Projects: React.FC = () => {
         className="full-width display-flex flex-center"
       >
         {projectsData.map((project: Project, index: number) => (
-         <div key={project.title}>
-          <PreviewMemoizedProject
-          key={project.title}
-            {...projectProps(project, index)}
-          />
-         </div>
+          <div key={project.title}>
+            <PreviewMemoizedProject
+              key={project.title}
+              {...projectProps(project, index)}
+            />
+          </div>
         ))}
       </Grid>
     );
