@@ -31,13 +31,15 @@ const Projects: React.FC = () => {
         container
         rowSpacing={4}
         columnSpacing={3}
-        className="display-flex flex-center"
+        className="full-width display-flex flex-center"
       >
         {projectsData.map((project: Project, index: number) => (
+         <div key={project.title}>
           <PreviewMemoizedProject
-            key={project.title}
+          key={project.title}
             {...projectProps(project, index)}
           />
+         </div>
         ))}
       </Grid>
     );
@@ -58,7 +60,7 @@ const Projects: React.FC = () => {
           Projects
         </Typography>
       </div>
-      <div className="display-flex flex-center inherit-height">
+      <div className="display-flex inherit-height">
         {!fullDisplay ? displayAllProjects() : displayExpandedProject()}
       </div>
     </section>

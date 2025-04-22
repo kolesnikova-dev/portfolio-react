@@ -24,7 +24,6 @@ export const DisplayPreview: React.FC<Props> = ({
     <PreviewBox thumbnails={cloudinaryUrl}>
       <ProjectHeader
         project={project}
-        fullDisplay={fullDisplay}
         toggleDisplay={toggleDisplay}
         index={index}
       />

@@ -67,13 +67,13 @@ export const ProjectHeader: React.FC<Props> = ({
 
   return (
     <Box
-      className="full-width display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
+      className="display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
       flexDirection={headerFlexDirection}
       onClick={handleToggleDisplay}
     >
       <div>
         <div>{titleBox}</div>
-        <p className="subheader">{subheader}</p>
+        <p className="subheader text-left">{subheader}</p>
       </div>
 
       <div
