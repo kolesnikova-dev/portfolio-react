@@ -14,17 +14,21 @@ export const DisplayPreview: React.FC<Props> = ({
   toggleDisplay,
   index,
 }) => {
+  const handleToggleDisplay = (index: number) => {
+    toggleDisplay(index);
+  };
+
   const cloudinaryUrl = project.thumbnails && getUrl(project.thumbnails);
   if (!cloudinaryUrl) {
     console.error(`${project.title} is missing its cloudinaryUrl`);
   }
   return (
-    <PreviewBox thumbnails={cloudinaryUrl}>
-      <PreviewProjectHeader
-        project={project}
-        toggleDisplay={toggleDisplay}
-        index={index}
-      />
+    <PreviewBox
+      onClick={() => handleToggleDisplay(index)}
+      thumbnails={cloudinaryUrl}
+      className="pointer"
+    >
+      <PreviewProjectHeader project={project} />
     </PreviewBox>
   );
 };
