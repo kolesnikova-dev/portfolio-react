@@ -11,7 +11,7 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
     margin: theme.spacing(1),
     border: "3px solid var(--color-blue)",
     borderRadius: "4px",
-    transition: "all 0.3s ease-in-out",
+    transition: "all 0.3s ease",
     boxShadow: "1px 3px 5px 0px rgba(39, 41, 40, 0.8)",
     [theme.breakpoints.up("sm")]: {
       width: "44vw",
