@@ -6,7 +6,7 @@ export const Skills: React.FC = () => {
   return (
     <section>
       <header>
-        <div className="display-flex flex-center flex-gap-1vw">
+        <div className="display-flex flex-center flex-gap-1rem">
           {skillsData.map(({ skill, icon: SvgPath }) => (
             <h2 aria-label={skill} key={skill} className="pointer">
               <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
