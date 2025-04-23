@@ -54,9 +54,9 @@ const Projects: React.FC = () => {
   return (
     <section className="styled-grid light-paper">
       <div>
-        <Typography mb={4} variant="h4">
-          Projects
-        </Typography>
+        <header>
+          <h1>Projects</h1>
+        </header>
       </div>
       <div className="display-flex inherit-height">
         {!fullDisplay ? displayAllProjects() : displayExpandedProject()}
