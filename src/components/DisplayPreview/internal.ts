@@ -1,2 +1,2 @@
-export * from "./MUIStyles";
+export * from "./PreviewBox";
 export * from "./PreviewProjectHeader";
