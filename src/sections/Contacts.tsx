@@ -5,7 +5,7 @@ import { Tooltip, Typography } from "@mui/material";
 
 import { IconWithTooltip } from "../components/index";
 import { contactsData, email } from "../data/contactsData";
-import { icons } from "../data/icons";
+import { icons } from "../data/svgIcons";
 
 const contacts = contactsData.map((contact, index) => {
   return (

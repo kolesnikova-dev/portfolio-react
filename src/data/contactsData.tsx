@@ -1,5 +1,5 @@
 import type { Contact } from "../types/contactTypes";
-import { icons } from "./icons";
+import { icons } from "./svgIcons";
 
 export const email: string = "firstnamenika@gmail.com";
 
