@@ -1,14 +1,8 @@
 #!/bin/sh
 set -eu
 
-# Run formatter
-yarn run biome
-
 # Run linter
 yarn run lint
 
 # Run fixer
 yarn run fix
-
-# Stage modified files
-git add .
