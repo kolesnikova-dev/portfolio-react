@@ -53,9 +53,13 @@ const DisplayLink: React.FC<Props> = ({
         type="button"
         aria-label={ariaLabel}
         onClick={(event) => handleRedirect(event)}
-        className="display-flex flex-center flex-gap-1vw bg-whitesmoke blue-border"
+        className="display-flex flex-center flex-gap-1rem bg-whitesmoke blue-border"
       >
-        <Box component="span" sx={{ display: ariaLabelDisplay }}>
+        <Box
+          component="span"
+          className="md-font"
+          sx={{ display: ariaLabelDisplay }}
+        >
           {ariaLabel}
         </Box>
         <span>{svg}</span>
