@@ -1,5 +1,5 @@
 export { default as ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
-export * from "./DisplayFull";
+export * from "./DisplayFull/DisplayFull";
 export * from "./DisplayPreview/DisplayPreview";
 export * from "./Footer";
 export * from "./Form/Form";
