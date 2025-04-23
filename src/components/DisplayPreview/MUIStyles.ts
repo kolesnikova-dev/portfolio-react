@@ -13,16 +13,16 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
     borderRadius: "4px",
     boxShadow: "1px 3px 5px 0px rgba(39, 41, 40, 0.8)",
     [theme.breakpoints.up("sm")]: {
-      width: "32vw",
-      height: "calc(32vw * 3 / 4)",
+      width: "44vw",
+      height: "calc(44vw * 3 / 4)",
     },
     [theme.breakpoints.up("md")]: {
-      width: "35vw",
-      height: "calc(35vw * 3 / 4)",
+      width: "44vw",
+      height: "calc(44vw * 3 / 4)",
     },
     [theme.breakpoints.up("lg")]: {
-      width: "38vw",
-      height: "calc(38vw * 9 / 16)",
+      width: "40vw",
+      height: "calc(40vw * 9 / 16)",
     },
     "::before": {
       content: '""',
