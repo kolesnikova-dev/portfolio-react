@@ -7,38 +7,14 @@ import {
 } from "@mui/material";
 
 import { IconWithTooltip } from "../components/index";
-import { icons } from "../data/icons";
+
+import {
+  githubIconOptions,
+  liveLinkOptions,
+  unfoldIconOptions,
+} from "../data/hoverIconOptions";
 import type { Project } from "../types/projectTypes";
-import { ProjectHeader } from "./index";
-
 import { getUrl } from "../utils/index";
-
-const unfoldIconOptions = {
-  ariaLabel: "See less information",
-  icon: icons.UnfoldLess,
-};
-
-const githubIconOptions = (githubLink: string) => ({
-  icon: {
-    ariaLabel: "View on GitHub",
-    icon: icons.GithubBlack,
-  },
-  link: {
-    ariaLabel: "View on GitHub",
-    url: githubLink,
-  },
-});
-
-const liveLinkOptions = (liveLink: string) => ({
-  icon: {
-    ariaLabel: "Navigate to live website",
-    icon: icons.ExternalLink,
-  },
-  link: {
-    ariaLabel: "Navigate to live website",
-    url: liveLink,
-  },
-});
 
 const headerFlexDirection = {
   xs: "row" as const,

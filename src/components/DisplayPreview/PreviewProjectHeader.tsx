@@ -1,37 +1,14 @@
 import Box from "@mui/material/Box";
 
-import { icons } from "../../data/icons";
+import {
+  githubIconOptions,
+  liveLinkOptions,
+  unfoldIconOptions,
+} from "../../data/hoverIconOptions";
 import type { Project } from "../../types";
 import { IconWithTooltip } from "../index";
 
 import "./projectHeaderStyles.css";
-
-const unfoldIconOptions = {
-  ariaLabel: "See more information",
-  icon: icons.UnfoldMore,
-};
-
-const githubIconOptions = (githubLink: string) => ({
-  icon: {
-    ariaLabel: "View on GitHub",
-    icon: icons.GithubBlack,
-  },
-  link: {
-    ariaLabel: "View on GitHub",
-    url: githubLink,
-  },
-});
-
-const liveLinkOptions = (liveLink: string) => ({
-  icon: {
-    ariaLabel: "Navigate to live website",
-    icon: icons.ExternalLink,
-  },
-  link: {
-    ariaLabel: "Navigate to live website",
-    url: liveLink,
-  },
-});
 
 type Props = {
   project: Project;
