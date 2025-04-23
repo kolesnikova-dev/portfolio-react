@@ -3,72 +3,75 @@ import Box from "@mui/material/Box";
 import {
   githubIconOptions,
   liveLinkOptions,
-  unfoldIconOptions,
 } from "../../data/hoverIconOptions";
 import type { Project } from "../../types";
 import { IconWithTooltip } from "../index";
 
-import "./projectHeaderStyles.css";
-
 type Props = {
   project: Project;
-  toggleDisplay: (newIndex: number) => void;
-  index: number;
 };
 
-export const PreviewProjectHeader: React.FC<Props> = ({
-  project,
-  toggleDisplay,
-  index,
-}) => {
+export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
   const { title, githubLink, liveLink, subheader } = project;
 
-  const handleToggleDisplay = () => {
-    toggleDisplay(index);
-  };
-
-  const titleBox = (
-    <div>
-      <span className="title">{title}</span>
-      <span>
-        <IconWithTooltip icon={unfoldIconOptions} placement="right" />
-      </span>
-    </div>
-  );
-
   const headerFlexDirection = {
-    xs: "row" as const,
+    xs: "column" as const,
     sm: "column" as const,
-    md: "row" as const,
+    md: "column" as const,
   };
 
   return (
-    <Box
-      className="display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
-      flexDirection={headerFlexDirection}
-      onClick={handleToggleDisplay}
-    >
-      <div>
-        <div>{titleBox}</div>
-        <p className="subheader text-left">{subheader}</p>
-      </div>
-
+    // Entire box
+    <Box className="inline-pd-box padding-block-2rem">
+      {/* Whitesmoke header */}
       <Box
-        className={`display-flex center-column ${liveLink && "flex-gap-1vw"}`}
-        flexDirection={{ xs: "row", md: "row", lg: "column" }}
+        className="display-flex flex-space bg-whitesmoke inline-pd-box"
+        flexDirection={headerFlexDirection}
       >
-        <IconWithTooltip
-          {...githubIconOptions(githubLink)}
-          placement="right"
-          fullDisplay={false}
-        />
-        {liveLink && (
-          <IconWithTooltip
-            {...liveLinkOptions(liveLink)}
-            placement="right"
-            fullDisplay={false}
-          />
-        )}
+        {/* Header and external links box */}
+        <Box
+          className="full-width display-flex flex-center pd-block-top-1rem"
+          flexDirection={{ xs: "column", md: "row", lg: "row" }}
+          justifyContent={{
+            xs: "space-between",
+            sm: "space-evenly",
+            md: "space-evenly",
+          }}
+        >
+          {/* Header */}
+          <header>
+            <h1 className="padding-inline-05rem">{title}</h1>
+          </header>
+
+          {/* External links box */}
+          <Box
+            className={`display-flex flex-center min-height-2rem ${liveLink && "flex-gap-2rem"} padding-block-1rem`}
+            flexDirection={{
+              xs: "row",
+              // sm: "row",
+              md: "row",
+              lg: "row",
+            }}
+          >
+            {/* GitHub link */}
+            <IconWithTooltip
+              {...githubIconOptions(githubLink)}
+              placement="right"
+              fullDisplay={false}
+            />
+            {/* Live website link */}
+            {liveLink && (
+              <IconWithTooltip
+                {...liveLinkOptions(liveLink)}
+                placement="right"
+                fullDisplay={false}
+              />
+            )}
+          </Box>
+        </Box>
+
+        {/* Subheader */}
+        <h3>{subheader}</h3>
       </Box>
     </Box>
   );
