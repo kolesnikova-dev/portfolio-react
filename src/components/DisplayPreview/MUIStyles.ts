@@ -5,11 +5,10 @@ import "../../index.css";
 
 export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
   ({ theme, thumbnails }) => ({
-    float: "left",
+    width: "100%",
+    float: "none",
     position: "relative",
-    marginTop: theme.spacing(1),
-    marginRight: theme.spacing(2),
-    marginBottom: theme.spacing(1),
+    margin: theme.spacing(1),
     border: "3px solid var(--color-blue)",
     borderRadius: "4px",
     boxShadow: "1px 3px 5px 0px rgba(39, 41, 40, 0.8)",
