@@ -40,7 +40,7 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
         >
           {/* Header */}
           <header>
-            <h1 className="padding-inline-05rem">{title}</h1>
+            <h2 className="padding-inline-05rem">{title}</h2>
           </header>
 
           {/* External links box */}
