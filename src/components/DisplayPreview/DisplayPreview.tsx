@@ -1,7 +1,6 @@
 import type { Project } from "../../types";
 import { getUrl } from "../../utils/index";
-import { ProjectHeader } from "../index";
-import { PreviewBox } from "./MUIStyles";
+import { PreviewBox, PreviewProjectHeader } from "./internal";
 
 type Props = {
   project: Project;
@@ -12,7 +11,6 @@ type Props = {
 
 export const DisplayPreview: React.FC<Props> = ({
   project,
-  fullDisplay,
   toggleDisplay,
   index,
 }) => {
@@ -22,7 +20,7 @@ export const DisplayPreview: React.FC<Props> = ({
   }
   return (
     <PreviewBox thumbnails={cloudinaryUrl}>
-      <ProjectHeader
+      <PreviewProjectHeader
         project={project}
         toggleDisplay={toggleDisplay}
         index={index}

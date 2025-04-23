@@ -8,4 +8,3 @@ export * from "./ImageContainer";
 export * from "./Loading/Loading";
 export * from "./SideBySideSection";
 export { default as ParticlesCanvas } from "./ParticlesCanvas";
-export * from "./ProjectHeader/ProjectHeader";

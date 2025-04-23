@@ -39,7 +39,7 @@ type Props = {
   index: number;
 };
 
-export const ProjectHeader: React.FC<Props> = ({
+export const PreviewProjectHeader: React.FC<Props> = ({
   project,
   toggleDisplay,
   index,
