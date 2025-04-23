@@ -53,8 +53,9 @@ export const PreviewProjectHeader: React.FC<Props> = ({
         <p className="subheader text-left">{subheader}</p>
       </div>
 
-      <div
+      <Box
         className={`display-flex center-column ${liveLink && "flex-gap-1vw"}`}
+        flexDirection={{ xs: "row", md: "row", lg: "column" }}
       >
         <IconWithTooltip
           {...githubIconOptions(githubLink)}
@@ -68,7 +69,7 @@ export const PreviewProjectHeader: React.FC<Props> = ({
             fullDisplay={false}
           />
         )}
-      </div>
+      </Box>
     </Box>
   );
 };
