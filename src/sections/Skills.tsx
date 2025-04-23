@@ -1,20 +1,22 @@
-import { Tooltip, Typography } from "@mui/material";
+import Tooltip from "@mui/material/Tooltip";
 
 import { skillsData } from "../data/skillsData";
 
 export const Skills: React.FC = () => {
   return (
     <section>
-      <div className="display-flex flex-center flex-gap-1vw">
-        {skillsData.map(({ skill, icon: SvgPath }) => (
-          <div aria-label={skill} key={skill} className="pointer">
-            <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
-              {SvgPath}
-            </Tooltip>
-          </div>
-        ))}
-      </div>
-      <Typography variant="h3">Skills</Typography>
+      <header>
+        <div className="display-flex flex-center flex-gap-1vw">
+          {skillsData.map(({ skill, icon: SvgPath }) => (
+            <h2 aria-label={skill} key={skill} className="pointer">
+              <Tooltip title={<p>{skill}</p>} placement="bottom" arrow>
+                {SvgPath}
+              </Tooltip>
+            </h2>
+          ))}
+        </div>
+        <h2>Skills</h2>
+      </header>
     </section>
   );
 };

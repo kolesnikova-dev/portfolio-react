@@ -1,4 +1,4 @@
-import { Avatar, Typography } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 
 import { aboutData } from "../../data/aboutData";
 import { getUrl } from "../../utils/index";
@@ -9,13 +9,10 @@ const picture = getUrl(["avatar", "image"]);
 const About: React.FC = () => {
   return (
     <section>
-      <div>
-        <Typography
-          variant="h3"
-          className="display-flex flex-center text-no-wrap light-paper"
-        >
-          {aboutData.greeting}
-        </Typography>
+      <header>
+        <div className="display-flex flex-center text-no-wrap light-paper">
+          <h1>{aboutData.greeting}</h1>
+        </div>
 
         <ImageWrapper>
           <StyledBadge
@@ -32,9 +29,9 @@ const About: React.FC = () => {
         </ImageWrapper>
 
         <div>
-          <p>{aboutData.introduction}</p>
+          <h2>{aboutData.introduction}</h2>
         </div>
-      </div>
+      </header>
     </section>
   );
 };
