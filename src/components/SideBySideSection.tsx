@@ -22,7 +22,7 @@ export const SideBySideSection: React.FC<Props> = ({ section }) => {
         container
         direction={{ xs: "column", md: "row" }}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        rowSpacing={{ xs: 3 }}
+        rowSpacing={{ xs: 6 }}
         className="display-flex flex-center"
       >
         {Object.values(section).map((side) => {
