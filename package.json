@@ -11,7 +11,6 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest",
     "lint": "npx @biomejs/biome check --staged --files-ignore-unknown=true --no-errors-on-unmatched",
-    "biome": "npx @biomejs/biome format --write --staged",
     "fix": "npx @biomejs/biome check --fix --staged",
     "prepare": "husky"
   },
