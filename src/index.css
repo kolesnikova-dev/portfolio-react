@@ -10,7 +10,7 @@
   --color-bg: #262535;
   --color-drop-shadow: rgba(39, 41, 40, 0.8);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1.9vh;
+  font-size: 62.5%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -34,8 +34,8 @@ a:hover {
 button {
   border-radius: 8px;
   border: 1px solid var(--color-pale-blue);
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-dark-slate);
@@ -48,6 +48,18 @@ button:hover {
 }
 button:active {
   border-color: #2631ff;
+}
+
+h1 {
+  color: var(--color-drop-shadow);
+  font-size: 2.8rem;
+  margin: 0.5rem 0rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-drop-shadow);
 }
 
 .pointer {
@@ -87,8 +99,8 @@ button:active {
   flex-direction: column;
 }
 
-.flex-gap-2vw {
-  gap: 2vw;
+.flex-gap-2rem {
+  gap: 2rem;
 }
 
 .flex-gap-1vw {
@@ -117,6 +129,10 @@ button:active {
   height: inherit;
 }
 
+.min-height-2rem {
+  min-height: 4rem;
+}
+
 .height-2vh {
   height: 2vh;
 }
@@ -130,12 +146,24 @@ button:active {
   padding: 2rem;
 }
 
+.padding-inline-05rem {
+  padding-inline: 0.5rem;
+}
+
 .padding-inline-15rem {
   padding-inline: 1.5rem;
 }
 
 .padding-block-1rem {
   padding-block: 1rem;
+}
+
+.padding-block-2rem {
+  padding-block: 2rem;
+}
+
+.pd-block-top-1rem {
+  padding-block-start: 2rem;
 }
 
 .no-padding {
@@ -180,6 +208,12 @@ button:active {
 
 .drop-shadow {
   filter: drop-shadow(5px 5px 5px var(--color-drop-shadow));
+}
+
+/* Boxes */
+.inline-pd-box {
+  border-radius: 4px;
+  padding-inline: 0.5rem;
 }
 
 /* Backgrounds */
