@@ -46,7 +46,7 @@ const DisplayLink: React.FC<Props> = ({
       {svg}
     </Link>
   );
-  console.log(fullDisplay);
+  
   if (fullDisplay) {
     return (
       <button
