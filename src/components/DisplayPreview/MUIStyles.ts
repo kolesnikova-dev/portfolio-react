@@ -11,14 +11,15 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
     margin: theme.spacing(1),
     border: "3px solid var(--color-blue)",
     borderRadius: "4px",
+    transition: "all 0.3s ease-in-out",
     boxShadow: "1px 3px 5px 0px rgba(39, 41, 40, 0.8)",
     [theme.breakpoints.up("sm")]: {
       width: "44vw",
       height: "calc(44vw * 3 / 4)",
     },
     [theme.breakpoints.up("md")]: {
-      width: "44vw",
-      height: "calc(44vw * 3 / 4)",
+      width: "90vw",
+      height: "calc(50vw * 3 / 4)",
     },
     [theme.breakpoints.up("lg")]: {
       width: "40vw",
