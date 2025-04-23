@@ -6,8 +6,8 @@ export const icons = {
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="40"
-        height="40"
+        width="55"
+        height="55"
         viewBox="0 0 50 50"
         stroke="var(--color-blue)"
       >
@@ -24,8 +24,8 @@ export const icons = {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="30"
-      height="30"
+      width="50"
+      height="50"
       viewBox="0 0 50 50"
       stroke="var(--color-blue)"
     >
@@ -42,8 +42,8 @@ export const icons = {
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
-        width="40"
-        height="40"
+        width="60"
+        height="60"
         viewBox="0 0 50 50"
         stroke="var(--color-blue)"
       >
@@ -100,8 +100,8 @@ export const icons = {
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
       fill="rgb(28, 25, 46)"
-      width="25"
-      height="25"
+      width="45"
+      height="45"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
       <g
@@ -120,8 +120,8 @@ export const icons = {
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
-      width="30"
-      height="30"
+      width="50"
+      height="50"
       viewBox="0 0 50 50"
       stroke="var(--color-blue)"
     >
