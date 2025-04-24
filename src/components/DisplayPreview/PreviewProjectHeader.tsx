@@ -26,6 +26,7 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
       {/* Whitesmoke header */}
       <Box
         className="display-flex flex-space bg-whitesmoke inline-pd-box"
+        data-testid="preview-header"
         flexDirection={headerFlexDirection}
       >
         {/* Header and external links box */}
