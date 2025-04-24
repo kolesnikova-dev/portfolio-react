@@ -42,13 +42,13 @@ export const Contacts: React.FC = () => {
     <section>
       <div className="display-flex flex-center center-column full-width flex-gap-2rem">
         {/* GitHub and LinkedIn container */}
-        <div className="display-flex flex-center flex-gap-2rem light-paper padding-2rem">
+        <div className="display-flex flex-center flex-gap-2rem light-paper pd-2rem">
           {contacts}
         </div>
 
         {/* email container */}
         <div
-          className="display-flex flex-center light-paper padding-2rem pointer bg-hover"
+          className="display-flex flex-center light-paper pd-2rem pointer bg-hover"
           onClick={copyEmail}
           onKeyDown={copyEmail}
         >

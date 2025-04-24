@@ -97,7 +97,7 @@ The application uses Vitest for testing. To run the test suite, run:
 
 The portfolio website is deployed using a reliable and efficient setup to ensure optimal performance:
 
-- **Netlify for Hosting**: The application is hosted on Netlify, which provides fast and secure hosting, automatic deployments, and continuous integration. Netlify is integrated with GitHub to automatically deploy any updates pushed to the repository, streamlining the deployment process and ensuring that changes are quickly reflected online.
+- **Netlify for Hosting**: The application is hosted on Netlify, which provides fast and secure hosting, automatic deployments, and continuous integration. Netlify is integrated with GitHub to automatically deploy any upaddingates pushed to the repository, streamlining the deployment process and ensuring that changes are quickly reflected online.
 
 - **Media Hosting on Cloudinary**: Images and videos are hosted on Cloudinary, a media management platform optimized for fast delivery. This helps reduce the app's load time and enhances user experience by offloading media assets from the main hosting platform.
 
@@ -115,7 +115,7 @@ This combination of optimized hosting, media delivery, and careful component sel
 
 ## Future Enhancements
 
-Future updates will include additional features such as a blog section and optimizations for Three.js animations. These enhancements aim to provide users with a richer experience while showcasing my ongoing learning and development.
+Future upaddingates will include additional features such as a blog section and optimizations for Three.js animations. These enhancements aim to provide users with a richer experience while showcasing my ongoing learning and development.
 
 ## Dependencies
 
@@ -128,4 +128,4 @@ Future updates will include additional features such as a blog section and optim
 
 
 ## Conclusion
-Thank you for reviewing the documentation for my portfolio website. This documentation will be updated regularly as new features are added and improvements are made. If you have any questions or need further assistance, feel free to reach out.
+Thank you for reviewing the documentation for my portfolio website. This documentation will be upaddingated regularly as new features are added and improvements are made. If you have any questions or need further assistance, feel free to reach out.

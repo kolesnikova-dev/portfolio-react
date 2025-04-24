@@ -30,7 +30,7 @@ export const FullProjectHeader: React.FC<Props> = ({
   return (
     <Box
       component="header"
-      className="display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
+      className="display-flex flex-space bg-whitesmoke border-radius-4px pointer pd-inline-15rem pd-block-1rem"
       flexDirection="row"
       onClick={handleToggleDisplay}
     >

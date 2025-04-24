@@ -28,7 +28,7 @@ export const DisplayFull: React.FC<Props> = ({
   const cloudinaryUrl = getUrl(video);
 
   return (
-    <section className="padding-2rem">
+    <section className="pd-2rem">
       {/* Top Section: title and links */}
       <FullProjectHeader
         githubLink={githubLink}

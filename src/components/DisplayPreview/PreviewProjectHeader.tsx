@@ -16,7 +16,7 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
 
   return (
     // Entire box
-    <Box className="inline-pd-box padding-block-2rem">
+    <Box className="inline-pd-box pd-block-2rem">
       {/* Whitesmoke header */}
       <Box
         className="display-flex flex-space bg-whitesmoke inline-pd-box"
@@ -35,12 +35,12 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
         >
           {/* Header */}
           <header>
-            <h2 className="padding-inline-05rem">{title}</h2>
+            <h2 className="pd-inline-05rem">{title}</h2>
           </header>
 
           {/* External links box */}
           <Box
-            className={`display-flex flex-center min-height-2rem ${liveLink && "flex-gap-2rem"} padding-block-1rem`}
+            className={`display-flex flex-center min-height-2rem ${liveLink && "flex-gap-2rem"} pd-block-1rem`}
             flexDirection="row"
           >
             {/* GitHub link */}

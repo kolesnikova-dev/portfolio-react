@@ -8,7 +8,7 @@ type Props = {
 
 export const ProjectDetails: React.FC<Props> = ({ details }) => {
   return (
-    <div className="flex-1 padding-05rem margin-top-2rem">
+    <div className="flex-1 pd-05rem margin-top-2rem">
       <div className="test-background flex-column center-column">
         <TableContainer>
           <table>

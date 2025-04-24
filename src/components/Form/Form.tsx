@@ -72,7 +72,7 @@ export const Form: React.FC = () => {
     >
       {Object.entries(textInputFields).map(([label, props]) => (
         <div key={label} className="full-width">
-          <p className="md-font no-margin-bottom text-left padding-inline-15rem">
+          <p className="md-font no-margin-bottom text-left pdne-15rem">
             {label}
           </p>
           <TextField
@@ -95,7 +95,7 @@ export const Form: React.FC = () => {
           <p className="md-font">{status}</p>
         ) : (
           <button
-            className="padding-inline-2rem padding-block-1rem lg-font"
+            className="pd-inline-2rem pd-block-1rem lg-font"
             aria-label="Send the form"
             type="submit"
           >
