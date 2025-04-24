@@ -11,7 +11,7 @@ import "./formStyles.css";
 
 const STATUS = {
   SENDING: "Sending...",
-  SENT: "Send!",
+  SENT: "Sent!",
 };
 
 // Import emailjs public key, service id and template id
@@ -68,28 +68,37 @@ export const Form: React.FC = () => {
       data-testid="emaill-js-form"
       ref={form}
       onSubmit={handleSubmit}
-      className="full-width"
+      className="display-flex flex-column width-80"
     >
       {Object.entries(textInputFields).map(([label, props]) => (
-        <Fragment key={label}>
-          <Typography>{label}</Typography>
+        <div key={label} className="full-width">
+          <p className="md-font no-margin-bottom text-left padding-inline-15rem">
+            {label}
+          </p>
           <TextField
             data-testid={props.name}
-            sx={{ background: "whitesmoke" }}
+            sx={{
+              background: "whitesmoke",
+              width: "100%",
+              borderRadius: "4px",
+            }}
             variant="filled"
             required
             {...props}
           />
-          <br />
-        </Fragment>
+        </div>
       ))}
 
       {/* Display SEND button or status message */}
-      <div className="alert-box drop-shadow">
+      <div className="alert-box height-2rem drop-shadow">
         {status ? (
-          <Typography>{status}</Typography>
+          <p className="md-font">{status}</p>
         ) : (
-          <button aria-label="Send the form" type="submit">
+          <button
+            className="padding-inline-2rem padding-block-1rem lg-font"
+            aria-label="Send the form"
+            type="submit"
+          >
             Send
           </button>
         )}
