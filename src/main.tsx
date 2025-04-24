@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@mui/material";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
@@ -5,6 +6,7 @@ import { App } from "./App.tsx";
 
 import "./index.css";
 
+import theme from "./theme.ts";
 const rootElement: HTMLElement | null = document.getElementById("root");
 
 try {
@@ -12,7 +14,9 @@ try {
     const root = createRoot(rootElement);
     root.render(
       <StrictMode>
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </StrictMode>,
     );
   }
