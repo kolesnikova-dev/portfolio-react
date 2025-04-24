@@ -27,19 +27,15 @@ describe("Projects component", () => {
     const githubIcons = screen.getAllByLabelText("View on GitHub");
     expect(githubIcons.length).toBe(projects.length);
 
-    const moreInformationIcons = screen.getAllByLabelText(
-      "See more information",
-    );
-    expect(moreInformationIcons.length).toBe(projects.length);
+    const previewBoxes = screen.getAllByTestId("preview-box");
+    expect(previewBoxes.length).toBe(projects.length);
   });
 
   test("expands a selected project", async () => {
-    const moreInformationIcons = screen.getAllByLabelText(
-      "See more information",
-    );
+    const previewHeaders = screen.getAllByTestId("preview-header");
 
-    moreInformationIcons.map(async (icon, index) => {
-      await userEvent.click(icon);
+    previewHeaders.map(async (header, index) => {
+      await userEvent.click(header);
       const projectDetails = projects[index].details;
 
       Object.values(projectDetails).map(async (detail) => {
@@ -47,7 +43,7 @@ describe("Projects component", () => {
         expect(element).toBeInTheDocument();
 
         // collapse the expanded project
-        await userEvent.click(icon);
+        await userEvent.click(header);
       });
     });
   });
