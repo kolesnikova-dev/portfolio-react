@@ -63,6 +63,7 @@ export const icons = {
       width="30"
       height="30"
       viewBox="0 0 50 50"
+      display="block"
     >
       <path
         fill="whitesmoke"
