@@ -18,7 +18,7 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
       height: "calc(44vw * 3 / 4)",
     },
     [theme.breakpoints.up("md")]: {
-      width: "90vw",
+      width: "70vw",
       height: "calc(50vw * 3 / 4)",
     },
     [theme.breakpoints.up("lg")]: {
