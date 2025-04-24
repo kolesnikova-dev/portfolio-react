@@ -37,9 +37,9 @@ export const Contacts: React.FC = () => {
 
   return (
     <section>
-      <div className="display-flex flex-center center-column full-width flex-gap-2vw">
+      <div className="display-flex flex-center center-column full-width flex-gap-2rem">
         {/* GitHub and LinkedIn container */}
-        <div className="display-flex flex-center flex-gap-2vw light-paper padding-2rem">
+        <div className="display-flex flex-center flex-gap-2rem light-paper padding-2rem">
           {contacts}
         </div>
 
@@ -49,13 +49,16 @@ export const Contacts: React.FC = () => {
           onClick={copyEmail}
           onKeyDown={copyEmail}
         >
-          <Tooltip title={copied ? "Copied!" : "Click to copy my email"}>
-            <div className="display-flex flex-center center-column">
-              <Typography>{email}</Typography>
-
-              <div className="height-2vh">
-                {copied ? icons.CheckCircle : "click to copy"}
-              </div>
+          <Tooltip
+            title={<p>{copied ? "Copied!" : "Click to copy my email"}</p>}
+            placement="bottom"
+            arrow
+          >
+            <div className="display-flex flex-center center-column md-font">
+              <p>{email}</p>
+              <p className="height-2rem">
+                {copied ? <span>{icons.CheckCircle}</span> : "click to copy"}
+              </p>
             </div>
           </Tooltip>
         </div>
