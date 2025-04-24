@@ -9,20 +9,23 @@ import { isTimePeriodValid } from "../../utils/index";
 
 import "./formStyles.css";
 
-//import emailjs public key, service id and template id
+const STATUS = {
+  SENDING: "Sending...",
+  SENT: "Send!",
+};
+
+// Import emailjs public key, service id and template id
 const public_key_emailjs = import.meta.env.VITE_PUBLIC_KEY;
 const service_id_emailjs = import.meta.env.VITE_SERVICE_ID;
 const template_id_emailjs = import.meta.env.VITE_TEMPLATE_ID;
 
 export const Form: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
-
-  //initialize state for email last email sent to enable rate limit
+  // Initialize state for email last sent - to enable rate limit
   const [lastEmailSent, setLastEmailSent] = useState<Date | null>(null);
-
   const [status, setStatus] = useState<string>("");
 
-  // initialize emailjs with the public key
+  // Initialize emailjs with the public key
   useEffect(() => {
     emailjs.init(public_key_emailjs);
   }, []);
@@ -34,21 +37,20 @@ export const Form: React.FC = () => {
     }, 3000);
   };
 
-  // handle form submit
+  // Handle form submit
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    setStatus("Sending...");
+    setStatus(STATUS.SENDING);
 
     try {
       const currentTime = new Date();
 
-      //check whether last email was sent less than a minute ago
+      // Check whether the last email was sent less than a minute ago
       if (isTimePeriodValid(currentTime, lastEmailSent) && form.current) {
         emailjs
           .sendForm(service_id_emailjs, template_id_emailjs, form.current)
           .then(() => {
-            setStatusBox("Sent!");
+            setStatusBox(STATUS.SENT);
             //set time last email was sent
             setLastEmailSent(currentTime);
           });
@@ -82,7 +84,7 @@ export const Form: React.FC = () => {
         </Fragment>
       ))}
 
-      {/* display SEND button or status message */}
+      {/* Display SEND button or status message */}
       <div className="alert-box drop-shadow">
         {status ? (
           <Typography>{status}</Typography>
