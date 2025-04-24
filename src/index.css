@@ -144,9 +144,11 @@ h4 {
   min-height: 4rem;
 }
 
-.height-2vh {
-  height: 2vh;
+.height-2rem {
+  height: 2rem;
 }
+
+
 
 /* Paddings */
 .padding-05rem {
