@@ -11,7 +11,7 @@ const contacts = contactsData.map((contact) => {
   return (
     <div
       key={contact.link.ariaLabel}
-      className="display-flex flex-center bg-hover border-radius-4px transparent-border"
+      className="display-flex flex-center bg-hover rd-transparent-border"
     >
       <IconWithTooltip
         icon={contact.icon}
