@@ -42,7 +42,13 @@ const DisplayLink: React.FC<Props> = ({
   };
 
   const linkElement = (
-    <Link to={link.url} aria-label={ariaLabel} target="_blank" rel="noopener">
+    <Link
+      to={link.url}
+      aria-label={ariaLabel}
+      target="_blank"
+      rel="noopener"
+      className="rd-transparent-border bg-hover"
+    >
       {svg}
     </Link>
   );
@@ -53,7 +59,7 @@ const DisplayLink: React.FC<Props> = ({
         type="button"
         aria-label={ariaLabel}
         onClick={(event) => handleRedirect(event)}
-        className="display-flex flex-center flex-gap-1rem bg-whitesmoke blue-border"
+        className="display-flex flex-center flex-gap-1rem bg-whitesmoke"
       >
         <Box
           component="span"
