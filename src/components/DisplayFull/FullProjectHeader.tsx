@@ -7,12 +7,6 @@ import {
 } from "../../data/hoverIconOptions";
 import { IconWithTooltip } from "../IconWithTooltip";
 
-const headerFlexDirection = {
-  xs: "row" as const,
-  sm: "row" as const,
-  md: "row" as const,
-};
-
 const seeLessBox = (
   <div className="display-flex flex-center flex-gap-1rem">
     <span className="title md-font blue-font">See less</span>
@@ -37,7 +31,7 @@ export const FullProjectHeader: React.FC<Props> = ({
     <Box
       component="header"
       className="display-flex flex-space bg-whitesmoke border-radius-4px pointer padding-inline-15rem padding-block-1rem"
-      flexDirection={headerFlexDirection}
+      flexDirection="row"
       onClick={handleToggleDisplay}
     >
       <IconWithTooltip
@@ -53,7 +47,7 @@ export const FullProjectHeader: React.FC<Props> = ({
         />
       )}
 
-      <div>{seeLessBox}</div>
+      {seeLessBox}
     </Box>
   );
 };

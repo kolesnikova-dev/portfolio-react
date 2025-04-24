@@ -37,10 +37,7 @@ export const DisplayFull: React.FC<Props> = ({
       />
 
       {/* Project box */}
-      <Box
-        display="flex"
-        flexDirection={{ xs: "column", md: "column", lg: "column", xl: "row" }}
-      >
+      <Box display="flex" flexDirection={{ xs: "column", xl: "row" }}>
         {/* Video box */}
         <Box
           className="display-flex flex-1 flex-center flex-gap-1rem margin-top-2rem"
@@ -48,7 +45,6 @@ export const DisplayFull: React.FC<Props> = ({
             xs: "column",
             sm: "row",
             md: "column",
-            lg: "column",
           }}
         >
           {/* Title box */}

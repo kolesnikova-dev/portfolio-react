@@ -14,12 +14,6 @@ type Props = {
 export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
   const { title, githubLink, liveLink, subheader } = project;
 
-  const headerFlexDirection = {
-    xs: "column" as const,
-    sm: "column" as const,
-    md: "column" as const,
-  };
-
   return (
     // Entire box
     <Box className="inline-pd-box padding-block-2rem">
@@ -27,12 +21,12 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
       <Box
         className="display-flex flex-space bg-whitesmoke inline-pd-box"
         data-testid="preview-header"
-        flexDirection={headerFlexDirection}
+        flexDirection="column"
       >
         {/* Header and external links box */}
         <Box
           className="full-width display-flex flex-center pd-block-top-1rem"
-          flexDirection={{ xs: "column", md: "row", lg: "row" }}
+          flexDirection={{ xs: "column", md: "row" }}
           justifyContent={{
             xs: "space-between",
             sm: "space-evenly",
@@ -47,12 +41,7 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
           {/* External links box */}
           <Box
             className={`display-flex flex-center min-height-2rem ${liveLink && "flex-gap-2rem"} padding-block-1rem`}
-            flexDirection={{
-              xs: "row",
-              // sm: "row",
-              md: "row",
-              lg: "row",
-            }}
+            flexDirection="row"
           >
             {/* GitHub link */}
             <IconWithTooltip
