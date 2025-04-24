@@ -1,7 +1,1 @@
-#!/bin/sh
-
-# Run linter
-yarn run lint
-
-# Run fixer
-yarn run fix
+npx lint-staged
