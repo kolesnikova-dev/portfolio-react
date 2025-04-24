@@ -68,7 +68,7 @@ export const Form: React.FC = () => {
       data-testid="emaill-js-form"
       ref={form}
       onSubmit={handleSubmit}
-      className="display-flex flex-column width-80"
+      className="flex-column width-80"
     >
       {Object.entries(textInputFields).map(([label, props]) => (
         <div key={label} className="full-width">
