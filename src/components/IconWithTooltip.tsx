@@ -68,8 +68,7 @@ const DisplayLink: React.FC<Props> = ({
   }
   return (
     <Tooltip
-      className="display-flex right-justify"
-      title={ariaLabel}
+      title={<p>{ariaLabel}</p>}
       placement={placement}
       onClick={handleClick}
       arrow
@@ -87,8 +86,8 @@ export const IconWithTooltip: React.FC<Props> = (props) => {
     return <DisplayLink {...props} />;
   }
   return (
-    <Tooltip title={ariaLabel} placement={placement} arrow>
-      <span className="pointer">&nbsp;{svg}</span>
+    <Tooltip title={<p>{ariaLabel}</p>} placement={placement} arrow>
+      <p className="pointer">&nbsp;{svg}</p>
     </Tooltip>
   );
 };
