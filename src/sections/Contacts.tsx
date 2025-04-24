@@ -1,15 +1,18 @@
 import type React from "react";
 import { useState } from "react";
 
-import { Tooltip, Typography } from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 import { IconWithTooltip } from "../components/index";
 import { contactsData, email } from "../data/contactsData";
 import { icons } from "../data/svgIcons";
 
-const contacts = contactsData.map((contact, index) => {
+const contacts = contactsData.map((contact) => {
   return (
-    <div key={contact.link.ariaLabel} className="display-flex flex-center">
+    <div
+      key={contact.link.ariaLabel}
+      className="display-flex flex-center bg-hover border-radius-4px transparent-border"
+    >
       <IconWithTooltip
         icon={contact.icon}
         link={contact.link}
@@ -45,7 +48,7 @@ export const Contacts: React.FC = () => {
 
         {/* email container */}
         <div
-          className="display-flex flex-center light-paper padding-2rem pointer"
+          className="display-flex flex-center light-paper padding-2rem pointer bg-hover"
           onClick={copyEmail}
           onKeyDown={copyEmail}
         >
@@ -55,7 +58,9 @@ export const Contacts: React.FC = () => {
             arrow
           >
             <div className="display-flex flex-center center-column md-font">
-              <p>{email}</p>
+              <p>
+                <b>{email}</b>
+              </p>
               <p className="height-2rem">
                 {copied ? <span>{icons.CheckCircle}</span> : "click to copy"}
               </p>
