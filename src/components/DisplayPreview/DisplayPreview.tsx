@@ -27,6 +27,7 @@ export const DisplayPreview: React.FC<Props> = ({
       onClick={() => handleToggleDisplay(index)}
       thumbnails={cloudinaryUrl}
       className="pointer"
+      data-testid="preview-box"
     >
       <PreviewProjectHeader project={project} />
     </PreviewBox>
