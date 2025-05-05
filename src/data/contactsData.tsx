@@ -11,7 +11,7 @@ export const contactsData: Contact[] = [
     },
     link: {
       ariaLabel: "Navigate to GitHub",
-      url: "https://github.com/kweeuhree",
+      url: "https://github.com/kolesnikova-dev",
     },
   },
   {
@@ -21,7 +21,7 @@ export const contactsData: Contact[] = [
     },
     link: {
       ariaLabel: "Navigate to LinkedIn",
-      url: "https://www.linkedin.com/in/vekolesnikova/",
+      url: "https://www.linkedin.com/in/kolesnikova-dev/",
     },
   },
 ];

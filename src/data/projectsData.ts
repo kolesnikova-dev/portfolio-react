@@ -4,7 +4,7 @@ export const projectsData: Project[] = [
   {
     title: "Distributed Rate Limiter",
     subheader: "Go - Redis - Docker",
-    githubLink: "https://github.com/kweeuhree/distributed-rate-limiter",
+    githubLink: "https://github.com/kolesnikova-dev/distributed-rate-limiter",
     video: ["limiterRecording", "video"],
     thumbnails: ["limiterThumbnails", "image"],
     details: {
@@ -46,7 +46,8 @@ export const projectsData: Project[] = [
   {
     title: "Personal Budgeting App",
     subheader: "React.js - Go - MySQL",
-    githubLink: "https://github.com/kweeuhree/personal-budgeting-frontend",
+    githubLink:
+      "https://github.com/kolesnikova-dev/personal-budgeting-frontend",
     liveLink: "https://personal-budgeting.onrender.com/",
     video: ["budgetingRecording", "video"],
     thumbnails: ["budgetingThumbnails", "image"],
@@ -67,7 +68,7 @@ export const projectsData: Project[] = [
   {
     title: "Weather App",
     subheader: "React.js - Weather API",
-    githubLink: "https://github.com/kweeuhree/weather-app",
+    githubLink: "https://github.com/kolesnikova-dev/weather-app",
     liveLink: "https://local-weather-watch.netlify.app/",
     video: ["weatherRecording", "video"],
     thumbnails: ["weatherThumbnails", "image"],
