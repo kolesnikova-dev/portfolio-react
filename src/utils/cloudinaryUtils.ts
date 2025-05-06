@@ -1,6 +1,8 @@
 //import cloudinary ids
 const cloudinaryMediaIds = {
   // Prompto
+  promptoRecording: import.meta.env.VITE_PROMPTO_ID,
+  promptoThumbnails: import.meta.env.VITE_PROMPTO_THUMBNAILS_ID,
   // Stock Market Aggregator
   // Smart Shopping List
   smartShopRecording: import.meta.env.VITE_SMART_SHOP_ID,
