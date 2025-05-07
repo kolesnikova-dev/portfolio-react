@@ -11,7 +11,7 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
     margin: theme.spacing(1),
     border: "3px solid var(--color-blue)",
     borderRadius: "4px",
-    transition: "all 0.3s ease",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
     boxShadow: "1px 3px 5px 0px rgba(39, 41, 40, 0.8)",
     [theme.breakpoints.up("sm")]: {
       width: "44vw",
@@ -27,6 +27,7 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
     },
     "::before": {
       content: '""',
+      willChange: "opacity",
       position: "absolute",
       top: 0,
       left: 0,
@@ -35,7 +36,7 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
       backgroundSize: "cover",
       backgroundPosition: "center",
       backgroundImage: `url(${thumbnails})`,
-      transition: "opacity 0.2s ease-in-out",
+      transition: "opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
       opacity: 0.4,
       zIndex: -1,
     },
