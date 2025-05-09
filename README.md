@@ -11,7 +11,7 @@ Welcome to the documentation for my portfolio website. This application showcase
 To run this portfolio website locally, you will need:
 
 - [Node.js](https://nodejs.org/) (version 14 or higher)
-- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable/)
 
 ### Installation
 
@@ -34,11 +34,11 @@ To install the application, follow these steps:
 
 ## Running the Application
 
-To start the development server, execute the following command:
+To start the application, execute the following command:
    ```bash
-   npm run dev
+   yarn run dev
    ```
-Once the server is running, open your browser and navigate to http://localhost:3000 to view the application.
+Once it is running, open your browser and navigate to http://localhost:3000 to view the application.
 
 ## Project Structure
 
@@ -48,7 +48,7 @@ The project follows a structured approach to ensure maintainability and scalabil
 src/
 ├── components/      # Reusable React components used throughout the app
 ├── data/            # Static data files used across the application
-├── pages/           # Page components, such as MainPage, wrapped in MUI Grid
+├── pages/           # Page components
 ├── sections/        # Components that represent sections of the page
 ├── types/           # TypeScript type declarations 
 ├── utils/           # Utility functions, such as helpers for Cloudinary uploads, emailjs integrations, or other reusable logic
@@ -75,6 +75,8 @@ tests/                # Directory containing Vitest unit tests, located outside 
 
 - **Progressive Web App (PWA) Setup**: Configured with `vite-plugin-pwa` for offline support and installable capabilities, offering users a better mobile experience.
 
+- **Formatting and linting with Husky and Biome**: Configured with pre-commit and pre-push hooks for consistent code quality.
+
 
 ### Future Enhancements
 
@@ -90,7 +92,7 @@ The application employs the Layout component to maintain a consistent styling fr
 
 The application uses Vitest for testing. To run the test suite, run:
    ```bash
-       npm run test
+       yarn run test
    ```
 
 ## Deployment
@@ -119,7 +121,7 @@ Future upaddingates will include additional features such as a blog section and 
 
 ## Dependencies
 
- - **@emailjs/browser**: For email sending functionalities.
+- **@emailjs/browser**: For email sending functionalities.
 - **@emotion/react and @emotion/styled**: For styling components.
 - **@mui/material**: For Material UI components.
 - **@react-three/drei, @react-three/fiber, and @react-three/postprocessing**: For Three.js integration.
