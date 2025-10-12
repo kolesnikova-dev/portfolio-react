@@ -7,4 +7,5 @@ export * from "./IconWithTooltip";
 export * from "./ImageContainer";
 export * from "./Loading/Loading";
 export * from "./SideBySideSection";
+export * from "./ThemeToggle/ThemeToggle";
 export { default as ParticlesCanvas } from "./ParticlesCanvas";
