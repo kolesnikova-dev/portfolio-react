@@ -7,15 +7,17 @@
   --color-blue: rgba(117, 124, 232, 0.6);
   --color-pale-blue: rgba(117, 124, 232, 0.2);
   --color-dark-slate: #2e37436c;
-  --color-bg: #262535;
+  --color-bg-dark: #262535;
+  --color-bg-light: #413e70;
   --color-drop-shadow: rgba(39, 41, 40, 0.8);
+  --color-dark-rose: #832e6ae5;
   --color-rose: #ce6bb0e5;
+  --color-whitesmoke: whitesmoke;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--color-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -52,7 +54,7 @@ button:active {
 }
 
 h1 {
-  color: whitesmoke;
+  color: var(--color-whitesmoke);
   font-size: 2.8rem;
   margin: 0.5rem 0rem;
 }
@@ -72,6 +74,24 @@ h4 {
   font-size: 2rem;
   font-weight: 400;
   color: var(--color-drop-shadow);
+}
+
+h5 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-whitesmoke);
+}
+
+
+
+/* Theme Palette */
+
+.light {
+  background-color: var(--color-bg-light);
+}
+
+.dark {
+  background-color: var(--color-bg-dark);
 }
 
 .pointer {
@@ -116,6 +136,10 @@ h4 {
 
 .flex-grow-1 {
   flex-grow: 1;
+}
+
+.right {
+  justify-content: flex-end;
 }
 
 /* Widths*/
