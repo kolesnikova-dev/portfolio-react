@@ -3,6 +3,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./App.tsx";
+import { ThemeToggleProvider } from "./ThemeToggleProvider.tsx";
 
 import "./index.css";
 
@@ -14,9 +15,11 @@ try {
     const root = createRoot(rootElement);
     root.render(
       <StrictMode>
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>
+        <ThemeToggleProvider>
+          <ThemeProvider theme={theme}>
+            <App />
+          </ThemeProvider>
+        </ThemeToggleProvider>
       </StrictMode>,
     );
   }
