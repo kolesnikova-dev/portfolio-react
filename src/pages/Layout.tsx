@@ -1,10 +1,13 @@
 import { Suspense, lazy } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../components";
+
+import { Footer, ThemeToggle } from "../components";
+import { useThemePalette } from "../useTheme";
 
 const ParticlesCanvas = lazy(() => import("../components/ParticlesCanvas"));
 
 export const Layout: React.FC = () => {
+  const { themePalette } = useThemePalette();
   return (
     <>
       {/* canvas -- start */}
@@ -14,14 +17,17 @@ export const Layout: React.FC = () => {
       {/* canvas -- end */}
 
       {/* layout */}
-      <div className="dark-paper">
-        <div className="App">
-          {/* Main section */}
-          <Outlet />
-
-          {/* Footer */}
-          <Footer />
+      <div className={`App ${themePalette === "light" ? "light" : "dark"}`}>
+        {/* ToggleTheme section */}
+        <div className="display-flex flex-center right pd-inline-15rem">
+          <ThemeToggle />
         </div>
+
+        {/* Main section */}
+        <Outlet />
+
+        {/* Footer */}
+        <Footer />
       </div>
     </>
   );
