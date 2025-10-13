@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 // Initialize context
 export const ThemeContext = createContext({
-  themePalette: "",
+  themePalette: "dark",
   toggleThemePalette: () => {},
 });
 
