@@ -4,6 +4,7 @@ import { useRef } from "react";
 import type { Group } from "three";
 
 const Particles = () => {
+  console.log("ParticlesCanvas rendering");
   const groupRef = useRef<Group>(null);
 
   // Animate the stars subtly by rotating them on the Y-axis
@@ -37,7 +38,7 @@ const ParticlesCanvas = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: -1,
+        zIndex: 0,
       }}
     >
       <Particles />
