@@ -1,18 +1,20 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, memo } from "react";
 import { Outlet } from "react-router-dom";
 
 import { Footer, ThemeToggle } from "../components";
 import { useThemePalette } from "../useTheme";
 
 const ParticlesCanvas = lazy(() => import("../components/ParticlesCanvas"));
+// Create a memoized version
+const MemoizedParticlesCanvas = memo(ParticlesCanvas);
 
 export const Layout: React.FC = () => {
   const { themePalette } = useThemePalette();
   return (
-    <>
+    <div>
       {/* canvas -- start */}
       <Suspense fallback={null}>
-        <ParticlesCanvas />
+        <MemoizedParticlesCanvas />
       </Suspense>
       {/* canvas -- end */}
 
@@ -29,6 +31,6 @@ export const Layout: React.FC = () => {
         {/* Footer */}
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
