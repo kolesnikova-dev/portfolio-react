@@ -1,5 +1,4 @@
 import { Tooltip } from "@mui/material";
-import React from "react";
 import { useThemePalette } from "../../useTheme.ts";
 import "./ThemeToggleStyles.css";
 
@@ -16,11 +15,12 @@ const SUN = {
 };
 
 const ToggleLabel = ({ type }: { type: string }) => {
+  const tooltipTitle = type === SUN.str ? "Light" : "Dark";
   return (
-    <Tooltip title={type === SUN.str ? "Light" : "Dark"}>
-      <label className="lg-font" htmlFor={TOGGLE}>
+    <Tooltip title={<p>{tooltipTitle}</p>} arrow>
+      <p className="lg-font pointer">
         {type === SUN.str ? SUN.symbol : MOON.symbol}
-      </label>
+      </p>
     </Tooltip>
   );
 };
@@ -28,7 +28,7 @@ const ToggleLabel = ({ type }: { type: string }) => {
 export const ThemeToggle = () => {
   const { themePalette, toggleThemePalette } = useThemePalette();
   return (
-    <div className="display-flex flex-center flex-gap-1rem">
+    <div className="display-flex flex-center flex-gap-1rem zindx-1">
       <ToggleLabel type={MOON.str} />
       <input
         type="checkbox"
