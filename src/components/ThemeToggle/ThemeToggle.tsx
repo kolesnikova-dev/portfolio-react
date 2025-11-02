@@ -11,7 +11,7 @@ const MOON = {
 
 const SUN = {
   str: "sun",
-  symbol: "☼",
+  symbol: "☀",
 };
 
 const ToggleLabel = ({ type }: { type: string }) => {
