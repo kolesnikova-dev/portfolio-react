@@ -1,7 +1,7 @@
 import { Suspense, lazy, memo } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Footer, ThemeToggle } from "../components";
+import { Footer } from "../components";
 import { useThemePalette } from "../useTheme";
 
 const ParticlesCanvas = lazy(() => import("../components/ParticlesCanvas"));
@@ -20,11 +20,6 @@ export const Layout: React.FC = () => {
 
       {/* layout */}
       <div className={`App ${themePalette === "light" ? "light" : "dark"}`}>
-        {/* ToggleTheme section */}
-        <div className="display-flex flex-center right pd-inline-15rem">
-          <ThemeToggle />
-        </div>
-
         {/* Main section */}
         <Outlet />
 

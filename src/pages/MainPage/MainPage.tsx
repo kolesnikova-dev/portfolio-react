@@ -2,7 +2,7 @@ import type React from "react";
 
 import Grid2 from "@mui/material/Grid2";
 
-import { SideBySideSection } from "../../components";
+import { SideBySideSection, ThemeToggle } from "../../components";
 import { About, Contacts, Projects, SendEmail, Skills } from "../../sections";
 import type { Sections } from "../../types/sectionTypes";
 
@@ -28,6 +28,11 @@ export const MainPage: React.FC = () => {
 
   return (
     <div className="full-width flex-grow-1">
+      {/* ToggleTheme section should live inside a navigation bar, or be housed in the same slice */}
+      {/* ToggleTheme section */}
+      <div className="display-flex flex-center right pd-inline-15rem">
+        <ThemeToggle />
+      </div>
       {/* About and Skills section */}
       <Grid2 className="styled-grid">
         <SideBySideSection section={sections.top} />
