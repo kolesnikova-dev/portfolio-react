@@ -5,24 +5,19 @@ import { Footer } from "../components";
 import { useThemePalette } from "../useTheme";
 
 const ParticlesCanvas = lazy(() => import("../components/ParticlesCanvas"));
-// Create a memoized version
 const MemoizedParticlesCanvas = memo(ParticlesCanvas);
 
 export const Layout: React.FC = () => {
   const { themePalette } = useThemePalette();
   return (
     <div>
-      {/* canvas -- start */}
+      {/* Canvas */}
       <Suspense fallback={null}>
         <MemoizedParticlesCanvas />
       </Suspense>
-      {/* canvas -- end */}
-
-      {/* layout */}
+      {/* Layout */}
       <div className={`App ${themePalette === "light" ? "light" : "dark"}`}>
-        {/* Main section */}
         <Outlet />
-
         {/* Footer */}
         <Footer />
       </div>
