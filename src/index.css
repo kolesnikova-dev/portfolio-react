@@ -142,9 +142,10 @@ h5 {
   flex-grow: 1;
 }
 
-.right {
+/* Not sure I'm using right  */
+/* .right {
   justify-content: flex-end;
-}
+} */
 
 /* Widths*/
 .full-width {
