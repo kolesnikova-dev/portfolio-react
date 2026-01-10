@@ -10,6 +10,7 @@
     border-radius: 1.4rem;
     transition: background 400ms;
     border: 1px solid gray;
+    cursor: pointer;
 }
 
 /* slider button */

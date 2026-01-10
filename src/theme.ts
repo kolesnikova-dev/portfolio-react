@@ -24,6 +24,25 @@ const theme = createTheme({
         },
       },
     },
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: "rgba(117, 124, 232, 0.6)",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          fontSize: "5rem",
+        },
+        textColorPrimary: {
+          "&.Mui-selected": {
+            color: "rgba(117, 124, 232, 0.6)",
+          },
+        },
+      },
+    },
   },
 });
 

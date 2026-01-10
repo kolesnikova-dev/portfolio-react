@@ -7,10 +7,10 @@ type Props = {
 
 // Initialize ThemeToggleProvider that will return the context.Provider
 export const ThemeToggleProvider = ({ children }: Props) => {
-  const [themePalette, setThemePalette] = useState<string>("light");
+  const [themePalette, setThemePalette] = useState<string>("dark");
 
   const toggleThemePalette = () => {
-    setThemePalette(themePalette === "light" ? "dark" : "light");
+    setThemePalette(themePalette === "dark" ? "light" : "dark");
   };
 
   return (
