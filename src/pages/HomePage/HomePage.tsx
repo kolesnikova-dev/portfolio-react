@@ -27,15 +27,15 @@ export const HomePage = () => {
   return (
     <Fragment>
       {/* About and Skills section */}
-      <Grid2 className="styled-grid">
+      <Grid2 className="pd-block-pos-relative">
         <SideBySideSection section={sections.top} />
       </Grid2>
       {/* Projects section */}
-      <Grid2 className="styled-grid">
+      <Grid2 className="pd-block-pos-relative">
         <ProjectsSection />
       </Grid2>
       {/* Contacts section */}
-      <Grid2 className="styled-grid">
+      <Grid2 className="pd-block-pos-relative">
         <SideBySideSection section={sections.bottom} />
       </Grid2>
     </Fragment>

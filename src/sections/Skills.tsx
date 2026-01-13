@@ -37,7 +37,7 @@ export const Skills: React.FC = () => {
         {skillsData.map(({ skill, icon: SvgPath }, index) => (
           // A specific skill container -- green shadow box
           <div
-            className={`rd-transparent-border green-box-shadow pd-inline-15rem pd-05rem ${currentIndex === index && "glow"} hover-glow pointer`}
+            className={`rd-transparent-border green-box-shadow p-6 ${currentIndex === index && "glow"} hover-glow pointer`}
             key={skill}
           >
             {/* A specific skill */}
@@ -55,7 +55,7 @@ export const Skills: React.FC = () => {
         ))}
       </Box>
 
-      <header>
+      <header className="pt-3">
         <h2>
           {isHovered
             ? isHovered
