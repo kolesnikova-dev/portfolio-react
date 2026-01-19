@@ -15,12 +15,14 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
   const { date, title, content } = blog;
   return (
     <BlogBox>
-      <div className="flex">
+      <div className="flex items-center">
         <DateBox>{date}</DateBox>
-        <h2 className="p-4 text-6xl">{title}</h2>
+        <h2 className="p-4 text-6xl tracking-wider">{title}</h2>
       </div>
 
-      <div className="p-4 text-5xl">{content}</div>
+      <div className="p-4 text-5xl whitespace-break-spaces text-left">
+        {content}
+      </div>
     </BlogBox>
   );
 };
@@ -28,9 +30,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
 export const BlogPage = () => {
   return (
     <div className="pd-block-pos-relative">
-      {Object.entries(blogs).map(([id, blog]) => (
-        <BlogPost key={id} blog={blog} />
-      ))}
+      {Object.entries(blogs)
+        .reverse()
+        .map(([id, blog]) => (
+          <BlogPost key={id} blog={blog} />
+        ))}
     </div>
   );
 };
