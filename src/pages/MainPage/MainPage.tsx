@@ -42,12 +42,12 @@ function a11yProps(index: number) {
 export const MainPage: React.FC = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
   return (
-    <div className="full-width flex-grow-1">
+    <div className="full-width grow">
       {/* Navigation bar -- start */}
       <div className="display-flex flex-space">
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
