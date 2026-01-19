@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --color-pale-blue-gradient: linear-gradient(
     45deg,
@@ -7,6 +9,7 @@
   --color-blue: rgba(117, 124, 232, 0.6);
   --color-pale-blue: rgba(117, 124, 232, 0.2);
   --color-dark-slate: #2e37436c;
+  --color-scrim: #25395fd7;
   --color-bg-dark: #262535;
   --color-bg-light: #413e70;
   --color-drop-shadow: rgba(39, 41, 40, 0.8);
@@ -82,8 +85,6 @@ h5 {
   color: var(--color-whitesmoke);
 }
 
-
-
 /* Theme Palette */
 
 .light {
@@ -140,10 +141,6 @@ h5 {
 
 .flex-grow-1 {
   flex-grow: 1;
-}
-
-.right {
-  justify-content: flex-end;
 }
 
 /* Widths*/
@@ -227,7 +224,6 @@ h5 {
   opacity: 0.9;
 }
 
-
 /* Text alignment */
 .text-left {
   text-align: left;
@@ -284,7 +280,7 @@ h5 {
 .bg-hover:hover {
   transition: all 0.5s ease;
   background: var(--color-blue);
-  border: 1px solid  var(--color-blue);
+  border: 1px solid var(--color-blue);
 }
 
 .bg-whitesmoke {
@@ -307,7 +303,8 @@ h5 {
 /* Effects */
 .green-box-shadow {
   position: relative;
-  transition: border-color 0.4s ease-in-out, transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  transition: border-color 0.4s ease-in-out, transform 0.8s ease-in-out, opacity
+    0.8s ease-in-out;
   /* border-top: solid 1px #bec1ff; */
   opacity: 1;
   z-index: 1;
@@ -318,11 +315,10 @@ h5 {
   position: absolute;
   inset: 0;
   z-index: -1;
-  border-radius: inherit; 
+  border-radius: inherit;
   box-shadow: 1px 1px 10px 5px #80ffc6e1;
   opacity: 0;
-  transition:     opacity 1.6s ease-in-out,
-  box-shadow 1.2s ease-out;
+  transition: opacity 1.6s ease-in-out, box-shadow 1.2s ease-out;
 }
 
 .glow {
@@ -353,7 +349,7 @@ h5 {
   right: 0;
   bottom: 0;
   z-index: -1;
-  border-radius: inherit; 
+  border-radius: inherit;
   box-shadow: 1px 1px 10px 5px var(--color-rose);
   opacity: 0.7;
   transition: opacity 400ms ease-in-out;

@@ -18,7 +18,7 @@ const ToggleLabel = ({ type }: { type: string }) => {
   const tooltipTitle = type === SUN.str ? "Light" : "Dark";
   return (
     <Tooltip title={<p>{tooltipTitle}</p>} arrow>
-      <p className="lg-font pointer">
+      <p className="text-6xl pointer">
         {type === SUN.str ? SUN.symbol : MOON.symbol}
       </p>
     </Tooltip>

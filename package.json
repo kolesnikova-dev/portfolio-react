@@ -6,17 +6,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "yarn run typecheck && yarn run lint && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest",
-    "lint": "npx @biomejs/biome check --staged --files-ignore-unknown=true --no-errors-on-unmatched",
-    "fix": "npx @biomejs/biome check --fix --staged",
+    "lint": "yarn exec biome lint",
+    "fix": "yarn exec biome lint --write ./src",
     "prepare": "husky"
   },
   "lint-staged": {
     "**.{js,ts,jsx,tsx,json,jsonc}": [
-      "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched"
+      "biome check --write --no-errors-on-unmatched"
     ]
   },
   "dependencies": {
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@tailwindcss/vite": "^4.1.18",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.3.0",
@@ -53,6 +54,7 @@
     "lint-staged": "^15.5.1",
     "rollup-plugin-visualizer": "^5.14.0",
     "source-map-loader": "^5.0.0",
+    "tailwindcss": "^4.1.18",
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.3",
     "vite": "^5.2.12",

@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="styled-grid light-paper">
+    <section className="pd-block-pos-relative light-paper">
       <header className="pd-block-end-2rem">
         <h1>Projects</h1>
       </header>
