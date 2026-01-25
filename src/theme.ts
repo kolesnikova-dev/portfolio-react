@@ -33,9 +33,18 @@ const theme = createTheme({
     },
     MuiTab: {
       styleOverrides: {
-        root: {
-          fontSize: "5rem",
-        },
+        root: ({ theme }) => ({
+          fontSize: "2.2rem",
+          [theme.breakpoints.up("sm")]: {
+            fontSize: "3rem",
+          },
+          [theme.breakpoints.up("md")]: {
+            fontSize: "4rem",
+          },
+          [theme.breakpoints.up("lg")]: {
+            fontSize: "5rem",
+          },
+        }),
         textColorPrimary: {
           "&.Mui-selected": {
             color: "rgba(117, 124, 232, 0.6)",
