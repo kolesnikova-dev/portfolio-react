@@ -21,7 +21,7 @@ export const SideBySideSection: React.FC<Props> = ({ section }) => {
       <Grid2
         container
         direction={{ xs: "column", md: "row" }}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        columnSpacing={{ xs: 1, sm: 3, md: 5 }}
         rowSpacing={{ xs: 6 }}
         className="display-flex flex-center"
       >

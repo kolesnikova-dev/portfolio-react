@@ -8,8 +8,6 @@ import Tabs from "@mui/material/Tabs";
 import { ThemeToggle } from "../../components";
 import { BlogPage, HomePage } from "../internal";
 
-import "./mainPageStyles.css";
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;

@@ -29,7 +29,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
 
 export const BlogPage = () => {
   return (
-    <div className="pd-block-pos-relative">
+    <div className="sm:py-10 md:py-52">
       {Object.entries(blogs)
         .reverse()
         .map(([id, blog]) => (

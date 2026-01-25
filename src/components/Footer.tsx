@@ -4,7 +4,7 @@ const year: number = new Date().getFullYear();
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="display-flex flex-center pd-2rem md-font">
+    <footer className="display-flex flex-center pb-8 md-font">
       {icons.Copyright}&nbsp;Veronika Kolesnikova, {year}
     </footer>
   );
