@@ -27,15 +27,15 @@ export const HomePage = () => {
   return (
     <Fragment>
       {/* About and Skills section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative py-52">
         <SideBySideSection section={sections.top} />
       </Grid2>
       {/* Projects section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative py-52">
         <ProjectsSection />
       </Grid2>
       {/* Contacts section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative py-52">
         <SideBySideSection section={sections.bottom} />
       </Grid2>
     </Fragment>
