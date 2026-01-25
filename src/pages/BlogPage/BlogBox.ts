@@ -16,6 +16,11 @@ export const BlogBox = styled(Box as React.ComponentType<CustomBoxProps>)(
     paddingBlockEnd: "10rem",
     marginBlockEnd: "10rem",
     display: "flex-column",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    "&:hover": {
+      border: "3px solid var(--color-warm-pair)",
+      background: "var(--color-pale-blue)",
+    },
   }),
 );
 
