@@ -5,10 +5,8 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 
-import { ThemeToggle } from "../../components";
+import { Footer, ThemeToggle } from "../../components";
 import { BlogPage, HomePage } from "../internal";
-
-import "./mainPageStyles.css";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -47,7 +45,7 @@ export const MainPage: React.FC = () => {
   };
 
   return (
-    <div className="full-width grow">
+    <div className="flex flex-col w-full min-h-screen h-full grow">
       {/* Navigation bar -- start */}
       <div className="display-flex flex-space">
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -76,13 +74,19 @@ export const MainPage: React.FC = () => {
       </div>
       {/* Navigation bar -- end */}
 
-      {/* TabPanels */}
-      <TabPanel value={value} index={0}>
-        <HomePage />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <BlogPage />
-      </TabPanel>
+      <div className="flex flex-col min-h-screen justify-between">
+        {/* TabPanels */}
+        <div>
+          <TabPanel value={value} index={0}>
+            <HomePage />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <BlogPage />
+          </TabPanel>
+        </div>
+        {/* Footer */}
+        <Footer />
+      </div>
     </div>
   );
 };

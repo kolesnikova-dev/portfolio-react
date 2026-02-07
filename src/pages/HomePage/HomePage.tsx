@@ -25,19 +25,19 @@ const ProjectsSection = sections.middle.component;
 
 export const HomePage = () => {
   return (
-    <Fragment>
+    <div className="relative py-20 sm:py-20 md:py-52">
       {/* About and Skills section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative pb-52">
         <SideBySideSection section={sections.top} />
       </Grid2>
       {/* Projects section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative pb-52">
         <ProjectsSection />
       </Grid2>
       {/* Contacts section */}
-      <Grid2 className="pd-block-pos-relative">
+      <Grid2 className="relative">
         <SideBySideSection section={sections.bottom} />
       </Grid2>
-    </Fragment>
+    </div>
   );
 };
