@@ -25,6 +25,10 @@ const Projects: React.FC = () => {
     toggleDisplay,
   });
 
+  const currentProjectIdx = (index: number) => {
+    return index;
+  };
+
   const displayAllProjects = () => {
     return (
       <Grid
@@ -33,12 +37,15 @@ const Projects: React.FC = () => {
         columnSpacing={3}
         className="full-width display-flex flex-center"
       >
-        {projectsData.map((project: Project, index: number) => (
-          <PreviewMemoizedProject
-            key={project.title}
-            {...projectProps(project, index)}
-          />
-        ))}
+        {projectsData.map((project: Project, index: number) => {
+          currentProjectIdx(index);
+          return (
+            <PreviewMemoizedProject
+              key={project.title}
+              {...projectProps(project, index)}
+            />
+          );
+        })}
       </Grid>
     );
   };
@@ -52,7 +59,11 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="py-52 light-paper">
+    <section
+      className="py-52 light-paper"
+      onClick={fullDisplay ? () => toggleDisplay(expandedProject) : undefined}
+      onKeyDown={fullDisplay ? () => toggleDisplay(expandedProject) : undefined}
+    >
       <header className="pd-block-end-2rem">
         <h1>Projects</h1>
       </header>
