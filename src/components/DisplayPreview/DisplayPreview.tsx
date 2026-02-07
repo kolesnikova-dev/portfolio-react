@@ -14,7 +14,8 @@ export const DisplayPreview: React.FC<Props> = ({
   toggleDisplay,
   index,
 }) => {
-  const handleToggleDisplay = (index: number) => {
+  const handleToggleDisplay = (e: React.MouseEvent) => {
+    e.stopPropagation();
     toggleDisplay(index);
   };
 
@@ -24,7 +25,7 @@ export const DisplayPreview: React.FC<Props> = ({
   }
   return (
     <PreviewBox
-      onClick={() => handleToggleDisplay(index)}
+      onClick={handleToggleDisplay}
       thumbnails={cloudinaryUrl}
       className="pointer"
       data-testid="preview-box"

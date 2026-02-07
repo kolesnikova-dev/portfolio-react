@@ -37,7 +37,11 @@ export const DisplayFull: React.FC<Props> = ({
       />
 
       {/* Project box */}
-      <Box display="flex" flexDirection={{ xs: "column", xl: "row" }}>
+      <Box
+        display="flex"
+        flexDirection={{ xs: "column", xl: "row" }}
+        className="cursor-auto"
+      >
         {/* Video box */}
         <Box
           className="display-flex flex-1 flex-center flex-gap-1rem margin-top-2rem"

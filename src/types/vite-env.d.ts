@@ -25,7 +25,7 @@ export interface PreviewBoxProps extends BoxProps {
   thumbnails?: string;
   children?: React.ReactNode;
   className?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
 export interface CustomBoxProps extends BoxProps {

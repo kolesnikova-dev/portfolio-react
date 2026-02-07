@@ -25,6 +25,9 @@ export const PreviewBox = styled(Box as React.ComponentType<PreviewBoxProps>)(
       width: "40vw",
       height: "calc(40vw * 9 / 16)",
     },
+    "&:hover": {
+      border: "3px solid var(--color-bright-blue)",
+    },
     "::before": {
       content: '""',
       willChange: "opacity",

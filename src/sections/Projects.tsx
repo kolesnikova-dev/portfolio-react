@@ -60,8 +60,19 @@ const Projects: React.FC = () => {
 
   return (
     <section
-      className="py-52 light-paper"
-      onClick={fullDisplay ? () => toggleDisplay(expandedProject) : undefined}
+      className={`py-52 light-paper ${fullDisplay ? "cursor-pointer" : ""}`}
+      onClick={
+        fullDisplay
+          ? (e) => {
+              if (
+                e.currentTarget === e.target ||
+                (e.target as HTMLElement).closest("header")
+              ) {
+                toggleDisplay(expandedProject);
+              }
+            }
+          : undefined
+      }
       onKeyDown={fullDisplay ? () => toggleDisplay(expandedProject) : undefined}
     >
       <header className="pd-block-end-2rem">
