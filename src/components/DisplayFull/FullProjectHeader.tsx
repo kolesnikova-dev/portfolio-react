@@ -17,7 +17,7 @@ const seeLessBox = (
 );
 
 type Props = {
-  handleToggleDisplay: () => void;
+  handleToggleDisplay: (e) => void;
   githubLink: string;
   liveLink?: string;
 };
