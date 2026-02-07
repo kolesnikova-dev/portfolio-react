@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Project } from "../../types";
 import { getUrl } from "../../utils/index";
 import { PreviewBox, PreviewProjectHeader } from "./internal";
@@ -14,7 +15,9 @@ export const DisplayPreview: React.FC<Props> = ({
   toggleDisplay,
   index,
 }) => {
-  const handleToggleDisplay = (index: number) => {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const handleToggleDisplay = (e: React.MouseEvent) => {
+    e.stopPropagation();
     toggleDisplay(index);
   };
 
@@ -24,12 +27,14 @@ export const DisplayPreview: React.FC<Props> = ({
   }
   return (
     <PreviewBox
-      onClick={() => handleToggleDisplay(index)}
+      onClick={handleToggleDisplay}
       thumbnails={cloudinaryUrl}
       className="pointer"
       data-testid="preview-box"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <PreviewProjectHeader project={project} />
+      <PreviewProjectHeader project={project} isHovered={isHovered} />
     </PreviewBox>
   );
 };

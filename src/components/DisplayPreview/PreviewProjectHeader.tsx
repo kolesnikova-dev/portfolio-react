@@ -9,9 +9,13 @@ import { IconWithTooltip } from "../index";
 
 type Props = {
   project: Project;
+  isHovered?: boolean;
 };
 
-export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
+export const PreviewProjectHeader: React.FC<Props> = ({
+  project,
+  isHovered,
+}) => {
   const { title, githubLink, liveLink, subheader } = project;
 
   return (
@@ -34,7 +38,9 @@ export const PreviewProjectHeader: React.FC<Props> = ({ project }) => {
           }}
         >
           {/* Header */}
-          <header>
+          <header
+            className={`pd-block-1rem border rounded-lg border-transparent ${isHovered ? "bg-(--color-pale-blue) transition-bg duration-500 " : "bg-transparent"}`}
+          >
             <h2 className="pd-inline-05rem">{title}</h2>
           </header>
 

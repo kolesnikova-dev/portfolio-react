@@ -17,7 +17,7 @@ export const BlogBox = styled(Box as React.ComponentType<CustomBoxProps>)(
     display: "flex-column",
     transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
     "&:hover": {
-      border: "3px solid var(--color-warm-pair)",
+      border: "3px solid var(--color-bright-blue)",
       background: "var(--color-pale-blue)",
     },
   }),
