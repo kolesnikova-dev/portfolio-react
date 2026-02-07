@@ -1,7 +1,6 @@
 import { Suspense, lazy, memo } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Footer } from "../components";
 import { useThemePalette } from "../useTheme";
 
 const ParticlesCanvas = lazy(() => import("../components/ParticlesCanvas"));
@@ -10,7 +9,7 @@ const MemoizedParticlesCanvas = memo(ParticlesCanvas);
 export const Layout: React.FC = () => {
   const { themePalette } = useThemePalette();
   return (
-    <div>
+    <div className="relative w-full min-h-full">
       {/* Canvas */}
       <Suspense fallback={null}>
         <MemoizedParticlesCanvas />
@@ -18,8 +17,6 @@ export const Layout: React.FC = () => {
       {/* Layout */}
       <div className={`App ${themePalette === "light" ? "light" : "dark"}`}>
         <Outlet />
-        {/* Footer */}
-        <Footer />
       </div>
     </div>
   );

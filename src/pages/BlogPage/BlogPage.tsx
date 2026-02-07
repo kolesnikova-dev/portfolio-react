@@ -29,7 +29,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ blog }) => {
 
 export const BlogPage = () => {
   return (
-    <div className="sm:py-10 md:py-52">
+    <div className="flex flex-col h-full items-center px-1 md:px-30 lg:px-60">
       {Object.entries(blogs)
         .reverse()
         .map(([id, blog]) => (
